@@ -83,3 +83,16 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+define('LANGUAGE', 'kor');
+
+$code_arr = array('0');
+for($i='A'; $i!= 'AA'; $i++){
+	array_push($code_arr,$i);	
+}
+for($j=1;$j<10;$j++){
+	array_push($code_arr,$j);	
+}
+if($_SERVER['HTTP_HOST'] != "stoassi.co.kr"){
+    define('CATEGORY_CODE', $code_arr);
+}
