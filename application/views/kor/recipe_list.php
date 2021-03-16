@@ -131,10 +131,10 @@
                                 </div>
                                 
                                 <div class="form-group">		
-                                        <div class="col-sm-8" id="insert_recipe_value">
+                                        <div class="col-sm-7" id="insert_recipe_value">
                                            
 					</div>
-                                        <div class="col-sm8" style="text-align: center">
+                                        <div class="col-sm-7" style="text-align: center">
                                             <span class="form-control">추가</span>
                                         </div>
 				</div>
