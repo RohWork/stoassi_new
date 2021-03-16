@@ -137,8 +137,15 @@
                                 </div>
                                 
                                 <div class="form-group">		
-                                        <div class="col-sm-8 col-sm-offset-3" id="insert_recipe_value">
-                                           
+                                        <div class="col-sm-8 col-sm-offset-3" >
+                                            <table id="insert_recipe_value">
+                                                <tr>
+                                                    <th>투입재료</th>
+                                                    <th>투입량</th>
+                                                    <th>투입단위</th>
+                                                    <th>투입후 조리시간</th>
+                                                </tr>
+                                            </table>
 					</div>
                                         <div class="col-sm-8 col-sm-offset-3" style="text-align: center">
                                             <span class="form-control" style="cursor: pointer" onclick="recipe_val_add()">추가</span>
@@ -175,17 +182,16 @@
         var recipe_val = $("#insert_recipe_value");
         var recipe_html = recipe_val.html();
         
-        recipe_html += "<div class='row select_font'>"
+        recipe_html += "<tr>"
 
-                        +"<label class='control-label col-md-2'>투입재료:</label>"
-                        +"<div class='col-md-3'><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
+
+                        +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
-                        +"</select></div>"
-                        +"<div class='col-md-2'><input class='form-control' type='text' id='stock_cnt[]' name='stock_cnt[]'/></div>"
-                        +"<div class='col-md-1'><span class='form-control' id='stock_unit[]' name='stock_unit[]'></span</div>"
-                        +"<label class='control-label col-md-2'>소요시간:</label>"
-                        +"<div class='col-md-1'><span class='form-control  ' id='recipe_time[]' name='recipe_time[]'></span></div>"
-                        +"</div>";
+                        +"</select></td>"
+                        +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></span</td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></span></td>"
+                        +"</tr>";
         
         recipe_val.html(recipe_html);
         
