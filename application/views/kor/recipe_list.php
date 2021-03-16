@@ -143,7 +143,8 @@
                                                     <th class="select_font" width="30%">투입재료</th>
                                                     <th class="select_font" width="20%">투입량</th>
                                                     <th class="select_font" width="20%">투입단위</th>
-                                                    <th class="select_font" width="30%">투입후 조리시간</th>
+                                                    <th class="select_font" width="20%">투입후 조리시간</th>
+                                                    <th class="select_font" width="10%">제거</th>
                                                 </tr>
                                             </table>
 					</div>
@@ -189,8 +190,9 @@
                         +  "<option value='1'>진간장</option>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
-                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></span</td>"
-                        +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></span></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></td>"
+                        +"<td><span class='glyphicon glyphicon-minus'></span></td>"
                         +"</tr>";
         
         recipe_val.html(recipe_html);
