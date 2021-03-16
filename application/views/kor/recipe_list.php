@@ -135,7 +135,7 @@
                                            
 					</div>
                                         <div class="col-sm-8 col-sm-offset-3" style="text-align: center">
-                                            <span class="form-control">추가</span>
+                                            <span class="form-control" style="cursor: pointer">추가</span>
                                         </div>
 				</div>
 			</form>
