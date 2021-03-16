@@ -40,8 +40,6 @@ class RecipeList extends CI_Controller {
         $group_rows = $this->recipe_md->get_group_list(0,$search_vo);
         
         $group_select = "";
-
-        var_dump($group_rows);
         
         foreach($group_rows as $grow){
             
