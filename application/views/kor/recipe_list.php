@@ -128,11 +128,14 @@
 				</div>
                                 <div class="form-group">
 					<label for="insert_recipe_value" class="col-sm-3 control-label">레시피내용</label>
-					<div class="col-sm-8">
+					<div class="col-sm-8" id="">
 						
                                             
-                                            <div>추가</div>
+                                           
 					</div>
+                                        <div class="col-sm8">
+                                            <span class="col-sm-3 control-label">추가</span>
+                                        </div>
 				</div>
 			</form>
 		  </div>
