@@ -177,7 +177,7 @@
         
         recipe_html += "<div class='row'>"
 
-                        +"<label class='control-label col-md-2 select_font' select_font>투입재료:</label>"
+                        +"<label class='control-label col-md-2 select_font'>투입재료:</label>"
                         +"<div class='col-md-3'><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
                         +"</select></div>"
