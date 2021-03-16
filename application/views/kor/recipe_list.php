@@ -147,7 +147,7 @@
                                                 </tr>
                                             </table>
 					</div>
-                                        <div class="col-sm-8 col-sm-offset-3" style="text-align: center">
+                                        <div class="col-sm-8 col-sm-offset-3" style="text-align: center;margin-top: 10px">
                                             <span class="form-control" style="cursor: pointer" onclick="recipe_val_add()">추가</span>
                                         </div>
                                     <input type="hidden" id="insert_recipe_cnt" name="insert_recipe_cnt" value="0"/>
