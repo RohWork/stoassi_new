@@ -120,7 +120,11 @@
 					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
 					<div class="col-sm-8">
                                             <select id="insert_recipe_group" name="insert_recipe_group">
-                                                
+                                                <?php
+                                                    foreach($group_rows as $grow){
+                                                        echo "<option value='".$grow->idx."'>".$grow->name."</option>";
+                                                    }
+                                                ?>
                                             </select>
 					</div>
 				</div>
