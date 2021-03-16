@@ -131,7 +131,7 @@
                                 </div>
                                 
                                 <div class="form-group">		
-                                        <div class="col-sm-3 col-sm-offset-5" id="insert_recipe_value">
+                                        <div class="col-sm-5 col-sm-offset-3" id="insert_recipe_value">
                                            
 					</div>
                                         <div class="col-sm-5 col-sm-offset-3" style="text-align: center">
