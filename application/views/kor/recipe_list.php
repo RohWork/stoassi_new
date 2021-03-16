@@ -100,7 +100,7 @@
 	  </div>
 	</div>
 	
-	<div id="modal_group_insert" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="modal_recipe_insert" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -135,14 +135,15 @@
                                            
 					</div>
                                         <div class="col-sm-8 col-sm-offset-3" style="text-align: center">
-                                            <span class="form-control" style="cursor: pointer">추가</span>
+                                            <span class="form-control" style="cursor: pointer" onclick="recipe_val_add()">추가</span>
                                         </div>
+                                    <input type="hidden" id="insert_recipe_cnt" name="insert_recipe_cnt" value="0"/>
 				</div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('group_insert_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="group_insert()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="reset_insert()" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="recipe_insert()" class="btn btn-primary">저장하기</button>
 		  </div>
 		</div>
 	  </div>
@@ -160,8 +161,32 @@
     });
 
     $("#input_button").click(function(){
-        $("#modal_group_insert").modal('show');
+        $("#modal_recipe_insert").modal('show');
     });
+    
+    function recipe_val_add(){
+
+        var recipe_val = $("#insert_recipe_value");
+        var recipe_html = recipe_val.html();
+        
+        recipe_html += "<div>"
+                        +"<span class='control-label'>투입재료:</span>"
+                        +"<select class='control-label' id='stock_idx[]' name='stock_idx[]'>"
+                        +  "<option value='1'>진간장</option>"
+                        +"</select>"
+                        +"<input type='text' id='stock_cnt[]' name='stock_cnt[]'/>"
+                        +"<span class='control-label' id='stock_unit[]' name='stock_unit[]'></span>"
+                        +"<span class='control-label'>소요시간:</span>"
+                        +"<span class='control-label' id='recipe_time[]' name='recipe_time[]'></span>"
+                        +"</div>";
+        
+        recipe_val.html(recipe_html);
+        
+        
+        
+        
+        
+    }
 
     function detail_group_show(idx){
         var params =  {
