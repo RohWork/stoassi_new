@@ -190,7 +190,7 @@
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></td>"
                         +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></td>"
-                        +"<td style='text-align: center'><span class='glyphicon glyphicon-minus'></span></td>"
+                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
                         +"</tr>";
         
         recipe_val.html(recipe_html);
