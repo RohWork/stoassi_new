@@ -42,6 +42,7 @@ class RecipeList extends CI_Controller {
         $group_select = "";
 
         foreach($group_rows as $grow){
+            echo $grow;
             if($grow->idx == $search_vo->group_idx){
                 $group_select .= "<option value='".$grow->idx."' selected>".$grow->name."</option>";
             }else{
