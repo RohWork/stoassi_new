@@ -113,7 +113,7 @@
 					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
 					<div class="col-sm-8">
                                             
-                                            <select id="insert_recipe_group" name="insert_recipe_group">
+                                            <select id="insert_recipe_group" name="insert_recipe_group" class="form-control">
                                                 <?php
                                                     echo $group_select;
                                                 ?>
