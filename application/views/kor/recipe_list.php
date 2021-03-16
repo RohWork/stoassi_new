@@ -112,14 +112,28 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">그룹추가</h4>
+			<h4 class="modal-title" id="myModalLabel">레시피추가</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="group_insert_form" name="group_insert_form" enctype="multipart/form-data" class="form-horizontal">
-				<div class="form-group">
-					<label for="inert_group_name" class="col-sm-3 control-label">그룹명</label>
+                                <div class="form-group">
+					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
 					<div class="col-sm-8">
-						<input type="text" id="insert_group_name" name="insert_group_name" class="form-control"/>
+                                            <select id="insert_recipe_group" name="insert_recipe_group">
+                                                
+                                            </select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="insert_recipe_name" class="col-sm-3 control-label">레시피명</label>
+					<div class="col-sm-8">
+						<input type="text" id="insert_recipe_name" name="insert_recipe_name" class="form-control"/>
+					</div>
+				</div>
+                                <div class="form-group">
+					<label for="insert_recipe_value" class="col-sm-3 control-label">레시피내용</label>
+					<div class="col-sm-8">
+						
 					</div>
 				</div>
 			</form>
