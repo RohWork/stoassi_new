@@ -138,12 +138,12 @@
                                 
                                 <div class="form-group">		
                                         <div class="col-sm-8 col-sm-offset-3" >
-                                            <table id="insert_recipe_value">
+                                            <table id="insert_recipe_value" width="100%">
                                                 <tr>
-                                                    <th>투입재료</th>
-                                                    <th>투입량</th>
-                                                    <th>투입단위</th>
-                                                    <th>투입후 조리시간</th>
+                                                    <th class="select_font">투입재료</th>
+                                                    <th class="select_font">투입량</th>
+                                                    <th class="select_font">투입단위</th>
+                                                    <th class="select_font">투입후 조리시간</th>
                                                 </tr>
                                             </table>
 					</div>
