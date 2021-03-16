@@ -37,12 +37,24 @@ class RecipeList extends CI_Controller {
         $search_vo->shop_idx = $this->session->userdata("shop_idx");
         $search_vo->state = "Y";
         
-        $data['group_rows'] = $this->recipe_md->get_group_list(0,$search_vo);
+        $group_rows = $this->recipe_md->get_group_list(0,$search_vo);
+        
+        $group_select = "";
+
+        foreach($group_rows as $grow){
+            if($grow->idx == $search_vo->group_idx){
+                $group_select .= "<option value='".$grow->idx."' selected>".$grow->name."</option>";
+            }else{
+                $group_select .= "<option value='".$grow->idx."'>".$grow->name."</option>";
+            }
+
+        }
         
         $data['rows'] = $rows;
         $data['base_url'] = $config['base_url'];
         $data['offset'] = $offset;
         $data['search_vo'] = $search_vo;
+        $data['group_select'] = $group_select;
 
         $this->load->view(LANGUAGE.'/header', $this->head_data);
         $this->load->view(LANGUAGE.'/recipe_list', $data);
