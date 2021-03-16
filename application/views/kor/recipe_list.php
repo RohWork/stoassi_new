@@ -11,17 +11,8 @@
                 <div class="col-sm-2" >
                     <select id="group_select" name="group_select" class="form-control">
                         <option value="0">선택없음</option>
-                        <?php
-                            $group_select = "";
-                            
-                            foreach($group_rows as $grow){
-                                if($grow->idx == $search_vo->group_idx){
-                                    $group_select .= "<option value='".$grow->idx."' selected>".$grow->name."</option>";
-                                }else{
-                                    $group_select .= "<option value='".$grow->idx."'>".$grow->name."</option>";
-                                }
-                                
-                            }
+                        <?php                            
+                            echo $group_select;
                         ?>
                     </select>
                 </div>
