@@ -121,7 +121,7 @@
 					<div class="col-sm-8">
                                             <select id="insert_recipe_group" name="insert_recipe_group">
                                                 <?php
-                                                    var_dump($group_rows);
+                                                    var_dump($grow);
                                                     foreach($group_rows as $grow){
                                                         echo "<option value='".$grow->idx."'>".$grow->name."</option>";
                                                     }
