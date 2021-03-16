@@ -130,6 +130,8 @@
 					<label for="insert_recipe_value" class="col-sm-3 control-label">레시피내용</label>
 					<div class="col-sm-8">
 						
+                                            
+                                            <div>추가</div>
 					</div>
 				</div>
 			</form>
