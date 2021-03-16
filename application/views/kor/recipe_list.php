@@ -169,15 +169,15 @@
         var recipe_val = $("#insert_recipe_value");
         var recipe_html = recipe_val.html();
         
-        recipe_html += "<div>"
-                        +"<span class='form-control>투입재료:</span>"
-                        +"<select class='form-control' id='stock_idx[]' name='stock_idx[]'>"
+        recipe_html += "<div class=row>"
+                        +"<span class='form-control col-md-1'>투입재료:</span>"
+                        +"<select class='form-control  col-md-1' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
                         +"</select>"
-                        +"<input class='form-control' type='text' id='stock_cnt[]' name='stock_cnt[]'/>"
-                        +"<span class='form-control' id='stock_unit[]' name='stock_unit[]'></span>"
-                        +"<span class='form-control'>소요시간:</span>"
-                        +"<span class='form-control' id='recipe_time[]' name='recipe_time[]'></span>"
+                        +"<input class='form-control  col-md-1' type='text' id='stock_cnt[]' name='stock_cnt[]'/>"
+                        +"<span class='form-control  col-md-1' id='stock_unit[]' name='stock_unit[]'></span>"
+                        +"<span class='form-control  col-md-1'>소요시간:</span>"
+                        +"<span class='form-control  col-md-1' id='recipe_time[]' name='recipe_time[]'></span>"
                         +"</div>";
         
         recipe_val.html(recipe_html);
