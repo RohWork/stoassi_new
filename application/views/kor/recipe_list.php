@@ -1,3 +1,9 @@
+<style>
+    .select_font{
+        font-size: 10px;
+    }
+    
+</style>
 
 	<div class="container">
             <div class="page-header">
@@ -171,13 +177,13 @@
         
         recipe_html += "<div class='row'>"
 
-                        +"<label class='control-label col-md-2'>투입재료:</label>"
-                        +"<div class='col-md-3'><select class='form-control  col-md-1' id='stock_idx[]' name='stock_idx[]'>"
+                        +"<label class='control-label col-md-2' select_font>투입재료:</label>"
+                        +"<div class='col-md-3'><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
                         +"</select></div>"
                         +"<div class='col-md-2'><input class='form-control  col-md-1' type='text' id='stock_cnt[]' name='stock_cnt[]'/></div>"
                         +"<div class='col-md-1'><span class='form-control  col-md-1' id='stock_unit[]' name='stock_unit[]'></span</div>"
-                        +"<label class='control-label col-md-2'>소요시간:</label>"
+                        +"<label class='control-label col-md-2 select_font'>소요시간:</label>"
                         +"<div class='col-md-1'><span class='form-control  col-md-1' id='recipe_time[]' name='recipe_time[]'></span></div>"
                         +"</div>";
         
