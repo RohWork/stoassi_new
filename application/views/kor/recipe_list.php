@@ -184,8 +184,6 @@
         var recipe_html = recipe_val.html();
         
         recipe_html += "<tr>"
-
-
                         +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
                         +"</select></td>"
