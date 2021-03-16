@@ -120,7 +120,7 @@
 					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
 					<div class="col-sm-8">
                                             <?php
-                                                var_dump($grow);
+                                                var_dump($group_rows);
                                             ?>
                                             <select id="insert_recipe_group" name="insert_recipe_group">
                                                 <?php
