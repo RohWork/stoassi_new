@@ -139,7 +139,7 @@
                                 <div class="form-group">		
                                         <div class="col-sm-8 col-sm-offset-3" >
                                             <table id="insert_recipe_value" width="100%">
-                                                <tr>
+                                                <tr style="height: 30px;line-height: 30px">
                                                     <th class="select_font" width="30%">투입재료</th>
                                                     <th class="select_font" width="20%">투입량</th>
                                                     <th class="select_font" width="20%">투입단위</th>
