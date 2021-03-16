@@ -12,11 +12,13 @@
                     <select id="group_select" name="group_select" class="form-control">
                         <option value="0">선택없음</option>
                         <?php
+                            $group_select = "";
+                            
                             foreach($group_rows as $grow){
                                 if($grow->idx == $search_vo->group_idx){
-                                    echo "<option value='".$grow->idx."' selected>".$grow->name."</option>";
+                                    $group_select .= "<option value='".$grow->idx."' selected>".$grow->name."</option>";
                                 }else{
-                                    echo "<option value='".$grow->idx."'>".$grow->name."</option>";
+                                    $group_select .= "<option value='".$grow->idx."'>".$grow->name."</option>";
                                 }
                                 
                             }
@@ -119,15 +121,10 @@
                                 <div class="form-group">
 					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
 					<div class="col-sm-8">
-                                            <?php
-                                                var_dump($group_rows);
-                                            ?>
+                                            
                                             <select id="insert_recipe_group" name="insert_recipe_group">
                                                 <?php
-                                                    
-                                                    foreach($group_rows as $grow){
-                                                        echo "<option value='".$grow->idx."'>".$grow->name."</option>";
-                                                    }
+                                                    echo $group_select;
                                                 ?>
                                             </select>
 					</div>
