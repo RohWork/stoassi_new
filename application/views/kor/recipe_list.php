@@ -144,7 +144,7 @@
                                                     <th class="select_font" width="20%">투입재료</th>
                                                     <th class="select_font" width="15%">투입량</th>
                                                     <th class="select_font" width="15%">투입단위</th>
-                                                    <th class="select_font" width="15%">투입후조리시간</th>
+                                                    <th class="select_font" width="15%">소요시간</th>
                                                     <th class="select_font" width="15%" style="text-align: center">제거</th>
                                                 </tr>
                                             </table>
