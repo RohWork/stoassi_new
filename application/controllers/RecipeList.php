@@ -38,7 +38,7 @@ class RecipeList extends CI_Controller {
         $search_vo->state = "Y";
         
         $group_rows = $this->recipe_md->get_group_list(0,$search_vo);
-        $stock_category_info = $this->stock_md->get_category_info();
+        $stock_category_info = $this->stock_md->get_stock_category();
         
         
         $group_select = "";
