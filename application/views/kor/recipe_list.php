@@ -133,7 +133,7 @@
 					</div>
 				</div>
                                 <div class="form-group">
-					<label for="insert_recipe_value" class="col-sm-3 control-label">레시피내용</label>
+					<label for="insert_recipe_value" class="col-sm-2 control-label">레시피내용</label>
                                 </div>
                                 
                                 <div class="form-group">		
