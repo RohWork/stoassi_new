@@ -163,15 +163,19 @@
 		</div>
 	  </div>
 	</div>
+        <?php
+            var_dump($recipe_select);
+        ?>
 </body>
 <script>
 
-
+    
 	
     $(document).ready(function(){
 	$("#group_select").change(function(){
             location.href = "/RecipeList/recipe_list?group_idx="+$("#group_select").val();
         });
+        
         
     });
 
@@ -198,11 +202,7 @@
                         +"</tr>";
         
         recipe_val.html(recipe_html);
-        
-        
-        
-        
-        
+
     }
 
     function detail_group_show(idx){
