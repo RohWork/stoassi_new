@@ -167,7 +167,7 @@
 </body>
 <script>
     
-    var stock_info_array = new array();
+    var stock_info_array = new Array();
     
 	
     $(document).ready(function(){
