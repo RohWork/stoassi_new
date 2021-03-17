@@ -116,7 +116,7 @@
 		  <div class="modal-body">
 			<form id="group_insert_form" name="group_insert_form" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="form-group">
-					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리</label>
+					<label for="insert_recipe_group" class="col-sm-2 control-label">카테고리</label>
 					<div class="col-sm-4">
                                             
                                             <select id="insert_recipe_group" name="insert_recipe_group" class="form-control">
