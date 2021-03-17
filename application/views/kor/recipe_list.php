@@ -164,7 +164,7 @@
 	  </div>
 	</div>
         <?php
-            var_dump($recipe_select);
+            var_dump($stock_select);
         ?>
 </body>
 <script>
