@@ -223,7 +223,7 @@ class Stock_model extends CI_Model {
         $this->db->update('stock_seller_info',$data);
     }
     
-    function get_stock_info_array(){
+    function get_stock_info_array($where){
         $this->db->select("si.*");
         $this->db->from("stock_info si");
         $this->db->where($where);
