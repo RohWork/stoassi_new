@@ -7,7 +7,7 @@ class RecipeList extends CI_Controller {
             $this->head_data = header_set("recipe_list");
 
             $this->load->model('Recipe_model', 'recipe_md', TRUE);
-            
+            $this->load->model('Stock_model', 'stock_md', TRUE);
         }
 
  public function recipe_list(){
@@ -38,6 +38,8 @@ class RecipeList extends CI_Controller {
         $search_vo->state = "Y";
         
         $group_rows = $this->recipe_md->get_group_list(0,$search_vo);
+        $stock_category_info = $this->stock_md->get_category_info();
+        
         
         $group_select = "";
         
