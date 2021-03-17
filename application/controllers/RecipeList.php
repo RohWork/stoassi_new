@@ -55,9 +55,7 @@ class RecipeList extends CI_Controller {
         }
         
         foreach($stock_category_info as $srow){
-            if($grow->idx == $search_vo->group_idx){
-                $scategory_select .= "<option value='".$grow->idx."'>".$grow->name."</option>";
-            }
+                $scategory_select .= "<option value='".$srow->idx."'>".$srow->name."</option>";
         }
         
         $data['rows'] = $rows;
