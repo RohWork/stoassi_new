@@ -42,6 +42,7 @@ class RecipeList extends CI_Controller {
         
         
         $group_select = "";
+        $scategory_select = "";
         
         foreach($group_rows as $grow){
             
