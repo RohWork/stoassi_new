@@ -186,6 +186,9 @@
         
         recipe_html += "<tr>"
                         +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
+                        +  "<option value='1'>그룹명</option>"
+                        +"</select></td>"
+                        +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
                         +  "<option value='1'>진간장</option>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
