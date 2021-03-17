@@ -224,8 +224,8 @@ class Stock_model extends CI_Model {
     }
     
     function get_stock_info_array($where){
-        $this->db->select("si.*");
-        $this->db->from("stock_info si");
+        $this->db->select("*");
+        $this->db->from("stock_info");
         $this->db->where($where);
         return $this->db->get()->result();
     }
