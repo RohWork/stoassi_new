@@ -163,12 +163,11 @@
 		</div>
 	  </div>
 	</div>
-        <?php
-            var_dump($stock_select);
-        ?>
+        
 </body>
 <script>
-
+    
+    var stock_info_array = array();
     
 	
     $(document).ready(function(){
@@ -176,6 +175,14 @@
             location.href = "/RecipeList/recipe_list?group_idx="+$("#group_select").val();
         });
         
+        <?php
+           for($i=0;$i<count($stock_select_key);$i++){ 
+              $key =  $stock_select_key[$i];
+        ?>    
+              stock_info_array[<?=$key?>] = "<?=$stock_select[$key]?>";  
+         <?php     
+           }
+        ?>
         
     });
 
