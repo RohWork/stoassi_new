@@ -53,12 +53,19 @@ class RecipeList extends CI_Controller {
 
         }
         
+        foreach($stock_category_info as $srow){
+            if($grow->idx == $search_vo->group_idx){
+                $scategory_select .= "<option value='".$grow->idx."'>".$grow->name."</option>";
+            }
+        }
+        
         $data['rows'] = $rows;
         $data['base_url'] = $config['base_url'];
         $data['offset'] = $offset;
         $data['search_vo'] = $search_vo;
         $data['group_select'] = $group_select;
-
+        $data['scategory_select'] = $scategory_select;
+        
         $this->load->view(LANGUAGE.'/header', $this->head_data);
         $this->load->view(LANGUAGE.'/recipe_list', $data);
     }
