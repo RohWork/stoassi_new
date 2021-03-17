@@ -41,8 +41,6 @@ class RecipeList extends CI_Controller {
         $stock_category_info = $this->stock_md->get_stock_category();
         $stock_info = $this->stock_md->get_stock_info_array("state = 1");
         
-        var_dump($stock_info);
-        
         $group_select = "";
         $scategory_select = "";
         $stock_select = array();
