@@ -116,7 +116,7 @@
 		  <div class="modal-body">
 			<form id="group_insert_form" name="group_insert_form" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="form-group">
-					<label for="insert_recipe_group" class="col-sm-3 control-label">카테고리명</label>
+					<label for="insert_recipe_group" class="col-sm-2 control-label">카테고리명</label>
 					<div class="col-sm-4">
                                             
                                             <select id="insert_recipe_group" name="insert_recipe_group" class="form-control">
@@ -127,8 +127,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="insert_recipe_name" class="col-sm-3 control-label">레시피명</label>
-					<div class="col-sm-8">
+					<label for="insert_recipe_name" class="col-sm-2 control-label">레시피명</label>
+					<div class="col-sm-9">
 						<input type="text" id="insert_recipe_name" name="insert_recipe_name" class="form-control"/>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
                                 </div>
                                 
                                 <div class="form-group">		
-                                        <div class="col-sm-8 col-sm-offset-3" >
+                                        <div class="col-sm-9 col-sm-offset-2" >
                                             <table id="insert_recipe_value" width="100%">
                                                 <tr style="height: 30px;line-height: 30px">
                                                     <th class="select_font" width="30%">투입재료</th>
@@ -148,7 +148,7 @@
                                                 </tr>
                                             </table>
 					</div>
-                                        <div class="col-sm-8 col-sm-offset-3" style="text-align: center;margin-top: 10px">
+                                        <div class="col-sm-9 col-sm-offset-2" style="text-align: center;margin-top: 10px">
                                             <span class="form-control" style="cursor: pointer" onclick="recipe_val_add()">추가</span>
                                         </div>
                                     <input type="hidden" id="insert_recipe_cnt" name="insert_recipe_cnt" value="0"/>
