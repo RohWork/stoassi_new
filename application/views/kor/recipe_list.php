@@ -183,9 +183,7 @@
          <?php     
            }
         ?>
-                
-         console.log(stock_info_array);
-        
+                        
     });
 
     $("#input_button").click(function(){
