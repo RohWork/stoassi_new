@@ -44,7 +44,7 @@ class RecipeList extends CI_Controller {
         
         $group_select = "";
         $scategory_select = "";
-        $recipe_select = array();
+        $stock_select = array();
         
         foreach($group_rows as $grow){
             
@@ -60,8 +60,8 @@ class RecipeList extends CI_Controller {
             $scategory_select .= "<option value='".$srow->idx."'>".$srow->name."</option>";
         }
         
-        foreach($stock_info as $srow){
-            $recipe_select[$srow->stock_category_idx] .= "<option value='".$srow->idx."'>".$srow->name."</option>";
+        foreach($stock_info as $strow){
+            $stock_select[$strow->stock_category_idx] .= "<option value='".$strow->idx."'>".$strow->name."</option>";
         }
         
         $data['rows'] = $rows;
@@ -71,7 +71,7 @@ class RecipeList extends CI_Controller {
         $data['group_select'] = $group_select;
         $data['scategory_select'] = $scategory_select;
         $data['stock_info'] = $stock_info;
-        $data['recipe_select'] = $recipe_select;
+        $data['stocke_select'] = $stock_select;
         
         $this->load->view(LANGUAGE.'/header', $this->head_data);
         $this->load->view(LANGUAGE.'/recipe_list', $data);
