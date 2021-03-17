@@ -60,7 +60,7 @@ class RecipeList extends CI_Controller {
         }
         
         foreach($stock_info as $strow){
-            if($stock_select[$strow->stock_category_idx] == null){
+            if(empty($stock_select[$strow->stock_category_idx])){
                 $stock_select[$strow->stock_category_idx] = "<option value='".$strow->idx."'>".$strow->name."</option>";
             }else{
                 $stock_select[$strow->stock_category_idx] .= "<option value='".$strow->idx."'>".$strow->name."</option>";
