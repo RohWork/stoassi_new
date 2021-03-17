@@ -183,6 +183,8 @@
          <?php     
            }
         ?>
+                
+         console.log(stock_info_array);
         
     });
 
