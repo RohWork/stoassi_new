@@ -196,11 +196,10 @@
         var recipe_html = recipe_val.html();
         
         recipe_html += "<tr>"
-                        +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
+                        +"<td><select class='form-control select_font' id='stock_category' name='stock_category[]'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_idx[]' name='stock_idx[]'>"
-                        +  "<option value='1'>진간장</option>"
+                        +"<td><select class='form-control select_font' id='stock_info' name='stock_info[]'>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></td>"
@@ -211,6 +210,12 @@
         recipe_val.html(recipe_html);
 
     }
+    
+    function stock_info_set(idx){
+        
+        
+    }
+    
 
     function detail_group_show(idx){
         var params =  {
