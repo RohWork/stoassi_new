@@ -43,8 +43,8 @@ class RecipeList extends CI_Controller {
         
         $group_select = "";
         $scategory_select = "";
-        $stock_select = array();
-        $stock_unit = array();
+        $stock_data = array();
+
         
         foreach($group_rows as $grow){
             
@@ -68,13 +68,13 @@ class RecipeList extends CI_Controller {
                                                     "unit"  => $strow->unit,
                                             );  
             if(empty($stock_select[$strow->stock_category_idx])){
-                $stock_select[$strow->stock_category_idx] = array();
+                $stock_data[$strow->stock_category_idx] = array();
             }
             
-            array_push($stock_select[$strow->stock_category_idx], $array_unit);
+            array_push($stock_data[$strow->stock_category_idx], $array_unit);
         }
         
-        var_dump($stock_select);
+
         
         $data['rows'] = $rows;
         $data['base_url'] = $config['base_url'];
@@ -83,8 +83,7 @@ class RecipeList extends CI_Controller {
         $data['group_select'] = $group_select;
         $data['scategory_select'] = $scategory_select;
         $data['stock_info'] = $stock_info;
-        $data['stock_select'] = $stock_select;
-        $data['stock_unit'] = $stock_unit;
+        $data['stock_data'] = $stock_data;
         $data['stock_select_key'] = array_keys($stock_select);
         
         $this->load->view(LANGUAGE.'/header', $this->head_data);
