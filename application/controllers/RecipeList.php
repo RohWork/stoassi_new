@@ -74,8 +74,6 @@ class RecipeList extends CI_Controller {
             array_push($stock_data[$strow->stock_category_idx], $array_unit);
         }
         
-        var_dump($stock_data);
-
         
         $data['rows'] = $rows;
         $data['base_url'] = $config['base_url'];
