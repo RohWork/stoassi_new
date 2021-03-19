@@ -61,13 +61,17 @@ class RecipeList extends CI_Controller {
         }
         
         foreach($stock_info as $strow){
-            if(empty($stock_select[$strow->stock_category_idx])){
-                $stock_select[$strow->stock_category_idx] = "<option value='".$strow->idx."'>".$strow->name."</option>";
-            }else{
-                $stock_select[$strow->stock_category_idx] .= "<option value='".$strow->idx."'>".$strow->name."</option>";
-            }
-            $stock_unit[$strow->idx] = $strow->unit;
+            
+            $array_unit = array();
+            $array_unit[$strow->idx] = array(
+                                                    "name" => $strow->name,
+                                                    "unit" => $strow->unit,
+                                            );  
+            
+            array_push($stock_select[$strow->stock_category_idx], $array_unit);
         }
+        
+        var_dump($stock_select);
         
         $data['rows'] = $rows;
         $data['base_url'] = $config['base_url'];
