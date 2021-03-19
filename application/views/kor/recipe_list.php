@@ -176,7 +176,7 @@
         
         stock_info_array = <?=json_encode($stock_data)?>;
         
-        console.log(stock_info_array);
+        //console.log(stock_info_array);
     });
 
     $("#input_button").click(function(){
