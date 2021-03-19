@@ -174,7 +174,7 @@
             location.href = "/RecipeList/recipe_list?group_idx="+$("#group_select").val();
         });
         
-        stock_info_array = <?=json_encode($stock_info)?>;
+        stock_info_array = <?=json_encode($stock_data)?>;
         
         console.log(stock_info_array);
     });
