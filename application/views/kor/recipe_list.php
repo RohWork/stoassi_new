@@ -184,7 +184,7 @@
            }
         ?>
         
-        console.log(stock_info_array);
+        console.log(stock_info_array[1]);
     });
 
     $("#input_button").click(function(){
