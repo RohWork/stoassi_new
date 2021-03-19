@@ -67,7 +67,9 @@ class RecipeList extends CI_Controller {
                                                     "name" => $strow->name,
                                                     "unit" => $strow->unit,
                                             );  
-            $stock_select[$strow->stock_category_idx] = array();
+            if(empty($stock_select[$strow->stock_category_idx])){
+                $stock_select[$strow->stock_category_idx] = array();
+            }
             
             array_push($stock_select[$strow->stock_category_idx], $array_unit);
         }
