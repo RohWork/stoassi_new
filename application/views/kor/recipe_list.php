@@ -207,7 +207,16 @@
     
     function stock_info_set(idx){
         
+
+        
         $("#stock_info").html("");
+        
+        var stock_category_data = stock_info_array[idx];
+        
+        
+        for(var i=0;i<count(stock_category_data);i++){
+            console.log(stock_category_data[i]);
+        }
         
         $("#stock_info").html(stock_info_array[idx]);
         
