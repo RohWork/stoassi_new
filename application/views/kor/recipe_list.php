@@ -220,7 +220,7 @@
             stock_select .= "<option value="+row['idx']+">"+row['name']+"</optio>";
         }
         
-        $("#stock_info").html(stock_info_array[idx]);
+        $("#stock_info").html(stock_select);
         
     }
     function stock_unit_set(idx){
