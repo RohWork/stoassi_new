@@ -74,6 +74,7 @@ class RecipeList extends CI_Controller {
             array_push($stock_data[$strow->stock_category_idx], $array_unit);
         }
         
+        console.log($stock_data);
 
         
         $data['rows'] = $rows;
@@ -84,6 +85,7 @@ class RecipeList extends CI_Controller {
         $data['scategory_select'] = $scategory_select;
         $data['stock_info'] = $stock_info;
         $data['stock_data'] = $stock_data;
+
         
         $this->load->view(LANGUAGE.'/header', $this->head_data);
         $this->load->view(LANGUAGE.'/recipe_list', $data);
