@@ -74,7 +74,7 @@ class RecipeList extends CI_Controller {
             array_push($stock_data[$strow->stock_category_idx], $array_unit);
         }
         
-        console.log($stock_data);
+        var_dump($stock_data);
 
         
         $data['rows'] = $rows;
