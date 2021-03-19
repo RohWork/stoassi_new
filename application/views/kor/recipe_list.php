@@ -215,7 +215,7 @@
         var stock_select = "";
         
         for(var i=0;i<stock_category_data.length;i++){
-            var row = stock_category_data;
+            var row = stock_category_data[i];
             
             stock_select += "<option value="+row['idx']+">"+row['name']+"</optio>";
         }
