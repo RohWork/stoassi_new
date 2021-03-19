@@ -184,7 +184,6 @@
            }
         ?>
         
-        console.log(stock_info_array[1]);
     });
 
     $("#input_button").click(function(){
@@ -213,7 +212,7 @@
     }
     
     function stock_info_set(idx){
-        
+        $("#stock_info").html(stock_info_array[idx]);
         
     }
     
