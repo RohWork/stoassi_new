@@ -167,23 +167,16 @@
 </body>
 <script>
     
-    var stock_info_array = new Array();
-    
+    var stock_info_array;
 	
     $(document).ready(function(){
 	$("#group_select").change(function(){
             location.href = "/RecipeList/recipe_list?group_idx="+$("#group_select").val();
         });
         
-        <?php
-           for($i=0;$i<count($stock_select_key);$i++){ 
-              $key =  $stock_select_key[$i];
-        ?>    
-              stock_info_array[<?=$key?>] = "<?=$stock_select[$key]?>";  
-         <?php     
-           }
-        ?>
+        stock_info_array = json_encode(<?=$stock_info?>);
         
+        console.log(stock_info_array);
     });
 
     $("#input_button").click(function(){
@@ -199,10 +192,10 @@
                         +"<td><select class='form-control select_font' id='stock_category' name='stock_category[]' onchange='stock_info_set(this.value)'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_info' name='stock_info[]'>"
+                        +"<td><select class='form-control select_font' id='stock_info' name='stock_info[]' onchange='stock_unit_set(this.value)'>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
-                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]'></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]' readonly></td>"
                         +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></td>"
                         +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
                         +"</tr>";
@@ -217,6 +210,10 @@
         $("#stock_info").html("");
         
         $("#stock_info").html(stock_info_array[idx]);
+        
+    }
+    function stock_unit_set(idx){
+        
         
     }
     
