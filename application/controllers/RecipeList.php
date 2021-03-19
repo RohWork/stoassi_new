@@ -63,9 +63,9 @@ class RecipeList extends CI_Controller {
         foreach($stock_info as $strow){
             
             $array_unit = array();
-            $array_unit[$strow->idx] = array(
-                                                    "name" => $strow->name,
-                                                    "unit" => $strow->unit,
+            $array_unit = array(                   "idx"   => $strow->idx, 
+                                                    "name"  => $strow->name,
+                                                    "unit"  => $strow->unit,
                                             );  
             if(empty($stock_select[$strow->stock_category_idx])){
                 $stock_select[$strow->stock_category_idx] = array();
