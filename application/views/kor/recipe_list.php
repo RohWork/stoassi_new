@@ -196,7 +196,7 @@
         var recipe_html = recipe_val.html();
         
         recipe_html += "<tr>"
-                        +"<td><select class='form-control select_font' id='stock_category' name='stock_category[]' onchange='stock_info_set(this.val())'>"
+                        +"<td><select class='form-control select_font' id='stock_category' name='stock_category[]' onchange='stock_info_set(this.value)'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
                         +"<td><select class='form-control select_font' id='stock_info' name='stock_info[]'>"
