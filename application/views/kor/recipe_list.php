@@ -214,7 +214,7 @@
         var stock_category_data = stock_info_array[idx];
         var stock_select = "";
         
-        if(!stock_category_data.empty()){
+        if(Array.isArray(stock_category_data)){
             for(var i=0;i<stock_category_data.length;i++){
                 var row = stock_category_data[i];
 
