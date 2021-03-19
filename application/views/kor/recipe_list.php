@@ -214,7 +214,7 @@
         var stock_category_data = stock_info_array[idx];
         
         
-        for(var i=0;i<count(stock_category_data);i++){
+        for(var i=0;i<stock_category_data.length;i++){
             console.log(stock_category_data[i]);
         }
         
