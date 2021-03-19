@@ -212,12 +212,12 @@
         $("#stock_info").html("");
         
         var stock_category_data = stock_info_array[idx];
-        var stock_select ="";
+        var stock_select = "";
         
         for(var i=0;i<stock_category_data.length;i++){
             var row = stock_category_data;
             
-            stock_select .= "<option value="+row['idx']+">"+row['name']+"</optio>";
+            stock_select += "<option value="+row['idx']+">"+row['name']+"</optio>";
         }
         
         $("#stock_info").html(stock_select);
