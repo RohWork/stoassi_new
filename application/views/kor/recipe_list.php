@@ -208,10 +208,14 @@
                         +"</tr>";
         
         recipe_val.html(recipe_html);
-
+     
+        stock_info_set(1);
     }
     
     function stock_info_set(idx){
+        
+        $("#stock_info").html("");
+        
         $("#stock_info").html(stock_info_array[idx]);
         
     }
