@@ -84,7 +84,6 @@ class RecipeList extends CI_Controller {
         $data['scategory_select'] = $scategory_select;
         $data['stock_info'] = $stock_info;
         $data['stock_data'] = $stock_data;
-        $data['stock_select_key'] = array_keys($stock_select);
         
         $this->load->view(LANGUAGE.'/header', $this->head_data);
         $this->load->view(LANGUAGE.'/recipe_list', $data);
