@@ -206,7 +206,6 @@
         recipe_val.html(recipe_html);
      
         stock_info_set(1,stock_info_cnt);
-        stock_unit_set(1,stock_info_cnt);
     }
     
     function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
