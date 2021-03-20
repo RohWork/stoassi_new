@@ -228,6 +228,7 @@
         }else{
             $("#stock_info"+cnt).html("");
         }
+        stock_unit_set($("#stock_info"+stock_info_cnt).val(),stock_info_cnt);
     }
     function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
     
