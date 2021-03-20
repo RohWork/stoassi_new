@@ -190,7 +190,7 @@
         
         var recipe_val = $("#insert_recipe_value");
 
-        var recipe_html  = "<tr>"
+        var recipe_html  = "<tr id='recipe"+stock_info_cnt+"'>"
                         +"<td><select class='form-control select_font' id='stock_category"+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
@@ -199,7 +199,7 @@
                         +"<td><input type='text' class='form-control' id='stock_cnt"+stock_info_cnt+"' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit"+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
                         +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
-                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
+                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_stock("+stock_info_cnt+")'></span></td>"
                         +"</tr>";
         
         recipe_val.append(recipe_html);
@@ -242,7 +242,10 @@
         }
         
     }
+    function delete_stock(idx){
+        $("#recipe"+idx).remove();
     
+    }
 
     function detail_group_show(idx){
         var params =  {
