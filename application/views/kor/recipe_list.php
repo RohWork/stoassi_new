@@ -197,9 +197,9 @@
                         +"</select></td>"
                         +"<td><select class='form-control select_font' id='stock_info"+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
                         +"</select></td>"
-                        +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
-                        +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]' readonly></td>"
-                        +"<td><input type='text' class='form-control  id='recipe_time[]' name='recipe_time[]'></td>"
+                        +"<td><input type='text' class='form-control' id='stock_cnt"+stock_info_cnt+"' name='stock_cnt[]'/></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit"+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]'></td>"
                         +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
                         +"</tr>";
         
@@ -208,7 +208,7 @@
         stock_info_set(1,stock_info_cnt);
     }
     
-    function stock_info_set(idx,cnt){
+    function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
         
         
         
@@ -227,8 +227,20 @@
             $("#stock_info"+cnt).html(stock_select);
         }
     }
-    function stock_unit_set(idx,cnt){
+    function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
+    
+        var sc_idx = $("#stock_category"+cnt).val();
         
+        var stock_category_data = stock_info_array[sc_idx];
+        
+        if(Array.isArray(stock_category_data)){
+            for(var i=0;i<stock_category_data.length;i++){
+                var row = stock_category_data[i];
+                if(row['idx'] == idx){    
+                    $("#stock_unit"+cnt).val(row['unit']);
+                }
+            }
+        }
         
     }
     
