@@ -205,6 +205,7 @@
         recipe_val.append(recipe_html);
      
         stock_info_set(1,stock_info_cnt);
+        stock_unit_set($("#stock_info"+stock_info_cnt).val(),stock_info_cnt);
     }
     
     function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
