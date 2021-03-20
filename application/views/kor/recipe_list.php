@@ -238,10 +238,10 @@
         
 
         var recipe_html  = "<tr id='recipe"+mode+stock_info_cnt+"'>"
-                        +"<td><select class='form-control select_font' id='stock_category"+mode+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
+                        +"<td><select class='form-control select_font' id='stock_category"+mode+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+","+mode+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_info"+mode+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
+                        +"<td><select class='form-control select_font' id='stock_info"+mode+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+","+mode+")'>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt"+mode+stock_info_cnt+"' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit"+mode+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
@@ -251,13 +251,13 @@
         
         recipe_val.append(recipe_html);
      
-        stock_info_set(1,stock_info_cnt);
-        stock_unit_set($("#stock_info"+stock_info_cnt).val(),stock_info_cnt);
+        stock_info_set(1,stock_info_cnt,mode);
+        stock_unit_set($("#stock_info"+stock_info_cnt).val(),stock_info_cnt,mode);
     }
     
-    function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
+    function stock_info_set(idx,cnt,mode){   //카테고리 선택시 투입재료 셀렉트박스 생성
 
-        $("#stock_info").html("");
+        $("#stock_info"+mode+cnt).html("");
         
         var stock_category_data = stock_info_array[idx];
         var stock_select = "";
@@ -269,16 +269,16 @@
                 stock_select += "<option value="+row['idx']+">"+row['name']+"</option>";
             }
         
-            $("#stock_info"+cnt).html(stock_select);
+            $("#stock_info"+mode+cnt).html(stock_select);
         }else{
-            $("#stock_info"+cnt).html("");
+            $("#stock_info"+mode+cnt).html("");
         }
-        stock_unit_set($("#stock_info"+cnt).val(),cnt);
+        stock_unit_set($("#stock_info"+mode+cnt).val(),cnt,mode);
     }
     
-    function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
+    function stock_unit_set(idx,cnt,mode){   //투입재료 선택시 투입단위 추가
     
-        var sc_idx = $("#stock_category"+cnt).val();
+        var sc_idx = $("#stock_category"+mode+cnt).val();
         
         var stock_category_data = stock_info_array[sc_idx];
         
@@ -286,7 +286,7 @@
             for(var i=0;i<stock_category_data.length;i++){
                 var row = stock_category_data[i];
                 if(row['idx'] == idx){    
-                    $("#stock_unit"+cnt).val(row['unit']);
+                    $("#stock_unit"+mode+cnt).val(row['unit']);
                 }
             }
         }
