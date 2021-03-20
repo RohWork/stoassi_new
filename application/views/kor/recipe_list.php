@@ -114,7 +114,7 @@
 			<h4 class="modal-title" id="myModalLabel">레시피추가</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="group_insert_form" name="group_insert_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="recipe_insert_form" name="recipe_insert_form" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="form-group">
 					<label for="insert_recipe_group" class="col-sm-2 control-label">카테고리</label>
 					<div class="col-sm-4">
@@ -199,7 +199,7 @@
                         +"<td><input type='text' class='form-control' id='stock_cnt"+stock_info_cnt+"' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit"+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
                         +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
-                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_stock("+stock_info_cnt+")'></span></td>"
+                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+")'></span></td>"
                         +"</tr>";
         
         recipe_val.append(recipe_html);
@@ -246,9 +246,45 @@
         }
         
     }
-    function delete_stock(idx){
+    function delete_recipe(idx){
         $("#recipe"+idx).remove();
     }
+
+    function recipe_insert(){
+
+        var recipe_name = $("#insert_recipe_name");
+        
+		
+        if(recipe_name.val() == ""){
+            alert("레시피명을 입력하시기 바랍니다.");
+            recipe_name.focus();
+            return;
+        }
+		
+        var form = $("#recipe_insert_form");
+
+        $.ajax({
+            url:'/RecipeList/set_recipe',
+            type:'post',
+            data:form.serialize()+"&stock_info_cnt="+stock_info_cnt,
+            dataType: 'json',
+            success:function(data){
+
+                if(data.code == 200){
+                        location.reload();
+                }
+            },
+            error: function(xhr,status,error) {
+                console.log(xhr,status,error);
+                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                return false;
+            }	 
+        });
+
+    }
+
+
+
 
     function detail_group_show(idx){
         var params =  {
@@ -286,38 +322,7 @@
     }
 
 
-  function group_insert(){
-
-        var group_name = $("#insert_group_name");
-
-		
-        if(group_name.val() == ""){
-            alert("그룹명을 입력하시기 바랍니다.");
-            group_name.focus();
-            return;
-        }
-		
-        var form = $("#group_insert_form");
-
-        $.ajax({
-            url:'/RecipeGroup/set_group',
-            type:'post',
-            data:form.serialize(),
-            dataType: 'json',
-            success:function(data){
-
-                if(data.code == 200){
-                        location.reload();
-                }
-            },
-            error: function(xhr,status,error) {
-                console.log(xhr,status,error);
-                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                return false;
-            }	 
-        });
-
-    }
+  
     
     
     function group_update(){
