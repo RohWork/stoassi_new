@@ -189,7 +189,7 @@
         $("#insert_recipe_name").val("");
         
         for(var i=1;i<=stock_info_cnt;i++){
-            $("#recipe"+idx).remove();
+            $("#recipe"+i).remove();
         }
     }
     
