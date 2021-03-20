@@ -95,8 +95,11 @@ class RecipeList extends CI_Controller {
         $message = '';
         
         $vo = array();
+        $vo_process = array();
         
         $vo['name'] = $this->input->post("insert_recipe_name");
+        $vo['group_idx'] = $this->input->post("insert_recipe_group");
+        
         $vo['shop_idx'] = $data['writer'] = $this->session->userdata("shop_idx");
                 
         if (empty($vo['name'])){
@@ -104,28 +107,34 @@ class RecipeList extends CI_Controller {
             $message = 'insert_recipe_name 변수의 요청이 올바르지 않습니다.';
         }else{
             
-            $vo['stock_category'] = $this->input->post("stock_category");
-            $vo['stock_info'] = $this->input->post("stock_info");
-            $vo['stock_cnt'] = $this->input->post("stock_cnt");
-            $vo['stock_unit'] = $this->input->post("stock_unit");
-            $vo['recipe_time'] = $this->input->post("recipe_time");
-            
-            var_dump($vo);
-            
-            
-            
+            $stock_category_array   = $this->input->post("stock_category");
+            $stock_info_array       = $this->input->post("stock_info");
+            $stock_cnt_array        = $this->input->post("stock_cnt");
+            $stock_unit_array       = $this->input->post("stock_unit");
+            $recipe_time_array      = $this->input->post("recipe_time");
+
+
             $this->db->trans_begin();
 			
-            //$this->recipe_md->insert_group($vo);
-
+            $vo_process['recipe_idx'] = $this->recipe_md->insert_recipe($vo);
+            
+            for($i=0;$i<count($stock_info_array);$i++){
+                
+                $vo_process['stock_idx'] = $stock_info_array[$i];
+                $vo_process['order_num'] = $i;
+                $vo_process['stock_input'] = $stock_cnt_array[$i];
+                $vo_process['set_time'] = $recipe_time_array[$i];
+                
+                $this->recipe_md->insert_process($vo_process);
+            }
             if ($this->db->trans_status() === FALSE) {
                     $this->db->trans_rollback();
                     $code = 400;
-                    $message = "타입 추가 실패";
+                    $message = "레시피 추가 실패";
             } else {
                     $this->db->trans_commit();
                     $code = 200;
-                    $message = '타입 추가 완료';
+                    $message = '레시피 추가 완료';
             }
 
             
