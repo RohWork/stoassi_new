@@ -205,7 +205,7 @@
         
         recipe_val.html(recipe_html);
      
-        stock_info_set(1);
+        stock_info_set(1,stock_info_cnt);
     }
     
     function stock_info_set(idx,cnt){
