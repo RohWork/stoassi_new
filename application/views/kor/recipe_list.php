@@ -47,7 +47,7 @@
                                                     <td><?=$row->name?></td>
                                                     <td><?=date('Y-m-d', strtotime($row->modi_date))?></td>
                                                     <td><?=$row->state == "Y" ? "사용" : "사용안함" ?></td>
-                                                    <td><button type="button" id="modi_button" onclick="detail_group_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
+                                                    <td><button type="button" id="modi_button" onclick="detail_recipe_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
                                             </tr>
                                     <?php
                                             $no++;
@@ -197,23 +197,46 @@
     var stock_info_array;
     var stock_insert_cnt = 0;
     var stock_update_cnt = 0;
-	
+    var mode = "insert";
+    
+
     $(document).ready(function(){
+        
 	$("#group_select").change(function(){
             location.href = "/RecipeList/recipe_list?group_idx="+$("#group_select").val();
         });
         
         stock_info_array = <?=json_encode($stock_data)?>;
-        
-        //console.log(stock_info_array);
+
     });
 
     $("#input_button").click(function(){
         stock_insert_cnt = 0;
+        mode = "insert";
         $("#modal_recipe_insert").modal('show');
     });
     
-    function reset_insert(mode){
+    function detail_recipe_show(idx){
+        
+        var params =  {
+                "idx" : idx
+        };
+        /*$.ajax({
+            url:'/RecipeList/get_recipe_info',
+            type:'post',
+            data:params,
+            success:function(data){
+                set_detail_modal(data.result);
+            }
+        });*/
+
+        stock_update_cnt = 0;
+        mode = "update";
+        $("#modal_recipe_detail").modal('show');
+    }
+
+    
+    function reset_insert(){
         
         $("#insert_recipe_name").val("");
         var scnt;
@@ -249,27 +272,27 @@
 
         
 
-        var recipe_html  = "<tr id='recipe"+mode+stock_info_cnt+"'>"
-                        +"<td><select class='form-control select_font' id='stock_category"+mode+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+","+mode+")'>"
+        var recipe_html  = "<tr id='recipe_"+mode+stock_info_cnt+"'>"
+                        +"<td><select class='form-control select_font' id='stock_category_"+mode+stock_info_cnt+"' name='+"mode"+_stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_info"+mode+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+","+mode+")'>"
+                        +"<td><select class='form-control select_font' id='stock_info_"+mode+stock_info_cnt+"' name='+"mode"+_stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
                         +"</select></td>"
-                        +"<td><input type='text' class='form-control' id='stock_cnt"+mode+stock_info_cnt+"' name='stock_cnt[]'/></td>"
-                        +"<td><input type='text' class='form-control' id='stock_unit"+mode+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
-                        +"<td><input type='text' class='form-control  id='recipe_time"+mode+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
-                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+","+mode+")'></span></td>"
+                        +"<td><input type='text' class='form-control' id='stock_cnt_"+mode+stock_info_cnt+"' name='+"mode"+_stock_cnt[]'/></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit_"+mode+stock_info_cnt+"' name='+"mode"+_stock_unit[]' readonly></td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time_"+mode+stock_info_cnt+"' name='+"mode"+_recipe_time[]' value=0></td>"
+                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+")'></span></td>"
                         +"</tr>";
         
         recipe_val.append(recipe_html);
      
-        stock_info_set(1,stock_info_cnt,mode);
-        stock_unit_set($("#stock_info"+stock_info_cnt).val(),stock_info_cnt,mode);
+        stock_info_set(1,stock_info_cnt);
+        stock_unit_set($("#stock_info_"+mode+stock_info_cnt).val(),stock_info_cnt);
     }
     
-    function stock_info_set(idx,cnt,mode){   //카테고리 선택시 투입재료 셀렉트박스 생성
+    function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
 
-        $("#stock_info"+mode+cnt).html("");
+        $("#stock_info_"+mode+cnt).html("");
         
         var stock_category_data = stock_info_array[idx];
         var stock_select = "";
@@ -281,16 +304,16 @@
                 stock_select += "<option value="+row['idx']+">"+row['name']+"</option>";
             }
         
-            $("#stock_info"+mode+cnt).html(stock_select);
+            $("#stock_info_"+mode+cnt).html(stock_select);
         }else{
-            $("#stock_info"+mode+cnt).html("");
+            $("#stock_info_"+mode+cnt).html("");
         }
-        stock_unit_set($("#stock_info"+mode+cnt).val(),cnt,mode);
+        stock_unit_set($("#stock_info_"+mode+cnt).val(),cnt,mode);
     }
     
-    function stock_unit_set(idx,cnt,mode){   //투입재료 선택시 투입단위 추가
+    function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
     
-        var sc_idx = $("#stock_category"+mode+cnt).val();
+        var sc_idx = $("#stock_category_"+mode+cnt).val();
         
         var stock_category_data = stock_info_array[sc_idx];
         
@@ -298,14 +321,14 @@
             for(var i=0;i<stock_category_data.length;i++){
                 var row = stock_category_data[i];
                 if(row['idx'] == idx){    
-                    $("#stock_unit"+mode+cnt).val(row['unit']);
+                    $("#stock_unit_"+mode+cnt).val(row['unit']);
                 }
             }
         }
         
     }
-    function delete_recipe(idx,mode){
-        $("#recipe"+mode+idx).remove();
+    function delete_recipe(idx){
+        $("#recipe_"+mode+idx).remove();
     }
 
     function recipe_insert(){
@@ -342,38 +365,20 @@
     }
 
     
-
-
-    function detail_group_show(idx){
-        var params =  {
-                "idx" : idx
-        };
-        $.ajax({
-            url:'/RecipeGroup/get_group_info',
-            type:'post',
-            data:params,
-            success:function(data){
-                set_detail_modal(data.result);
-            }
-    })
-
-            $("#modal_group_detail").modal('show');
-    }
-
     function set_detail_modal(data){
         
-            $("#update_group_idx").val(data.idx);
-            $("#update_group_name").val(data.name);
+            $("#update_recipe_idx").val(data.idx);
+            $("#update_recipe_name").val(data.name);
             
             
             if(data.state == "Y"){
-                $("#group_use_y").prop("checked", true);
+                $("#recipe_use_y").prop("checked", true);
             }else{
-                $("#group_use_n").prop("checked", true);
+                $("#recipe_use_n").prop("checked", true);
             }
             
-
     }
+
 
     function modal_close(id_val){
             $("#"+id_val)[0].reset();
