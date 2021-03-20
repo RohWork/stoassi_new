@@ -184,6 +184,16 @@
         $("#modal_recipe_insert").modal('show');
     });
     
+    function reset_insert(){
+        
+        $("#insert_recipe_name").val("");
+        
+        for(var i=1;i<=stock_info_cnt;i++){
+            $("#recipe"+idx).remove();
+        }
+    }
+    
+    
     function recipe_val_add(){
         
         stock_info_cnt++;
@@ -283,7 +293,7 @@
 
     }
 
-
+    
 
 
     function detail_group_show(idx){
