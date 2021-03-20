@@ -224,6 +224,8 @@
             }
         
             $("#stock_info"+cnt).html(stock_select);
+        }else{
+            $("#stock_info"+cnt).html("");
         }
     }
     function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
@@ -244,7 +246,6 @@
     }
     function delete_stock(idx){
         $("#recipe"+idx).remove();
-    
     }
 
     function detail_group_show(idx){
