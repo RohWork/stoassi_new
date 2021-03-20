@@ -74,25 +74,53 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">그룹상세화면</h4>
+			<h4 class="modal-title" id="myModalLabel">레시피상세화면</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="group_update_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="recipe_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">그룹명</label>
-					<div class="col-sm-8">
-						<input type="hidden" id="update_group_idx" name="update_group_idx"/>
-						<input type="text" id="update_group_name" name="update_group_name" class="form-control"/>
+					<label for="update_recipe_group" class="col-sm-2 control-label">카테고리</label>
+					<div class="col-sm-4">
+                                            
+                                            <select id="update_recipe_group" name="update_recipe_group" class="form-control">
+                                                <?php
+                                                    echo $group_select;
+                                                ?>
+                                            </select>
 					</div>
 				</div>
+                                <div class="form-group">
+					<label for="update_recipe_name" class="col-sm-2 control-label">레시피명</label>
+					<div class="col-sm-9">
+						<input type="text" id="update_recipe_name" name="update_recipe_name" class="form-control"/>
+					</div>
+				</div>
+                                <div class="form-group">		
+                                        <div class="col-sm-9 col-sm-offset-2" >
+                                            <table id="update_recipe_value" width="100%">
+                                                <tr style="height: 30px;line-height: 30px">
+                                                    <th class="select_font" width="20%">재료그룹</th>
+                                                    <th class="select_font" width="20%">투입재료</th>
+                                                    <th class="select_font" width="15%">투입량</th>
+                                                    <th class="select_font" width="15%">투입단위</th>
+                                                    <th class="select_font" width="15%">소요시간</th>
+                                                    <th class="select_font" width="15%" style="text-align: center">제거</th>
+                                                </tr>
+                                            </table>
+					</div>
+                                        <div class="col-sm-9 col-sm-offset-2" style="text-align: center;margin-top: 10px">
+                                            <span class="form-control" style="cursor: pointer" onclick="recipe_val_add('update')">추가</span>
+                                        </div>
+				</div>
+                                
 				<div class="form-group">
-					<label for="update_group_useyn" class="col-sm-3 control-label">사용여부</label>
+					<label for="update_recipe_useyn" class="col-sm-3 control-label">사용여부</label>
 					<div class="col-sm-9">
 						<label class="radio-inline">
-						<input type="radio" name="update_group_useyn" id="group_use_y" value='Y'>사용
+						<input type="radio" name="update_recipe_useyn" id="recipe_use_y" value='Y'>사용
 						</label>
 						<label class="radio-inline">
-						<input type="radio" name="update_group_useyn" id="group_use_n" value='N'>사용안함
+						<input type="radio" name="update_recipe_useyn" id="recipe_use_n" value='N'>사용안함
 						</label>
 					</div>
 				</div>
@@ -150,9 +178,8 @@
                                             </table>
 					</div>
                                         <div class="col-sm-9 col-sm-offset-2" style="text-align: center;margin-top: 10px">
-                                            <span class="form-control" style="cursor: pointer" onclick="recipe_val_add()">추가</span>
+                                            <span class="form-control" style="cursor: pointer" onclick="recipe_val_add('insert')">추가</span>
                                         </div>
-                                    <input type="hidden" id="insert_recipe_cnt" name="insert_recipe_cnt" value="0"/>
 				</div>
 			</form>
 		  </div>
@@ -168,7 +195,8 @@
 <script>
     
     var stock_info_array;
-    var stock_info_cnt = 0;
+    var stock_insert_cnt = 0;
+    var stock_update_cnt = 0;
 	
     $(document).ready(function(){
 	$("#group_select").change(function(){
@@ -181,6 +209,7 @@
     });
 
     $("#input_button").click(function(){
+        stock_info_cnt = 0;
         $("#modal_recipe_insert").modal('show');
     });
     
@@ -194,22 +223,30 @@
     }
     
     
-    function recipe_val_add(){
+    function recipe_val_add(mode){
         
-        stock_info_cnt++;
+        var recipe_val;
         
-        var recipe_val = $("#insert_recipe_value");
+        if(mode == "insert"){
+            recipe_val = $("#insert_recipe_value");
+            stock_insert_cnt++;
+        }else{
+            recipe_val = $("#update_recipe_value");
+            stock_update_cnt++;
+        }
 
-        var recipe_html  = "<tr id='recipe"+stock_info_cnt+"'>"
-                        +"<td><select class='form-control select_font' id='stock_category"+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
+        
+
+        var recipe_html  = "<tr id='recipe"+mode+stock_info_cnt+"'>"
+                        +"<td><select class='form-control select_font' id='stock_category"+mode+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_info"+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
+                        +"<td><select class='form-control select_font' id='stock_info"+mode+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
                         +"</select></td>"
-                        +"<td><input type='text' class='form-control' id='stock_cnt"+stock_info_cnt+"' name='stock_cnt[]'/></td>"
-                        +"<td><input type='text' class='form-control' id='stock_unit"+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
-                        +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
-                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+")'></span></td>"
+                        +"<td><input type='text' class='form-control' id='stock_cnt"+mode+stock_info_cnt+"' name='stock_cnt[]'/></td>"
+                        +"<td><input type='text' class='form-control' id='stock_unit"+mode+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time"+mode+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
+                        +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+","+mode+")'></span></td>"
                         +"</tr>";
         
         recipe_val.append(recipe_html);
@@ -219,9 +256,7 @@
     }
     
     function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
-        
-        
-        
+
         $("#stock_info").html("");
         
         var stock_category_data = stock_info_array[idx];
@@ -240,6 +275,7 @@
         }
         stock_unit_set($("#stock_info"+cnt).val(),cnt);
     }
+    
     function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
     
         var sc_idx = $("#stock_category"+cnt).val();
@@ -256,8 +292,8 @@
         }
         
     }
-    function delete_recipe(idx){
-        $("#recipe"+idx).remove();
+    function delete_recipe(idx,mode){
+        $("#recipe"+mode+idx).remove();
     }
 
     function recipe_insert(){
