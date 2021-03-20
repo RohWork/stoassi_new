@@ -189,9 +189,8 @@
         stock_info_cnt++;
         
         var recipe_val = $("#insert_recipe_value");
-        var recipe_html = recipe_val.html();
-        
-        recipe_html += "<tr>"
+
+        var recipe_html  = "<tr>"
                         +"<td><select class='form-control select_font' id='stock_category"+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
@@ -203,7 +202,7 @@
                         +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
                         +"</tr>";
         
-        recipe_val.html(recipe_html);
+        recipe_val.append(recipe_html);
      
         stock_info_set(1,stock_info_cnt);
     }
