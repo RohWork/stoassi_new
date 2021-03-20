@@ -248,7 +248,7 @@
         }
         
         for(var i=1;i<=scnt;i++){
-            $("#recipe"+mode+i).remove();
+            $("#recipe"+mode+""+i).remove();
         }
     }
     
@@ -287,12 +287,12 @@
         recipe_val.append(recipe_html);
      
         stock_info_set(1,stock_info_cnt);
-        stock_unit_set($("#stock_info_"+mode+stock_info_cnt).val(),stock_info_cnt);
+        stock_unit_set($("#stock_info_"+mode+""+stock_info_cnt).val(),stock_info_cnt);
     }
     
     function stock_info_set(idx,cnt){   //카테고리 선택시 투입재료 셀렉트박스 생성
 
-        $("#stock_info_"+mode+cnt).html("");
+        $("#stock_info_"+mode+""+cnt).html("");
         
         var stock_category_data = stock_info_array[idx];
         var stock_select = "";
@@ -304,16 +304,16 @@
                 stock_select += "<option value="+row['idx']+">"+row['name']+"</option>";
             }
         
-            $("#stock_info_"+mode+cnt).html(stock_select);
+            $("#stock_info_"+mode+""+cnt).html(stock_select);
         }else{
-            $("#stock_info_"+mode+cnt).html("");
+            $("#stock_info_"+mode+""+cnt).html("");
         }
-        stock_unit_set($("#stock_info_"+mode+cnt).val(),cnt,mode);
+        stock_unit_set($("#stock_info_"+mode+""+cnt).val(),cnt,mode);
     }
     
     function stock_unit_set(idx,cnt){   //투입재료 선택시 투입단위 추가
     
-        var sc_idx = $("#stock_category_"+mode+cnt).val();
+        var sc_idx = $("#stock_category_"+mode+""+cnt).val();
         
         var stock_category_data = stock_info_array[sc_idx];
         
@@ -321,14 +321,14 @@
             for(var i=0;i<stock_category_data.length;i++){
                 var row = stock_category_data[i];
                 if(row['idx'] == idx){    
-                    $("#stock_unit_"+mode+cnt).val(row['unit']);
+                    $("#stock_unit_"+mode+""+cnt).val(row['unit']);
                 }
             }
         }
         
     }
     function delete_recipe(idx){
-        $("#recipe_"+mode+idx).remove();
+        $("#recipe_"+mode+""+idx).remove();
     }
 
     function recipe_insert(){
