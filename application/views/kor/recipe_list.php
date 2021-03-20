@@ -347,7 +347,7 @@
         $.ajax({
             url:'/RecipeList/set_recipe',
             type:'post',
-            data:form.serialize()+"&stock_info_cnt="+stock_info_cnt,
+            data:form.serialize()
             dataType: 'json',
             success:function(data){
 
