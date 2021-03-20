@@ -198,7 +198,7 @@
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt"+stock_info_cnt+"' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit"+stock_info_cnt+"' name='stock_unit[]' readonly></td>"
-                        +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]'></td>"
+                        +"<td><input type='text' class='form-control  id='recipe_time"+stock_info_cnt+"' name='recipe_time[]' value=0></td>"
                         +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger'></span></td>"
                         +"</tr>";
         
