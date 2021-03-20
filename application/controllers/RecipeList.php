@@ -108,11 +108,11 @@ class RecipeList extends CI_Controller {
             $message = 'insert_recipe_name 변수의 요청이 올바르지 않습니다.';
         }else{
             
-            $stock_category_array   = $this->input->post("stock_category");
-            $stock_info_array       = $this->input->post("stock_info");
-            $stock_cnt_array        = $this->input->post("stock_cnt");
-            $stock_unit_array       = $this->input->post("stock_unit");
-            $recipe_time_array      = $this->input->post("recipe_time");
+            $stock_category_array   = $this->input->post("insert_stock_category");
+            $stock_info_array       = $this->input->post("insert_stock_info");
+            $stock_cnt_array        = $this->input->post("insert_stock_cnt");
+            $stock_unit_array       = $this->input->post("insert_stock_unit");
+            $recipe_time_array      = $this->input->post("insert_recipe_time");
 
 
             $this->db->trans_begin();
