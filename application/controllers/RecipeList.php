@@ -96,17 +96,27 @@ class RecipeList extends CI_Controller {
         
         $vo = array();
         
-        $vo['name'] = $this->input->post("insert_group_name");
+        $vo['name'] = $this->input->post("insert_recipe_name");
         $vo['shop_idx'] = $data['writer'] = $this->session->userdata("shop_idx");
                 
         if (empty($vo['name'])){
             $code = 400;
-            $message = 'insert_group_name 변수의 요청이 올바르지 않습니다.';
+            $message = 'insert_recipe_name 변수의 요청이 올바르지 않습니다.';
         }else{
+            
+            $vo['stock_category'] = $this->input->post("stock_category");
+            $vo['stock_info'] = $this->input->post("stock_info");
+            $vo['stock_cnt'] = $this->input->post("stock_cnt");
+            $vo['stock_unit'] = $this->input->post("stock_unit");
+            $vo['recipe_time'] = $this->input->post("recipe_time");
+            
+            var_dump($vo);
+            
+            
             
             $this->db->trans_begin();
 			
-            $this->recipe_md->insert_group($vo);
+            //$this->recipe_md->insert_group($vo);
 
             if ($this->db->trans_status() === FALSE) {
                     $this->db->trans_rollback();
