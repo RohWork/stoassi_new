@@ -233,13 +233,18 @@
     function recipe_val_add(mode){
         
         var recipe_val;
+        var stock_info_cnt;
         
         if(mode == "insert"){
             recipe_val = $("#insert_recipe_value");
             stock_insert_cnt++;
+            
+            stock_info_cnt = stock_insert_cnt;
         }else{
             recipe_val = $("#update_recipe_value");
             stock_update_cnt++;
+            
+            stock_info_cnt = stock_update_cnt;
         }
 
         
