@@ -3,6 +3,7 @@ class StockHistory extends CI_Controller {
 	
 	function __construct() {
             parent ::__construct();
+            $this->allow=array();
             
             $this->head_data = header_set("stock_history");
 
