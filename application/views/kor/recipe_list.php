@@ -209,7 +209,7 @@
     });
 
     $("#input_button").click(function(){
-        stock_info_cnt = 0;
+        stock_insert_cnt = 0;
         $("#modal_recipe_insert").modal('show');
     });
     
