@@ -184,7 +184,7 @@
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="reset_insert()" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="reset_insert('insert')" class="btn btn-default" data-dismiss="modal">취소</button>
 			<button type="button" onclick="recipe_insert()" class="btn btn-primary">저장하기</button>
 		  </div>
 		</div>
@@ -213,12 +213,19 @@
         $("#modal_recipe_insert").modal('show');
     });
     
-    function reset_insert(){
+    function reset_insert(mode){
         
         $("#insert_recipe_name").val("");
+        var scnt;
         
-        for(var i=1;i<=stock_info_cnt;i++){
-            $("#recipe"+i).remove();
+        if(mode == "insert"){
+            scnt = stock_insert_cnt;
+        }else{
+            scnt = stock_update_cnt;
+        }
+        
+        for(var i=1;i<=scnt;i++){
+            $("#recipe"+mode+i).remove();
         }
     }
     
