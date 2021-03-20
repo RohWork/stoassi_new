@@ -168,6 +168,7 @@
 <script>
     
     var stock_info_array;
+    var stock_info_cnt = 0;
 	
     $(document).ready(function(){
 	$("#group_select").change(function(){
@@ -184,15 +185,17 @@
     });
     
     function recipe_val_add(){
-
+        
+        stock_info_cnt++;
+        
         var recipe_val = $("#insert_recipe_value");
         var recipe_html = recipe_val.html();
         
         recipe_html += "<tr>"
-                        +"<td><select class='form-control select_font' id='stock_category' name='stock_category[]' onchange='stock_info_set(this.value)'>"
+                        +"<td><select class='form-control select_font' id='stock_category"+stock_info_cnt+"' name='stock_category[]' onchange='stock_info_set(this.value,"+stock_info_cnt+")'>"
                         +  "<?=$scategory_select?>"
                         +"</select></td>"
-                        +"<td><select class='form-control select_font' id='stock_info' name='stock_info[]' onchange='stock_unit_set(this.value)'>"
+                        +"<td><select class='form-control select_font' id='stock_info"+stock_info_cnt+"' name='stock_info[]' onchange='stock_unit_set(this.value,"+stock_info_cnt+")'>"
                         +"</select></td>"
                         +"<td><input type='text' class='form-control' id='stock_cnt[]' name='stock_cnt[]'/></td>"
                         +"<td><input type='text' class='form-control' id='stock_unit[]' name='stock_unit[]' readonly></td>"
@@ -205,7 +208,7 @@
         stock_info_set(1);
     }
     
-    function stock_info_set(idx){
+    function stock_info_set(idx,cnt){
         
         
         
@@ -217,14 +220,14 @@
         if(Array.isArray(stock_category_data)){
             for(var i=0;i<stock_category_data.length;i++){
                 var row = stock_category_data[i];
-
+                    
                 stock_select += "<option value="+row['idx']+">"+row['name']+"</option>";
             }
         
-            $("#stock_info").html(stock_select);
+            $("#stock_info"+cnt).html(stock_select);
         }
     }
-    function stock_unit_set(idx){
+    function stock_unit_set(idx,cnt){
         
         
     }
