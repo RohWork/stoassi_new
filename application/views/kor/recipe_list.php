@@ -347,7 +347,7 @@
         $.ajax({
             url:'/RecipeList/set_recipe',
             type:'post',
-            data:form.serialize()
+            data:form.serialize(),
             dataType: 'json',
             success:function(data){
 
