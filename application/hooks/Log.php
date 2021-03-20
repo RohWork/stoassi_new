@@ -5,11 +5,11 @@ class Log extends CI_Controller{
     
     function __construct()
     {
-        //$this->CI =& get_instance();
+        $this->CI =& get_instance();
         
          
         if(!isset($this->CI->session)){  
-           //   $this->CI->load->library('session');  
+              $this->CI->load->library('session');  
         }
     }
     
