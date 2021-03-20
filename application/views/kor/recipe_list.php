@@ -127,7 +127,7 @@
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('group_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="reset_insert()" class="btn btn-default" data-dismiss="modal">취소</button>
 			<button type="button" onclick="group_update()" class="btn btn-primary">저장하기</button>
 		  </div>
 		</div>
@@ -379,10 +379,6 @@
             
     }
 
-
-    function modal_close(id_val){
-            $("#"+id_val)[0].reset();
-    }
 
 
   
