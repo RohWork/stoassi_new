@@ -153,13 +153,12 @@ class RecipeList extends CI_Controller {
 
     public function get_recipe_info(){
         
-        $group_idx = $this->input->post("idx");
+        $recipe_idx = $this->input->post("idx");
         
-        $where_arr = array(
-                "idx" => $group_idx,
-        );
+
 	
-        $result = $this->recipe_md->get_group_info($where_arr);
+        $result = $this->recipe_md->get_recipe_info($recipe_idx);
+        $result_process = $this->recipe_md->get_recipe_proces($recipe_idx);
         
         if(empty($result)){
             $code = 400;
@@ -173,6 +172,7 @@ class RecipeList extends CI_Controller {
             'code' => $code,
             'message' => $message,
             'result'  => $result,
+            'process' => $result_process,
         );
 
         header("Content-Type: application/json;");
