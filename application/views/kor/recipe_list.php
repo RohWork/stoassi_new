@@ -221,14 +221,14 @@
         var params =  {
                 "idx" : idx
         };
-        /*$.ajax({
+        $.ajax({
             url:'/RecipeList/get_recipe_info',
             type:'post',
             data:params,
             success:function(data){
                 set_detail_modal(data.result);
             }
-        });*/
+        });
 
         stock_update_cnt = 0;
         mode = "update";
