@@ -112,6 +112,27 @@ class Recipe_model extends CI_Model {
         return $this->db->insert_id();
     }
     
+    function get_recipe_info($idx){
+        
+        $this->db->select('ri.*');
+        $this->db->from('recipe_info as ri');
+        $this->db->where('ri.idx', $idx);
+        
+        return $this->db->get()->row();
+    }
+    function get_recipe_proces($idx){
+        
+        $this->db->select('rp.order_num, rp.set_time, rp.stock_input, rp.stock_idx');
+        $this->db->select('si.name AS stock_name');    
+        $this->db->select('sc.name AS stock_category_name FROM recipe_process AS rp');
+        
+        $this->db->from('recipe_process as rp');
+        $this->db->join('stock_info as si',"rp.stock_idx = si.idx","left");
+        $this->db->join('stock_category as sc',"si.stock_category_idx = sc.idx","left");
+        $this->db->where('rp.recipe_idx', $idx);
+        
+        return $this->db->get()->result();
+    }
     
 }    
 ?>
