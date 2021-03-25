@@ -226,7 +226,7 @@
             type:'post',
             data:params,
             success:function(data){
-                set_detail_modal(data.result);
+                set_detail_modal(data.result, data.process);
             }
         });
 
@@ -365,12 +365,12 @@
     }
 
     
-    function set_detail_modal(data){
+    function set_detail_modal(data, process){
         
             $("#update_recipe_idx").val(data.idx);
             $("#update_recipe_name").val(data.name);
             
-            console.log(data.process);
+            console.log(process);
             
             if(data.state == "Y"){
                 $("#recipe_use_y").prop("checked", true);
