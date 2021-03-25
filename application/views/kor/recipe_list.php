@@ -370,6 +370,7 @@
             $("#update_recipe_idx").val(data.idx);
             $("#update_recipe_name").val(data.name);
             
+            console.log(data.process);
             
             if(data.state == "Y"){
                 $("#recipe_use_y").prop("checked", true);
