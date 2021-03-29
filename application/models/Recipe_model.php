@@ -122,7 +122,7 @@ class Recipe_model extends CI_Model {
     }
     function get_recipe_proces($idx){
         
-        $this->db->select('rp.order_num, rp.set_time, rp.stock_input, rp.stock_idx');
+        $this->db->select('rp.order_num, rp.set_time, rp.stock_input, rp.stock_idx, sc.idx as category_idx');
         $this->db->select('si.name AS stock_name');    
         $this->db->select('sc.name AS stock_category_name');
         
