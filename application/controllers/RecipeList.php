@@ -204,29 +204,23 @@ class RecipeList extends CI_Controller {
             $this->db->trans_begin();
             
             $this->recipe_md->update_recipe($vo, $recipe_idx);
+            $this->recipe_md->delete_process($recipe_idx);
             
             $stock_category_array   = $this->input->post("update_stock_category");
             $stock_info_array       = $this->input->post("update_stock_info");
             $stock_cnt_array        = $this->input->post("update_stock_cnt");
             $stock_unit_array       = $this->input->post("update_stock_unit");
             $recipe_time_array      = $this->input->post("update_recipe_time");
-            $order_num_array      = $this->input->post("update_order_num");
-            
-
-            
+           
             for($i=0;$i<count($stock_info_array);$i++){
                 
                 $vo_process['stock_idx'] = $stock_info_array[$i];
                 $vo_process['order_num'] = $i;
                 $vo_process['stock_input'] = $stock_cnt_array[$i];
                 $vo_process['set_time'] = $recipe_time_array[$i];
+                $vo_process['recipe_idx'] = $recipe_idx;
                 
-                if(!empty($order_num_array[$i])){
-                    $this->recipe_md->update_process($vo_process, $recipe_idx, $i);
-                }else{
-                    $vo_process['recipe_idx'] = $recipe_idx;
-                    $this->recipe_md->insert_process($vo_process);
-                }
+                $this->recipe_md->insert_process($vo_process);
             }
             
             
