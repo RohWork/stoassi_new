@@ -130,8 +130,8 @@ class Recipe_model extends CI_Model {
         
         
         $this->db->where('order_num', $order); 
-        $this->db->where('idx', $recipe_idx); 
-        $this->db->update('recipe_info',$data);
+        $this->db->where('recipe_idx', $recipe_idx); 
+        $this->db->update('recipe_process',$data);
         
     }
     
