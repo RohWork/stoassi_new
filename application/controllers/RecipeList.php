@@ -213,7 +213,6 @@ class RecipeList extends CI_Controller {
             
             $order_num = $this->input->post("order_num");
             
-            var_dump($stock_info_array);
             for($i=0;$i<count($stock_info_array);$i++){
                 
                 $vo_process['stock_idx'] = $stock_info_array[$i];
