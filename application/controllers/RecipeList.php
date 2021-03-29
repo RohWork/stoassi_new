@@ -203,7 +203,7 @@ class RecipeList extends CI_Controller {
             
             $this->db->trans_begin();
             
-            $this->recipe_md->recipe_update($vo, $recipe_idx);
+            $this->recipe_md->update_recipe($vo, $recipe_idx);
             
             $stock_category_array   = $this->input->post("update_stock_category");
             $stock_info_array       = $this->input->post("update_stock_info");
