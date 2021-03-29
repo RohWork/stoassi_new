@@ -438,7 +438,7 @@
             type:'post',
             data:formData,
             success:function(data){
-                alert('수정완료');
+                alert(data.message);
                 location.reload();
             },
             error: function(xhr,status,error) {
