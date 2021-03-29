@@ -198,7 +198,7 @@ class RecipeList extends CI_Controller {
         
         if (empty($vo['name'])){
             $code = 400;
-            $message = 'update_recipep_name 변수의 요청이 올바르지 않습니다.';
+            $message = 'update_recipe_name 변수의 요청이 올바르지 않습니다.';
         } else{
             
             $this->db->trans_begin();
