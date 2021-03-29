@@ -426,11 +426,11 @@
 
         if(recipe_name.val() == ""){
                 alert("레시피명을 입력하시기 바랍니다.");
-                group_name.focus();
+                recipe_name.focus();
                 return;
         }
 	        
-        var form = $("#group_update_form");
+        var form = $("#recipe_update_form");
         var formData = form.serialize() +"&order_num="+stock_update_cnt;
         
         $.ajax({
