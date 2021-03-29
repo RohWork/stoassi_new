@@ -404,6 +404,7 @@
                     +"<td><input type='text' class='form-control' id='stock_unit_"+mode+""+stock_info_cnt+"' name='"+mode+"_stock_unit[]' readonly></td>"
                     +"<td><input type='text' class='form-control  id='recipe_time_"+mode+""+stock_info_cnt+"' name='"+mode+"_recipe_time[]' value="+set_time+"></td>"
                     +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+")'></span></td>"
+            
                         +"</tr>";
         
         recipe_val.append(recipe_html);
@@ -430,7 +431,7 @@
         }
 	        
         var form = $("#group_update_form");
-        var formData = form.serialize();
+        var formData = form.serialize() +"&order_num="+stock_update_cnt;
         
         $.ajax({
             url:'/RecipeList/set_update_recipe',
