@@ -104,12 +104,35 @@ class Recipe_model extends CI_Model {
         return $this->db->insert_id();
         
     }
+
+    function update_recipe($vo, $idx){
+        
+         $data['modi_date'] =  date('Y-m-d H:i:s');
+         $data['modifier'] = $this->session->userdata("user_id");
+         $data['group_idx'] = $vo['group_idx'];
+         $data['name'] = $vo['name'];
+        
+        $this->db->where('idx', $idx); 
+        $this->db->update('recipe_info',$data);
+        
+        return $this->db->insert_id();
+        
+    }
     
     function insert_process($data){
 
         $this->db->insert('recipe_process',$data);
         
         return $this->db->insert_id();
+    }
+    
+    function update_process($data, $recipe_idx, $order){
+        
+        
+        $this->db->where('order_num', $order); 
+        $this->db->where('idx', $recipe_idx); 
+        $this->db->update('recipe_info',$data);
+        
     }
     
     function get_recipe_info($idx){
