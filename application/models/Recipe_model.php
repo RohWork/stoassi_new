@@ -111,6 +111,7 @@ class Recipe_model extends CI_Model {
          $data['modifier'] = $this->session->userdata("user_id");
          $data['group_idx'] = $vo['group_idx'];
          $data['name'] = $vo['name'];
+         $data['state'] = $vo['state'];
         
         $this->db->where('idx', $idx); 
         $this->db->update('recipe_info',$data);
