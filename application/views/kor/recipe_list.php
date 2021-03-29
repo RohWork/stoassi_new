@@ -404,7 +404,7 @@
         
         recipe_val.append(recipe_html);
      
-        stock_info_set(1,stock_info_cnt);
+        stock_info_set(category_idx,stock_info_cnt);
         stock_unit_set($("#stock_info_"+mode+""+stock_info_cnt).val(),stock_info_cnt);   
     }
 
