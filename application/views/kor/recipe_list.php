@@ -124,11 +124,12 @@
 						</label>
 					</div>
 				</div>
+                                <input type="hidden" id="update_recipe_idx" name="update_recipe_idx" />
 			</form>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="reset_insert()" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="group_update()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="recipe_update()" class="btn btn-primary">저장하기</button>
 		  </div>
 		</div>
 	  </div>
@@ -412,18 +413,18 @@
         
         $("#stock_category_"+mode+""+stock_info_cnt).val(category_idx);
         $("#stock_info_"+mode+""+stock_info_cnt).val(stock_idx);
-        stock_unit_set($("#stock_info_"+mode+""+stock_info_cnt).val(),stock_info_cnt);   
+        stock_unit_set($("#stock_info_"+mode+""+stock_info_cnt).val(), stock_info_cnt);   
     }
 
   
     
     
-    function group_update(){
+    function recipe_update(){
         
-        var group_name = $("#update_group_name");
+        var recipe_name = $("#update_recipe_name");
 
-        if(group_name.val() == ""){
-                alert("그룹명을 입력하시기 바랍니다.");
+        if(recipe_name.val() == ""){
+                alert("레시피명을 입력하시기 바랍니다.");
                 group_name.focus();
                 return;
         }
@@ -432,7 +433,7 @@
         var formData = form.serialize();
         
         $.ajax({
-            url:'/RecipeGroup/set_update_group',
+            url:'/RecipeList/set_update_recipe',
             type:'post',
             data:formData,
             success:function(data){
