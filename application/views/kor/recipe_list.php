@@ -404,7 +404,7 @@
                     +"<td><input type='text' class='form-control' id='stock_unit_"+mode+""+stock_info_cnt+"' name='"+mode+"_stock_unit[]' readonly></td>"
                     +"<td><input type='text' class='form-control  id='recipe_time_"+mode+""+stock_info_cnt+"' name='"+mode+"_recipe_time[]' value="+set_time+"></td>"
                     +"<td style='text-align: center'><button type='button' class='glyphicon glyphicon-minus btn btn-danger' onclick='delete_recipe("+stock_info_cnt+")'></span>"
-                    +"<input type=hidden id='recipe_order_"+mode+" name='"+mode+"_order_num[]' value='"+stock_update_cnt+"'/>"
+                    +"<input type=hidden id='recipe_order_"+mode+"' name='"+mode+"_order_num[]' value='"+stock_update_cnt+"'/>"
                     +"</td>"
                     
                         +"</tr>";
