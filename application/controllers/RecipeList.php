@@ -101,6 +101,8 @@ class RecipeList extends CI_Controller {
         
         $vo['name'] = $this->input->post("insert_recipe_name");
         $vo['group_idx'] = $this->input->post("insert_recipe_group");
+        $vo['recipe_idx'] = $this->input->post("insert_recipe_group");
+        
         
         $vo['shop_idx'] = $data['writer'] = $this->session->userdata("shop_idx");
                 
@@ -187,10 +189,13 @@ class RecipeList extends CI_Controller {
         
         $vo = array();
         
-        $group_idx = $this->input->post("update_group_idx");
-        $vo['name'] = $this->input->post("update_group_name");
-        $vo['state'] = $this->input->post("update_group_useyn");
-                
+        $recipe_idx = $this->input->post("update_recipe_idx");
+        $vo['name'] = $this->input->post("update_recipep_name");
+        $vo['state'] = $this->input->post("update_recipe_useyn");
+        $vo['group_idx'] = $this->input->post("update_recipe_group");
+        
+        
+        
         if (empty($vo['name'])){
             $code = 400;
             $message = 'update_group_name 변수의 요청이 올바르지 않습니다.';
@@ -198,7 +203,29 @@ class RecipeList extends CI_Controller {
             
             $this->db->trans_begin();
             
-            $this->recipe_md->group_update($vo, $group_idx);
+            $this->recipe_md->recipe_update($vo, $recipe_idx);
+            
+            $stock_category_array   = $this->input->post("update_stock_category");
+            $stock_info_array       = $this->input->post("update_stock_info");
+            $stock_cnt_array        = $this->input->post("update_stock_cnt");
+            $stock_unit_array       = $this->input->post("update_stock_unit");
+            $recipe_time_array      = $this->input->post("update_recipe_time");
+            
+            $order_num = $this->input->post("order_num");
+            
+            for($i=0;$i<count($stock_info_array);$i++){
+                
+                $vo_process['stock_idx'] = $stock_info_array[$i];
+                $vo_process['order_num'] = $i;
+                $vo_process['stock_input'] = $stock_cnt_array[$i];
+                $vo_process['set_time'] = $recipe_time_array[$i];
+                if($i <= $order_num){
+                    $this->recipe_md->update_process($vo_process, $recipe_idx, $i);
+                }else{
+                    $this->recipe_md->insert_process($vo_process);
+                }
+            }
+            
             
             if ($this->db->trans_status() === FALSE) {
                 $this->db->trans_rollback();
