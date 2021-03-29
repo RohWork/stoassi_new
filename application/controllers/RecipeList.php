@@ -221,7 +221,7 @@ class RecipeList extends CI_Controller {
                 $vo_process['stock_input'] = $stock_cnt_array[$i];
                 $vo_process['set_time'] = $recipe_time_array[$i];
                 
-                if(!empty($order_nume_array[$i])){
+                if(!empty($order_num_array[$i])){
                     $this->recipe_md->update_process($vo_process, $recipe_idx, $i);
                 }else{
                     $vo_process['recipe_idx'] = $recipe_idx;
