@@ -190,7 +190,7 @@ class RecipeList extends CI_Controller {
         $vo = array();
         
         $recipe_idx = $this->input->post("update_recipe_idx");
-        $vo['name'] = $this->input->post("update_recipep_name");
+        $vo['name'] = $this->input->post("update_recipe_name");
         $vo['state'] = $this->input->post("update_recipe_useyn");
         $vo['group_idx'] = $this->input->post("update_recipe_group");
         
@@ -198,7 +198,7 @@ class RecipeList extends CI_Controller {
         
         if (empty($vo['name'])){
             $code = 400;
-            $message = 'update_group_name 변수의 요청이 올바르지 않습니다.';
+            $message = 'update_recipep_name 변수의 요청이 올바르지 않습니다.';
         } else{
             
             $this->db->trans_begin();
