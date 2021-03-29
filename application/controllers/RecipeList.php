@@ -210,8 +210,9 @@ class RecipeList extends CI_Controller {
             $stock_cnt_array        = $this->input->post("update_stock_cnt");
             $stock_unit_array       = $this->input->post("update_stock_unit");
             $recipe_time_array      = $this->input->post("update_recipe_time");
+            $order_num_array      = $this->input->post("update_order_num");
             
-            $order_num = $this->input->post("order_num");
+
             
             for($i=0;$i<count($stock_info_array);$i++){
                 
@@ -220,7 +221,7 @@ class RecipeList extends CI_Controller {
                 $vo_process['stock_input'] = $stock_cnt_array[$i];
                 $vo_process['set_time'] = $recipe_time_array[$i];
                 
-                if($i <= $order_num){
+                if(!empty($order_nume_array[$i])){
                     $this->recipe_md->update_process($vo_process, $recipe_idx, $i);
                 }else{
                     $vo_process['recipe_idx'] = $recipe_idx;
