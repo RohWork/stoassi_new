@@ -238,12 +238,14 @@
     
     function reset_insert(){
         
-        $("#insert_recipe_name").val("");
+        
         var scnt;
         
         if(mode == "insert"){
+            $("#insert_recipe_name").val("");
             scnt = stock_insert_cnt;
         }else{
+            $("#update_recipe_name").val("");
             scnt = stock_update_cnt;
         }
         
