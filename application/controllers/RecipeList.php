@@ -213,6 +213,7 @@ class RecipeList extends CI_Controller {
             
             $order_num = $this->input->post("order_num");
             
+            var_dump($stock_info_array);
             for($i=0;$i<count($stock_info_array);$i++){
                 
                 $vo_process['stock_idx'] = $stock_info_array[$i];
@@ -230,11 +231,11 @@ class RecipeList extends CI_Controller {
             if ($this->db->trans_status() === FALSE) {
                 $this->db->trans_rollback();
                 $code = 400;
-                $message = "타입 수정 실패";
+                $message = "수정 실패";
             } else {
                 $this->db->trans_commit();
                 $code = 200;
-                $message = '타입 수정 완료';
+                $message = '수정 완료';
             }
             
         }
