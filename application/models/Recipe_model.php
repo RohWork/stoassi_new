@@ -126,12 +126,10 @@ class Recipe_model extends CI_Model {
         return $this->db->insert_id();
     }
     
-    function update_process($data, $recipe_idx, $order){
-        
-        
-        $this->db->where('order_num', $order); 
+    function delete_process($recipe_idx){
+       
         $this->db->where('recipe_idx', $recipe_idx); 
-        $this->db->update('recipe_process',$data);
+        $this->db->delete('recipe_process');
         
     }
     
