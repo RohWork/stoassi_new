@@ -450,6 +450,10 @@
 
     }
     
+    $('#modal_recipe_detail').on('hide.bs.modal', function (e) {
+        reset_insert();
+    });
+
 
         
 </script>
