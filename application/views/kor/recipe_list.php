@@ -249,10 +249,9 @@
             scnt = stock_update_cnt;
         }
         
-        alert(scnt);
         
         for(var i=1;i<=scnt;i++){
-            $("#recipe"+mode+""+i).remove();
+            $("#recipe_"+mode+""+i).remove();
         }
     }
     
