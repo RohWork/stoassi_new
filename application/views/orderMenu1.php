@@ -24,6 +24,8 @@
                 text-align: center;
                 margin: 1px;
                 height: 100px;
+                vertical-align: middle;
+                font-size: 32px;
             }
         </style>
     </head>
