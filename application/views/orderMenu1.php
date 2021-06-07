@@ -23,6 +23,7 @@
                 background-color: #CCCCCC;
                 text-align: center;
                 margin: 1px;
+                height: 100px;
             }
         </style>
     </head>
