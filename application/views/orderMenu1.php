@@ -25,7 +25,7 @@
                 margin: 1px;
                 height: 100px;
                 line-height: 100px;
-                font-size: 32px;
+                font-size: 32vx;
             }
         </style>
     </head>
