@@ -13,7 +13,7 @@ class Customer extends CI_Controller {
                
 	}
         
-        function orderMenu($level){
+       public function orderMenu($level){
             
             $language = $this->input->get("language");
             
