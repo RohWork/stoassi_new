@@ -25,10 +25,10 @@
                 <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <div class="row" style="border: 1px solid black">
+            <div class="row">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-4 col-xs-4">LANGUAGE1</div>
-                <div class="col-md-4 col-xs-4">LANGUAGE2</div>
+                <div class="col-md-4 col-xs-4" style="border: 1px solid black">LANGUAGE1</div>
+                <div class="col-md-4 col-xs-4" style="border: 1px solid black">LANGUAGE2</div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
         </div>
