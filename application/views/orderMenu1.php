@@ -20,7 +20,7 @@
         
         <style>
             .menu_button{
-                background-color: #CCCCCCC;
+                background-color: #CCCCCC;
                 text-align: center;
             }
         </style>
