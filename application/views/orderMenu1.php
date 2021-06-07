@@ -22,6 +22,7 @@
             .menu_button{
                 background-color: #CCCCCC;
                 text-align: center;
+                margin: 1px;
             }
         </style>
     </head>
