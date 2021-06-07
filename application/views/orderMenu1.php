@@ -17,6 +17,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <!-- Custom styles for this template -->
         <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
+        
+        <style>
+            .menu_button{
+                background-color: #CCCCCCC;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -27,8 +34,8 @@
             </div>
             <div class="row">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-4 col-xs-4" style="border: 1px solid black">LANGUAGE1</div>
-                <div class="col-md-4 col-xs-4" style="border: 1px solid black">LANGUAGE2</div>
+                <div class="col-md-4 col-xs-4">LANGUAGE1</div>
+                <div class="col-md-4 col-xs-4">LANGUAGE2</div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
         </div>
