@@ -6,9 +6,8 @@ class Customer extends CI_Controller {
     	function __construct() {
 		parent ::__construct();
 
-                $this->allow=array('index', 'login_process');
+                $this->allow=array('orderMenu');
                  
-		$this->head_data = header_set("main");
                 
                 $this->load->model('Member_model', 'member_md', TRUE);
                
