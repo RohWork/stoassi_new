@@ -21,7 +21,7 @@ class Customer extends CI_Controller {
             
             switch ($level){
                 case 1:     //언어 선택
-                    $this->load->view($language.'/orderMenu1', $data);
+                    $this->load->view('/orderMenu1', $data);
                     break;
                 case 2:     //취식, 포장 여부 선택
                     $data['language'] = $language;                    
