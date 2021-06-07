@@ -26,6 +26,7 @@
                 height: 100px;
                 line-height: 100px;
                 font-size: 32vx;
+                cursor: pointer;
             }
         </style>
     </head>
