@@ -17,18 +17,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <!-- Custom styles for this template -->
         <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
-        
-        <style>
-            .menu_button{
-                background-color: #CCCCCC;
-                text-align: center;
-                margin: 1px;
-                height: 100px;
-                line-height: 100px;
-                font-size: 32vx;
-                cursor: pointer;
-            }
-        </style>
+        <link href="../../assets/css/customer.css" rel="stylesheet">
+
     </head>
     <body>
         <div class="container">
