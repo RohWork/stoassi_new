@@ -32,7 +32,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="row" style="border: 1px solid black">
+            <div class="row">
                 <div class="col-md-2 col-xs-2"></div>
                 <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
