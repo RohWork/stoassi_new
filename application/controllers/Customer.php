@@ -12,7 +12,7 @@ class Customer extends CI_Controller {
                
 	}
         
-       public function orderMenu($level,$shop_idx){
+       public function orderMenu($level,$shop_idx=0){
             
             $language = $this->input->get_post("language");
             $place = $this->input->get_post("place");
@@ -29,7 +29,7 @@ class Customer extends CI_Controller {
                 $data['table_no'] = $table_no;
                 $this->session->set_userdata('table_no', $table_no);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
             }
-            if(empty($shop_idx)){
+            if(empty($shop_idx) || $shop_idx == 0){
                 show_error(); 
             }else{
                 $data['shop_info'] = $this->shop_md->get_shop_info($shop_idx);
