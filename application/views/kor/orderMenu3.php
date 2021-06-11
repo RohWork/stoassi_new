@@ -30,7 +30,7 @@
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
                     <div class="col-md-8 col-xs-8 menu_button">
-                        <table border="0">
+                        <table border="0" style="width:100%">
                             <tr>
                                 <td>취식 테이블 번호 입력</td>
                             </tr>
