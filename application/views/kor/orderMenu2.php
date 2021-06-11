@@ -26,7 +26,7 @@
                 <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3">
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3" method="post">
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
                     <div class="col-md-4 col-xs-4 menu_button" id="button_in" onclick="order_submit(1)">취식</div>
