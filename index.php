@@ -1,17 +1,4 @@
 <?php
-
-ini_set('display_errors', 0);
-register_shutdown_function('error_alert');
- 
-function error_alert()
-{
-        if(is_null($e = error_get_last()) === false)
-        {
-            print_r($e); // 이곳에서 디비처리, 메일, SMS발송, 해당소스 강제수정, 예외처리등등 가능
-            
- 
-        }
-}
 /**
  * CodeIgniter
  *
