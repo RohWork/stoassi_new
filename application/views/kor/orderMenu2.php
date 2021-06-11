@@ -33,14 +33,14 @@
                     <div class="col-md-4 col-xs-4 menu_button" id="button_out" onclick="order_submit(2)">포장</div>
                     <div class="col-md-2 col-xs-2"></div>
                 </div>
-                <input type="hidden" name="language" id="language" <?=$language?> />
+                <input type="hidden" name="language" id="language" value="<?=$language?> "/>
                 <input type="hidden" name="place" id="place" />
             </form>
 	</div>
     </body>
     <script>
         function order_submit(place){
-            $("#place").value = place;
+            $("#place").val(place);
             
             $("#orderForm")[0].submit();
             
