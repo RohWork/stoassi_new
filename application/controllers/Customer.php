@@ -47,9 +47,8 @@ class Customer extends CI_Controller {
                     break;
                 case 4:     //메뉴 선택
                     
-                    $params = array(
-                        'shop_idx' => $shop_idx
-                    );
+                    $params->shop_idx = $shop_idx;
+                    
                     
                     
                     $data['menu_info'] = $this->recipe_md->get_group_list("",$params);
