@@ -32,7 +32,7 @@
                     <div class="col-md-8 col-xs-8 menu_button">
                         <table border="0" style="width:100%">
                             <tr>
-                                <td><h3>취식 테이블 번호 입력</h3></td>
+                                <td><h4>취식 테이블 번호 입력</h4</td>
                             </tr>
                             <tr>
                                 <td>
