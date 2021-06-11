@@ -36,7 +36,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" id="table_no" name="table_no" style="width:100%;height:100px"/>
+                                    <input type="text" id="table_no" name="table_no" style="width:100%;height:30px"/>
                                 </td> 
                             </tr>
                         </table>
