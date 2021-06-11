@@ -33,8 +33,8 @@
                     <div class="col-md-4 col-xs-4 menu_button" id="button_out" onclick="order_submit(2)">포장</div>
                     <div class="col-md-2 col-xs-2"></div>
                 </div>
-                <input type="hidden" name="language" id="language" value="<?=$language?> "/>
-                <input type="hidden" name="place" id="place" />
+                <input type="hidden" name="language" id="language" value="<?=$language?>"/>
+                <input type="hidden" name="place" id="place" value="<?=$place?>"/>
             </form>
 	</div>
     </body>
