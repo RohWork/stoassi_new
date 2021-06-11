@@ -9,7 +9,7 @@ class Customer extends CI_Controller {
                 $this->allow=array('orderMenu');
                  
                 $this->load->model('Shop_model', 'shop_md', TRUE);
-                $this->load->model('Recipe_model', 'recipe_model', TRUE);
+                $this->load->model('Recipe_model', 'recipe_md', TRUE);
 	}
         
        public function orderMenu($level,$shop_idx=0){
