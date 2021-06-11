@@ -29,7 +29,7 @@ class Shop_model extends CI_Model {
        $this->db->from("shop_info");
        $this->db->where("idx", $shop_idx);
         
-       return $this->db->get()->result_array();
+       return $this->db->get()->row_array();
     }
     
 }
