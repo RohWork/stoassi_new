@@ -17,7 +17,7 @@ class Customer extends CI_Controller {
             
             $language = $this->input->get_post("language");
             $place = $this->input->get_post("place");
-            
+            $table_no = $this->input->get_post("table_no");
             
             $data = array();
             
@@ -26,6 +26,7 @@ class Customer extends CI_Controller {
                     $this->load->view('orderMenu1', $data);
                     break;
                 case 2:     //취식, 포장 여부 선택
+                    
                     $data['language'] = $language;                    
                     $this->load->view($language.'/orderMenu2', $data);
                     break;
@@ -37,6 +38,8 @@ class Customer extends CI_Controller {
                 case 4:     //상위 메뉴 선택
                     $data['language'] = $language;
                     $data['place'] = $place;
+                    $data['table_no'] = $table_no;
+                    $this->session->set_userdata('table_no', $table_no);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
                     $this->load->view($language.'/orderMenu4', $data);
                     break;
                 case 5:     //하위 메뉴 선택
