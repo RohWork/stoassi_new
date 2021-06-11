@@ -29,8 +29,8 @@
             </div>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2?language=kor'">KOREAN</div>
-                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2?language=eng'">ENGLISH</div>
+                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2/<?=$shop_info['idx']?>?language=kor'">KOREAN</div>
+                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2/<?=$shop_info['idx']?>?language=eng'">ENGLISH</div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
         </div>
