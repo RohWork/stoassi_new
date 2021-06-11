@@ -20,21 +20,32 @@
         <link href="../../assets/css/customer.css" rel="stylesheet">
     </head>
     <body>
-        	<div class="container">
-                    <div class="row">
-                        <div class="col-xs-4"></div>
-                        <div class="col-xs-4"><center><h3>가게명</h3></center></div>
-                        <div class="col-xs-2"></div>
-                    </div>
-                    <div class="row" style="margin-top: 30px">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4 col-xs-6">LANGUAGE1</div>
-                        <div class="col-md-4 col-xs-6">LANGUAGE2</div>
-                        <div class="col-md-2"></div>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
+                <div class="col-md-2 col-xs-2"></div>
+            </div>
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3">
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-md-2 col-xs-2"></div>
+                    <div class="col-md-4 col-xs-4 menu_button" id="button_in" onclick="order_submit(1)">취식</div>
+                    <div class="col-md-4 col-xs-4 menu_button" id="button_out" onclick="order_submit(2)">포장</div>
+                    <div class="col-md-2 col-xs-2"></div>
                 </div>
+                <input type="hidden" name="language" id="language" <?=$language?> />
+                <input type="hidden" name="place" id="place" />
+            </form>
 	</div>
     </body>
+    <script>
+        function order_submit(place){
+            $("#place").value = place;
+            
+            $("#orderForm")[0].submit();
+            
+        }
+    </script>
 </html>
         
         
