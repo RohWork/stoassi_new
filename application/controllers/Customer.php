@@ -16,6 +16,8 @@ class Customer extends CI_Controller {
        public function orderMenu($level){
             
             $language = $this->input->get("language");
+            $place = $this->input->get("place");
+            
             
             $data = array();
             
@@ -29,10 +31,12 @@ class Customer extends CI_Controller {
                     break;
                 case 3:     //테이블번호, 혹은 시리얼 번호 입력 (하루 유지)
                     $data['language'] = $language;
+                    $data['place'] = $place;
                     $this->load->view($language.'/orderMenu3', $data);
                     break;
                 case 4:     //상위 메뉴 선택
                     $data['language'] = $language;
+                    $data['place'] = $place;
                     $this->load->view($language.'/orderMenu4', $data);
                     break;
                 case 5:     //하위 메뉴 선택
