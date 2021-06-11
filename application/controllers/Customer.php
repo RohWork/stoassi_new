@@ -15,8 +15,8 @@ class Customer extends CI_Controller {
         
        public function orderMenu($level){
             
-            $language = $this->input->get("language");
-            $place = $this->input->get("place");
+            $language = $this->input->getPostGet("language");
+            $place = $this->input->getPostGet("place");
             
             
             $data = array();
