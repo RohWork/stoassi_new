@@ -23,10 +23,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
+                <div class="col-md-8 col-xs-8"><center><h3><?=$shop_info['name']?></h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/4" method="post">
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/4/<?=$shop_info['idx']?>" method="post">
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
                     <div class="col-md-8 col-xs-8 menu_button">
