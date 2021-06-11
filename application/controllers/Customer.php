@@ -9,7 +9,7 @@ class Customer extends CI_Controller {
                 $this->allow=array('orderMenu');
                  
                 $this->load->model('Shop_model', 'shop_md', TRUE);
-               
+                $this->load->model('Recipe_model', 'recipe_model', TRUE);
 	}
         
        public function orderMenu($level,$shop_idx=0){
@@ -46,6 +46,15 @@ class Customer extends CI_Controller {
                     $this->load->view($language.'/orderMenu3', $data);
                     break;
                 case 4:     //메뉴 선택
+                    
+                    $params = array(
+                        'shop_idx' => $shop_idx
+                    );
+                    
+                    
+                    $data['menu_info'] = $this->recipe_md->get_group_list("",$params);
+                    
+                    
                     $this->load->view($language.'/orderMenu4', $data);
                     break;
             }
