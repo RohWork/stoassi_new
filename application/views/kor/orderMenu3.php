@@ -29,7 +29,7 @@
             <form id="orderForm" name="orderForm" action="/customer/orderMenu/3" method="post">
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
-                    <div class="col-md-4 col-xs-8 menu_button">
+                    <div class="col-md-8 col-xs-8 menu_button">
                         <table border="0">
                             <tr>
                                 <td>취식 테이블 번호 입력</td>
