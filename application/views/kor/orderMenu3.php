@@ -26,7 +26,7 @@
                 <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3" method="post">
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/4" method="post">
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
                     <div class="col-md-8 col-xs-8 menu_button">
@@ -39,6 +39,11 @@
                                     <input type="text" id="table_no" name="table_no" style="width:100%;height:30px"/>
                                 </td> 
                             </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="enter"/>
+                                </td>    
+                            </tr>
                         </table>
                     </div>
                     <div class="col-md-2 col-xs-2"></div>
@@ -50,7 +55,6 @@
     </body>
     <script>
         function order_submit(place){
-            $("#place").val(place);
             
             $("#orderForm")[0].submit();
             
