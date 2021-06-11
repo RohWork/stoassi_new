@@ -25,6 +25,7 @@
                         <div class="col-xs-4"><center><h3>가게명</h3></center></div>
                         <div class="col-xs-2"></div>
                     </div>
+                    <div class="row"></div>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 col-xs-6">LANGUAGE1</div>
