@@ -37,7 +37,7 @@
                 <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top: 30vx">
                 <div class="col-md-2 col-xs-2"></div>
                 <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2?language=kor'">KOREAN</div>
                 <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2?language=eng'">ENGLISH</div>
