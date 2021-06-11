@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <!-- Custom styles for this template -->
         <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
-        <link href="../../assets/css/customer.css" rel="stylesheet">
+        <link href="/assets/css/customer.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
