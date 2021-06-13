@@ -4,15 +4,7 @@ class Member extends CI_Controller {
 	function __construct() {
             parent ::__construct();
 
-            $this->head_data = array(
-                    "main"	=> "class='active'",
-                    "stock_list" => "",
-                    "stock_category" => "",
-                    "stock_seller" => "",
-                    "stock" => "",
-                    "stock_drop" => "show",
-            );
-
+            $this->head_data = header_set("main");
             $this->load->model('Member_model', 'member_md', TRUE);
             $this->load->model('Shop_model', 'shop_md', TRUE);
 	}
@@ -153,7 +145,7 @@ class Member extends CI_Controller {
 		$data['base_url'] = $config['base_url'];
 
 		
-		//$this->load->view(LANGUAGE.'/header', $this->head_data);
+		$this->load->view(LANGUAGE.'/header', $this->head_data);
 		$this->load->view(LANGUAGE.'/member_list', $data);
             
             
