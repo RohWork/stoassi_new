@@ -38,7 +38,7 @@
                                        if($cnt % 2 == 0 && $cnt != 0){
                                            echo "</tr><tr class='menu_height'>";
                                        }
-                                                   echo "<td align='center' onclick='location.href=/customer/orderMenu/2/".$shop_info['idx']."?language=".$lang['language']."'>".$lang['language_full']."</td>";
+                                                   echo "<td align='center' onclick='location.href=/customer/orderMenu/2/".$shop_info['idx']."?language=".$lang->language."'>".$lang->language_full."</td>";
                                        $cnt++;
                                    }
                                ?>  
