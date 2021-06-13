@@ -58,7 +58,7 @@
             element.attr('background-color', "#CCCCCC");
             $("#menu_idx").val(idx);
             
-            $("#orderForm")[0].submit();
+           // $("#orderForm")[0].submit();
             
         }
     </script>
