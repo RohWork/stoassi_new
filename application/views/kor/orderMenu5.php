@@ -54,7 +54,7 @@
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
-                    <button onclick="menu_send_go()" style="width:100%">주문하기</button>
+                    <button onclick="menu_send_go()" style="width:100%">메뉴추가</button>
                 </div>
                 <div class="col-md-1 col-xs-1"></div>
             </div>
@@ -80,7 +80,23 @@
             if($("#menu_idx").val() == ""){
                 alert("메뉴를 체크해주세요.");
             }else{
-                $("#orderForm")[0].submit();
+                $.ajax({
+                        url:'/customer/setMenu',
+                        type:'post',
+                        data: $("#orderForm").serialize(),
+                        success:function(data){
+                            if(data.result == true){
+                                alert(data.message);
+                            }else{
+                                alert(data.message);
+                            }
+                        },
+                        error: function(xhr,status,error) {
+                            console.log(xhr,status,error);
+                            alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                            return false;
+                        }	 
+                });
             }
         }
     </script>
