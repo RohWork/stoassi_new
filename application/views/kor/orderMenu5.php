@@ -56,7 +56,7 @@
     <script>
         function menu_check_go(idx, element){
             $(element).css('backgroundColor' , '#CCCCCC');
-            $("#menu_idx").append("/"+idx);
+            $("#menu_idx").val(this.val()+idx);
             
            // $("#orderForm")[0].submit();
             
