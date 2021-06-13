@@ -30,7 +30,7 @@
                 <div class="row" style="margin-top: 30px">
                         <div class="col-md-2 col-xs-2"></div>
                              <div class="col-md-8 col-xs-8">
-                                 <table style="width:100%" width="100%" border="1" cellpadding="0" cellspacing="0">
+                                 <table style="width:100%" width="100%" border="0" cellpadding="0" cellspacing="0">
                                      <tr>
                                         <?php
                                             $cnt = 0;
