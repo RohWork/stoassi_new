@@ -22,14 +22,14 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-8 col-xs-8"><center><h3><?=$shop_info['name']?></h3></center></div>
-                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-1 col-xs-1"></div>
+                <div class="col-md-10 col-xs-10"><center><h3><?=$shop_info['name']?></h3></center></div>
+                <div class="col-md-1 col-xs-1"></div>
             </div>
             <form id="orderForm" name="orderForm" action="/customer/orderMenu/5/<?=$shop_info['idx']?>" method="post">
                 <div class="row" style="margin-top: 30px">
-                        <div class="col-md-2 col-xs-2"></div>
-                             <div class="col-md-8 col-xs-8">
+                        <div class="col-md-1 col-xs-1"></div>
+                             <div class="col-md-10 col-xs-10">
                                  <table style="width:100%" width="100%" border="0" cellpadding="0" cellspacing="0">
                                      <tr class="menu_height">
                                         <?php
@@ -45,7 +45,7 @@
                                      </tr>
                                  </table>
                              </div>
-                        <div class="col-md-2 col-xs-2"></div>
+                        <div class="col-md-1 col-xs-1"></div>
                     </div>
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
