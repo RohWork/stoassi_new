@@ -38,7 +38,7 @@
                                                 if($cnt % 2  == 0){
                                                     echo "</tr><tr>";
                                                 }
-                                                            echo "<td align='center'><b>".$menu->name."<b/></td>";
+                                                            echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b>".$menu->name."<b/></td>";
                                                 $cnt++;
                                             }
                                         ?>  
@@ -48,13 +48,14 @@
                         <div class="col-md-2 col-xs-2"></div>
                     </div>
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
-                <input type="hidden" name="place" id="place" />
+                <input type="hidden" name="place" id="place" value="<?=$place?>"/>
+                <input type="hidden" name="menu_idx" id="menu_idx" />
             </form>
 	</div>
     </body>
     <script>
-        function order_submit(place){
-            $("#place").val(place);
+        function submenu_go(idx){
+            $("#menu_idx").val(idx);
             
             $("#orderForm")[0].submit();
             
