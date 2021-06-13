@@ -153,7 +153,7 @@ class Member extends CI_Controller {
 		$data['base_url'] = $config['base_url'];
 
 		
-		$this->load->view(LANGUAGE.'/header', $this->head_data);
+		//$this->load->view(LANGUAGE.'/header', $this->head_data);
 		$this->load->view(LANGUAGE.'/member_list', $data);
             
             
