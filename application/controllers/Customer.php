@@ -84,14 +84,17 @@ class Customer extends CI_Controller {
             $place = $this->input->post("place");
             
             for($i=0;$i<count($recipe_array);$i++){
-                $data = array(
-                    "table_no"      => $table_no,
-                    "cnt"           => $cnt,
-                    "place"         => $place,
-                    "recipe_idx"    => $recipe_array[$i]
-                );
                 
-                $this->cust_md->insert_order($data);
+                if($recipe_array[$i] != ""){
+                    $data = array(
+                        "table_no"      => $table_no,
+                        "cnt"           => $cnt,
+                        "place"         => $place,
+                        "recipe_idx"    => $recipe_array[$i]
+                    );
+
+                    $this->cust_md->insert_order($data);
+                }
             }
             $result["result"] = "1";
             
