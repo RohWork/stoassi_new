@@ -61,6 +61,8 @@ class Customer extends CI_Controller {
                     $params->group_idx = $this->input->post('menu_idx');
                     $params->asc = "asc";
                     
+                    var_dump($params);
+                    
                     $data['menu_info'] = $this->recipe_md->get_recipe_list("",$params);
                     
                     $this->load->view($language.'/orderMenu5', $data);
