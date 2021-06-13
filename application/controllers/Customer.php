@@ -72,7 +72,25 @@ class Customer extends CI_Controller {
         function orderDetail(){
             $this->input->get("order_idx");
             
+        }
+        
+        function setMenu(){
             
+            
+            
+            $table_no =  $this->session->table_no;
+            $recipe_idx = $this->input->post("menu_idx");
+            $recipe_array = explode("/", $recipe_idx);
+            $cnt = 1; //cnt 값은 나중에 입력 받을 예정
+            $place = $this->input->post("place");
+            
+            for($i=0;$i<count($recipe_array);$i++){
+                echo $recipe_array[$i];
+            }
+            $result["message"] = "성공";
+            
+            header("Content-Type: application/json;");
+            echo json_encode($result);
         }
 }
 
