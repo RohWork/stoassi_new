@@ -54,7 +54,7 @@
 	</div>
     </body>
     <script>
-        function submenu_go(idx, element){
+        function menu_check_go(idx, element){
             element.attr('background-color', "#CCCCCC");
             $("#menu_idx").val(idx);
             
