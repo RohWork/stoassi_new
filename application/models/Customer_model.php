@@ -9,7 +9,7 @@ class Customer_model extends CI_Model {
         $data['recipe_idx'] = $vo['recipe_idx'];
         $data['place'] = $vo['place'];
         
-        $this->db->insert('recipe_info',$data);
+        $this->db->insert('order_list',$data);
         
         return $this->db->insert_id();
         
