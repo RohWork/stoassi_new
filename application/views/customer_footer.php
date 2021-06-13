@@ -6,6 +6,7 @@
             <div class="col-md-4 col-xs-2" style="text-align: center" onclick="history.back();">뒤로가기</div>
             <div class="col-md-4 col-xs-2">
                 <select>
+                    <option value="">언어변경</option>
                     <?php
                         foreach($language_list as $lang){
                             echo "<option value=".$lang->language.">".$lang->language_full."</option>";
