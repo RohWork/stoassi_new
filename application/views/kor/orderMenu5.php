@@ -31,12 +31,12 @@
                         <div class="col-md-2 col-xs-2"></div>
                              <div class="col-md-8 col-xs-8">
                                  <table style="width:100%" width="100%" border="0" cellpadding="0" cellspacing="0">
-                                     <tr>
+                                     <tr class="menu_height">
                                         <?php
                                             $cnt = 0;
                                             foreach($menu_info as $menu){
                                                 if($cnt % 2  == 0){
-                                                    echo "</tr><tr>";
+                                                    echo "</tr><tr class='menu_height'>";
                                                 }
                                                             echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->name."<b/></td>";
                                                 $cnt++;
