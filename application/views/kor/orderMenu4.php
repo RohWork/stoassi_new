@@ -29,7 +29,7 @@
             <form id="orderForm" name="orderForm" action="/customer/orderMenu/5/<?=$shop_info['idx']?>" method="post">
                 <div class="row" style="margin-top: 30px">
                         <div class="col-md-2 col-xs-2"></div>
-                             <div class="col-md-4 col-xs-4">
+                             <div class="col-md-8 col-xs-8">
                                  <table style="width:100%" width="100%" border="1" cellpadding="0" cellspacing="0">
                                      <tr>
                                         <?php
