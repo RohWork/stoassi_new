@@ -38,7 +38,7 @@
                                                 if($cnt % 2  == 0){
                                                     echo "</tr><tr>";
                                                 }
-                                                            echo "<td>".$menu->name."</td>";
+                                                            echo "<td align='center'>".$menu->name."</td>";
                                                 $cnt++;
                                             }
                                         ?>  
