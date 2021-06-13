@@ -10,6 +10,7 @@ class Customer extends CI_Controller {
                  
                 $this->load->model('Shop_model', 'shop_md', TRUE);
                 $this->load->model('Recipe_model', 'recipe_md', TRUE);
+                $this->load->model('Customer_model', 'cust_md', TRUE);
 	}
         
        public function orderMenu($level,$shop_idx=0){
@@ -76,8 +77,6 @@ class Customer extends CI_Controller {
         
         function setMenu(){
             
-            
-            
             $table_no =  $this->session->table_no;
             $recipe_idx = $this->input->post("menu_idx");
             $recipe_array = explode("/", $recipe_idx);
@@ -85,7 +84,14 @@ class Customer extends CI_Controller {
             $place = $this->input->post("place");
             
             for($i=0;$i<count($recipe_array);$i++){
-                echo $recipe_array[$i];
+                $data = array(
+                    "table_no"      => $table_no,
+                    "cnt"           => $cnt,
+                    "place"         => $place,
+                    "recipe_idx"    => $recipe_array[$i]
+                );
+                
+                $this->cust_md->insert_order($data);
             }
             $result["message"] = "성공";
             
