@@ -22,13 +22,18 @@ class Recipe_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('recipe_group as rg');
         $this->db->where('rg.shop_idx', $search_vo->shop_idx);
-        $this->db->order_by("rg.idx", "desc");
+        if(!empty($search_vo->asc)){
+            $this->db->order_by("rg.idx", "asc");
+        }else{
+            $this->db->order_by("rg.idx", "desc");
+        }
         if(!empty($search_vo->config_per_page)){
             $this->db->limit($search_vo->config_per_page, $offset);
         }
         if(!empty($search_vo->state)){
             $this->db->where('rg.state', $search_vo->state);
         }
+        
         
         return $this->db->get()->result();
         
@@ -85,7 +90,11 @@ class Recipe_model extends CI_Model {
         if(!empty($search_vo->group_idx)){
             $this->db->where('ri.group_idx', $search_vo->group_idx);
         }
-        $this->db->order_by("ri.idx", "desc");
+        if(!empty($search_vo->asc)){
+            $this->db->order_by("ri.idx", "asc");
+        }else{
+            $this->db->order_by("ri.idx", "desc");
+        }
         if(!empty($search_vo->config_per_page)){
             $this->db->limit($search_vo->config_per_page, $offset);
         }
