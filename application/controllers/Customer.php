@@ -56,6 +56,7 @@ class Customer extends CI_Controller {
                     break;
                 case 5:
                     
+                    $this->load->view($language.'/orderMenu5', $data);
                     break;
                 
             }
