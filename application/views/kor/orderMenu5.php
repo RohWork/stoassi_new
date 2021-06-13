@@ -23,24 +23,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-8 col-xs-8"><center><h3>가게명</h3></center></div>
+                <div class="col-md-8 col-xs-8"><center><h3><?=$shop_info['name']?></h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3" method="post">
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/5/<?=$shop_info['idx']?>" method="post">
                 <div class="row" style="margin-top: 30px">
-                    <div class="col-md-2 col-xs-2"></div>
-                    <div class="col-md-4 col-xs-4 menu_button" id="button_in" onclick="order_submit(1)">취식</div>
-                    <div class="col-md-4 col-xs-4 menu_button" id="button_out" onclick="order_submit(2)">포장</div>
-                    <div class="col-md-2 col-xs-2"></div>
-                </div>
+                        <div class="col-md-2 col-xs-2"></div>
+                             <div class="col-md-8 col-xs-8">
+                                 <table style="width:100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+                                     <tr>
+                                        <?php
+                                            $cnt = 0;
+                                            foreach($menu_info as $menu){
+                                                if($cnt % 2  == 0){
+                                                    echo "</tr><tr>";
+                                                }
+                                                            echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->name."<b/></td>";
+                                                $cnt++;
+                                            }
+                                        ?>  
+                                     </tr>
+                                 </table>
+                             </div>
+                        <div class="col-md-2 col-xs-2"></div>
+                    </div>
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
-                <input type="hidden" name="place" id="place" />
+                <input type="hidden" name="place" id="place" value="<?=$place?>"/>
+                <input type="hidden" name="menu_idx" id="menu_idx" />
             </form>
 	</div>
     </body>
     <script>
-        function order_submit(place){
-            $("#place").val(place);
+        function submenu_go(idx){
+            $("#menu_idx").val(idx);
             
             $("#orderForm")[0].submit();
             
