@@ -54,7 +54,7 @@
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
-                    <button onclick >주문하기</button>
+                    <button onclick="menu_send_go()" style="width:100%">주문하기</button>
                 </div>
                 <div class="col-md-1 col-xs-1"></div>
             </div>
