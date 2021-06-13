@@ -60,7 +60,8 @@
                 
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
                 
-                sting.replace('-','')
+                sting.replace('-','');
+                $(element).css('backgroundColor' , '#FFFFFF');
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
