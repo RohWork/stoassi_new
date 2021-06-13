@@ -86,9 +86,9 @@
                         data: $("#orderForm").serialize(),
                         success:function(data){
                             if(data.result == true){
-                                alert(data.message);
+                                alert("주문완료");
                             }else{
-                                alert(data.message);
+                                alert("주문실패");
                             }
                         },
                         error: function(xhr,status,error) {
