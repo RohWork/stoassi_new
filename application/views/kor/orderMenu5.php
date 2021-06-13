@@ -38,7 +38,7 @@
                                                 if($cnt % 2 == 0 && $cnt != 0){
                                                     echo "</tr><tr class='menu_height'>";
                                                 }
-                                                            echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->group_name."<br/>".$menu->name."<br/>[상세보기]<b/></td>";
+                                                            echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
                                                 $cnt++;
                                             }
                                         ?>  
