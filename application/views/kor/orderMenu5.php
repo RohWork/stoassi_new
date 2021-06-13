@@ -38,7 +38,7 @@
                                                 if($cnt % 2 == 0 && $cnt != 0){
                                                     echo "</tr><tr class='menu_height'>";
                                                 }
-                                                            echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
+                                                            echo "<td align='center' onclick='menu_check_go(".$menu->idx.", this)'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
                                                 $cnt++;
                                             }
                                         ?>  
@@ -54,7 +54,8 @@
 	</div>
     </body>
     <script>
-        function submenu_go(idx){
+        function submenu_go(idx, element){
+            element.attr('background-color', "#CCCCCC");
             $("#menu_idx").val(idx);
             
             $("#orderForm")[0].submit();
