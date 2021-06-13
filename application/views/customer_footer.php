@@ -5,7 +5,7 @@
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="location.href='/customer/orderMenu/1/10'">HOME</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">뒤로가기</div>
             <div class="col-md-2 col-xs-2">
-                <select>
+                <select class="input-group">
                     <option value="">언어변경</option>
                     <?php
                         foreach($language_list as $lang){
