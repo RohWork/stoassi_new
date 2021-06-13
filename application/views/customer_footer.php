@@ -14,8 +14,9 @@
                             }
                         ?>
                     </select>
-                    <input type="hidden" name="place" id="place" value="<?=$place?>"/>
-                    <input type="hidden" name="menu_idx" id="menu_idx" value="<?=$menu_idx?>"/>
+
+                    <input type="hidden" name="place" id="place" value="<?= !empty($place)? $place : "" ?>"/>
+                    <input type="hidden" name="menu_idx" id="menu_idx" value="<?= !empty($menu_idx)? $place : ""?>"/>
                 </form>
             </div>
             <div class="col-md-3 col-xs-3"></div>
