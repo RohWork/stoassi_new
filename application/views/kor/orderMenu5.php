@@ -55,9 +55,12 @@
     </body>
     <script>
         function menu_check_go(idx, element){
-            $(element).css('backgroundColor' , '#CCCCCC');
-            $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
-            
+            if($("#menu_idx").val().indexOf(idx) != -1){
+                console.log($("#menu_idx").val().indexOf(idx) );
+            }else{
+                $(element).css('backgroundColor' , '#CCCCCC');
+                $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
+            }
            // $("#orderForm")[0].submit();
             
         }
