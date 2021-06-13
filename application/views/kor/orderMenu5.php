@@ -55,6 +55,7 @@
     </body>
     <script>
         function menu_check_go(idx, element){
+            console.log(element);
             element.attr('background-color', "#CCCCCC");
             $("#menu_idx").val(idx);
             
