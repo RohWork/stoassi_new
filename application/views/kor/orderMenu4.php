@@ -33,7 +33,7 @@
                                  <table>
                                      <tr>
                 <?php
-                    $cnt = 1;
+                    $cnt = 0;
                     foreach($menu_info as $menu){
                         if($cnt % 2  == 0){
                             echo "</tr><tr>";
