@@ -51,6 +51,15 @@
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="menu_idx" id="menu_idx" />
             </form>
+            <div class="row" style="margin-top: 30px">
+                <div class="col-md-1 col-xs-1"></div>
+                <div class="col-md-10 col-xs-10">
+                    <button onclick >주문하기</button>
+                </div>
+                <div class="col-md-1 col-xs-1"></div>
+            </div>
+            
+            
 	</div>
     </body>
     <script>
@@ -65,6 +74,14 @@
             }
            // $("#orderForm")[0].submit();
             
+        }
+        
+        function menu_send_go(){
+            if($("#menu_idx").val() == ""){
+                alert("메뉴를 체크해주세요.");
+            }else{
+                $("#orderForm")[0].submit();
+            }
         }
     </script>
 </html>
