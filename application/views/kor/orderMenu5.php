@@ -56,10 +56,7 @@
     <script>
         function menu_check_go(idx, element){
             if($("#menu_idx").val().indexOf(idx) != -1){
-                console.log($("#menu_idx").val().indexOf(idx) );
-                
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
-                
                 sting.replace('-','');
                 $(element).css('backgroundColor' , '#FFFFFF');
             }else{
