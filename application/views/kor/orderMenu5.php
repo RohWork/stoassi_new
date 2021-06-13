@@ -67,7 +67,6 @@
             if($("#menu_idx").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
-                sting.replace('-','');
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
