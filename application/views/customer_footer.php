@@ -8,7 +8,7 @@
                 <select>
                     <?php
                         foreach($language_list as $lang){
-                            echo "<option value=".$lang['language'].">".$lang['language_full']."</option>";
+                            echo "<option value=".$lang->language.">".$lang->language_full."</option>";
                         }
                     ?>
                 </select>
