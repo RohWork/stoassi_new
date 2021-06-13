@@ -32,16 +32,16 @@
                              <div class="col-md-4 col-xs-4">
                                  <table style="width:100%">
                                      <tr>
-                <?php
-                    $cnt = 0;
-                    foreach($menu_info as $menu){
-                        if($cnt % 2  == 0){
-                            echo "</tr><tr>";
-                        }
-                                    echo "<td>".$menu->name."</td>";
-                        $cnt++;
-                    }
-                ?>  
+                                        <?php
+                                            $cnt = 0;
+                                            foreach($menu_info as $menu){
+                                                if($cnt % 2  == 0){
+                                                    echo "</tr><tr>";
+                                                }
+                                                            echo "<td>".$menu->name."</td>";
+                                                $cnt++;
+                                            }
+                                        ?>  
                                      </tr>
                                  </table>
                              </div>
