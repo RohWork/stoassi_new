@@ -50,10 +50,8 @@ class Customer extends CI_Controller {
                     $params = new stdClass();
                     $params->shop_idx = $shop_idx;
                     
-                    
-                    
                     $data['menu_info'] = $this->recipe_md->get_group_list("",$params);
-                    
+                    var_dump($data['menu_info']);
                     
                     $this->load->view($language.'/orderMenu4', $data);
                     break;
