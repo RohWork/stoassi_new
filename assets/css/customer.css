@@ -22,3 +22,13 @@ and open the template in the editor.
     height:100px;
     vertical-align: middle;
 }
+
+footer{
+    border : 4px solid brown;
+    position : fixed;
+    left : 0;
+    bottom : 0;
+    width : 100%;
+    height: 100px;
+    background-color: antiquewhite;
+}
