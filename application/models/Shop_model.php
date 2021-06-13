@@ -37,7 +37,7 @@ class Shop_model extends CI_Model {
         $this->db->from("shop_setting");
         $this->db->where("shop_idx", $shop_idx);
         
-        return $this->db->get()->result_array();
+        return $this->db->get()->result();
     }
 }
 
