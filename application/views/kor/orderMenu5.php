@@ -35,7 +35,7 @@
                                         <?php
                                             $cnt = 0;
                                             foreach($menu_info as $menu){
-                                                if(($cnt % 2 )&&($cnt != 0)){
+                                                if($cnt % 2 && $cnt != 0){
                                                     echo "</tr><tr class='menu_height'>";
                                                 }
                                                             echo "<td align='center' onclick='submenu_go(".$menu->idx.")'><b style='cursor:pointer'>".$menu->group_name."<br/>".$menu->name."<b/></td>";
