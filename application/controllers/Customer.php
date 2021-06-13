@@ -49,6 +49,7 @@ class Customer extends CI_Controller {
                     
                     $params = new stdClass();
                     $params->shop_idx = $shop_idx;
+                    $params->asc = "asc";
                     
                     $data['menu_info'] = $this->recipe_md->get_group_list("",$params);
                     
@@ -58,6 +59,7 @@ class Customer extends CI_Controller {
                     
                     $params = new stdClass();
                     $params->group_idx = $this->input->post('menu_idx');
+                    $params->asc = "asc";
                     
                     $data['menu_info'] = $this->recipe_md->get_recipe_list("",$params);
                     
