@@ -34,6 +34,7 @@ class Customer extends CI_Controller {
                 show_error("Check to Your URL."); 
             }else{
                 $data['shop_info'] = $this->shop_md->get_shop_info($shop_idx);
+                $data['language_list'] = $this->shop_md->get_shop_set($shop_idx);
             }
             
             switch ($level){
