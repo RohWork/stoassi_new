@@ -14,6 +14,8 @@
                             }
                         ?>
                     </select>
+                    <input type="hidden" name="place" id="place" value="<?=$place?>"/>
+                    <input type="hidden" name="menu_idx" id="menu_idx" value="<?=$menu_idx?>"/>
                 </form>
             </div>
             <div class="col-md-3 col-xs-3"></div>
