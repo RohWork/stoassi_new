@@ -93,7 +93,7 @@ class Customer extends CI_Controller {
                 
                 $this->cust_md->insert_order($data);
             }
-            $result["message"] = "성공";
+            $result["result"] = "1";
             
             header("Content-Type: application/json;");
             echo json_encode($result);
