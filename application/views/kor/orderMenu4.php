@@ -28,11 +28,25 @@
             </div>
             <form id="orderForm" name="orderForm" action="/customer/orderMenu/5/<?=$shop_info['idx']?>" method="post">
                 <div class="row" style="margin-top: 30px">
-                    <div class="col-md-2 col-xs-2"></div>
-                    <div class="col-md-4 col-xs-4 menu_button" id="button_in" onclick="order_submit(1)">취식</div>
-                    <div class="col-md-4 col-xs-4 menu_button" id="button_out" onclick="order_submit(2)">포장</div>
-                    <div class="col-md-2 col-xs-2"></div>
-                </div>
+                        <div class="col-md-2 col-xs-2"></div>
+                             <div class="col-md-4 col-xs-4">
+                                 <table>
+                                     <tr>
+                <?php
+                    $cnt = 1;
+                    foreach($menu_info as $menu){
+                        if($cnt % 2  == 0){
+                            echo "</tr><tr>";
+                        }
+                                    echo "<td>".$menu->name."</td>";
+                        $cnt++;
+                    }
+                ?>  
+                                     </tr>
+                                 </table>
+                             </div>
+                        <div class="col-md-2 col-xs-2"></div>
+                    </div>
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" />
             </form>
