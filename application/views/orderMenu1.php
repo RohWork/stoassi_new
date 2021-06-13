@@ -29,8 +29,22 @@
             </div>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-2 col-xs-2"></div>
-                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2/<?=$shop_info['idx']?>?language=kor'">KOREAN</div>
-                <div class="col-md-4 col-xs-4 menu_button" onclick="location.href='/customer/orderMenu/2/<?=$shop_info['idx']?>?language=eng'">ENGLISH</div>
+                    <div class="col-md-10 col-xs-10">
+                        <table style="width:100%" width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr class="menu_height">
+                               <?php
+                                   $cnt = 0;
+                                   foreach($language_list as $lang){
+                                       if($cnt % 2 == 0 && $cnt != 0){
+                                           echo "</tr><tr class='menu_height'>";
+                                       }
+                                                   echo "<td align='center' onclick='location.href=/customer/orderMenu/2/".$shop_info['idx']."?language=".$lang['language']."'>".$lang['language_full']."</td>";
+                                       $cnt++;
+                                   }
+                               ?>  
+                            </tr>
+                        </table>
+                    </div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
         </div>
