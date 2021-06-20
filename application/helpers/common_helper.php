@@ -81,6 +81,7 @@ if ( ! function_exists('header_set')) {
         
         $stock_array = array("stock_seller","stock_list","stock_category","stock_history");
         $recipe_array = array("recipe_group","recipe_list");
+        $order_array = arra("order_list_counter");
         $stock= $recipe = "";
         
         if(in_array($menu, $stock_array)){
@@ -91,6 +92,9 @@ if ( ! function_exists('header_set')) {
             $recipe = "active";
         }
         
+        if(in_array($menu, $order_array)){
+            $order = "active";
+        }
         
         $head_data = array(
             "main"	=> "",
@@ -100,8 +104,10 @@ if ( ! function_exists('header_set')) {
             "stock_history" => "",
             "recipe_group"   => "",
             "recipe_list"   => "",
+            "order_list"   => "",
             "stock" => $stock,
-            "recipe"    => $recipe
+            "recipe"    => $recipe,
+            "order"    => $order
         );
         $head_data[$menu] = "class='active'";
         
