@@ -20,7 +20,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
+            $offset = $this->input->get('per_page');
             
+            $config['total_rows'] = $this->cust_md->count_order($search_vo);
+            
+            $config = setPagination($config);
+            $this->pagination->initialize($config);
+            
+            $data['offset'] = $offset;
             $data['order_list'] = $this->cust_md->order_list($vo);
             
             
