@@ -9,47 +9,27 @@
 				<thead>
 					<tr>
 						<th>NO</th>
-						<th>재료명</th>
-						<th>재료타입</th>
-						<th>재료 남은갯수</th>
-						<th>최근수정일</th>
-						<th>사용여부</th>
-						<th>수정/삭제</th>
+						<th>테이블번호</th>
+						<th>주문상태</th>
+						<th>주문시각</th>
+						<th>주문명</th>
+						<th>포장여부</th>
+						<th>결제여부/수정</th>
 					</tr>
 				</thead>
 				<tbody>
 				<?php
 				$no = 1+$offset;
-				foreach($rows as $row){
-					switch($row->stock_level){
-						case 3:
-							$row->lv3_sc_name = null;
-							break;
-						case 2:
-							$row->lv3_sc_name = null;
-							$row->lv2_sc_name = null;
-							break;
-						case 1:
-							$row->lv3_sc_name = null;
-							$row->lv2_sc_name = null;
-							$row->lv1_sc_name = null;
-							break;
-					}					
-					
+				foreach($order_list as $row){		
 				?>
 					<tr>
 						<td><?=$no?></td>
-						<td><?=$row->name?></td>
-						<td>
-							<?=$row->lv1_sc_name?><?= !empty($row->lv1_sc_name) ? ">" : "" ?>
-							<?=$row->lv2_sc_name?><?= !empty($row->lv2_sc_name) ? ">" : "" ?>
-							<?=$row->lv3_sc_name?><?= !empty($row->lv3_sc_name) ? ">" : "" ?>
-							<?=$row->category_name?>
-						</td>
-						<td><?=$row->count?> <?=$row->unit?></td>
-						<td><?=date('Y-m-d', strtotime($row->modi_date))?></td>
-						<td><?=$row->state == 1 ? "사용" : "사용안함" ?></td>
-						<td><button type="button" id="modi_button" onclick="detail_stock_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
+						<td><?=$row->table_no?></td>
+						<td><?=$row->STATUS?></td>
+						<td><?=$row->reg_date?></td>
+						<td><?=$row->group_name?><?=$row->recipe_name?></td>
+						<td><?=$row->place?></td>
+						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
 					</tr>
 				<?php
 				$no ++;
