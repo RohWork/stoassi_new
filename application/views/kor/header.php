@@ -60,8 +60,8 @@
                   주문관리 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li <?=$order_list_kichen?>><a href="/RecipeGroup/group_list">주방주문관리</a></li>
-                <li <?=$order_list_counter?>><a href="/RecipeList/recipe_list">카운터주문관리</a></li>
+                <li <?=$order_list_kichen?>><a href="/Order/order_list_kiche">주방주문관리</a></li>
+                <li <?=$order_list_counter?>><a href="/Order/order_list_counter">카운터주문관리</a></li>
               </ul>
             </li>
           </ul>
