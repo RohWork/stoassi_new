@@ -46,13 +46,22 @@
                         <li <?=$stock_history?>><a href="/StockHistory/history_list">재고이력관리</a></li>
                 </ul>
             </li>
-                <li class="dropdown <?=$recipe?>">
+            <li class="dropdown <?=$recipe?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                   레시피관리 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li <?=$recipe_group?>><a href="/RecipeGroup/group_list">레시피그룹관리</a></li>
                 <li <?=$recipe_list?>><a href="/RecipeList/recipe_list">레시피리스트관리 </a></li>
+              </ul>
+            </li>
+            <li class="dropdown <?=$order?>">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  주문관리 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li <?=$order_list_kichen?>><a href="/RecipeGroup/group_list">주방주문관리</a></li>
+                <li <?=$order_list_counter?>><a href="/RecipeList/recipe_list">카운터주문관리</a></li>
               </ul>
             </li>
           </ul>
