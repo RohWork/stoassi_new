@@ -18,6 +18,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function order_list_counter(){
             $this->head_data = header_set("order_list_counter");
             
+            
+            $this->load->library('pagination');
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
             $offset = $this->input->get('per_page');
