@@ -105,6 +105,8 @@ if ( ! function_exists('header_set')) {
             "recipe_group"   => "",
             "recipe_list"   => "",
             "order_list"   => "",
+            "order_list_counter"   => "",
+            "order_list_kichen"   => "",
             "stock" => $stock,
             "recipe"    => $recipe,
             "order"    => $order
