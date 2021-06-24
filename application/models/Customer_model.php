@@ -28,6 +28,16 @@ class Customer_model extends CI_Model {
         
         return $this->db->get()->result_array();
     }
+    
+    function count_order($vo){
+        
+        $this->db->select('*');
+        $this->db->from('order_list AS ol');
+        $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
+        $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
+        $this->db->like('ol.regi_date', $vo->date);
+        return $this->db->count_all_results();
+    }
 }
 ?>
 
