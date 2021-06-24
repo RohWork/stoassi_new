@@ -39,7 +39,7 @@
 			</table>
 		</div>
 		<div class="col-sm-12">
-			<button type="button" id="input_button" class="btn btn-primary">상품추가</button>
+			<button type="button" id="input_button" class="btn btn-primary">주문추가</button>
 		</div>
 		<div class="col-sm-offset-5">
 			<ul class="pagination">
@@ -199,12 +199,12 @@
             get_seller_info(0,'insert');
     });
 
-    function detail_stock_show(idx){
+    function detail_order_show(idx){
         var params =  {
                 "idx" : idx
         };
         $.ajax({
-            url:'/stock/get_stock_info',
+            url:'/order/get_order_info',
             type:'post',
             data:params,
             success:function(data){
@@ -230,11 +230,6 @@
                 $("#stock_use_y").prop("checked", false);
             }
             
-            if(data.image != null){
-                $("#stock_image").attr("src", 'http://<?=$_SERVER['HTTP_HOST']?>'+data.image);
-            }else{
-                $("#stock_image").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKaZM3avvgYxxTcLs_z8BzV-grlQfZF_NhSQ&usqp=CAU");
-            }
             if(data.history_price != null){
                 $("#stock_amt_history").text("€ "+data.history_price);
             }else{
@@ -249,45 +244,6 @@
     }
 
 
-    function get_category_info(idx, mode){
-        $.ajax({
-        url:'/stock/get_stock_category',
-        type:'post',
-        data:'',
-        success:function(data){
-            var str = '';
-            data.forEach(function (item){
-				var view_name;
-					
-					
-					switch(item.level){
-						case "2":
-							view_name = item.lv1_sc_name +">"+ item.name;
-							break;
-						case "3":
-							view_name = item.lv1_sc_name +">"+ item.lv2_sc_name +">"+ item.name;
-							break;
-						case "4":
-							view_name = item.lv1_sc_name +">"+ item.lv2_sc_name +">"+item.lv3_sc_name +">"+ item.name;
-							break;
-						default:
-							view_name = item.name;
-							break;
-					}
-                    if(idx == item.idx){
-                            str += "<option value='"+item.idx+"' selected>"+view_name+"</option>";
-                    }else{
-                            str += "<option value='"+item.idx+"'>"+view_name+"</option>";
-                    }
-            });
-            if(mode == 'detail'){
-                    $("#update_stock_category_idx").html(str);
-            }else{
-                    $("#insert_stock_category_idx").html(str);
-            }
-        }
-    })
-    }
 
     function get_seller_info(idx, mode){
         $.ajax({
