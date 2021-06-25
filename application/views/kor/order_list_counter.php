@@ -175,7 +175,7 @@
             type:'post',
             data:params,
             success:function(data){
-                set_detail_modal(data.order_detail);
+                set_detail_modal(data.result);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
