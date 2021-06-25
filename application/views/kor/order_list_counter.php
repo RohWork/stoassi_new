@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<!-- Modal -->
-	<div id="modal_stock_detail" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="modal_order_detail" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -56,7 +56,7 @@
 			<h4 class="modal-title" id="myModalLabel">주문상세화면</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="stock_update_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
 					<label for="stock_name" class="col-sm-3 control-label">테이블번호</label>
 					<div class="col-sm-8">
@@ -80,49 +80,16 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="update_stock_seller_idx" class="col-sm-3 control-label">구입처</label>
+					<label for="update_stock_seller_idx" class="col-sm-3 control-label">고객메시지</label>
 					<div class="col-sm-8">
-						<select name="update_stock_seller_idx" id="update_stock_seller_idx" class="form-control"></select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="update_stock_count" class="col-sm-3 control-label">재료갯수</label>
-					<div class="col-sm-4">
-						<input type="number" id="update_stock_count" name="update_stock_count" class="form-control" readonly/>
-					</div>
-					<label for="update_stock_unit" class="col-sm-2 control-label">갯수단위</label>
-					<div class="col-sm-2">
-						<input type="text" id="update_stock_unit" name="update_stock_unit" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="stock_amt_history" class="col-sm-3 control-label">최근구매금액</label>
-					<div class="col-sm-8">
-						<div id="stock_amt_history"></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="stock_comment" class="col-sm-3 control-label">재료설명</label>
-					<div class="col-sm-8">
-						<textarea id="update_stock_comment" name="update_stock_comment" class="form-control"></textarea>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="update_stock_useyn" class="col-sm-3 control-label">사용여부</label>
-					<div class="col-sm-9">
-						<label class="radio-inline">
-						<input type="radio" name="update_stock_useyn" id="stock_use_y">사용
-						</label>
-						<label class="radio-inline">
-						<input type="radio" name="update_stock_useyn" id="stock_use_n">사용안함
-						</label>
+                                            <span id="user_msg" name="user_msg"></span>
 					</div>
 				</div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="stock_update()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="order_update()" class="btn btn-primary">저장하기</button>
 		  </div>
 		</div>
 	  </div>
@@ -212,7 +179,7 @@
             }
     })
 
-            $("#modal_stock_detail").modal('show');
+            $("#modal_order_detail").modal('show');
     }
 
     function set_detail_modal(data){
@@ -315,27 +282,8 @@ function stock_insert(){
     
     function stock_update(){
         
-        var stock_name = $("#stock_name");
-        var stock_unit = $("#stock_unit");
-
-        if(stock_name.val() == ""){
-                alert("재료명을 입력하시기 바랍니다.");
-                stock_name.focus();
-                return;
-        }
-        if(stock_unit.val() == ""){
-                alert("갯수 단위를 입력하시기 바랍니다.");
-                stock_unit.focus();
-                return;
-        }
-        
-        if($("#update_stock_image").val() != ""){
-            file_upload_test($("#update_stock_image"));
-        }
-        
-        var form = $("#stock_update_form");
+        var form = $("#order_update_form");
         var formData = new FormData(form[0]);
-        formData.append("file", $("#update_stock_image")[0].files[0]);
         
         $.ajax({
             url:'/stock/set_update_stock',
