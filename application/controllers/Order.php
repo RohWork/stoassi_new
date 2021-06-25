@@ -40,6 +40,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view(LANGUAGE.'/order_list_counter', $data);
             
         }
+        
+        public function get_order_info(){
+            
+            $code = '';
+            $message = '';
+            
+            $order_idx = $this->input->post("idx");
+            
+            if(empty($order_idx)){
+                $message = "idx error";
+                $code = 404;
+            }else{
+                $vo = new stdClass();
+                $vo->idx = $order_idx;
+                
+                $data['order_detail'] = $this->cust_md->detail_order($vo);
+            }
+
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
     }
 
 ?>
