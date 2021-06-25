@@ -83,8 +83,10 @@
 					<label for="update_stock_seller_idx" class="col-sm-3 control-label">고객메시지</label>
 					<div class="col-sm-8">
                                             <span id="user_msg" name="user_msg"></span>
+                                            <input type="hidden" id="idx" name="idx"/>
 					</div>
 				</div>
+                            
 			</form>
 		  </div>
 		  <div class="modal-footer">
@@ -195,6 +197,7 @@
             $("#regi_date").html(data.regi_date.substr(10,6));
             //$("#user_msg").val(data.user_msg);
             $("#status").val(data.status);
+            $("#idx").val(data.idx);
      
     }
 
