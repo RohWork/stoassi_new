@@ -26,7 +26,7 @@ class Customer_model extends CI_Model {
         
         $this->db->like('ol.regi_date', $vo->date);
         
-        return $this->db->get()->result_array();
+        return $this->db->get()->result();
     }
     
     function count_order($vo){
