@@ -194,24 +194,9 @@
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
             $("#regi_date").html(data.regi_date.substr(10,6));
-            $("#update_stock_count").val(data.count);
-            $("#update_stock_unit").val(data.unit);
-            $("#update_stock_comment").val(data.memo);
-            $("#update_stock_useyn").val(data.state);
-            
-            if(data.state == "1"){
-                $("#stock_use_y").prop("checked", true);
-            }else{
-                $("#stock_use_y").prop("checked", false);
-            }
-            
-            if(data.history_price != null){
-                $("#stock_amt_history").text("€ "+data.history_price);
-            }else{
-                $("#stock_amt_history").text("정보없음");
-            }
-            get_category_info(data.stock_category_idx, 'detail');
-            get_seller_info(data.stock_seller_idx, 'detail');
+            //$("#user_msg").val(data.user_msg);
+            $("#status").val(data.status);
+     
     }
 
     function modal_close(id_val){
@@ -220,30 +205,8 @@
 
 
 
-    function get_seller_info(idx, mode){
-        $.ajax({
-        url:'/stock/get_stock_seller',
-        type:'post',
-        data:'',
-        success:function(data){
-            var str = '';
-            data.forEach(function (item){
-                    if(idx == item.idx){
-                            str += "<option value='"+item.idx+"' selected>"+item.name+"</option>";
-                    }else{
-                            str += "<option value='"+item.idx+"'>"+item.name+"</option>";
-                    }
-            });
-            if(mode == 'detail'){
-                    $("#update_stock_seller_idx").html(str);
-            }else{
-                    $("#insert_stock_seller_idx").html(str);
-            }
-        }
-    })
-    }
 
-function stock_insert(){
+    function stock_insert(){
 
         var stock_name = $("#insert_stock_name");
         var stock_unit = $("#insert_stock_unit");
@@ -294,7 +257,7 @@ function stock_insert(){
         var formData = new FormData(form[0]);
         
         $.ajax({
-            url:'/stock/set_update_stock',
+            url:'/order/set_update_order',
             type:'post',
             processData : false,
             contentType : false,
@@ -312,38 +275,7 @@ function stock_insert(){
 
     }
     
-    function file_upload_test(upload_file){
-        var extArray = new Array("jpg", "gif", "png");
-        var path = upload_file.val();
-        if(path == ""){
-            alert("파일을 추가해주세요.");
-            return false;
-        }
-        
-        var pos = path.indexOf(".");
-        if(pos < 0 ){
-            alert("확장자가 없는 파일입니다.");
-            return false;
-        }
-        
-        var ext = path.slice(path.indexOf(".")+ 1).toLowerCase();
-        var checkExt = false;
-        for(var i = 0; i < extArray.length; i++) {
-            if(ext == extArray[i]) {
-                    checkExt = true;
-                    break;
-            }
-	}
 
-	if(checkExt == false) {
-            alert("업로드 할 수 없는 파일 확장자 입니다.");
-	    return false;
-
-	}
-	return true;
-
-        
-    }
         
 </script>
 </html>
