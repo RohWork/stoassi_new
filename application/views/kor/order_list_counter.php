@@ -188,8 +188,7 @@
     }
 
     function set_detail_modal(data){
-            
-            console.log(data);
+
             
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
@@ -251,7 +250,7 @@
     }
     
     
-    function stock_update(){
+    function order_update(){
         
         var form = $("#order_update_form");
         var formData = new FormData(form[0]);
