@@ -66,6 +66,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             echo json_encode($data);
             
         }
+        
+        public function set_update_order(){
+            
+            $code = '';
+            $message = '';
+            
+            $order_idx = $this->input->post("idx");
+            $stats = $this->input->post("status");
+            
+            if(empty($order_idx)){
+                $message = "idx error";
+                $code = 404;
+            }else{
+                $vo = new stdClass();
+                $vo->idx = $order_idx;
+                $vo->status = $status;
+                
+                $result = $this->cust_md->set_order($vo);
+            }
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
     }
 
 ?>
