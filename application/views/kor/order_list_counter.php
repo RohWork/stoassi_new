@@ -272,11 +272,11 @@ function stock_insert(){
             contentType : false,
             data:formData,
             success:function(data){
-				alert(data.message);
-				
-				if(data.code == 200){
-					location.reload();
-				}
+                    alert(data.message);
+
+                    if(data.code == 200){
+                            location.reload();
+                    }
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
