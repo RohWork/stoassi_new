@@ -193,7 +193,7 @@
             
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
-            $("#update_stock_name").val(data.name);
+            $("#regi_date").html(data.regi_date.substr(10,6));
             $("#update_stock_count").val(data.count);
             $("#update_stock_unit").val(data.unit);
             $("#update_stock_comment").val(data.memo);
