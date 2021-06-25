@@ -18,7 +18,7 @@ class Customer_model extends CI_Model {
     
     function order_list($vo){
         $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_no, ol.cnt");
-        $this->db->select("ol.regi_date, if(ol.`status` = 1, '결제대기', if(ol.status=2,'결제완료','조리완료') ) AS STATUS");
+        $this->db->select("ol.regi_date, CASE WHEN ol.status = '1' then '결제대기' when ol.status = '2' then '결제완료' when ol.status = '3' then '조리완료' else '결제취소' ) AS STATUS");
         $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ri.idx");
         $this->db->from('order_list AS ol');
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
