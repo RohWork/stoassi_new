@@ -26,7 +26,7 @@
 						<td><?=$no?></td>
 						<td><?=$row->table_no?></td>
 						<td><?=$row->STATUS?></td>
-						<td><?=$row->reg_date?></td>
+						<td><?=$row->regi_date?></td>
 						<td><?=$row->group_name?><?=$row->recipe_name?></td>
 						<td><?=$row->place?></td>
 						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
