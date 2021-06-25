@@ -53,7 +53,7 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">주문상세화면</h4>
+			<h4 class="modal-title" id="myModalOrderLabel">주문상세화면</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
@@ -189,7 +189,7 @@
 
     function set_detail_modal(data){
             
-
+            $("#myModalOrderLabel").html(data.name);
             $("#table_no").html(data.table_no);
             $("#update_stock_name").val(data.name);
             $("#update_stock_count").val(data.count);
