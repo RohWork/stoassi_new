@@ -189,8 +189,8 @@
 
     function set_detail_modal(data){
             
-            console.log(data);
-            $("#table_no").val(data.idx);
+
+            $("#table_no").html(data.table_no);
             $("#update_stock_name").val(data.name);
             $("#update_stock_count").val(data.count);
             $("#update_stock_unit").val(data.unit);
