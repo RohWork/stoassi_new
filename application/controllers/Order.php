@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $message = '';
             
             $order_idx = $this->input->post("idx");
-            $stats = $this->input->post("status");
+            $status = $this->input->post("status");
             
             if(empty($order_idx)){
                 $message = "idx error";
