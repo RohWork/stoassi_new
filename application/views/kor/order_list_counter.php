@@ -191,7 +191,7 @@
             
             console.log(data);
             
-            $("#myModalOrderLabel").html(data.name);
+            $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
             $("#update_stock_name").val(data.name);
             $("#update_stock_count").val(data.count);
