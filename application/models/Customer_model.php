@@ -53,6 +53,16 @@ class Customer_model extends CI_Model {
         return $this->db->get()->row();
         
     }
+    
+    function set_order($vo){
+        
+        $data['modi_date'] = date('Y-m-d H:i:s');
+        $data['status'] = $vo->status;
+        
+        $this->db->where("idx",$vo->idx);
+        $this->db->update('order_list',$data);
+        
+    }
 }
 ?>
 
