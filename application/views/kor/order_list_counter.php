@@ -39,7 +39,7 @@
 			</table>
 		</div>
 		<div class="col-sm-12">
-			<button type="button" id="input_button" class="btn btn-primary">주문추가</button>
+			<!--<button type="button" id="input_button" class="btn btn-primary">주문추가</button>-->
 		</div>
 		<div class="col-sm-offset-5">
 			<ul class="pagination">
@@ -53,30 +53,29 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">재고상세화면</h4>
+			<h4 class="modal-title" id="myModalLabel">주문상세화면</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="stock_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">재료명</label>
+					<label for="stock_name" class="col-sm-3 control-label">테이블번호</label>
 					<div class="col-sm-8">
-                                                <input type="hidden" id="update_stock_idx" name="update_stock_idx"/>
-                                                       
-                                                       
-						<input type="text" id="update_stock_name" name="update_stock_name" class="form-control"/>
+                                            <span id="table_no" name="table_no"></span>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="stock_category_idx" class="col-sm-3 control-label">자료타입</label>
+					<label for="stock_category_idx" class="col-sm-3 control-label">주문시간</label>
 					<div class="col-sm-8">
-						<select name="update_stock_category_idx" id="update_stock_category_idx" class="form-control"></select>
+                                            <span id="regi_date" name="regi_date"></span>
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">재료사진</label>
+					<label for="stock_name" class="col-sm-3 control-label">주문상태</label>
 					<div class="col-sm-8">
-						<img id="stock_image" src="" class="img-responsive" id="view_stock_image">
-						<input type="file" id="update_stock_image" name="update_stock_image" class="form-control"/>
+                                            <select id="status" name="status">
+                                                <option value="1">결제대기</option>
+                                                <option value="2">결제완료</option>
+                                            </select>
 					</div>
 				</div>
 				<div class="form-group">
