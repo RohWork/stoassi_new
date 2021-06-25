@@ -55,9 +55,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo = new stdClass();
                 $vo->idx = $order_idx;
                 
-                $data['order_detail'] = $this->cust_md->detail_order($vo);
+                $result = $this->cust_md->detail_order($vo);
             }
-
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
             
             header("Content-Type: application/json;");
             echo json_encode($data);
