@@ -38,6 +38,21 @@ class Customer_model extends CI_Model {
         $this->db->like('ol.regi_date', $vo->date);
         return $this->db->count_all_results();
     }
+    
+    function detail_order($vo){
+        
+        $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_no, ol.cnt");
+        $this->db->select("ol.regi_date, if(ol.`status` = 1, '결제대기', if(ol.status=2,'결제완료','조리완료') ) AS STATUS");
+        $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ri.idx");
+        $this->db->from('order_list AS ol');
+        $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
+        $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
+        
+        $this->db->where('ri.idx', $vo->idx);
+        
+        return $this->db->get()->row();
+        
+    }
 }
 ?>
 
