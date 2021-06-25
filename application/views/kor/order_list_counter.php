@@ -176,7 +176,12 @@
             data:params,
             success:function(data){
                 set_detail_modal(data.order_detail);
-            }
+            },
+            error: function(xhr,status,error) {
+                console.log(xhr,status,error);
+                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                return false;
+            }	
     })
 
             $("#modal_order_detail").modal('show');
