@@ -189,6 +189,8 @@
 
     function set_detail_modal(data){
             
+            console.log(data);
+            
             $("#myModalOrderLabel").html(data.name);
             $("#table_no").html(data.table_no);
             $("#update_stock_name").val(data.name);
