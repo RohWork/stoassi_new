@@ -175,7 +175,7 @@
             type:'post',
             data:params,
             success:function(data){
-                set_detail_modal(data.result);
+                set_detail_modal(data.order_detail);
             }
     })
 
