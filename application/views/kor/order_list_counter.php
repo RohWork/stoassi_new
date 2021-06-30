@@ -102,55 +102,33 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">재고상품추가</h4>
+			<h4 class="modal-title" id="myModalLabel">주문추가</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="stock_insert_form" enctype="multipart/form-data" class="form-horizontal">
-				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">재료명</label>
-					<div class="col-sm-8">
-						<input type="text" id="insert_stock_name" name="insert_stock_name" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_category_idx" class="col-sm-3 control-label">자료타입</label>
-					<div class="col-sm-8">
-						<select name="insert_stock_category_idx" id="insert_stock_category_idx" class="form-control"></select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_image" class="col-sm-3 control-label">재료사진</label>
-					<div class="col-sm-8">
-						<input type="file" id="insert_stock_image" name="insert_stock_image" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_seller_idx" class="col-sm-3 control-label">구입처</label>
-					<div class="col-sm-8">
-						<select name="insert_stock_seller_idx" id="insert_stock_seller_idx" class="form-control"></select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_count" class="col-sm-3 control-label">재료갯수</label>
-					<div class="col-sm-4">
-						<input type="number" id="insert_stock_count" name="insert_stock_count" class="form-control" value="0"/>
-					</div>
-					<label for="insert_stock_unit" class="col-sm-2 control-label">갯수단위</label>
-					<div class="col-sm-2">
-						<input type="text" id="insert_stock_unit" name="insert_stock_unit" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_comment" class="col-sm-3 control-label">재료설명</label>
-					<div class="col-sm-8">
-						<textarea id="insert_stock_comment" name="insert_stock_comment" class="form-control"></textarea>
-					</div>
-				</div>
+                            <div class="form-group">
+                                    <label for="insert_table_no" class="col-sm-3 control-label">테이블번호</label>
+                                    <div class="col-sm-8">
+                                            <input type="text" id="insert_table_no" name="insert_table_no" class="form-control"/>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="insert_recipe_group" class="col-sm-3 control-label">메뉴 그룹</label>
+                                    <div class="col-sm-8">
+                                            <select name="insert_recipe_group" id="insert_recipe_group" class="form-control"></select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="insert_recipe" class="col-sm-3 control-label">메뉴 선택</label>
+                                    <div class="col-sm-8">
+                                        <select name="insert_recipe" id="insert_recipe" class="form-control"></select>
+                                    </div>
+                            </div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_insert_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="stock_insert()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="stock_insert()" class="btn btn-primary">주문하기</button>
 		  </div>
 		</div>
 	  </div>
