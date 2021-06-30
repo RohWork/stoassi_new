@@ -1,8 +1,8 @@
 
 	<div class="container">
 		<div class="page-header">
-			<h1>재고관리</h1>
-			<p class="lead">재고관리 화면</p>
+			<h1>주문관리</h1>
+			<p class="lead">주문관리 화면 - 부엌</p>
 		</div>
 		<div class="table-responsive">
 			<table class="table">
