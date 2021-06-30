@@ -95,6 +95,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        
+        public function order_list_kitchen(){
+            $this->head_data = header_set("order_list_kitchen");
+            
+            
+            $this->load->library('pagination');
+            $vo = new stdClass();
+            $vo->date = date('Y-m-d');
+            $offset = $this->input->get('per_page');
+            
+            $config['total_rows'] = $this->cust_md->count_order($vo);
+            
+            $config = setPagination($config);
+            $this->pagination->initialize($config);
+            $data['pagination'] = $this->pagination->create_links();
+            
+            
+            $data['offset'] = $offset;
+            $data['order_list'] = $this->cust_md->order_list($vo);
+            
+            
+            
+            $this->load->view(LANGUAGE.'/header', $this->head_data);
+            $this->load->view(LANGUAGE.'/order_list_counter', $data);
+            
+        }
     }
 
 ?>
