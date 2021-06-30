@@ -9,6 +9,7 @@ class Customer_model extends CI_Model {
         $data['recipe_idx'] = $vo['recipe_idx'];
         $data['place'] = $vo['place'];
         $data['cnt'] = $vo['cnt'];
+        $data['shop_idx']= $vo['shop_idx'];
         
         $this->db->insert('order_list',$data);
         
