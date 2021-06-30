@@ -103,6 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->library('pagination');
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
+            $vo->status = 2;
             $offset = $this->input->get('per_page');
             
             $config['total_rows'] = $this->cust_md->count_order($vo);
