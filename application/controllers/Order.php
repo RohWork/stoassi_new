@@ -35,7 +35,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['order_list'] = $this->cust_md->order_list($vo);
             
             
-            
             $this->load->view(LANGUAGE.'/header', $this->head_data);
             $this->load->view(LANGUAGE.'/order_list_counter', $data);
             
@@ -57,6 +56,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
                 $result = $this->cust_md->detail_order($vo);
             }
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
+        public function get_recipe_info(){
+            $code = '';
+            $message = '';
+            
+            $group_idx = $this->input->post("group_idx");
+            
+            $vo = new stdClass();
+            $vo->group_idx = $group_idx;
+                
+            $result = $this->recipe_md->get_recipe_list(0,$group_idx);
             
             $data['code'] = $code;
             $data['message'] = $message;
@@ -122,6 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view(LANGUAGE.'/order_list_kitchen', $data);
             
         }
+        
     }
 
 ?>
