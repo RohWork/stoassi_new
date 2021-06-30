@@ -50,6 +50,7 @@
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="menu_idx" id="menu_idx"/>
+                <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
             </form>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
