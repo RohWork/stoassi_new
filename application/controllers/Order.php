@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
-            $this->load->view(LANGUAGE.'/order_list_counter', $data);
+            $this->load->view(LANGUAGE.'/order_list_kitchen', $data);
             
         }
     }
