@@ -36,6 +36,9 @@ class Customer_model extends CI_Model {
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
         $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
         $this->db->like('ol.regi_date', $vo->date);
+        if(!empty($vo->status)){
+            $this->db->like('ol.status', $vo->status);
+        }
         return $this->db->count_all_results();
     }
     
