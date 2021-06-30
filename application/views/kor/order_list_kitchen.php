@@ -13,7 +13,7 @@
 						<th>주문시각</th>
                                                 <th>메뉴타입</th>
 						<th>주문명</th>
-						<th>결제여부/수정</th>
+						<th>조리진행</th>
 					</tr>
 				</thead>
 				<tbody>
