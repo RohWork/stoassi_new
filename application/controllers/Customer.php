@@ -87,6 +87,7 @@ class Customer extends CI_Controller {
             $recipe_array = explode("/", $recipe_idx);
             $cnt = 1; //cnt 값은 나중에 입력 받을 예정
             $place = $this->input->post("place");
+            $shop_idx = $this->input->post("shop_idx");
             
             for($i=0;$i<count($recipe_array);$i++){
                 
@@ -95,7 +96,8 @@ class Customer extends CI_Controller {
                         "table_no"      => $table_no,
                         "cnt"           => $cnt,
                         "place"         => $place,
-                        "recipe_idx"    => $recipe_array[$i]
+                        "recipe_idx"    => $recipe_array[$i],
+                        "shop_idx"      => $shop_idx,
                     );
 
                     $this->cust_md->insert_order($data);
