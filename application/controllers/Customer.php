@@ -64,6 +64,7 @@ class Customer extends CI_Controller {
                     $params->asc = "asc";
                     
                     $data['menu_info'] = $this->recipe_md->get_recipe_list("",$params);
+                    $data['shop_idx'] = $shop_idx;
                     
                     $this->load->view($language.'/orderMenu5', $data);
                     break;
