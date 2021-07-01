@@ -141,6 +141,16 @@
                                         <span>포장</span>
                                     </div>
                             </div>
+                            <div class="form-group">
+                                    <label for="stock_name" class="col-sm-3 control-label">주문상태</label>
+                                    <div class="col-sm-8">
+                                        <select id="insert_status" name="insert_status">
+                                            <option value="1">결제대기</option>
+                                            <option value="2">결제완료</option>
+                                            <option value="4">결제취소</option>
+                                        </select>
+                                    </div>
+                            </div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
