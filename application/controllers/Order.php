@@ -106,7 +106,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo['cnt'] = "1";
             $vo['status'] = "1";
             
-            
             $result = $this->cust_md->insert_order($vo);
             
             $data['code'] = $code;
