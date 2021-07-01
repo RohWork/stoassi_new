@@ -79,7 +79,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo = new stdClass();
             $vo->group_idx = $group_idx;
-                
+            
+            echo $group_idx;
+            
             $result = $this->recipe_md->get_recipe_list( "" ,$vo);
             
             $data['code'] = $code;
