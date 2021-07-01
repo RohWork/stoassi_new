@@ -103,8 +103,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo['recipe_idx'] = $this->input->post("insert_recipe");
             $vo['table_no'] = $this->input->post("insert_table_no");
             $vo['place'] = $this->input->post("insert_place");
+            $vo['status'] = $this->input->post("insert_status");
+            
             $vo['cnt'] = "1";
-            $vo['status'] = "1";
+            
             
             $result = $this->cust_md->insert_order($vo);
             
