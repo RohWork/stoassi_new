@@ -203,7 +203,6 @@
     
     function recipe_detail(idx){
         
-        alert(idx);
         var params =  {
                 "idx" : idx
         };
