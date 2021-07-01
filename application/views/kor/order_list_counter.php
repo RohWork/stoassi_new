@@ -115,7 +115,13 @@
                             <div class="form-group">
                                     <label for="insert_recipe_group" class="col-sm-3 control-label">메뉴 그룹</label>
                                     <div class="col-sm-8">
-                                            <select name="insert_recipe_group" id="insert_recipe_group" class="form-control"></select>
+                                        <select name="insert_recipe_group" id="insert_recipe_group" class="form-control">
+                                            <?php
+                                                for($i=0;$i<count($recipe_group_list);$i++){
+                                                    echo "<option value='".$recipe_group_list[$i]['idx']."'>".$recipe_group_list[$i]['name']."</option>";
+                                                }
+                                            ?>
+                                        </select>
                                     </div>
                             </div>
                             <div class="form-group">
