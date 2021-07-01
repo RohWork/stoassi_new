@@ -208,7 +208,7 @@
                 "idx" : idx
         };
         
-        $("#insert_recipe").children('option').remove();
+        $("#insert_recipe option").remove();
         
         $.ajax({
             url:'/order/get_recipe_info',
@@ -223,7 +223,7 @@
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
                 });
-                //$("#insert_recipe").html(str);
+                $("#insert_recipe").html(str);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
