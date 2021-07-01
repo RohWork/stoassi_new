@@ -209,6 +209,8 @@
         
         $("#insert_recipe option").remove();
         
+        console.log(params);
+        
         $.ajax({
             url:'/order/get_recipe_info',
             type:'post',
