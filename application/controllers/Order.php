@@ -91,6 +91,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function set_order(){
+            $code = '';
+            $message = '';
+            
+
+            
+            
+            
+            $vo['shop_idx'] = $this->session->userdata("shop_idx");
+            $vo['recipe_idx'] = $this->input->post("insert_recipe");
+            $vo['table_no'] = $this->input->post("insert_table_no");
+            $vo['place'] = $this->input->post("insert_place");
+            $vo['cnt'] = "1";
+            $vo['status'] = "1";
+            
+            
+            $result = $this->cust_md->insert_order($vo);
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
         public function set_update_order(){
             
             $code = '';
