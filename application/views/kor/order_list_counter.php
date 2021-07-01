@@ -204,7 +204,7 @@
     function recipe_detail(idx){
         
         var params =  {
-                "idx" : idx
+                "group_idx" : idx
         };
         
         $("#insert_recipe option").remove();
