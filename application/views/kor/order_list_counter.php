@@ -208,7 +208,7 @@
                 "idx" : idx
         };
         
-        $("#insert_recipe option").remove();
+        $("#insert_recipe").remove();
         
         $.ajax({
             url:'/order/get_recipe_info',
@@ -217,8 +217,6 @@
             contentType : false,
             data:params,
             success:function(data){
-                
-                
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
