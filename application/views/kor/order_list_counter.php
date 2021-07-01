@@ -147,7 +147,6 @@
                                         <select id="insert_status" name="insert_status">
                                             <option value="1">결제대기</option>
                                             <option value="2">결제완료</option>
-                                            <option value="4">결제취소</option>
                                         </select>
                                     </div>
                             </div>
