@@ -207,6 +207,8 @@
                 "idx" : idx
         };
         
+        $("#insert_recipe").html("");
+        
         $.ajax({
             url:'/order/get_recipe_info',
             type:'post',
@@ -214,6 +216,8 @@
             contentType : false,
             data:params,
             success:function(data){
+                
+                
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
