@@ -117,8 +117,8 @@
                                     <div class="col-sm-8">
                                         <select name="insert_recipe_group" id="insert_recipe_group" class="form-control">
                                             <?php
-                                                for($i=0;$i<count($recipe_group_list);$i++){
-                                                    echo "<option value='".$recipe_group_list[$i]['idx']."'>".$recipe_group_list[$i]['name']."</option>";
+                                                foreach($recipe_group_list as $row){
+                                                    echo "<option value='".$row->idx."'>".$row->name."</option>";
                                                 }
                                             ?>
                                         </select>
