@@ -208,7 +208,7 @@
                 "idx" : idx
         };
         
-        $("#insert_recipe").remove();
+        $("#insert_recipe option").remove();
         
         $.ajax({
             url:'/order/get_recipe_info',
