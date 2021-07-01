@@ -97,7 +97,7 @@
 	  </div>
 	</div>
 	
-	<div id="modal_stock_insert" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="modal_order_insert" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -105,7 +105,7 @@
 			<h4 class="modal-title" id="myModalLabel">주문추가</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="stock_insert_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="order_insert_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
                                     <label for="insert_table_no" class="col-sm-3 control-label">테이블번호</label>
                                     <div class="col-sm-8">
@@ -133,7 +133,7 @@
                             <div class="form-group">
                                     <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
                                     <div class="col-sm-4">
-                                        <input type="radio" name="insert_place" id="insert_place" value="1"/>
+                                        <input type="radio" name="insert_place" id="insert_place" value="1" checked/>
                                         <span>취식</span>
                                     </div>
                                     <div class="col-sm-4">
@@ -158,9 +158,7 @@
     });
 
     $("#input_button").click(function(){
-            $("#modal_stock_insert").modal('show');
-            get_category_info(0, 'insert');
-            get_seller_info(0,'insert');
+            $("#modal_order_insert").modal('show');
     });
 
     function detail_order_show(idx){
@@ -203,10 +201,9 @@
 
 
 
-    function stock_insert(){
+    function order_insert(){
 
-        var stock_name = $("#insert_stock_name");
-        var stock_unit = $("#insert_stock_unit");
+
 
         if(stock_name.val() == ""){
                 alert("재료명을 입력하시기 바랍니다.");
@@ -226,7 +223,7 @@
         formData.append("file", $("#insert_stock_image")[0].files[0]);
 
         $.ajax({
-            url:'/stock/set_stock',
+            url:'/order/set_order',
             type:'post',
             processData : false,
             contentType : false,
