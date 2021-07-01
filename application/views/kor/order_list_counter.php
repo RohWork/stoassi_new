@@ -223,7 +223,7 @@
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
                 });
-                $("#insert_recipe").html(str);
+                //$("#insert_recipe").html(str);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
