@@ -95,10 +95,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $code = '';
             $message = '';
             
-
-            
-            
-            
             $vo['shop_idx'] = $this->session->userdata("shop_idx");
             $vo['recipe_idx'] = $this->input->post("insert_recipe");
             $vo['table_no'] = $this->input->post("insert_table_no");
@@ -107,6 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo['cnt'] = "1";
             
+            var_dump($vo);
             
             $result = $this->cust_md->insert_order($vo);
             
