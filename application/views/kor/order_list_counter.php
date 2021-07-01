@@ -239,6 +239,7 @@
                 $("#insert_table_no").focus();
                 return;
         }
+        console.log($("#insert_recipe").val());
         if($("#insert_recipe").val() == ""){
                 alert("메뉴명을 선택하시기 바랍니다.");
                 $("#insert_recipe").focus();
