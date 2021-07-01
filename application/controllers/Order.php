@@ -93,8 +93,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         public function set_order(){
             
-            $code = '';
-            $message = '';
+            $code = '200';
+            $message = '성공';
             
             $vo['shop_idx'] = $this->session->userdata("shop_idx");
             $vo['recipe_idx'] = $this->input->post("insert_recipe");
