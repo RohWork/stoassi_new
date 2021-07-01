@@ -155,6 +155,8 @@
 
     $(document).ready(function(){
             var modfy_idx;
+            
+            recipe_detail($("#insert_recipe_group").val());
     });
 
     $("#input_button").click(function(){
