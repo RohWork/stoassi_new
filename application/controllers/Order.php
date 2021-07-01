@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $result = $this->recipe_md->get_recipe_list( "", $vo);
             
-            var_dump($result);
+            var_dump($vo);
             
             $data['code'] = $code;
             $data['message'] = $message;
