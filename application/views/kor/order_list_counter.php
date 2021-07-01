@@ -212,8 +212,6 @@
         $.ajax({
             url:'/order/get_recipe_info',
             type:'post',
-            processData : false,
-            contentType : false,
             data:params,
             success:function(data){
                 var str = "";
