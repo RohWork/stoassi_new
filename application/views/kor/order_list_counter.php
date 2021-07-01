@@ -255,14 +255,12 @@
                 return;
         }
 
-        var form = $("#stock_insert_form");
-        var formData = new FormData(form[0]);
+        var form = $("#order_insert_form");
+        var formData = form.serialize();
 
         $.ajax({
             url:'/order/set_order',
             type:'post',
-            processData : false,
-            contentType : false,
             data:formData,
             success:function(data){
                     alert(data.message);
