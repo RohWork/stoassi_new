@@ -215,7 +215,7 @@
                 var str = "";
                 data.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+view_name+"</option>";
-                }
+                });
                 $("#insert_recipe").html(str);
             },
             error: function(xhr,status,error) {
