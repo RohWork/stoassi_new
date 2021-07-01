@@ -234,22 +234,19 @@
 
 
 
-        if(stock_name.val() == ""){
-                alert("재료명을 입력하시기 바랍니다.");
-                stock_name.focus();
+        if($("#insert_table_no").val() == ""){
+                alert("테이블번호를 입력하시기 바랍니다.");
+                $("#insert_table_no").focus();
                 return;
         }
-        if(stock_unit.val() == ""){
-                alert("갯수 단위를 입력하시기 바랍니다.");
-                stock_unit.focus();
+        if($("#insert_recipe").val() == ""){
+                alert("메뉴명을 선택하시기 바랍니다.");
+                $("#insert_recipe").focus();
                 return;
         }
-		if($("#update_stock_image").val() != ""){
-			file_upload_test($("#insert_stock_image"));
-		}
+
         var form = $("#stock_insert_form");
         var formData = new FormData(form[0]);
-        formData.append("file", $("#insert_stock_image")[0].files[0]);
 
         $.ajax({
             url:'/order/set_order',
