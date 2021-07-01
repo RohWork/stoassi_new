@@ -115,7 +115,7 @@
                             <div class="form-group">
                                     <label for="insert_recipe_group" class="col-sm-3 control-label">메뉴 그룹</label>
                                     <div class="col-sm-8">
-                                        <select name="insert_recipe_group" id="insert_recipe_group" onchange="get_category_info(this.value)" class="form-control">
+                                        <select name="insert_recipe_group" id="insert_recipe_group" onchange="recipe_detail(this.value)" class="form-control">
                                             <?php
                                                 foreach($recipe_group_list as $row){
                                                     echo "<option value='".$row->idx."'>".$row->name."</option>";
