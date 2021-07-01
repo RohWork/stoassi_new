@@ -198,7 +198,34 @@
             $("#"+id_val)[0].reset();
     }
 
-
+    
+    function recipe_detail(idx){
+        
+        var params =  {
+                "idx" : idx
+        };
+        
+        $.ajax({
+            url:'/order/get_recipe_info',
+            type:'post',
+            processData : false,
+            contentType : false,
+            data:params,
+            success:function(data){
+                var str = "";
+                data.forEach(function (item){
+                    str += "<option value='"+item.idx+"'>"+view_name+"</option>";
+                }
+                $("#insert_recipe").html(str);
+            },
+            error: function(xhr,status,error) {
+                console.log(xhr,status,error);
+                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                return false;
+            }	 
+        });
+        
+    }
 
 
     function order_insert(){
