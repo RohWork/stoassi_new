@@ -152,8 +152,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
             
-            echo $vo->date;
-            
             $vo->status = 2;
             $offset = $this->input->get('per_page');
             
