@@ -27,7 +27,7 @@
 						<td><?=$row->regi_date?></td>
 						<td><?=$row->group_name?></td>
                                                 <td><?=$row->recipe_name?></td>
-						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->idx?>')" class="btn btn-default">조리진행</button></td>
+						<td><button type="button" id="modi_button" onclick="set_made_order('<?=$row->idx?>')" class="btn btn-default">조리진행</button></td>
 					</tr>
 				<?php
 				$no ++;
