@@ -46,12 +46,12 @@
 		</div>
 	</div>
 	<!-- Modal -->
-	<div id="modal_order_detail" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="modal_order_kitchen" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalOrderLabel">주문상세화면</h4>
+			<h4 class="modal-title" id="myModalOrderLabel">주문 조리 화면</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
@@ -94,65 +94,6 @@
 		</div>
 	  </div>
 	</div>
-	
-	<div id="modal_stock_insert" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">재고상품추가</h4>
-		  </div>
-		  <div class="modal-body">
-			<form id="stock_insert_form" enctype="multipart/form-data" class="form-horizontal">
-				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">재료명</label>
-					<div class="col-sm-8">
-						<input type="text" id="insert_stock_name" name="insert_stock_name" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_category_idx" class="col-sm-3 control-label">자료타입</label>
-					<div class="col-sm-8">
-						<select name="insert_stock_category_idx" id="insert_stock_category_idx" class="form-control"></select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_image" class="col-sm-3 control-label">재료사진</label>
-					<div class="col-sm-8">
-						<input type="file" id="insert_stock_image" name="insert_stock_image" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_seller_idx" class="col-sm-3 control-label">구입처</label>
-					<div class="col-sm-8">
-						<select name="insert_stock_seller_idx" id="insert_stock_seller_idx" class="form-control"></select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_count" class="col-sm-3 control-label">재료갯수</label>
-					<div class="col-sm-4">
-						<input type="number" id="insert_stock_count" name="insert_stock_count" class="form-control" value="0"/>
-					</div>
-					<label for="insert_stock_unit" class="col-sm-2 control-label">갯수단위</label>
-					<div class="col-sm-2">
-						<input type="text" id="insert_stock_unit" name="insert_stock_unit" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="insert_stock_comment" class="col-sm-3 control-label">재료설명</label>
-					<div class="col-sm-8">
-						<textarea id="insert_stock_comment" name="insert_stock_comment" class="form-control"></textarea>
-					</div>
-				</div>
-			</form>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('stock_insert_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="stock_insert()" class="btn btn-primary">저장하기</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
 </body>
 <script>
 
@@ -184,7 +125,7 @@
             }	
     })
 
-            $("#modal_order_detail").modal('show');
+            $("#modal_order_kitchen").modal('show');
     }
 
     function set_detail_modal(data){
@@ -206,50 +147,6 @@
 
 
 
-    function stock_insert(){
-
-        var stock_name = $("#insert_stock_name");
-        var stock_unit = $("#insert_stock_unit");
-
-        if(stock_name.val() == ""){
-                alert("재료명을 입력하시기 바랍니다.");
-                stock_name.focus();
-                return;
-        }
-        if(stock_unit.val() == ""){
-                alert("갯수 단위를 입력하시기 바랍니다.");
-                stock_unit.focus();
-                return;
-        }
-		if($("#update_stock_image").val() != ""){
-			file_upload_test($("#insert_stock_image"));
-		}
-        var form = $("#stock_insert_form");
-        var formData = new FormData(form[0]);
-        formData.append("file", $("#insert_stock_image")[0].files[0]);
-
-        $.ajax({
-            url:'/stock/set_stock',
-            type:'post',
-            processData : false,
-            contentType : false,
-            data:formData,
-            success:function(data){
-                    alert(data.message);
-
-                    if(data.code == 200){
-                            location.reload();
-                    }
-            },
-            error: function(xhr,status,error) {
-                console.log(xhr,status,error);
-                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                return false;
-            }	 
-        });
-
-    }
-    
     
     function order_update(){
         
