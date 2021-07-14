@@ -68,23 +68,15 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">주문상태</label>
-					<div class="col-sm-8">
-                                            <select id="status" name="status">
-                                                <option value="1">결제대기</option>
-                                                <option value="2">결제완료</option>
-                                                <option value="4">결제취소</option>
-                                            </select>
-					</div>
-				</div>
-				<div class="form-group">
 					<label for="update_stock_seller_idx" class="col-sm-3 control-label">고객메시지</label>
 					<div class="col-sm-8">
                                             <span id="user_msg" name="user_msg"></span>
                                             <input type="hidden" id="idx" name="idx"/>
 					</div>
 				</div>
-                            
+                                <div class="form-group">
+                                    
+                                </div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
