@@ -107,7 +107,7 @@
             get_seller_info(0,'insert');
     });
 
-    function detail_order_show(idx){
+    function set_made_order(idx){
         var params =  {
                 "idx" : idx
         };
