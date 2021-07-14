@@ -28,7 +28,7 @@ class Customer_model extends CI_Model {
         $this->db->like('ol.regi_date', $vo->date);
         
         if(!empty($vo->status)){
-            $this->db->like('ol.status', $vo->status);
+            $this->db->like('ol.status', $vo->status, 'after');
         }
         
         return $this->db->get()->result();
@@ -40,7 +40,7 @@ class Customer_model extends CI_Model {
         $this->db->from('order_list AS ol');
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
         $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
-        $this->db->like('ol.regi_date', $vo->date);
+        $this->db->like('ol.regi_date', $vo->date, 'after');
         if(!empty($vo->status)){
             $this->db->like('ol.status', $vo->status);
         }
