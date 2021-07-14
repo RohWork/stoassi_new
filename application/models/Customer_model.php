@@ -10,7 +10,7 @@ class Customer_model extends CI_Model {
         $data['place'] = $vo['place'];
         $data['cnt'] = $vo['cnt'];
         $data['shop_idx']= $vo['shop_idx'];
-        if(!empty($vo->status)){
+        if(!empty($vo['status'])){
             $data['status'] = $vo['status'];
         }
         
