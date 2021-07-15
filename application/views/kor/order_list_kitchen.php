@@ -102,7 +102,7 @@
                 "idx" : idx
         };
         $.ajax({
-            url:'/order/get_order_info',
+            url:'/order/get_order_recipe_info',
             type:'post',
             data:params,
             success:function(data){
