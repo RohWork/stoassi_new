@@ -54,7 +54,7 @@ class Customer_model extends CI_Model {
         
         $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_no, ol.cnt");
         $this->db->select("ol.regi_date, ol.status");
-        $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ol.idx");
+        $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ol.idx, ri.idx as recipe_idx");
         $this->db->from('order_list AS ol');
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
         $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
