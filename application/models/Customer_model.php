@@ -53,7 +53,7 @@ class Customer_model extends CI_Model {
     function detail_order($vo){
         
         $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_no, ol.cnt");
-        $this->db->select("ol.regi_date, ol.status,");
+        $this->db->select("ol.regi_date, ol.status");
         $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ol.idx, ri.idx as recipe_idx");
         $this->db->from('order_list AS ol');
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
@@ -83,7 +83,7 @@ class Customer_model extends CI_Model {
         $this->db->join('recipe_process AS rp ', 'ri.idx = rp.recipe_idx', 'left');
         $this->db->join('stock_info AS si', 'si.idx  = rp.stock_idx', 'left');
 
-        $this->db->where("idx",$recipe_idx);
+        $this->db->where("ri.idx",$recipe_idx);
         
         return $this->db->get()->result();
     }
