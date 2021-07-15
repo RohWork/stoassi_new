@@ -172,6 +172,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function get_order_recipe_info(){
+            
+            $code = '';
+            $message = '';
+            
+            $order_idx = $this->input->post("idx");
+            
+            if(empty($order_idx)){
+                $message = "idx error";
+                $code = 404;
+            }else{
+                $vo = new stdClass();
+                $vo->idx = $order_idx;
+                
+                $result['order'] = $this->cust_md->detail_order($vo);
+                
+                $recipe_idx = $result->recipe_idx;
+                
+                $result['recipe'] = $this->cust_md->get_order_recipe($recipe_idx);
+                
+            }
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
         
     }
 
