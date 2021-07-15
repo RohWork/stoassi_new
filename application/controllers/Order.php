@@ -188,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
                 $result['order'] = $this->cust_md->detail_order($vo);
                 
-                $recipe_idx = $result->recipe_idx;
+                $recipe_idx = $result['order']->recipe_idx;
                 
                 $result['recipe'] = $this->cust_md->get_order_recipe($recipe_idx);
                 
