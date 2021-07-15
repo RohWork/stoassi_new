@@ -97,7 +97,7 @@
             get_seller_info(0,'insert');
     });
 
-    function get_order_recipe_info(idx){
+    function set_made_order(idx){
         var params =  {
                 "idx" : idx
         };
@@ -113,7 +113,7 @@
                 alert("네트워크 오류!! 관리자에게 문의 주세요!!");
                 return false;
             }	
-    })
+            });
 
             $("#modal_order_kitchen").modal('show');
     }
