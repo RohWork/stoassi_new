@@ -97,7 +97,7 @@
             get_seller_info(0,'insert');
     });
 
-    function set_made_order(idx){
+    function get_order_recipe_info(idx){
         var params =  {
                 "idx" : idx
         };
@@ -106,7 +106,7 @@
             type:'post',
             data:params,
             success:function(data){
-                set_detail_modal(data.result);
+                set_detail_modal(data.result.order, data.result.recipe);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
@@ -118,7 +118,7 @@
             $("#modal_order_kitchen").modal('show');
     }
 
-    function set_detail_modal(data){
+    function set_detail_modal(data, recipe){
 
             
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
