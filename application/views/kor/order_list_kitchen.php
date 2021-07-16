@@ -66,8 +66,8 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="update_stock_seller_idx" class="col-sm-4 control-label">고객메시지</label>
-					<div class="col-sm-8">
+					<label for="update_stock_seller_idx" class="col-sm-3 control-label">고객메시지</label>
+					<div class="col-sm-9">
                                             <span id="user_msg" name="user_msg"></span>
                                             <input type="hidden" id="idx" name="idx"/>
 					</div>
