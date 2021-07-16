@@ -72,18 +72,12 @@
                                             <input type="hidden" id="idx" name="idx"/>
 					</div>
 				</div>
-                                <div class="form-group" >
-                                    <div class="col-sm-12">
-                                        <table id="recipe_area" class="table">
-                                            <tr>
-                                                <th>조리순서</th>
-                                                <th>재료명</th>
-                                                <th>재료투입량<th>
-                                                <th>재료투입단위</th>
-                                                <th>진행시간<th>
-                                            </tr>   
-                                        </table>
-                                    </div>
+                                <div class="form-group" id="recipe_area">
+                                    <div class="col-sm-2">조리순서</div>
+                                    <div class="col-sm-2">재료명</div>
+                                    <div class="col-sm-2">투입량</div>
+                                    <div class="col-sm-2">단위</div>
+                                    <div class="col-sm-2">진행시간</div>
                                 </div>
 			</form>
 		  </div>
