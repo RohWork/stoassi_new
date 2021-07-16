@@ -73,7 +73,7 @@
 					</div>
 				</div>
                                 <div class="form-group" >
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-12">
                                         <table id="recipe_area" class="table">
                                             <tr>
                                                 <th>조리순서</th>
