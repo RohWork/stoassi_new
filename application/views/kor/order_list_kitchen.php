@@ -74,7 +74,7 @@
 				</div>
                                 <div class="form-group" >
                                     <div class="col-sm-12">
-                                        <table id="recipe_area" border="0" cellpadding="0" cellspacing="0">
+                                        <table id="recipe_area" border="0" cellpadding="0" cellspacing="0" class="form-control">
                                             <th>
                                                 <td>조리순서</td>
                                                 <td>재료명</td>
