@@ -74,12 +74,12 @@
 				</div>
                                 <div class="form-group" id="recipe_area">
                                     <div class="col-sm-1"></div>
-                                    <div class="col-sm-2 control-label ">조리순서</div>
-                                    <div class="col-sm-2 control-label">재료명</div>
-                                    <div class="col-sm-2 control-label">투입량</div>
-                                    <div class="col-sm-2 control-label">단위</div>
-                                    <div class="col-sm-2 control-label">진행시간</div>
-                                    <div class="col-sm-1"></div>
+                                    <label class="col-sm-2 control-label ">조리순서</label>
+                                    <label class="col-sm-2 control-label">재료명</label>
+                                    <label class="col-sm-2 control-label">투입량</label>
+                                    <label class="col-sm-2 control-label">단위</label>
+                                    <label class="col-sm-2 control-label">진행시간</label>
+                                    <label class="col-sm-1"></div>
                                 </div>
 			</form>
 		  </div>
