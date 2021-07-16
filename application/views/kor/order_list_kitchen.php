@@ -79,7 +79,7 @@
                                     <label class="col-sm-2 control-label">투입량</label>
                                     <label class="col-sm-2 control-label">단위</label>
                                     <label class="col-sm-2 control-label">진행시간</label>
-                                    <label class="col-sm-1"></div>
+                                    <div class="col-sm-1"></div>
                                 </div>
 			</form>
 		  </div>
