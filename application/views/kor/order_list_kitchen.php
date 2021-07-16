@@ -74,7 +74,7 @@
 				</div>
                                 <div class="form-group" id="recipe_area">
                                     <div class="col-sm-1"></div>
-                                    <label class="col-sm-2 control-label ">조리순서</label>
+                                    <label class="col-sm-2 control-label">조리순서</label>
                                     <label class="col-sm-2 control-label">재료명</label>
                                     <label class="col-sm-2 control-label">투입량</label>
                                     <label class="col-sm-2 control-label">단위</label>
