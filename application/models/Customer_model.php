@@ -78,7 +78,7 @@ class Customer_model extends CI_Model {
     function get_order_recipe($recipe_idx){
         
         
-        $this->db->select("ri.name, rp.order_num, si.name, rp.stock_input, si.unit,rp.set_time");
+        $this->db->select("ri.name, rp.order_num, si.name as stock_name, rp.stock_input, si.unit,rp.set_time");
         $this->db->from('recipe_info AS ri');
         $this->db->join('recipe_process AS rp ', 'ri.idx = rp.recipe_idx', 'left');
         $this->db->join('stock_info AS si', 'si.idx  = rp.stock_idx', 'left');
