@@ -75,13 +75,13 @@
                                 <div class="form-group" >
                                     <div class="col-sm-12">
                                         <table id="recipe_area" class="table">
-                                            <th>
-                                                <td >조리순서</td>
-                                                <td >재료명</td>
-                                                <td >재료투입량</td>
-                                                <td >재료투입단위</td>
-                                                <td >진행시간</td>
-                                            </th>   
+                                            <tr>
+                                                <th>조리순서</th>
+                                                <th>재료명</th>
+                                                <th>재료투입량<th>
+                                                <th>재료투입단위</th>
+                                                <th>진행시간<th>
+                                            </tr>   
                                         </table>
                                     </div>
                                 </div>
