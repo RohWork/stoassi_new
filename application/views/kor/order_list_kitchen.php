@@ -76,11 +76,11 @@
                                     <div class="col-sm-12">
                                         <table id="recipe_area" border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <th>
-                                                <td>조리순서</td>
-                                                <td>재료명</td>
-                                                <td>재료투입량</td>
-                                                <td>재료투입단위</td>
-                                                <td>진행시간</td>
+                                                <td class="control-label">조리순서</td>
+                                                <td class="control-label">재료명</td>
+                                                <td class="control-label">재료투입량</td>
+                                                <td class="control-label">재료투입단위</td>
+                                                <td class="control-label">진행시간</td>
                                             </th>   
                                         </table>
                                     </div>
