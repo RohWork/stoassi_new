@@ -127,7 +127,17 @@
             //$("#user_msg").val(data.user_msg);
             $("#status").val(data.status);
             $("#idx").val(data.idx);
-     
+            
+            recipe.forEach (function (el, index) {
+                console.log('element', index, el);
+                console.log(el.name);
+                console.log(el.order_num);
+                console.log(el.stock_name);
+                console.log(el.stock_input);
+                console.log(el.unit);
+                console.log(el.set_time);
+            });
+            
     }
 
     function modal_close(id_val){
