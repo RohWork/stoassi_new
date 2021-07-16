@@ -80,7 +80,7 @@
                                                     <th><label class="control-label">재료명</label></th>
                                                     <th><label class="control-label">투입량</label></th>
                                                     <th><label class="control-label">단위</label></th>
-                                                    <th><label class="control-label">진행시간</label></th>
+                                                    <th><label class="control-label">진행시간(초)</label></th>
                                             </tr>
                                             <tr>
                                                 <td>0</td>
