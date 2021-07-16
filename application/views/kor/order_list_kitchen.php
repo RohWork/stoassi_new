@@ -56,12 +56,12 @@
 		  <div class="modal-body">
 			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-4 control-label">테이블번호</label>
-					<div class="col-sm-2">
+					<label for="stock_name" class="col-sm-2 control-label">테이블번호</label>
+					<div class="col-sm-4">
                                             <span id="table_no" name="table_no"></span>
 					</div>
-                                        <label for="stock_category_idx" class="col-sm-4 control-label">주문시간</label>
-					<div class="col-sm-2">
+                                        <label for="stock_category_idx" class="col-sm-2 control-label">주문시간</label>
+					<div class="col-sm-4">
                                             <span id="regi_date" name="regi_date"></span>
 					</div>
 				</div>
