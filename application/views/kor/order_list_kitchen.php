@@ -72,7 +72,7 @@
                                             <input type="hidden" id="idx" name="idx"/>
 					</div>
 				</div>
-                                <div class="form-group" id="recipe_area">
+                                <div class="form-group">
                                     <div class="col-sm-12">
                                         <table id="recipe_area" class="table">
                                             <tr>
