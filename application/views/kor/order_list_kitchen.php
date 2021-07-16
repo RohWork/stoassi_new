@@ -74,14 +74,21 @@
 				</div>
                                 <div class="form-group">
                                     <div class="col-sm-10 col-sm-offset-1">
-                                        <table id="recipe_area" class="table table-bordered" style="font-size: 12px">
+                                        <table id="recipe_area" class="table" style="font-size: 12px">
                                             <tr>
                                                     <th><label class="control-label">조리순서</label></th>
                                                     <th><label class="control-label">재료명</label></th>
                                                     <th><label class="control-label">투입량</label></th>
                                                     <th><label class="control-label">단위</label></th>
                                                     <th><label class="control-label">진행시간</label></th>
-                                            </tr>   
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>소금</td>
+                                                <td>30</td>
+                                                <td>mg</td>
+                                                <td>30</td>
+                                            </tr>
                                         </table>
                                     </div>
                                 </div>
