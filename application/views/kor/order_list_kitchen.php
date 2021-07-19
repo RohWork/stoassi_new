@@ -97,6 +97,8 @@
 </body>
 <script>
     
+    var recipe_cnt;
+    
     $(document).ready(function(){
             var modfy_idx;
     });
@@ -129,6 +131,8 @@
     }
 
     function set_detail_modal(data, recipe){
+
+            recipe_cnt = 0;
             
             $("#recipe_area").html("");
             
@@ -139,8 +143,6 @@
             $("#status").val(data.status);
             $("#idx").val(data.idx);
             
-            
-            
             recipe.forEach (function (el, index) {
 
                 var tdString = "<tr>";
@@ -148,12 +150,14 @@
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
-                tdString += "<td><span name=recipe_time[]>"+el.set_time+"</span></td>";
+                tdString += "<td><span id=recipe_time["+el.order_num+"]>"+el.set_time+"</span></td>";
                 tdString += "</td>";
                 
                 
                 $("#recipe_area").append(tdString);
-               
+                
+                recipe_cnt++;
+                
             });
             
     }
@@ -164,7 +168,7 @@
 
 
     function set_cook(){
-        alert($("input[name=recipe_time[]]").length);
+        alert(recipe_cnt);
     }
 
     
