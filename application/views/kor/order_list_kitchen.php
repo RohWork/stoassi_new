@@ -184,7 +184,7 @@
             if(time == 0){
                 clearInterval(timer);
             }
-        },1000);
+        }, 1000);
         
         alert('데이터처리 예정');
     }
