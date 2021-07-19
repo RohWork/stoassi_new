@@ -179,7 +179,7 @@
         for(i=1; i<6; i++){
             (function(x){
               setTimeout(function(){
-                document.write(x+"<br/>");
+               console.log(x+"<br/>");
               }, 1000*x);
             })(i);
         }
