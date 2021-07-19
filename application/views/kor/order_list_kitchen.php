@@ -96,7 +96,9 @@
 	</div>
 </body>
 <script>
-
+    
+    var recipe_cnt;
+    
     $(document).ready(function(){
             var modfy_idx;
     });
@@ -130,6 +132,7 @@
 
     function set_detail_modal(data, recipe){
 
+            recipe_cnt = 0;
             
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
@@ -151,6 +154,8 @@
                 
                 $("#recipe_area").append(tdString);
                 
+                recipe_cnt++;
+                
             });
             
     }
@@ -161,7 +166,7 @@
 
 
     function set_cook(){
-        alert($("#recipe_time").size);
+        alert(recipe_cnt);
     }
 
     
