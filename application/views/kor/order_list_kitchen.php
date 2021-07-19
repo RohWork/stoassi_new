@@ -169,7 +169,7 @@
 
     function set_cook(){
         for(var i=0; i<recipe_cnt; i++){
-            console.log($("#recipe_time_"+i).val());
+            console.log($("#recipe_time_"+i).html());
         }
     }
 
