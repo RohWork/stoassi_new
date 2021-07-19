@@ -177,8 +177,8 @@
 
     function set_time(time, object){
         
-        var timer = setInterval(function({
-            time = time-1;
+        var timer = setInterval(function(){
+            time = time--;
             object.html(time);
 
             if(time == 0){
