@@ -185,7 +185,7 @@
 
     }
 
-    function set_time(time, object, i){
+    function set_time(time, element, i){
         
         if(time > 0){
             var timer = setInterval(function(){
