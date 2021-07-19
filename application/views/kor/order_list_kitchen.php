@@ -153,9 +153,7 @@
                 
                 
                 $("#recipe_area").append(tdString);
-                
-                recipe_cnt++;
-                
+               
             });
             
     }
