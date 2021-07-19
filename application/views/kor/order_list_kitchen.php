@@ -169,10 +169,25 @@
 
     function set_cook(){
         for(var i=0; i<recipe_cnt; i++){
-            console.log($("#recipe_time_"+i).html());
+            var time = ($("#recipe_time_"+i).html());
+            
+            
         }
     }
 
+    function set_time(time, object){
+        
+        var timer = setInterval(function({
+            time--;
+            object.html(time);
+
+            if(time == 0){
+                clearInterval(timer);
+            }
+        },1000);
+        
+        alert('데이터처리 예정');
+    }
     
     function order_update(){
         
