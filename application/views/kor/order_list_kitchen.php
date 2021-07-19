@@ -173,7 +173,7 @@
             
             var element = $("#recipe_time_"+i); 
             
-            if(set_time(element.html()), element)){
+            if(set_time(element.html(), element)){
                 i++;
                 set_cook(i);
             }
