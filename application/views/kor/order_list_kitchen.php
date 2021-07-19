@@ -172,12 +172,13 @@
         if(i<recipe_cnt){
             
             var element = $("#recipe_time_"+i); 
+            var time = Number(element.html());
             
-            if(set_time(element.html(), element)){
+            if(set_time(time, element)){
                 i++;
                 set_cook(i);
             }else{
-                alert('다음조리하기를 눌러주세요.');
+                alert('다음 조리하기를 눌러주세요.');
             }
         }else{
             alert('처리완료');
