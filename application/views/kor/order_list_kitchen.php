@@ -175,7 +175,7 @@
                 alert('데이터처리 예정');
             }
             
-            setTimeout(function(){},set_time*1000);
+            setTimeout(function(){},time*1000);
         }
     }
 
