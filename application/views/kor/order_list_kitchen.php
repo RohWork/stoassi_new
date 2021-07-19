@@ -88,8 +88,8 @@
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="order_update()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">닫기</button>
+			<button type="button" onclick="set_cook()" class="btn btn-primary">조리하기</button>
 		  </div>
 		</div>
 	  </div>
@@ -152,7 +152,7 @@
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
-                tdString += "<td>"+el.set_time+"</td>";
+                tdString += "<td><span id=recipe_time["+el.order_num+"]>"+el.set_time+"</span></td>";
                 tdString += "</td>";
                 
                 
@@ -167,7 +167,9 @@
     }
 
 
-
+    function set_cook(){
+        
+    }
 
     
     function order_update(){
