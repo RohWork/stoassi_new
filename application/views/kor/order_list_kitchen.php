@@ -179,16 +179,19 @@
 
     function set_time(time, object){
         
-        var timer = setInterval(function(){
-            time--;
-            object.html(time);
-            console.log(time);
-            if(time < 1){
-                clearInterval(timer);
-                return true;
-            }
-        }, 1000);
-        
+        if(time > 0){
+            var timer = setInterval(function(){
+                time--;
+                object.html(time);
+                console.log(time);
+                if(time < 1){
+                    clearInterval(timer);
+                    return true;
+                }
+            }, 1000);
+        }else{
+            return true;
+        }
         
     }
     
