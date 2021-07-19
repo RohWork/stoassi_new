@@ -148,7 +148,7 @@
                 console.log(el.set_time);
                 
                 var tdString = "<tr>";
-                tdString += "<td>"+el.order_num+"</td>";
+                tdString += "<td>"+(el.order_num+1)+"</td>";
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
