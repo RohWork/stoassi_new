@@ -176,6 +176,8 @@
             if(set_time(element.html(), element)){
                 i++;
                 set_cook(i);
+            }else{
+                alert('다음조리하기를 눌러주세요.');
             }
         }else{
             alert('처리완료');
