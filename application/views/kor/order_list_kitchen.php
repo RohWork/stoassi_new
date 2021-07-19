@@ -168,9 +168,20 @@
 
 
     function set_cook(){
-        for(var i=0; i<recipe_cnt ; i++){
+        /*for(var i=0; i<recipe_cnt ; i++){
             var time = ($("#recipe_time_"+i).html());            
-            setTimeout(console.log(time), 1000);
+            setTimeout(function(){
+                console.log(time);
+                recursive
+            }, Number(time)*1000);
+        }*/
+    
+        for(i=1; i<6; i++){
+            (function(x){
+              setTimeout(function(){
+                document.write(x+"<br/>");
+              }, 1000*x);
+            })(i);
         }
     }
 
