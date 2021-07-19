@@ -178,7 +178,7 @@
             if(time > 0){
                 var timer = setInterval(function(){
                     time--;
-                    object.html(time);
+                    element.html(time);
                     console.log(time);
                     if(time < 1){
                         clearInterval(timer);
