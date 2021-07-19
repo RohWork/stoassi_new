@@ -174,8 +174,8 @@
             if(set_time(time, $("#recipe_time_"+i))){
                 alert('데이터처리 예정');
             }
-            
-            setTimeout(function(){},time*1000);
+            console.log(time);
+            setTimeout(function(){}, time*1000);
         }
     }
 
