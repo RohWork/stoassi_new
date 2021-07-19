@@ -168,7 +168,11 @@
 
 
     function set_cook(i){
+        
         if(i<recipe_cnt){
+            
+            var time = ($("#recipe_time_"+i).html()); 
+            
             if(set_time(time,$("#recipe_cnt_"+i))){
                 i++;
                 set_cook(i);
