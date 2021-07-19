@@ -174,29 +174,25 @@
             var element = $("#recipe_time_"+i); 
             var time = Number(element.html());
             
-            set_time(time, element);
+            
+            if(time > 0){
+                var timer = setInterval(function(){
+                    time--;
+                    object.html(time);
+                    console.log(time);
+                    if(time < 1){
+                        clearInterval(timer);
+                    }
+                }, 1000);
+            }
+
             i++;
             set_cook(i);
 
-        }else{
-            alert('처리완료');
-        }
+
     }
 
-    function set_time(time, object){
-        
-        if(time > 0){
-            var timer = setInterval(function(){
-                time--;
-                object.html(time);
-                console.log(time);
-                if(time < 1){
-                    clearInterval(timer);
-                }
-            }, 1000);
-        }
-        
-    }
+
     
     function order_update(){
         
