@@ -180,7 +180,7 @@
         var timer = setInterval(function(){
             time = time--;
             object.html(time);
-
+            console.log(time);
             if(time == 0){
                 clearInterval(timer);
             }
