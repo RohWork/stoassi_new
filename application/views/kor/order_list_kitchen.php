@@ -168,21 +168,24 @@
 
 
     function set_cook(){
-        /*for(var i=0; i<recipe_cnt ; i++){
-            var time = ($("#recipe_time_"+i).html());            
-            setTimeout(function(){
-                console.log(time);
-                recursive
-            }, Number(time)*1000);
-        }*/
-    
+        for(var i=0; i<recipe_cnt ; i++){
+            
+            (function(time){
+                var time = ($("#recipe_time_"+i).html());   
+                setTimeout(function(){
+                    console.log(time);
+                    recursive
+                }, Number(time)*1000);
+            })(i);
+        }
+        /*
         for(i=1; i<6; i++){
             (function(x){
               setTimeout(function(){
                console.log(x+"<br/>");
               }, 1000*x);
             })(i);
-        }
+        }*/
     }
 
     function set_time(time, object){
