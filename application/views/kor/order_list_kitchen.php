@@ -168,12 +168,14 @@
 
 
     function set_cook(){
-        for(var i=0; i<recipe_cnt; i++){
+        for(var i=0; i<recipe_cnt ; i++){
             var time = ($("#recipe_time_"+i).html());
             
             if(set_time(time, $("#recipe_time_"+i))){
                 alert('데이터처리 예정');
             }
+            
+            setTimeout(function(){},set_time*1000);
         }
     }
 
