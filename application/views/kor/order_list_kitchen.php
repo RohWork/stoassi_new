@@ -170,8 +170,8 @@
     function set_cook(){
         for(var i=0; i<recipe_cnt ; i++){
             
-            (function(time){
-                var time = ($("#recipe_time_"+i).html());   
+            (function(x){
+                var time = ($("#recipe_time_"+x).html());   
                 setTimeout(function(){
                     console.log(time);
                     recursive
