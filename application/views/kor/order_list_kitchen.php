@@ -182,12 +182,14 @@
                     console.log(time);
                     if(time < 1){
                         clearInterval(timer);
+                        i++;
+                        set_cook(i);
                     }
                 }, 1000);
             }
 
-            i++;
-            set_cook(i);
+            
+            
         }else{
             alert('처리완료');
         }
