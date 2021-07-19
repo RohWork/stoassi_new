@@ -174,7 +174,7 @@
                 var time = ($("#recipe_time_"+x).html());   
                 setTimeout(function(){
                     console.log(time);
-                    recursive
+                    
                 }, Number(time)*1000);
             })(i);
         }
