@@ -181,7 +181,7 @@
             time--;
             object.html(time);
             console.log(time);
-            if(time == 0){
+            if(time < 1){
                 clearInterval(timer);
                 alert('데이터처리 예정');
             }
