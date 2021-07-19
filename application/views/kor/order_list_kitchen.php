@@ -137,6 +137,8 @@
             $("#status").val(data.status);
             $("#idx").val(data.idx);
             
+            $("#recipe_area").html("");
+            
             recipe.forEach (function (el, index) {
 
                 var tdString = "<tr>";
