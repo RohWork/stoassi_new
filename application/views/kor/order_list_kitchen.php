@@ -148,7 +148,7 @@
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
-                tdString += "<td><span id=recipe_time[]>"+el.set_time+"</span></td>";
+                tdString += "<td><span name=recipe_time[]>"+el.set_time+"</span></td>";
                 tdString += "</td>";
                 
                 
@@ -164,7 +164,7 @@
 
 
     function set_cook(){
-        alert($("#recipe_time").length);
+        alert($("input[name=recipe_time[]]").length);
     }
 
     
