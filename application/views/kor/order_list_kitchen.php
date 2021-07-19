@@ -168,7 +168,9 @@
 
 
     function set_cook(){
-        alert(recipe_cnt);
+        for(var i=0; i<recipe_cnt; i++){
+            alert($("#recipe_time["+i+"]").val());
+        }
     }
 
     
