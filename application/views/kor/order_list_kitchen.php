@@ -139,14 +139,7 @@
             $("#idx").val(data.idx);
             
             recipe.forEach (function (el, index) {
-                console.log('element', index, el);
-                console.log(el.name);
-                console.log(el.order_num);
-                console.log(el.stock_name);
-                console.log(el.stock_input);
-                console.log(el.unit);
-                console.log(el.set_time);
-                
+
                 var tdString = "<tr>";
                 tdString += "<td>"+(Number(el.order_num)+1)+"</td>";
                 tdString += "<td>"+el.stock_name+"</td>";
