@@ -130,6 +130,8 @@
 
     function set_detail_modal(data, recipe){
             
+            $("#recipe_area").html("");
+            
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
             $("#table_no").html(data.table_no);
             $("#regi_date").html(data.regi_date.substr(10,6));
@@ -137,7 +139,7 @@
             $("#status").val(data.status);
             $("#idx").val(data.idx);
             
-            $("#recipe_area").html("");
+            
             
             recipe.forEach (function (el, index) {
 
