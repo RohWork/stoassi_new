@@ -89,7 +89,7 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">닫기</button>
-			<button type="button" onclick="set_cook()" class="btn btn-primary">조리하기</button>
+			<button type="button" onclick="set_cook(0)" class="btn btn-primary">조리하기</button>
 		  </div>
 		</div>
 	  </div>
@@ -167,25 +167,15 @@
     }
 
 
-    function set_cook(){
-        for(var i=0; i<recipe_cnt ; i++){
-            
-            (function(x){
-                var time = ($("#recipe_time_"+x).html());   
-                setTimeout(function(){
-                    console.log(time);
-                    
-                }, Number(time)*1000);
-            })(i);
+    function set_cook(i){
+        if(i<recipe_cnt){
+            if(set_time(time,$("#recipe_cnt_"+i))){
+                i++;
+                set_cook(i);
+            }
+        }else{
+            alert('처리완료');
         }
-        /*
-        for(i=1; i<6; i++){
-            (function(x){
-              setTimeout(function(){
-               console.log(x+"<br/>");
-              }, 1000*x);
-            })(i);
-        }*/
     }
 
     function set_time(time, object){
