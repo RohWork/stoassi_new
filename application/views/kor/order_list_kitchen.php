@@ -175,18 +175,7 @@
             var time = Number(element.html());
             
             
-            if(time > 0){
-                var timer = setInterval(function(){
-                    time--;
-                    element.html(time);
-                    console.log(time);
-                    if(time < 1){
-                        clearInterval(timer);
-                        i++;
-                        set_cook(i);
-                    }
-                }, 1000);
-            }
+            set_time(time,element,i);
 
             
             
@@ -196,7 +185,23 @@
 
     }
 
-
+    function set_time(time, object, i){
+        
+        if(time > 0){
+            var timer = setInterval(function(){
+                time--;
+                element.html(time);
+                console.log(time);
+                if(time < 1){
+                    clearInterval(timer);
+                    i++;
+                    set_cook(i);
+                }
+            }, 1000);
+        }
+    }
+    
+    
     
     function order_update(){
         
