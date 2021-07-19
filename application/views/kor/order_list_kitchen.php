@@ -188,7 +188,9 @@
 
             i++;
             set_cook(i);
-
+        }else{
+            alert('처리완료');
+        }
 
     }
 
