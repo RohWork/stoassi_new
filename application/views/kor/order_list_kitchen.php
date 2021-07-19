@@ -170,7 +170,7 @@
     function set_cook(){
         for(var i=0; i<recipe_cnt ; i++){
             var time = ($("#recipe_time_"+i).html());            
-            setTimeout(console.log(time), time*1000);
+            setTimeout(console.log(time), Number(time)*1000);
         }
     }
 
