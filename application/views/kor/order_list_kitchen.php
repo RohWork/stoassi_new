@@ -82,13 +82,6 @@
                                                     <th><label class="control-label">단위</label></th>
                                                     <th><label class="control-label">진행시간(초)</label></th>
                                             </tr>
-                                            <tr>
-                                                <td>0</td>
-                                                <td>소금</td>
-                                                <td>30</td>
-                                                <td>mg</td>
-                                                <td>30</td>
-                                            </tr>
                                         </table>
                                     </div>
                                 </div>
@@ -153,6 +146,18 @@
                 console.log(el.stock_input);
                 console.log(el.unit);
                 console.log(el.set_time);
+                
+                var tdString = "<tr>";
+                tdString += "<td>"+el.order_num+"</td>";
+                tdString += "<td>"+el.stock_name+"</td>";
+                tdString += "<td>"+el.stock_input+"</td>";
+                tdString += "<td>"+el.unit+"</td>";
+                tdString += "<td>"+el.set_time+"</td>";
+                tdString += "</td>";
+                
+                
+                $("#recipe_area").append(tdString);
+                
             });
             
     }
