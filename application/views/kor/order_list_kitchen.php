@@ -171,9 +171,9 @@
         
         if(i<recipe_cnt){
             
-            var time = ($("#recipe_time_"+i).html()); 
+            var element = $("#recipe_time_"+i); 
             
-            if(set_time(time,$("#recipe_cnt_"+i))){
+            if(set_time(element.html()), element)){
                 i++;
                 set_cook(i);
             }
