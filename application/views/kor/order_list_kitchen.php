@@ -150,7 +150,7 @@
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
-                tdString += "<td><span id=recipe_time["+el.order_num+"]>"+el.set_time+"</span></td>";
+                tdString += "<td><span id='recipe_time_"+el.order_num+"'>"+el.set_time+"</span></td>";
                 tdString += "</td>";
                 
                 
@@ -169,7 +169,7 @@
 
     function set_cook(){
         for(var i=0; i<recipe_cnt; i++){
-            console.log($("#recipe_time["+i+"]").val());
+            console.log($("#recipe_time_"+i).val());
         }
     }
 
