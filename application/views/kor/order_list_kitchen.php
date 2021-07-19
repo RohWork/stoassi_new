@@ -161,7 +161,7 @@
 
 
     function set_cook(){
-        alert($("#recipe_time").length);
+        alert($("#recipe_time").size);
     }
 
     
