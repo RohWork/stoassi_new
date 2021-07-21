@@ -210,21 +210,23 @@
                 element.html(time);
                 console.log(time);
                 if(time < 1){
-                    $("#recipe_status_"+i).html("조리완료");
-                    $("#recipe_status_"+i).removeClass("cook_ing");
-                    $("#recipe_status_"+i).addClass("cook_end");
                     clearInterval(timer);
-                    i++;
-                    set_cook(i);
+                    set_complete_cook(i);
                 }
             }, 1000);
         }else{
-            $("#recipe_status_"+i).html("조리완료");
-            $("#recipe_status_"+i).removeClass("cook_ing");
-            $("#recipe_status_"+i).addClass("cook_end");
-            i++;
-            set_cook(i);
+            set_complete_cook(i);
         }
+    }
+    
+    function set_complete_cook(i){
+        $("#recipe_status_"+i).html("조리완료");
+        $("#recipe_status_"+i).removeClass("cook_ing");
+        $("#recipe_status_"+i).addClass("cook_end");
+        
+        i++;
+        set_cook(i);
+        
     }
     
     
