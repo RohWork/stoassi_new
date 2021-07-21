@@ -74,15 +74,20 @@
 				</div>
                                 <div class="form-group">
                                     <div class="col-sm-10 col-sm-offset-1">
-                                        <table id="recipe_area" class="table" style="font-size: 12px">
-                                            <tr>
-                                                    <th><label class="control-label">조리순서</label></th>
-                                                    <th><label class="control-label">재료명</label></th>
-                                                    <th><label class="control-label">투입량</label></th>
-                                                    <th><label class="control-label">단위</label></th>
-                                                    <th><label class="control-label">진행시간(초)</label></th>
-                                                    <th><label class="control-label">상태</label></th>
-                                            </tr>
+                                        <table  class="table" style="font-size: 12px">
+                                            <thead>
+                                                <tr>
+                                                        <th><label class="control-label">조리순서</label></th>
+                                                        <th><label class="control-label">재료명</label></th>
+                                                        <th><label class="control-label">투입량</label></th>
+                                                        <th><label class="control-label">단위</label></th>
+                                                        <th><label class="control-label">진행시간(초)</label></th>
+                                                        <th><label class="control-label">상태</label></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="recipe_area">
+                                                
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
