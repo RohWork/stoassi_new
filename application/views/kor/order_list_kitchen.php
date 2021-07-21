@@ -177,7 +177,7 @@
             
             $("#recipe_status_"+i).html("조리중");
             set_time(time,element,i);
-            $("#recipe_status_"+i).html("조리완료");
+            
             
             
         }else{
@@ -194,6 +194,7 @@
                 element.html(time);
                 console.log(time);
                 if(time < 1){
+                    $("#recipe_status_"+i).html("조리완료");
                     clearInterval(timer);
                     i++;
                     set_cook(i);
