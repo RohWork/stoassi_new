@@ -101,6 +101,15 @@
 	  </div>
 	</div>
 </body>
+<style>
+    .cook_ing{
+        font-weight: bold;
+        color:#E67E22;
+    }
+    .cook_end{
+        color:#bb8844;
+    }
+</style>
 <script>
     
     var recipe_cnt;
@@ -182,6 +191,7 @@
             var time = Number(element.html());
             
             $("#recipe_status_"+i).html("조리중");
+            $("#recipe_status_"+i).addClass("cook_ing");
             set_time(time,element,i);
             
             
@@ -201,6 +211,8 @@
                 console.log(time);
                 if(time < 1){
                     $("#recipe_status_"+i).html("조리완료");
+                    $("#recipe_status_"+i).removeClass("cook_ing");
+                    $("#recipe_status_"+i).addClass("cook_end");
                     clearInterval(timer);
                     i++;
                     set_cook(i);
@@ -208,6 +220,8 @@
             }, 1000);
         }else{
             $("#recipe_status_"+i).html("조리완료");
+            $("#recipe_status_"+i).removeClass("cook_ing");
+            $("#recipe_status_"+i).addClass("cook_end");
             i++;
             set_cook(i);
         }
