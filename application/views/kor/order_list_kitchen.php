@@ -157,7 +157,7 @@
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
                 tdString += "<td><span id='recipe_time_"+el.order_num+"'>"+el.set_time+"</span></td>";
-                tdString += "<td><span id='recipe_status_"+el.order_num+"'>"+el.set_time+"</span></td>";
+                tdString += "<td><span id='recipe_status_"+el.order_num+"'>조리대기</span></td>";
                 tdString += "</td>";
                 
                 
