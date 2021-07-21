@@ -151,6 +151,7 @@
                 tdString += "<td>"+el.stock_input+"</td>";
                 tdString += "<td>"+el.unit+"</td>";
                 tdString += "<td><span id='recipe_time_"+el.order_num+"'>"+el.set_time+"</span></td>";
+                tdString += "<td><span id='recipe_status_"+el.order_num+"'>"+el.set_time+"</span></td>";
                 tdString += "</td>";
                 
                 
@@ -174,9 +175,9 @@
             var element = $("#recipe_time_"+i); 
             var time = Number(element.html());
             
-            
+            $("#recipe_status_"+i).html("조리중");
             set_time(time,element,i);
-
+            $("#recipe_status_"+i).html("조리완료");
             
             
         }else{
