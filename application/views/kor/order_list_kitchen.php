@@ -206,6 +206,10 @@
                     set_cook(i);
                 }
             }, 1000);
+        }else{
+            $("#recipe_status_"+i).html("조리완료");
+            i++;
+            set_cook(i);
         }
     }
     
