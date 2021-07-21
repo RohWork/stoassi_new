@@ -81,6 +81,7 @@
                                                     <th><label class="control-label">투입량</label></th>
                                                     <th><label class="control-label">단위</label></th>
                                                     <th><label class="control-label">진행시간(초)</label></th>
+                                                    <th><label class="control-label">상태</label></th>
                                             </tr>
                                         </table>
                                     </div>
