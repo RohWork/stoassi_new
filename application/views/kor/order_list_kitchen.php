@@ -197,7 +197,7 @@
             
             
         }else{
-            alert('처리완료');
+            order_update_recipe();
         }
 
     }
@@ -231,13 +231,13 @@
     
     
     
-    function order_update(){
+    function order_update_recipe(){
         
         var form = $("#order_update_form");
         var formData = new FormData(form[0]);
         
         $.ajax({
-            url:'/order/set_update_order',
+            url:'/order/set_update_order_recipe',
             type:'post',
             processData : false,
             contentType : false,
