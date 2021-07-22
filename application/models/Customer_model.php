@@ -85,6 +85,7 @@ class Customer_model extends CI_Model {
         $this->db->join('stock_info AS si', 'si.idx  = rp.stock_idx', 'left');
 
         $this->db->where("ri.idx",$recipe_idx);
+        $this->db->order_by("rp.order_num","ASC");
         
         return $this->db->get()->result();
     }
