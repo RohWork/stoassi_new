@@ -203,6 +203,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function set_update_order_recipe(){
+            
+            $code = '';
+            $message = '';
+            
+            $order_idx = $this->input->post("idx");
+            $status = 3;
+            
+            if(empty($order_idx)){
+                $message = "idx error";
+                $code = 404;
+            }else{
+                $vo = new stdClass();
+                $vo->idx = $order_idx;
+                $vo->status = $status;
+                
+                $result = $this->cust_md->set_order($vo);
+            }
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
     }
 
 ?>
