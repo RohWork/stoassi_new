@@ -94,6 +94,14 @@ class Customer_model extends CI_Model {
         $this->db->insert("stock_history",$vo);
         return $this->db->insert_id();
     }
+    
+    function update_stock_count($vo){
+        
+        $this->db->set('count', 'count-'.$vo['stock_input']);
+        $this->db->where('idx', $vo['stock_idx']);
+        $this->db->update('stock_info');
+        
+    }
 }
 ?>
 
