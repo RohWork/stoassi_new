@@ -97,7 +97,7 @@ class Customer_model extends CI_Model {
     
     function update_stock_count($vo){
         
-        $this->db->set('count', 'count-'.$vo['stock_input']);
+        $this->db->set('count', 'count-'.$vo['count']);
         $this->db->where('idx', $vo['stock_idx']);
         $this->db->update('stock_info');
         
