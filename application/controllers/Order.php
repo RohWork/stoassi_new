@@ -232,17 +232,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
                 foreach($recipe as $ri){
                     
-                    $svo = array(
-                        "stock_idx" => $ri->stock_idx,
-                        "count"     => $ri->stock_input,
-                        "state"     => 1,
-                        "inout"     => 2,
-                        "memo"      => $ri->name,
-                        "writer"    => $this->session->userdata('user_id')
-                    );
+                    if($use_yn[$ri->order_num] == 'Y'){
+                        $svo = array(
+                            "stock_idx" => $ri->stock_idx,
+                            "count"     => $ri->stock_input,
+                            "state"     => 1,
+                            "inout"     => 2,
+                            "memo"      => $ri->name,
+                            "writer"    => $this->session->userdata('user_id')
+                        );
 
-                    $this->cust_md->insert_history($svo);
-                    
+                        $this->cust_md->insert_history($svo);
+                    }
                 }
                 
                 
