@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
             $vo->shop_idx = $this->session->userdata("shop_idx");
-            $vo->state= 'Y';
+            
             
             $offset = $this->input->get('per_page');
             
@@ -38,6 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $data['offset'] = $offset;
             $data['order_list'] = $this->cust_md->order_list($vo);
+            
+            $vo->state= 'Y';
             $data['recipe_group_list'] = $this->recipe_md->get_group_list("",$vo);
             
             
