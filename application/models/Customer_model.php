@@ -89,6 +89,11 @@ class Customer_model extends CI_Model {
         
         return $this->db->get()->result();
     }
+    
+    function insert_history($vo){
+        $this->db->insert($vo);
+        return $this->db->insert_id();
+    }
 }
 ?>
 
