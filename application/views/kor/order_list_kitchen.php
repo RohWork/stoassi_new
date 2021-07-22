@@ -222,7 +222,7 @@
         $("#recipe_status_"+i).html("조리완료");
         $("#recipe_status_"+i).removeClass("cook_ing");
         $("#recipe_status_"+i).addClass("cook_end");
-        $("#recipe_use_yn_"+i).value('1');
+        $("#recipe_use_yn_"+i).val('1');
         i++;
         set_cook(i);
         
