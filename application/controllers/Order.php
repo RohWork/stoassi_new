@@ -244,6 +244,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         );
 
                         $this->cust_md->insert_stock_history($svo);
+                        
+                        $this->cust_md->update_stock_count($svo);
                     }
                 }
                 
