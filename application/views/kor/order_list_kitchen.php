@@ -164,10 +164,10 @@
                 tdString += "<td>"+(Number(el.order_num)+1)+"</td>";
                 tdString += "<td>"+el.stock_name+"</td>";
                 tdString += "<td>"+el.stock_input+"</td>";
-                tdString += "<td>"+el.unit+"</td>";
+                tdString += "<td>"+el.unit+"<input type='hidden' name='use_yn[]' id=recipe_use_yn_"+el.order_num+" value='0'></td>";
                 tdString += "<td><span id='recipe_time_"+el.order_num+"'>"+el.set_time+"</span></td>";
                 tdString += "<td><span id='recipe_status_"+el.order_num+"'>조리대기</span></td>";
-                tdString += "</td>";
+                tdString += "</tr>";
                 
                 
                 $("#recipe_area").append(tdString);
@@ -223,7 +223,7 @@
         $("#recipe_status_"+i).html("조리완료");
         $("#recipe_status_"+i).removeClass("cook_ing");
         $("#recipe_status_"+i).addClass("cook_end");
-        
+        $("#recipe_use_yn_").value('1');
         i++;
         set_cook(i);
         
@@ -243,7 +243,7 @@
             contentType : false,
             data:formData,
             success:function(data){
-                alert('수정완료');
+                alert('조리완료');
                 location.reload();
             },
             error: function(xhr,status,error) {
