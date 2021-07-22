@@ -239,7 +239,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             "state"     => 1,
                             "inout"     => 2,
                             "memo"      => $ri->name,
-                            "writer"    => $this->session->userdata('user_id')
+                            "writer"    => $this->session->userdata('user_id'),
+                            'regi_date' => date('Y-m-d h:i:s')
                         );
 
                         $this->cust_md->insert_stock_history($svo);
