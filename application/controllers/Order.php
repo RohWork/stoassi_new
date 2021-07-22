@@ -209,7 +209,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $message = '';
             
             $order_idx = $this->input->post("idx");
+            $use_yn = $this->input->post("use_yn");
             $status = 3;
+            
+            var_dump($use_yn);
             
             if(empty($order_idx)){
                 $message = "idx error";
@@ -218,6 +221,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo = new stdClass();
                 $vo->idx = $order_idx;
                 $vo->status = $status;
+                
+                $recipe = $this->cust_md->get_order_recipe($recipe_idx);
                 
                 $result = $this->cust_md->set_order($vo);
             }
