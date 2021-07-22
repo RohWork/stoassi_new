@@ -215,8 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $order_idx = $this->input->post("idx");
             $use_yn = $this->input->post("use_yn");
             $status = 3;
-            
-            var_dump($use_yn);
+           
             
             if(empty($order_idx)){
                 $message = "idx error";
@@ -226,7 +225,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo->idx = $order_idx;
                 $vo->status = $status;
                 
+                
+                $result['order'] = $this->cust_md->detail_order($vo);
+                $recipe_idx = $result['order']->recipe_idx;
                 $recipe = $this->cust_md->get_order_recipe($recipe_idx);
+                
+                foreach($recipe as $ri){
+                    
+                    $svo = array(
+                        "stock_idx" => $ri->stock_idx,
+                        "count"     => $ri->stock_input,
+                        "state"     => 1,
+                        "inout"     => 2,
+                        "memo"      => $ri->name,
+                        "writer"    => $this->session->userdata('user_id')
+                    );
+
+                    $this->cust_md->insert_history($svo);
+                    
+                }
+                
                 
                 $result = $this->cust_md->set_order($vo);
             }
