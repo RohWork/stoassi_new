@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
             $vo->shop_idx = $this->session->userdata("shop_idx");
+            $vo->state = 'Y';
             
             $offset = $this->input->get('per_page');
             
