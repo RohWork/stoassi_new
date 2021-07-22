@@ -208,7 +208,6 @@
             var timer = setInterval(function(){
                 time--;
                 element.html(time);
-                console.log(time);
                 if(time < 1){
                     clearInterval(timer);
                     set_complete_cook(i);
