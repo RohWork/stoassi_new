@@ -226,12 +226,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo->status = $status;
                 
                 
-                $result['order'] = $this->cust_md->detail_order($vo);
-                $recipe_idx = $result['order']->recipe_idx;
+                $order = $this->cust_md->detail_order($vo);
+                $recipe_idx = $order->recipe_idx;
                 $recipe = $this->cust_md->get_order_recipe($recipe_idx);
                 
                 foreach($recipe as $ri){
-                    
+                    echo $use_yn[$ri->order_num];
                     if($use_yn[$ri->order_num] == 'Y'){
                         $svo = array(
                             "stock_idx" => $ri->stock_idx,
