@@ -90,8 +90,8 @@ class Customer_model extends CI_Model {
         return $this->db->get()->result();
     }
     
-    function insert_history($vo){
-        $this->db->insert($vo);
+    function insert_stock_history($vo){
+        $this->db->insert("stock_history",$vo);
         return $this->db->insert_id();
     }
 }
