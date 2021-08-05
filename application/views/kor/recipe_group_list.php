@@ -61,13 +61,13 @@
 			<form id="group_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
 					<label for="stock_name" class="col-sm-3 control-label">그룹명</label>
-					<div class="col-sm-8">
+					<div class="col-sm-8 input-group">
 						<input type="hidden" id="update_group_idx" name="update_group_idx"/>
 						<input type="text" id="update_group_name" name="update_group_name" class="form-control"/>
 					</div>
 				</div>
                                 <div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label input-group">부가세(%)</label>
+					<label for="stock_name" class="col-sm-3 control-label">부가세(%)</label>
 					<div class="col-sm-3 input-group">
 						<input type="number" id="update_group_tax" name="update_group_tax" class="form-control"/>
                                                 <div class="input-group-addon">%</div>
@@ -76,7 +76,7 @@
 				</div>
 				<div class="form-group">
 					<label for="update_group_useyn" class="col-sm-3 control-label">사용여부</label>
-					<div class="col-sm-9">
+					<div class="col-sm-9 input-group">
 						<label class="radio-inline">
 						<input type="radio" name="update_group_useyn" id="group_use_y" value='Y'>사용
 						</label>
