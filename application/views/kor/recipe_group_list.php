@@ -11,6 +11,7 @@
 						<th>NO</th>
 						<th>그룹명</th>
 						<th>최근수정일</th>
+                                                <th>부가세(%)</th>
 						<th>사용여부</th>
 						<th>수정/삭제</th>
 					</tr>
@@ -25,6 +26,7 @@
 							<td><?=$no?></td>
 							<td><?=$row->name?></td>
 							<td><?=date('Y-m-d', strtotime($row->modi_date))?></td>
+                                                        <td><?=$row->tax ?>%</td>
 							<td><?=$row->state == "Y" ? "사용" : "사용안함" ?></td>
 							<td><button type="button" id="modi_button" onclick="detail_group_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
 						</tr>
