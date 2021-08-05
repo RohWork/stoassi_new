@@ -66,6 +66,12 @@
 						<input type="text" id="update_group_name" name="update_group_name" class="form-control"/>
 					</div>
 				</div>
+                                <div class="form-group">
+					<label for="stock_name" class="col-sm-3 control-label">부가세(%)</label>
+					<div class="col-sm-8">
+						<input type="text" id="update_group_tax" name="update_group_tax" class="form-control"/>
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="update_group_useyn" class="col-sm-3 control-label">사용여부</label>
 					<div class="col-sm-9">
@@ -100,6 +106,12 @@
 					<label for="inert_group_name" class="col-sm-3 control-label">그룹명</label>
 					<div class="col-sm-8">
 						<input type="text" id="insert_group_name" name="insert_group_name" class="form-control"/>
+					</div>
+				</div>
+                                <div class="form-group">
+					<label for="inert_group_name" class="col-sm-3 control-label">부가세(%)</label>
+					<div class="col-sm-8">
+						<input type="text" id="insert_group_tax" name="insert_group_tax" class="form-control"/>
 					</div>
 				</div>
 			</form>
