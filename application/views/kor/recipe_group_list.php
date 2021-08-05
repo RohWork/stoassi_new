@@ -72,7 +72,7 @@
 						<input type="text" id="update_group_tax" name="update_group_tax" class="form-control"/>
                                                 
 					</div>
-                                        <label class="col-sm-1">%</label>
+                                        <label class="col-sm-1 control-label">%</label>
 				</div>
 				<div class="form-group">
 					<label for="update_group_useyn" class="col-sm-3 control-label">사용여부</label>
