@@ -157,6 +157,7 @@
         
             $("#update_group_idx").val(data.idx);
             $("#update_group_name").val(data.name);
+            $("#update_group_tax").val(data.tax);
             
             
             if(data.state == "Y"){
