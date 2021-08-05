@@ -69,7 +69,7 @@
                                 <div class="form-group">
 					<label for="stock_name" class="col-sm-3 control-label">부가세(%)</label>
 					<div class="col-sm-3">
-                                                <label class="radio-inline">
+                                                <label>
 						<input type="text" id="update_group_tax" name="update_group_tax" class="form-control"/>%
                                                 </label>
 					</div>
