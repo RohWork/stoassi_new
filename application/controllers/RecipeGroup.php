@@ -50,6 +50,7 @@ class RecipeGroup extends CI_Controller {
         $vo = array();
         
         $vo['name'] = $this->input->post("insert_group_name");
+        $vo['tax'] = $this->input->post("insert_group_tax");
         $vo['shop_idx'] = $data['writer'] = $this->session->userdata("shop_idx");
                 
         if (empty($vo['name'])){
@@ -122,7 +123,8 @@ class RecipeGroup extends CI_Controller {
         $group_idx = $this->input->post("update_group_idx");
         $vo['name'] = $this->input->post("update_group_name");
         $vo['state'] = $this->input->post("update_group_useyn");
-                
+        $vo['tax']  = $this->input->post("update_group_tax");
+        
         if (empty($vo['name'])){
             $code = 400;
             $message = 'update_group_name 변수의 요청이 올바르지 않습니다.';
