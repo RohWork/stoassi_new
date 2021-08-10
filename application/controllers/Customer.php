@@ -37,6 +37,10 @@ class Customer extends CI_Controller {
                 $data['language_list'] = $this->shop_md->get_shop_set($shop_idx);
             }
             
+            if(empty($data['shop_info'])){
+                show_error("Check to Your URL."); 
+            }
+            
             switch ($level){
                 case 1:     //언어 선택
                     $this->load->view('orderMenu1', $data);
