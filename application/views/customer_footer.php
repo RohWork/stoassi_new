@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-1 col-xs-2"></div>
+            <div class="col-md-1"></div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="location.href='/customer/orderMenu/1/10'">HOME</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">BACK</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="$('#myModal').modal('show');">BASKET</div>
@@ -20,7 +20,7 @@
                     <input type="hidden" name="menu_idx" id="menu_idx" value="<?= !empty($menu_idx)? $place : ""?>"/>
                 </form>
             </div>
-            <div class="col-md-2 col-xs-2"></div>
+            <div class="col-md-2 "></div>
         </div>
     </div>
 </footer>
