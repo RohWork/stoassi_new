@@ -5,7 +5,7 @@
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="location.href='/customer/orderMenu/1/10'">HOME</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">BACK</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="$('#myModal').modal('show');">BASKET</div>
-            <div class="col-md-2 col-xs-4">
+            <div class="col-md-2 col-xs-6">
                 <form method="post" id="change_form">
                     <select class="form-control" id="lang_change" name="language">
                         <option value="">LANGUAGE</option>
