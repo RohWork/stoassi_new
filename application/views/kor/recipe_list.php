@@ -95,6 +95,12 @@
 						<input type="text" id="update_recipe_name" name="update_recipe_name" class="form-control"/>
 					</div>
 				</div>
+                            <div class="form-group">
+					<label for="update_recipe_name" class="col-sm-2 control-label">금액</label>
+					<div class="col-sm-9">
+						<input type="number" id="update_recipe_price" name="update_recipe_price" class="form-control"/>
+					</div>
+				</div>
                                 <div class="form-group">		
                                         <div class="col-sm-9 col-sm-offset-2" >
                                             <table id="update_recipe_value" width="100%">
