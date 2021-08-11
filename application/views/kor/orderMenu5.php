@@ -50,7 +50,7 @@
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
-                <input type="hidden" name="menu_idx" id="menu_idx"/>
+                <input type="hidden" name="menu_array" id="menu_array"/>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
@@ -87,14 +87,14 @@
         var no = 1;
         
         function menu_check_go(idx, element){
-            if($("#menu_idx").val().indexOf(idx) != -1){
+            if($("#menu_array").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
-                $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
+                $("#menu_array").val($("#menu_array").val().replace("/"+idx,''));
                 $("#tr_"+idx).remove();
                 no--;
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
-                $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
+                $("#menu_array").val($("#menu_array").val()+"/"+idx);
                 $("#menu_list").append(
                         "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+menuArray[idx]+"</td><td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' /></td></tr>"
                 );
