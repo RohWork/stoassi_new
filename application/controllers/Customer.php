@@ -95,6 +95,8 @@ class Customer extends CI_Controller {
             
             for($i=0;$i<count($recipe_array);$i++){
                 
+                $cnt = $this->input->post("cnt_".$recipe_array[$i]);
+                
                 if($recipe_array[$i] != ""){
                     $data = array(
                         "table_no"      => $table_no,
