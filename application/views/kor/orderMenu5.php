@@ -56,8 +56,13 @@
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
-                    
-                    <
+                    <table id="menu_list">
+                        <tr>
+                            <th>NO</th>
+                            <th>메뉴명</th>
+                            <th>갯수</th>
+                        </tr>
+                    </table>
                     <button onclick="menu_send_go()" class="form-control">메뉴추가</button>
                 </div>
                 <div class="col-md-1 col-xs-1"></div>
