@@ -15,8 +15,6 @@ class Customer extends CI_Controller {
         
        public function orderMenu($level,$shop_idx=0){
             
-           $this->load->helper('cookie');
-           
             $language = $this->input->get_post("language");
             $place = $this->input->get_post("place");
             $table_no = $this->input->get_post("table_no");
@@ -30,8 +28,7 @@ class Customer extends CI_Controller {
             }
             if(!empty($table_no)){
                 $data['table_no'] = $table_no;
-
-                set_cookie("table_no", $table_no);   //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 쿠키으로 처리
+                $this->session->set_userdata('table_no', $table_no);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
             }
             if(empty($shop_idx) || $shop_idx == 0){
                 show_error("Check to Your URL."); 
@@ -89,7 +86,7 @@ class Customer extends CI_Controller {
         
         function setMenu(){
             
-            $table_no =  get_cookie('table_no');
+            $table_no =  $this->session->table_no;
             $recipe_idx = $this->input->post("menu_idx");
             $recipe_array = explode("/", $recipe_idx);
             $cnt = 1; //cnt 값은 나중에 입력 받을 예정
