@@ -46,7 +46,5 @@
 
 
 <script>
-    $("#lang_change").on("change", function(){
-        $("#change_form")[0].submit();
-    });
+
 </script>
