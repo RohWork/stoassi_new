@@ -96,7 +96,7 @@
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
                 $("#menu_list").append(
-                        "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+menuArray[idx]+"</td><td><input type='number' class='form-control' /></td></tr>"
+                        "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+menuArray[idx]+"</td><td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' /></td></tr>"
                 );
         
                 no++;
