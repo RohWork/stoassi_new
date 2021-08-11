@@ -77,15 +77,19 @@
             if($("#menu_idx").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
+                $("#tr"+idx).remove();
+                no--;
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
                 $("#menu_list").append(
                         "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+name+"</td><td><input type='number'></td></tr>"
                 );
+        
+                no++;
             }
             
-            no++;
+            
             
         }
         
