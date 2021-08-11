@@ -96,7 +96,7 @@
 					</div>
 				</div>
                             <div class="form-group">
-					<label for="update_recipe_name" class="col-sm-2 control-label">금액</label>
+					<label for="update_recipe_price" class="col-sm-2 control-label">금액</label>
 					<div class="col-sm-9">
 						<input type="number" id="update_recipe_price" name="update_recipe_price" class="form-control"/>
 					</div>
@@ -165,6 +165,12 @@
 					<label for="insert_recipe_name" class="col-sm-2 control-label">레시피명</label>
 					<div class="col-sm-9">
 						<input type="text" id="insert_recipe_name" name="insert_recipe_name" class="form-control"/>
+					</div>
+				</div>
+                            <div class="form-group">
+					<label for="insert_recipe_price" class="col-sm-2 control-label">금액</label>
+					<div class="col-sm-9">
+						<input type="number" id="insert_recipe_price" name="insert_recipe_price" class="form-control"/>
 					</div>
 				</div>
                                 <div class="form-group">
