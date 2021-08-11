@@ -113,9 +113,13 @@ class Customer extends CI_Controller {
                         var_dump($data);
                         exit;
                         $this->cust_md->insert_order($data);
+                        
+                        $result["result"] = "1";
+                    }else{
+                        $result["result"] = "0";
                     }
                 }
-                $result["result"] = "1";
+                
             }
             
             header("Content-Type: application/json;");
