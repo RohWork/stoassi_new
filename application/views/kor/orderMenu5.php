@@ -38,7 +38,7 @@
                                                 if($cnt % 2 == 0 && $cnt != 0){
                                                     echo "</tr><tr class='menu_height'>";
                                                 }
-                                                            echo "<td align='center' onclick='menu_check_go(".$menu->idx.", this)'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
+                                                            echo "<td align='center' onclick='menu_check_go(".$menu->idx.", this,".$menu->group_name.$menu_name." )'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
                                                 $cnt++;
                                             }
                                         ?>  
@@ -49,8 +49,6 @@
                     </div>
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
-                <input type="hidden" name="menu_idx" id="menu_idx"/>
-                <input type="hidden" name="menu_count" id="menu_count"/>   
                 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
             </form>
             <div class="row" style="margin-top: 30px">
@@ -72,15 +70,22 @@
 	</div>
     </body>
     <script>
-        function menu_check_go(idx, element){
+        
+        var no = 1;
+        
+        function menu_check_go(idx, element, name){
             if($("#menu_idx").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
+                $("#menu_list").append(
+                        "<tr id='tr_"+idx+"'><td>"+no+"<td><td>"+name+"<td><td><input type='number'<td><tr/>";
+                );
             }
-
+            
+            no++;
             
         }
         
