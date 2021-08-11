@@ -87,7 +87,7 @@ class Customer extends CI_Controller {
         function setMenu(){
             
             $table_no =  $this->session->table_no;
-            $recipe_idx = $this->input->post("menu_idx");
+            $recipe_idx = $this->input->post("menu_array");
             $recipe_array = explode("/", $recipe_idx);
             $cnt = 1; //cnt 값은 나중에 입력 받을 예정
             $place = $this->input->post("place");
