@@ -7,7 +7,7 @@
             <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');">장바구니</div>
             <div class="col-md-2 col-xs-5">
                 <form method="post" id="change_form">
-                    <select class="form-control" id="lang_change" name="language">
+                    <select class="form-control" id="lang_change" name="language" onchange="this.form.submit()">
                         <option value="">언어변경</option>
                         <?php
                             foreach($language_list as $lang){
@@ -46,7 +46,5 @@
 
 
 <script>
-    $("#lang_change").on("change", function(){
-        $("#change_form")[0].submit();
-    });
+
 </script>
