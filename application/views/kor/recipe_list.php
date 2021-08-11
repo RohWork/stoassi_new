@@ -379,7 +379,7 @@
         
             $("#update_recipe_idx").val(data.idx);
             $("#update_recipe_name").val(data.name);
-            
+            $("#update_recipe_price").val(data.price);
             
             for(var i=0; i<process.length;i++){
                 recipe_val_set(process[i]['category_idx'], process[i]['stock_idx'], process[i]['stock_input'], process[i]['set_time'] );
