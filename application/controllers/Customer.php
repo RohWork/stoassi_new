@@ -6,7 +6,7 @@ class Customer extends CI_Controller {
     	function __construct() {
 		parent ::__construct();
 
-                $this->allow=array('orderMenu');
+                //$this->allow=array('orderMenu');
                  
                 $this->load->model('Shop_model', 'shop_md', TRUE);
                 $this->load->model('Recipe_model', 'recipe_md', TRUE);
