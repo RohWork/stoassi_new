@@ -93,23 +93,29 @@ class Customer extends CI_Controller {
             $place = $this->input->post("place");
             $shop_idx = $this->input->post("shop_idx");
             
-            for($i=0;$i<count($recipe_array);$i++){
-                
-                $cnt = $this->input->post("cnt_".$recipe_array[$i]);
-                
-                if($recipe_array[$i] != ""){
-                    $data = array(
-                        "table_no"      => $table_no,
-                        "cnt"           => $cnt,
-                        "place"         => $place,
-                        "recipe_idx"    => $recipe_array[$i],
-                        "shop_idx"      => $shop_idx,
-                    );
+            if(empty($table_no)){
+                $result['message'] = "주문시간이 초과됬습니다.";
+                $result["result"] = "0";
+            }else{
 
-                    $this->cust_md->insert_order($data);
+                for($i=0;$i<count($recipe_array);$i++){
+
+                    $cnt = $this->input->post("cnt_".$recipe_array[$i]);
+
+                    if($recipe_array[$i] != ""){
+                        $data = array(
+                            "table_no"      => $table_no,
+                            "cnt"           => $cnt,
+                            "place"         => $place,
+                            "recipe_idx"    => $recipe_array[$i],
+                            "shop_idx"      => $shop_idx,
+                        );
+
+                        $this->cust_md->insert_order($data);
+                    }
                 }
+                $result["result"] = "1";
             }
-            $result["result"] = "1";
             
             header("Content-Type: application/json;");
             echo json_encode($result);
