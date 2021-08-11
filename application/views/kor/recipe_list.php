@@ -114,7 +114,7 @@
 				</div>
                                 
 				<div class="form-group">
-					<label for="update_recipe_useyn" class="col-sm-3 control-label">사용여부</label>
+					<label for="update_recipe_useyn" class="col-sm-2 control-label">사용여부</label>
 					<div class="col-sm-9">
 						<label class="radio-inline">
 						<input type="radio" name="update_recipe_useyn" id="recipe_use_y" value='Y'>사용
