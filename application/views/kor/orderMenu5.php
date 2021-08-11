@@ -57,8 +57,8 @@
                     <table id="menu_list" class="table">
                         <tr>
                             <th width="10%">NO</th>
-                            <th width="75%">메뉴명</th>
-                            <th width="15%">갯수</th>
+                            <th width="70%">메뉴명</th>
+                            <th width="20%">갯수</th>
                         </tr>
                     </table>
                     <button onclick="menu_send_go()" class="form-control">메뉴추가</button>
