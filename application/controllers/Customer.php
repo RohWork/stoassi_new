@@ -75,7 +75,7 @@ class Customer extends CI_Controller {
                 
             }
             if($level != 1){
-                $this->load->view('customer_footer', $data);
+                $this->load->view($language.'/customer_footer', $data);
             }
         }
         
