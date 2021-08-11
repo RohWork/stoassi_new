@@ -71,6 +71,16 @@
     </body>
     <script>
         
+        var menuArray = new Array();
+
+        <?php
+            foreach($menu_info as $menu){
+        ?>
+                menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
+        <?php
+            }
+        ?>
+        
         var no = 1;
         
         function menu_check_go(idx, element){
@@ -83,7 +93,7 @@
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
                 $("#menu_list").append(
-                        "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+name+"</td><td><input type='number'></td></tr>"
+                        "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+menuArray[idx]+"</td><td><input type='number'></td></tr>"
                 );
         
                 no++;
