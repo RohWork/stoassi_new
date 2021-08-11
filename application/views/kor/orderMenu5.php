@@ -77,7 +77,7 @@
             if($("#menu_idx").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
-                $("#tr"+idx).remove();
+                $("#tr_"+idx).remove();
                 no--;
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
