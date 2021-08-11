@@ -110,8 +110,6 @@ class Customer extends CI_Controller {
                             "recipe_idx"    => $recipe_array[$i],
                             "shop_idx"      => $shop_idx,
                         );
-                        var_dump($data);
-                        exit;
                         $this->cust_md->insert_order($data);
                         
                         $result["result"] = "1";
