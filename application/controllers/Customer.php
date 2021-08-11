@@ -94,7 +94,7 @@ class Customer extends CI_Controller {
             $shop_idx = $this->input->post("shop_idx");
             
             if(empty($table_no)){
-                $result['message'] = "주문시간이 초과됬습니다.";
+                $result['message'] = "TIME OUT";
                 $result["result"] = "0";
             }else{
 
@@ -116,6 +116,7 @@ class Customer extends CI_Controller {
                         
                         $result["result"] = "1";
                     }else{
+                        $result['message'] = "DATA ERROR";
                         $result["result"] = "0";
                     }
                 }
