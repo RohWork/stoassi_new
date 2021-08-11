@@ -62,7 +62,7 @@
                         </tr>
                     </table>
                     <div>
-                        <div style="float:left "><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
+                        <div style="float:left;margin-right:30px"><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
                         <div style="float:left "><button onclick="menu_send_go()" class="form-control">주문하기</button></div>
                     </div>
                 </div>
