@@ -118,7 +118,7 @@
                             if(data.result == true){
                                 alert("주문완료");
                             }else{
-                                alert("주문실패");
+                                alert(data.msg);
                             }
                         },
                         error: function(xhr,status,error) {
