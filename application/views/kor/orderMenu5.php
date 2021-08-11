@@ -38,7 +38,7 @@
                                                 if($cnt % 2 == 0 && $cnt != 0){
                                                     echo "</tr><tr class='menu_height'>";
                                                 }
-                                                            echo "<td align='center' onclick='menu_check_go(".$menu->idx.", this,".$menu->group_name.$menu->name." )'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
+                                                            echo "<td align='center' onclick='menu_check_go(".$menu->idx.", this )'><b style='cursor:pointer'>".$menu->group_name."<b/><br/>".$menu->name."<br/>[상세보기]</td>";
                                                 $cnt++;
                                             }
                                         ?>  
@@ -73,7 +73,7 @@
         
         var no = 1;
         
-        function menu_check_go(idx, element, name){
+        function menu_check_go(idx, element){
             if($("#menu_idx").val().indexOf(idx) != -1){
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_idx").val($("#menu_idx").val().replace("/"+idx,''));
