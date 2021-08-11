@@ -191,6 +191,7 @@ class RecipeList extends CI_Controller {
         
         $recipe_idx = $this->input->post("update_recipe_idx");
         $vo['name'] = $this->input->post("update_recipe_name");
+        $vo['price'] = $this->input->post("update_recipe_price");
         $vo['state'] = $this->input->post("update_recipe_useyn");
         $vo['group_idx'] = $this->input->post("update_recipe_group");
         
