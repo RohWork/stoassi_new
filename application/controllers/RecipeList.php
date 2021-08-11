@@ -102,7 +102,7 @@ class RecipeList extends CI_Controller {
         $vo['name'] = $this->input->post("insert_recipe_name");
         $vo['group_idx'] = $this->input->post("insert_recipe_group");
         $vo['recipe_idx'] = $this->input->post("insert_recipe_group");
-        
+        $vo['price'] = $this->input->post("insert_recipe_price");
         
         $vo['shop_idx'] = $data['writer'] = $this->session->userdata("shop_idx");
                 
