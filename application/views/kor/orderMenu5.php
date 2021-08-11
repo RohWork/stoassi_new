@@ -62,7 +62,7 @@
                         </tr>
                     </table>
                     <div style="text-align: center;width: 100%">
-                        총금액 : 
+                        <span> 총금액 :  </span>
                     </div>
                     <div style="text-align: center;width: 100%">
                         <div style="float:left;width:50%"><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
