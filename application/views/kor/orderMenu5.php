@@ -56,7 +56,7 @@
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
-                    <table id="menu_list" class="form-control">
+                    <table id="menu_list" class="table">
                         <tr>
                             <th>NO</th>
                             <th>메뉴명</th>
