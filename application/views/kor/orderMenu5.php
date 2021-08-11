@@ -50,12 +50,15 @@
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="menu_idx" id="menu_idx"/>
+                <input type="hidden" name="menu_count" id="menu_count"/>   
                 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
             </form>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
-                    <button onclick="menu_send_go()" style="width:100%">메뉴추가</button>
+                    
+                    <
+                    <button onclick="menu_send_go()" class="form-control">메뉴추가</button>
                 </div>
                 <div class="col-md-1 col-xs-1"></div>
             </div>
@@ -72,7 +75,7 @@
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_idx").val($("#menu_idx").val()+"/"+idx);
             }
-           // $("#orderForm")[0].submit();
+
             
         }
         
