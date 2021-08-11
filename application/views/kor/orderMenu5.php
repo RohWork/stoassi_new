@@ -56,9 +56,9 @@
                 <div class="col-md-10 col-xs-10">
                     <table id="menu_list" class="table">
                         <tr>
-                            <th>NO</th>
-                            <th>메뉴명</th>
-                            <th>갯수</th>
+                            <th width="10%">NO</th>
+                            <th width="80%">메뉴명</th>
+                            <th width="10%">갯수</th>
                         </tr>
                     </table>
                     <button onclick="menu_send_go()" class="form-control">메뉴추가</button>
