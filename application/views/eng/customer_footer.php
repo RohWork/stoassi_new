@@ -6,7 +6,7 @@
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">BACK</div>
             <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');">BASKET</div>
             <div class="col-md-2 col-xs-5">
-                <form method="post" id="change_form">
+                <form method="post" id="change_form" action="<?=$_SERVER['REQUEST_URI']?>">
                     <select class="form-control" id="lang_change" name="language">
                         <option value="">LANGUAGE</option>
                         <?php
