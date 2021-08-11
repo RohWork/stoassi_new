@@ -112,6 +112,7 @@ class Recipe_model extends CI_Model {
         $data['writer'] = $data['modifier'] = $this->session->userdata("user_id");
         $data['group_idx'] = $vo['group_idx'];
         $data['name'] = $vo['name'];
+        $data['price'] = $vo['price'];
         
         $this->db->insert('recipe_info',$data);
         
