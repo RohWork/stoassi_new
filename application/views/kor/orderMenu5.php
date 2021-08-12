@@ -64,7 +64,7 @@
                     </table>
                     <div style="width: 100%; margin-left: 30%">
                         <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
-                        <label> 부가세 : </label><span id="tax"> </span><br/>
+                        <label> 부가세 : </label><span id="tax"></span><br/>
                         <label> 계산된 금액 : </label><span id="total"> </span>
                     </div>
                     <div style="text-align: center;width: 100%">
@@ -83,14 +83,14 @@
         
         var menuArray = new Array();
         var priceArray = new Array();
-        var taxArray = new Array();
+        var tax;
         
         <?php
             foreach($menu_info as $menu){
         ?>
                 menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
                 priceArray[<?=$menu->idx?>] = "<?=$menu->price?>";
-                taxArray[0] = "<?=$menu->tax?>";
+                tax = "<?=$menu->tax?>";
         <?php
             }
         ?>
@@ -111,7 +111,7 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeypress='calcPrice()'/></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeypress='calcPrice(this, "+idx+")'/></td></tr>"
                 );
         
                 no++;
@@ -144,16 +144,24 @@
             }
         }
         
-        function calcPrice(){
-            var sumPrice;
-            var tax = taxArray[0];
-            var totalPrice;
-            
-            $("number:[id^='cnt_']").each(function(index,element){
-                alert(element.val());
+        function calcPrice(element, idx, mode){
+            var cnt = element.text();
+            var price = priceArray[idx];
+            var sumPrice  = $("#sum").text();
 
-         
-            });
+            if(mode == 1){ //더하기
+                sumPrice = sumPrice + (price * cnt);
+            }else{
+                sumPrice = sumPrice - (price * cnt);
+            }
+            var taxValue = sumPrice * (tax / 100);
+            var totalPrice = sumPrice + (sumPrice * (tax / 100));
+            
+            $("#sum").text(sumPrice);
+            $("#tax").text(taxValue);
+            $("#total").text(totalPrice);
+            
+            
 
 
 
