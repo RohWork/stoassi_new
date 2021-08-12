@@ -62,9 +62,9 @@
                         </tr>
                     </table>
                     <div style="text-align: center;width: 100%">
-                        <span> 메뉴가격 :  </span><span id="sum"> </span><br/>
-                        <span> 부가세 : </span><span id="tax"> </span><br/>
-                        <span> 계산된 금액 : </span><span id="total"> </span>
+                        <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
+                        <label> 부가세 : </label><span id="tax"> </span><br/>
+                        <label> 계산된 금액 : </label><span id="total"> </span>
                     </div>
                     <div style="text-align: center;width: 100%">
                         <div style="float:left;width:50%"><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
