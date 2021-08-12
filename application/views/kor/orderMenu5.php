@@ -147,14 +147,16 @@
         function calcPrice(idx, mode){
             var cnt = $("#cnt_"+idx).val();
             var price = priceArray[idx];
-            console.log(price);
             var sumPrice  = $("#sum").text();
-
+            
             if(mode == 1){ //더하기
                 sumPrice = sumPrice + (price * cnt);
             }else{
                 sumPrice = sumPrice - (price * cnt);
             }
+            
+            console.log(sumPirce);
+            
             var taxValue = sumPrice * (tax / 100);
             var totalPrice = sumPrice + (sumPrice * (tax / 100));
             
