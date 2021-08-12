@@ -61,7 +61,7 @@
                             <th width="20%">갯수</th>
                         </tr>
                     </table>
-                    <div style="width: 100%; margin-left: 30px">
+                    <div style="width: 100%; margin-left: 30%">
                         <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
                         <label> 부가세 : </label><span id="tax"> </span><br/>
                         <label> 계산된 금액 : </label><span id="total"> </span>
