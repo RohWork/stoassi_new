@@ -149,6 +149,8 @@
             var price = priceArray[idx];
             var sumPrice  = $("#sum").text();
             
+            console.log(cnt);
+            
             if(mode == 1){ //더하기
                 sumPrice = sumPrice + (price * cnt);
             }else{
