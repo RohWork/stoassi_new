@@ -111,7 +111,7 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeypress='calcPrice(this, "+idx+", 1)'/></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeypress='calcPrice("+idx+", 1)'/></td></tr>"
                 );
         
                 no++;
@@ -144,8 +144,8 @@
             }
         }
         
-        function calcPrice(ele, idx, mode){
-            var cnt = ele.val();
+        function calcPrice(idx, mode){
+            var cnt = $("#cnt_"+idx).val();
             var price = priceArray[idx];
             var sumPrice  = $("#sum").text();
 
