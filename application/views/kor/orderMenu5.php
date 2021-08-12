@@ -57,7 +57,8 @@
                     <table id="menu_list" class="table">
                         <tr>
                             <th width="10%">NO</th>
-                            <th width="70%">메뉴명</th>
+                            <th width="50%">메뉴명</th>
+                            <th width="20%">금액<th>
                             <th width="20%">갯수</th>
                         </tr>
                     </table>
@@ -81,11 +82,13 @@
     <script>
         
         var menuArray = new Array();
-
+        var priceArray = new Array();
+        
         <?php
             foreach($menu_info as $menu){
         ?>
                 menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
+                priceArray[<?=$menu->idx?>] = "<?=$menu->price?>";
         <?php
             }
         ?>
@@ -102,7 +105,11 @@
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_array").val($("#menu_array").val()+"/"+idx);
                 $("#menu_list").append(
-                        "<tr id='tr_"+idx+"'><td>"+no+"</td><td>"+menuArray[idx]+"</td><td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' /></td></tr>"
+                        "<tr id='tr_"+idx+"'>"+
+                            "<td>"+no+"</td>"+
+                            "<td>"+menuArray[idx]+"</td>"+
+                            "<td>"+priceArray[idx]+"</td>"+
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' /></td></tr>"
                 );
         
                 no++;
