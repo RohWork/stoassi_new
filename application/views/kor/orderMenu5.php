@@ -83,12 +83,14 @@
         
         var menuArray = new Array();
         var priceArray = new Array();
+        var taxArray = new Array();
         
         <?php
             foreach($menu_info as $menu){
         ?>
                 menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
                 priceArray[<?=$menu->idx?>] = "<?=$menu->price?>";
+                taxArray[0] = "<?=$menu->tax?>";
         <?php
             }
         ?>
@@ -109,15 +111,14 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' /></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeypress='calcPrice()'/></td></tr>"
                 );
         
                 no++;
             }
-            
-            
-            
         }
+        
+        
         
         function menu_send_go(){
             if($("#menu_idx").val() == ""){
@@ -141,6 +142,22 @@
                         }	 
                 });
             }
+        }
+        
+        function calcPrice(){
+            var sumPrice;
+            var tax = taxArray[0];
+            var totalPrice;
+            
+            $("number:[id^='cnt_']").each(function(index,element){
+                alert(element.val());
+
+         
+            });
+
+
+
+            
         }
     </script>
 </html>
