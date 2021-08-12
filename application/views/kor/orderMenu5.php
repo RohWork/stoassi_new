@@ -144,8 +144,8 @@
             }
         }
         
-        function calcPrice(element, idx, mode){
-            var cnt = element.text();
+        function calcPrice(ele, idx, mode){
+            var cnt = ele.text();
             var price = priceArray[idx];
             var sumPrice  = $("#sum").text();
 
