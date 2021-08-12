@@ -62,8 +62,8 @@
                         </tr>
                     </table>
                     <div style="text-align: center;width: 100%">
-                        <span> 메뉴가격 :  </span><span id="sum"> </span>
-                        <span> 부가세 : </span><span id="tax"> </span>
+                        <span> 메뉴가격 :  </span><span id="sum"> </span><br/>
+                        <span> 부가세 : </span><span id="tax"> </span><br/>
                         <span> 계산된 금액 : </span><span id="total"> </span>
                     </div>
                     <div style="text-align: center;width: 100%">
