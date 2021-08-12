@@ -155,7 +155,7 @@
                 sumPrice = sumPrice - (price * cnt);
             }
             
-            console.log(sumPirce);
+            console.log(sumPrice);
             
             var taxValue = sumPrice * (tax / 100);
             var totalPrice = sumPrice + (sumPrice * (tax / 100));
