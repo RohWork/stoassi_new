@@ -147,6 +147,7 @@
         function calcPrice(idx, mode){
             var cnt = $("#cnt_"+idx).val();
             var price = priceArray[idx];
+            console.log(price);
             var sumPrice  = $("#sum").text();
 
             if(mode == 1){ //더하기
