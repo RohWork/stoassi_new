@@ -157,9 +157,9 @@
             var taxValue = sumPrice * (tax / 100);
             var totalPrice = sumPrice + (sumPrice * (tax / 100));
             
-            $("#sum").text(sumPrice);
-            $("#tax").text(taxValue);
-            $("#total").text(totalPrice);
+            $("#sum").html(sumPrice);
+            $("#tax").html(taxValue);
+            $("#total").html(totalPrice);
             
             
 
