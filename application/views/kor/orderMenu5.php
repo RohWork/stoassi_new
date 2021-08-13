@@ -91,7 +91,7 @@
         ?>
                 menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
                 priceArray[<?=$menu->idx?>] = "<?=$menu->price?>";
-                
+                tax = "<?=$menu->tax?>";
         <?php
             }
         ?>
@@ -159,17 +159,7 @@
                 priceIdxArray = priceIdxArray.filter((element) => element !== idx);
             }
 
-            for(var i=0; i<priceIdxArray.length;i++){
-                var idx = priceIdxArray[i]).val();
-                
-                cnt = Number($("#cnt"+idx).val());
-                price = Number(priceArray[idx]);
-                
-                sumPrice = sumPrice + (price * cnt);
-                
-            }
-            taxValue = parseFloat(sumPrice * (tax / 100));
-            totalPrice = parseFloat(sumPrice + (sumPrice * (tax / 100)));
+
             
             $("#sum").text(sumPrice);
             $("#tax").text(taxValue);
