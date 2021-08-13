@@ -163,8 +163,10 @@
                 
                 var tmpIdx = priceIdxArray[i]).val();
                 
-                cnt = Number($("#cnt"+tmpIdx).val());
-
+                cnt = $("#cnt"+tmpIdx).val();
+                price = Number(priceArray[tmpIdx]);
+                
+                sumPrice = sumPrice + (price * cnt);
                 
             }
             taxValue = parseFloat(sumPrice * (tax / 100));
