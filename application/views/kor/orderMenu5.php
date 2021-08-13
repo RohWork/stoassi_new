@@ -146,6 +146,7 @@
         }
         
         function calcPrice(idx, mode){
+            
             var cnt;
             var price;
             var taxValue;
