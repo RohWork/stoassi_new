@@ -164,11 +164,11 @@
                 cnt = Number($("#cnt"+idx).val());
                 price = Number(priceArray[idx]);
                 
-                sumPrice += (price * cnt);
+                sumPrice = sumPrice + (price * cnt);
                 
             }
-            taxValue = sumPrice * (tax / 100);
-            totalPrice = sumPrice + (sumPrice * (tax / 100));
+            taxValue = parseFloat(sumPrice * (tax / 100));
+            totalPrice = parseFloat(sumPrice + (sumPrice * (tax / 100)));
             
             $("#sum").text(sumPrice);
             $("#tax").text(taxValue);
