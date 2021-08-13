@@ -170,6 +170,7 @@
                 sumPrice += Number(price * cnt);
             }
             
+            console.log(sumPrice);
             
             taxValue = parseFloat(sumPrice * (tax / 100));
             totalPrice = parseFloat(sumPrice + (sumPrice * (tax / 100)));
