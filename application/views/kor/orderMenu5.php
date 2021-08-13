@@ -83,6 +83,7 @@
         
         var menuArray = new Array();
         var priceArray = new Array();
+        var priceIdxArray = new Array(); 
         var tax;
         
         <?php
@@ -145,31 +146,34 @@
         }
         
         function calcPrice(idx, mode){
-            var cnt = $("#cnt_"+idx).val();
-            var price = priceArray[idx];
-            var sumPrice  = Number($("#sum").text());
-            
-            console.log(cnt);
+            var cnt;
+            var price;
+            var taxValue;
+            var totalPrice;
+            var sumPrice;
             
             if(mode == 1){ //더하기
-                sumPrice = sumPrice + (price * cnt);
+                priceIdxArray.push(idx);
             }else{
-                sumPrice = sumPrice - (price * cnt);
+                priceIdxArray = priceIdxArray.filter((element) => element !== idx);
             }
-            
-            console.log(sumPrice);
-            
-            var taxValue = sumPrice * (tax / 100);
-            var totalPrice = sumPrice + (sumPrice * (tax / 100));
+
+            for(var i=0; i<priceIdxArray.length;i++){
+                var idx = priceIdxArray[i]).val();
+                
+                cnt = Number($("#cnt"+idx).val());
+                price = Number(priceArray[idx]);
+                
+                sumPrice += (price * cnt);
+                
+            }
+            taxValue = sumPrice * (tax / 100);
+            totalPrice = sumPrice + (sumPrice * (tax / 100));
             
             $("#sum").text(sumPrice);
             $("#tax").text(taxValue);
             $("#total").text(totalPrice);
             
-            
-
-
-
             
         }
     </script>
