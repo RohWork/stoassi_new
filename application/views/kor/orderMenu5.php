@@ -91,7 +91,7 @@
         ?>
                 menuArray[<?=$menu->idx?>] = "<?=$menu->name?>";
                 priceArray[<?=$menu->idx?>] = "<?=$menu->price?>";
-                tax = "<?=$menu->tax?>";
+                
         <?php
             }
         ?>
