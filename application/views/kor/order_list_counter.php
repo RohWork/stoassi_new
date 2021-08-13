@@ -28,7 +28,7 @@
 						<td><?=$no?></td>
 						<td><?=$row->table_no?></td>
                                                 <td><?=$row->order_no?></td>
-                                                <td><?=$row->price?>zł</td>
+                                                <td><?=$row->price?> zł</td>
 						<td><?=$row->STATUS?></td>
 						<td><?=$row->regi_date?></td>
 						<td><?=$row->group_name?><?=$row->recipe_name?></td>
