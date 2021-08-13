@@ -166,7 +166,7 @@
                 cnt = Number($("#cnt_"+tmpIdx).val());
                 price = Number(priceArray[tmpIdx]);
                 
-                console.log(cnt+"*"+price+"*"+priceIdxArray.length);
+                console.log(priceIdxArray);
                 sumPrice = sumPrice + (price * cnt);
                 
             }
