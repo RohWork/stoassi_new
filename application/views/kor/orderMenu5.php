@@ -168,6 +168,8 @@
                 
                 
                 sumPrice += Number(price * cnt);
+                
+                console.log(sumPrice);
             }
             
             console.log(sumPrice);
