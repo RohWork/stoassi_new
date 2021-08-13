@@ -4,20 +4,9 @@ class Customer_model extends CI_Model {
 
     function insert_order($vo){
         
-        $data['regi_date'] = $data['modi_date'] =  date('Y-m-d H:i:s');
-        $data['table_no'] = $vo['table_no'];
-        $data['recipe_idx'] = $vo['recipe_idx'];
-        $data['place'] = $vo['place'];
-        $data['cnt'] = $vo['cnt'];
-        $data['shop_idx']= $vo['shop_idx'];
-        if(!empty($vo['status'])){
-            $data['status'] = $vo['status'];
-        }
-        $data['order_no'] = $vo['order_no'];
-        $data['price'] = $vo['price'];
+        $vo['regi_date'] = $vo['modi_date'] =  date('Y-m-d H:i:s');
         
-        
-        $this->db->insert('order_list',$data);
+        $this->db->insert('order_list',$vo);
         
         return $this->db->insert_id();
         
