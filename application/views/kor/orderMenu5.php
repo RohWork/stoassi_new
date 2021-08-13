@@ -167,7 +167,7 @@
                 price = Number(priceArray[tmpIdx]);
                 
                 
-                sumPrice = sumPrice + Number(price * cnt);
+                sumPrice = sumPrice + (price * cnt);
                 
                 console.log(price * cnt);
             }
