@@ -103,6 +103,7 @@
                 $(element).css('backgroundColor' , '#FFFFFF');
                 $("#menu_array").val($("#menu_array").val().replace("/"+idx,''));
                 $("#tr_"+idx).remove();
+                priceIdxArray.splice(priceIdxArray.indexOf(idx),1);
                 no--;
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
@@ -114,15 +115,10 @@
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)'/></td></tr>"
                 );
-        
+                priceIdxArray.push(idx);
                 no++;
             }
             
-            if(mode == 1){ //더하기
-                priceIdxArray.push(idx);
-            }else{
-                priceIdxArray.splice(priceIdxArray.indexOf(idx),1);
-            }
         }
         
         
