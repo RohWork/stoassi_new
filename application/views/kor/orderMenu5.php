@@ -166,12 +166,12 @@
                 cnt = Number($("#cnt_"+tmpIdx).val());
                 price = Number(priceArray[tmpIdx]);
                 
-                
+                console.log(cnt+"*"+price);
                 sumPrice = sumPrice + (price * cnt);
                 
             }
             
-            console.log(sumPrice);
+            
             
             taxValue = parseFloat(sumPrice * (tax / 100));
             totalPrice = parseFloat(sumPrice + (sumPrice * (tax / 100)));
