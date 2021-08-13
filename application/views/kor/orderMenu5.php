@@ -161,9 +161,9 @@
 
             for(var i=0; i <priceIdxArray.length; i++){
                 
-                var tmpIdx = priceIdxArray[i]).val();
+                var tmpIdx = priceIdxArray[i].val();
                 
-                cnt = $("#cnt"+tmpIdx).val();
+                cnt = Number($("#cnt"+tmpIdx).val());
                 price = Number(priceArray[tmpIdx]);
                 
                 sumPrice = sumPrice + (price * cnt);
