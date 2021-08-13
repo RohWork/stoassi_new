@@ -117,6 +117,12 @@
         
                 no++;
             }
+            
+            if(mode == 1){ //더하기
+                priceIdxArray.push(idx);
+            }else{
+                priceIdxArray.splice(priceIdxArray.indexOf(idx),1);
+            }
         }
         
         
@@ -153,11 +159,6 @@
             var totalPrice = 0 ;
             var sumPrice = 0;
             
-            if(mode == 1){ //더하기
-                priceIdxArray.push(idx);
-            }else{
-                priceIdxArray.splice(priceIdxArray.indexOf(idx),1);
-            }
 
             for(var i=0; i <priceIdxArray.length; i++){
                 
