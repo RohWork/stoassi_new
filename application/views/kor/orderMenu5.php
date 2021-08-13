@@ -51,6 +51,7 @@
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
                 <input type="hidden" name="menu_array" id="menu_array"/>
+                <input type="hidden" name="total_price" id="total_price"/>
             <div class="row" style="margin-top: 30px">
                 <div class="col-md-1 col-xs-1"></div>
                 <div class="col-md-10 col-xs-10">
@@ -66,6 +67,7 @@
                         <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
                         <label> 부가세 : </label><span id="tax"></span><br/>
                         <label> 계산된 금액 : </label><span id="total"> </span>
+                        
                     </div>
                     <div style="text-align: center;width: 100%">
                         <div style="float:left;width:50%"><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
@@ -175,7 +177,7 @@
             $("#sum").text(sumPrice);
             $("#tax").text(taxValue);
             $("#total").text(totalPrice);
-            
+            $("#total_price").val(totalPrice);
             
         }
     </script>
