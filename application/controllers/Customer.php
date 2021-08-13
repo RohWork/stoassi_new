@@ -110,7 +110,7 @@ class Customer extends CI_Controller {
                             "place"         => $place,
                             "recipe_idx"    => $recipe_array[$i],
                             "shop_idx"      => $shop_idx,
-                            "price"         => $total_price,
+                            "price"         => $price,
                             "order_no"      => date('his'),
                         );
                         $this->cust_md->insert_order($data);
