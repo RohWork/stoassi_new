@@ -163,7 +163,7 @@
                 
                 var tmpIdx = priceIdxArray[i];
                 
-                cnt = Number($("#cnt"+tmpIdx).val());
+                cnt = Number($("#cnt_"+tmpIdx).val());
                 price = Number(priceArray[tmpIdx]);
                 
                 sumPrice += (price * cnt);
