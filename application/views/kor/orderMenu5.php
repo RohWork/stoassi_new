@@ -147,10 +147,10 @@
         
         function calcPrice(idx, mode){
             
-            var cnt;
-            var price;
-            var taxValue;
-            var totalPrice;
+            var cnt = 0;
+            var price = 0;
+            var taxValue = 0;
+            var totalPrice = 0 ;
             var sumPrice = 0;
             
             if(mode == 1){ //더하기
