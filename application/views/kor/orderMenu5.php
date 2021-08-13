@@ -156,15 +156,14 @@
             if(mode == 1){ //더하기
                 priceIdxArray.push(idx);
             }else{
-                //priceIdxArray = priceIdxArray.filter((element) => element !== idx);
+                priceIdxArray = priceIdxArray.filter((element) => element !== idx);
             }
 
             for(var i=0; i<priceIdxArray.length;i++){
                 
                 var tmpIdx = priceIdxArray[i]).val();
                 
-                cnt = Number($("#cnt"+tmpIdx).val());
-                price = Number(priceArray[tmpIdx]);
+
                 
                 sumPrice = sumPrice + (price * cnt);
                 
