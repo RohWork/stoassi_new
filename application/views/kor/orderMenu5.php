@@ -159,13 +159,9 @@
                 priceIdxArray = priceIdxArray.filter((element) => element !== idx);
             }
 
-            for(var i=0; i<priceIdxArray.length;i++){
-                
-                var tmpIdx = priceIdxArray[i]).val();
+            for(var i=0; i <priceIdxArray.length; i++){
                 
 
-                
-                sumPrice = sumPrice + (price * cnt);
                 
             }
             taxValue = parseFloat(sumPrice * (tax / 100));
