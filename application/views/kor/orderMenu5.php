@@ -50,6 +50,7 @@
                 <input type="hidden" name="language" id="language" value="<?=$language?>"/>
                 <input type="hidden" name="place" id="place" value="<?=$place?>"/>
                 <input type="hidden" name="shop_idx" id="shop_idx" value="<?=$shop_idx?>"/>
+                <input type="hidden" name="menu_idx" id="menu_idx" value="<?=$menu_idx?>"/>
                 <input type="hidden" name="menu_array" id="menu_array"/>
                 <input type="hidden" name="total_price" id="total_price"/>
             <div class="row" style="margin-top: 30px">
