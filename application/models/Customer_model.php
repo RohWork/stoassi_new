@@ -13,6 +13,9 @@ class Customer_model extends CI_Model {
         if(!empty($vo['status'])){
             $data['status'] = $vo['status'];
         }
+        $data['order_no'] = $vo['order_no'];
+        $data['price'] = $vo['price'];
+        
         
         $this->db->insert('order_list',$data);
         
