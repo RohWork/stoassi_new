@@ -167,8 +167,6 @@
                 price = Number(priceArray[tmpIdx]);
                 
                 sumPrice += (price * cnt);
-                
-                console.log(price+"*"+cnt);
             }
             taxValue = parseFloat(sumPrice * (tax / 100));
             totalPrice = parseFloat(sumPrice + (sumPrice * (tax / 100)));
