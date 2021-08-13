@@ -161,6 +161,9 @@
 
             for(var i=0; i <priceIdxArray.length; i++){
                 
+                var tmpIdx = priceIdxArray[i]).val();
+                
+                cnt = Number($("#cnt"+tmpIdx).val());
 
                 
             }
