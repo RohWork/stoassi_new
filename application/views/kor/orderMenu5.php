@@ -26,7 +26,7 @@
                 <div class="col-md-10 col-xs-10"><center><h3><?=$shop_info['name']?></h3></center></div>
                 <div class="col-md-1 col-xs-1"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/5/<?=$shop_info['idx']?>" method="post">
+            <form id="orderForm" name="orderForm">
                 <div class="row" style="margin-top: 30px">
                         <div class="col-md-1 col-xs-1"></div>
                              <div class="col-md-10 col-xs-10">
