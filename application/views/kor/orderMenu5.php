@@ -151,7 +151,7 @@
             var price;
             var taxValue;
             var totalPrice;
-            var sumPrice;
+            var sumPrice = 0;
             
             if(mode == 1){ //더하기
                 priceIdxArray.push(idx);
@@ -167,9 +167,8 @@
                 price = Number(priceArray[tmpIdx]);
                 
                 
-                sumPrice = Number(sumPrice) + Number(price * cnt);
+                sumPrice = sumPrice + (price * cnt);
                 
-                console.log(price * cnt);
             }
             
             console.log(sumPrice);
