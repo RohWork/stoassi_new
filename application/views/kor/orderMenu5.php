@@ -169,7 +169,7 @@
                 
                 sumPrice = sumPrice + Number(price * cnt);
                 
-                console.log(sumPrice);
+                console.log(price * cnt);
             }
             
             console.log(sumPrice);
