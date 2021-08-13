@@ -92,6 +92,7 @@ class Customer extends CI_Controller {
             $cnt = 1; //cnt 값은 나중에 입력 받을 예정
             $place = $this->input->post("place");
             $shop_idx = $this->input->post("shop_idx");
+            $price = $this->input->post("total_price");
             
             if(empty($table_no)){
                 $result['message'] = "TIME OUT";
@@ -109,6 +110,7 @@ class Customer extends CI_Controller {
                             "place"         => $place,
                             "recipe_idx"    => $recipe_array[$i],
                             "shop_idx"      => $shop_idx,
+                            "price"         => $total_price,
                         );
                         $this->cust_md->insert_order($data);
                         
