@@ -20,7 +20,7 @@
 		<!-- Custom styles for this template --> 
 		<link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
 	</head>
-	<body> 
+	<body>  
 
 	<!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
