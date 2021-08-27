@@ -149,7 +149,7 @@
                 }
                 
                 $.cookie('menu_array', menu_idx_array, {path: '/' });
-                $.cookie('cnt_array'), menu_cnt_array, {path: '/' });
+                $.cookie('cnt_array', menu_cnt_array, {path: '/' });
                 
             }
         }
