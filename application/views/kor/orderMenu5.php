@@ -133,15 +133,20 @@
                 return;
             }else{
                 
-                var menu_idx_array;
+                var menu_idx_array = String($("#menu_array").val());
                 var menu_cnt_array;
+                var menu_cookie_array = $.cooke('menu_array').split("/");
+                
+                console.log(menu_cookie_array);
                 
                 if($.cooke('menu_array') == undefined){
                     menu_idx_array = String($("#menu_array").val());
                 }else{
                     menu_idx_array = $.cookie('menu_array')+""+String($("#menu_array").val());
-                    menu_idx_array = $.cookie('cnt_array');
+                    menu_cnt_array = $.cookie('cnt_array');
                 }
+                
+                
                 
                 for(var i=0; i<no; i++){
                     menu_cnt_array += "/"+$("#cnt"+i).val();
