@@ -135,7 +135,7 @@
                 
                 var menu_idx_array = String($("#menu_array").val());
                 var menu_cnt_array;
-                var menu_cookie_array = $.cooke('menu_array').split("/");
+                var menu_cookie_array = $.cooke('menu_array');
                 
                 console.log(menu_cookie_array);
                 
