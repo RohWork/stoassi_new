@@ -126,17 +126,22 @@
             
         }
         
-        function menu_basket_go(idx, element){
+        function menu_basket_go(){
         
             if($("#menu_idx").val() == ""){
                 alert("메뉴를 체크해주세요.");
                 return
             }else{
                 
-                var menu_array = String($("#menu_array").val());
+                var menu_idx_array = String($("#menu_array").val());
+                var menu_cnt_array;
                 
+                for(var i=0; i<no; i++){
+                    menu_cnt_array += "/"+$("#cnt"+i).val();
+                }
                 
-                $.cookie('menu_array', menu_array ,{path: '/' });
+                $.cookie('menu_array', menu_idx_array, {path: '/' });
+                $.cookie('cnt_array'), menu_cnt_array, {path: '/' });
             }
         }
         
