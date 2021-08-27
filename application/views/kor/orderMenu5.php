@@ -149,7 +149,7 @@
                             if(menu_cookie_array[j] == menu_idx_array[i]){
                                 menu_cnt_string += "/"+(Number(cnt_cookie_array[j])+Number($("#cnt_"+menu_idx_array[i]).val()));
                                 menu_idx_string += "/"+menu_idx_array[i];
-                                var check_cookie = true;
+                                check_cookie = true;
                             }else{
                                 menu_idx_string += "/"+menu_cookie_array[j];
                                 menu_idx_string += "/"+cnt_cookie_array[j];
