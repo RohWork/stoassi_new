@@ -151,8 +151,8 @@
                                 menu_idx_string += "/"+menu_idx_array[i];
                                 check_cookie = true;
                             }else if(i == 1){       //장바구니에만 들어가있는 경우
-                                menu_cnt_string += cnt_cookie_array[j];
-                                menu_idx_string += menu_cookie_array[j];
+                                menu_cnt_string += "/"+cnt_cookie_array[j];
+                                menu_idx_string += "/"+menu_cookie_array[j];
                             }
                         }
                         if(check_cookie == false){  //장바구니에 추가되있지 않는 상품일경우
