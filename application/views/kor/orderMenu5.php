@@ -159,7 +159,7 @@
                              menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
                              menu_idx_string += "/"+menu_idx_array[i];
                         }
-                        for(var j=1;j<menu_cookie_array.length;j++){
+                        for(var j=1;j<menu_cookie_array.length;j++){    //장바구니에서 변경될게 없는 상품
                             if(menu_cookie_array[j] != ""){
                                 menu_cnt_string += "/"+cnt_cookie_array[j];
                                 menu_idx_string += "/"+menu_cookie_array[j];
