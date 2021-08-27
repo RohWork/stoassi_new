@@ -73,8 +73,8 @@
                         
                     </div>
                     <div style="text-align: center;width: 100%">
-                        <div style="float:left;width:50%"><button onclick="menu_basket_go()" class="form-control">장바구니추가</button></div>
-                        <div style="float:left;width:50% "><button onclick="menu_send_go()" class="form-control">주문하기</button></div>
+                        <div style="float:left;width:50%"><button type="button" onclick="menu_basket_go()" class="form-control">장바구니추가</button></div>
+                        <div style="float:left;width:50% "><button type="button" onclick="menu_send_go()" class="form-control">주문하기</button></div>
                         <div style="clear: both"></div>
                     </div>
                 </div>
@@ -154,7 +154,6 @@
                 $.cookie('menu_array', menu_idx_array, {path: '/' });
                 $.cookie('cnt_array', menu_cnt_array, {path: '/' });
                
-                alert('test');
             }
         }
         
