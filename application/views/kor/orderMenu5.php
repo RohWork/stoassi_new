@@ -166,7 +166,7 @@
                     
                     if($("#cnt_"+menu_idx_array[i]).val() < 1){
                         alert('갯수를 입력해주세요');
-                        return;
+                        return false;
                     }
                 }
                 
