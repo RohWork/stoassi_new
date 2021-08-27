@@ -129,7 +129,7 @@
         function menu_basket_go(){
         
             if($("#total_price").val() == ""){
-                alert("메뉴를 체크해주세요.");
+                alert("상품을 선택해주세요.");
                 return;
             }else{
                 
