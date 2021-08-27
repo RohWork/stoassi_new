@@ -138,7 +138,7 @@
                // var menu_cookie_array = $.cookie('menu_array').split("/");
                
                 
-                if($.cooke('menu_array') == undefined){
+                if($.cookie('menu_array') == undefined){
                     menu_idx_array = String($("#menu_array").val());
                 }else{
                     menu_idx_array = $.cookie('menu_array')+""+String($("#menu_array").val());
