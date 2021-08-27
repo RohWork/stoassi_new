@@ -129,7 +129,7 @@
         
         function menu_basket_go(){
         
-            if($("#total_price").val() == ""){
+            if($("#total_price").val() == "" || $("#total_price").val() < 1){
                 alert("상품을 선택해주세요.");
                 return;
             }else{
