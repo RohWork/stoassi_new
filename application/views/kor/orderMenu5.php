@@ -145,7 +145,7 @@
                 for(var i=1; i<no; i++){
                     if(typeof($.cookie('menu_array')) != 'undefined'){
                         var check_cookie = false;
-                        for(var j=1;j<menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
+                        for(var j=1;j<=menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
                             if(menu_cookie_array[j] == menu_idx_array[i]){
                                 menu_cnt_string += "/"+(Number(cnt_cookie_array[j])+Number($("#cnt_"+menu_idx_array[i]).val()));
                                 check_cookie = true;
