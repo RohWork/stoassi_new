@@ -133,27 +133,35 @@
                 return;
             }else{
                 
-                var menu_idx_array = String($("#menu_array").val());
-                var menu_cnt_array;
+                var menu_idx_array = String($("#menu_array").val()).split("/");
+                var menu_idx_string;
+                var menu_cnt_string;
                 var menu_cookie_array = $.cookie('menu_array').split("/");
-               
-                console.log(menu_cookie_array);
-                
-                if($.cookie('menu_array') == undefined){
-                    menu_idx_array = String($("#menu_array").val());
-                }else{
-                    menu_idx_array = $.cookie('menu_array')+""+String($("#menu_array").val());
-                    menu_cnt_array = $.cookie('cnt_array');
+                var cnt_cookie_array = $.cookie('cnt_array').split("/");
+                                
+                                
+                for(var i=1; i<=no; i++){
+                    if(menu_cookie_array.length > 0){
+                        var check_cookie = false;
+                        for(var j=1;j<=menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
+                            if(menu_cookie_array[j] == menu_idx_array[i]){
+                                menu_cnt_string += "/"+(cnt_cookie_array[j]+Number($("#cnt_"+menu_idx_array[i]).val()));
+                                menu_idx_string += "/"+menu_idx_array[i];
+                                var check_cookie = true;
+                            }
+                        }
+                        if(check_cookie == false){  //장바구니에 추가되있지 않는 상품일경우
+                             menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
+                             menu_idx_string += "/"+menu_idx_array[i];
+                        }
+                    }else{
+                        menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
+                        menu_idx_string += "/"+menu_idx_array[i];
+                    }
                 }
                 
-                
-                
-                for(var i=0; i<no; i++){
-                    menu_cnt_array += "/"+$("#cnt"+i).val();
-                }
-                
-                $.cookie('menu_array', menu_idx_array, {path: '/' });
-                $.cookie('cnt_array', menu_cnt_array, {path: '/' });
+                $.cookie('menu_array', menu_idx_string, {path: '/' });
+                $.cookie('cnt_array', menu_cnt_string, {path: '/' });
                
             }
         }
