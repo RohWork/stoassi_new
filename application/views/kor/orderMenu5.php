@@ -18,6 +18,8 @@
         <!-- Custom styles for this template -->
         <link href="/assets/css/sticky-footer-navbar.css" rel="stylesheet">
         <link href="/assets/css/customer.css" rel="stylesheet">
+        <!-- 쿠키 사용 --> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> 
     </head>
     <body>
         <div class="container">
