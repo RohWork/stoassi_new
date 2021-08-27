@@ -144,22 +144,28 @@
                 }
                                 
                 for(var i=1; i<no; i++){
-                    if(typeof($.cookie('menu_array')) != 'undefined'){
+                    if(typeof($.cookie('menu_array')) != 'undefined'){  //장바구니가 비어있지 않을경우
                         var check_cookie = false;
                         for(var j=1;j<menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
                             if(menu_cookie_array[j] == menu_idx_array[i]){
                                 menu_cnt_string += "/"+(Number(cnt_cookie_array[j])+Number($("#cnt_"+menu_idx_array[i]).val()));
                                 menu_idx_string += "/"+menu_idx_array[i];
                                 check_cookie = true;
-                            }else if(i == 1){       //장바구니에만 들어가있는 경우
-                                menu_cnt_string += "/"+cnt_cookie_array[j];
-                                menu_idx_string += "/"+menu_cookie_array[j];
+                                
+                                menu_cookie_array[j] = "";
                             }
                         }
                         if(check_cookie == false){  //장바구니에 추가되있지 않는 상품일경우
                              menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
                              menu_idx_string += "/"+menu_idx_array[i];
                         }
+                        for(var j=1;j<menu_cookie_array.length;j++){
+                            if(menu_cookie_array[j] != ""){
+                                menu_cnt_string += "/"+cnt_cookie_array[j];
+                                menu_idx_string += "/"+menu_cookie_array[j];
+                            }
+                        }
+                        
                     }else{
                         menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
                         menu_idx_string += "/"+menu_idx_array[i];
