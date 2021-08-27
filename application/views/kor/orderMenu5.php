@@ -118,7 +118,7 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)' value=1/></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)' value='1'/></td></tr>"
                 );
                 priceIdxArray.push(idx);
                 no++;
