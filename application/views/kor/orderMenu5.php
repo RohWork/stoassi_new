@@ -130,7 +130,7 @@
         
             if($("#menu_idx").val() == ""){
                 alert("메뉴를 체크해주세요.");
-                return
+                return;
             }else{
                 
                 var menu_idx_array = String($("#menu_array").val());
