@@ -134,8 +134,8 @@
             }else{
                 
                 var menu_idx_array = String($("#menu_array").val()).split("/");
-                var menu_idx_string;
-                var menu_cnt_string;
+                var menu_idx_string = "";
+                var menu_cnt_string = "";
                                 
                 if(typeof($.cookie('menu_array')) != 'undefined'){
                     var menu_cookie_array = $.cookie('menu_array').split("/");
