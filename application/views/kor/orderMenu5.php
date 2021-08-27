@@ -128,7 +128,7 @@
         
         function menu_basket_go(){
         
-            if($("#menu_idx").val() == ""){
+            if($("#total_price").val() == ""){
                 alert("메뉴를 체크해주세요.");
                 return;
             }else{
