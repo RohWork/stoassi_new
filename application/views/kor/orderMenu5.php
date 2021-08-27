@@ -133,7 +133,7 @@
                 return
             }else{
 
-                $.cookie('menu_array', $("#menu_array").val() ,{path: '/' });
+                $.cookie('menu_array', 3 ,{path: '/' });
             }
         }
         
