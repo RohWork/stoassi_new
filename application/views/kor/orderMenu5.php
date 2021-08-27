@@ -132,8 +132,11 @@
                 alert("메뉴를 체크해주세요.");
                 return
             }else{
-
-                $.cookie('menu_array', 3 ,{path: '/' });
+                
+                var menu_array = $("#manu_array").val();
+                
+                
+                $.cookie('menu_array', menu_array ,{path: '/' });
             }
         }
         
