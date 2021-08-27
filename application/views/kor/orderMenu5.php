@@ -135,7 +135,7 @@
                 
                 var menu_idx_array = String($("#menu_array").val());
                 var menu_cnt_array;
-                var menu_cookie_array = $.cookie('menu_array').split("/");
+               // var menu_cookie_array = $.cookie('menu_array').split("/");
                
                 
                 if($.cooke('menu_array') == undefined){
