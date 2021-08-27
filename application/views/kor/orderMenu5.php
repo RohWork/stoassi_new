@@ -151,7 +151,7 @@
                                 menu_idx_string += "/"+menu_idx_array[i];
                                 var check_cookie = true;
                             }else{
-                                menu_idx_string += "/"+menu_cooke_array[j];
+                                menu_idx_string += "/"+menu_cookie_array[j];
                                 menu_idx_string += "/"+cnt_cookie_array[j];
                             }
                         }
