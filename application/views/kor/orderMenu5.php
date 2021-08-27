@@ -133,8 +133,13 @@
                 return;
             }else{
                 
-                var menu_idx_array = String($("#menu_array").val());
-                var menu_cnt_array;
+                if($.cooke('menu_array') == undefined){
+                    var menu_idx_array = String($("#menu_array").val());
+                    var menu_cnt_array;
+                }else{
+                    var menu_idx_array = $.cookie('menu_array')+""+String($("#menu_array").val());
+                    var menu_idx_array = $.cookie('cnt_array');
+                }
                 
                 for(var i=0; i<no; i++){
                     menu_cnt_array += "/"+$("#cnt"+i).val();
