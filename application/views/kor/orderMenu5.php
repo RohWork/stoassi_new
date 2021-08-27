@@ -132,7 +132,7 @@
                 alert("메뉴를 체크해주세요.");
                 return
             }else{
-                $.cookie('name', 'value');
+                $.cookie('name', 'value',{path: '/' });
             }
         }
         
