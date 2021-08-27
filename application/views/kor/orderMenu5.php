@@ -148,7 +148,6 @@
                         for(var j=1;j<menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
                             if(menu_cookie_array[j] == menu_idx_array[i]){
                                 menu_cnt_string += "/"+(Number(cnt_cookie_array[j])+Number($("#cnt_"+menu_idx_array[i]).val()));
-                                menu_idx_string += "/"+menu_idx_array[i];
                                 check_cookie = true;
                             }else{
                                 menu_idx_string += "/"+menu_cookie_array[j];
