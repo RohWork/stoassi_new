@@ -71,7 +71,7 @@
                         
                     </div>
                     <div style="text-align: center;width: 100%">
-                        <div style="float:left;width:50%"><button onclick="menu_send_go()" class="form-control">장바구니추가</button></div>
+                        <div style="float:left;width:50%"><button onclick="menu_basket_go()" class="form-control">장바구니추가</button></div>
                         <div style="float:left;width:50% "><button onclick="menu_send_go()" class="form-control">주문하기</button></div>
                         <div style="clear: both"></div>
                     </div>
@@ -124,11 +124,21 @@
             
         }
         
+        function menu_basket_go(idx, element){
+        
+            if($("#menu_idx").val() == ""){
+                alert("메뉴를 체크해주세요.");
+                return
+            }else{
+                $.cookie('name', 'value');
+            }
+        }
         
         
         function menu_send_go(){
             if($("#menu_idx").val() == ""){
                 alert("메뉴를 체크해주세요.");
+                return;
             }else{
                 $.ajax({
                         url:'/customer/setMenu',
