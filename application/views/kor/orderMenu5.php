@@ -110,6 +110,7 @@
                 $("#tr_"+idx).remove();
                 priceIdxArray.splice(priceIdxArray.indexOf(idx),1);
                 no--;
+                calcPrice();
             }else{
                 $(element).css('backgroundColor' , '#CCCCCC');
                 $("#menu_array").val($("#menu_array").val()+"/"+idx);
@@ -118,7 +119,7 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)'/></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice()'/></td></tr>"
                 );
                 priceIdxArray.push(idx);
                 no++;
@@ -206,7 +207,7 @@
             }
         }
         
-        function calcPrice(idx, mode){
+        function calcPrice(){
             
             var cnt = 0;
             var price = 0;
