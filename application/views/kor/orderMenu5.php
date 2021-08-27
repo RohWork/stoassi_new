@@ -150,7 +150,7 @@
                                 menu_cnt_string += "/"+(Number(cnt_cookie_array[j])+Number($("#cnt_"+menu_idx_array[i]).val()));
                                 menu_idx_string += "/"+menu_idx_array[i];
                                 check_cookie = true;
-                            }else if(i == 1){
+                            }else if(i == 1){       //장바구니에만 들어가있는 경우
                                 menu_cnt_string += cnt_cookie_array[j];
                                 menu_idx_string += menu_cookie_array[j];
                             }
