@@ -118,7 +118,7 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)' value='1'/></td></tr>"
+                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice("+idx+", 1)'/></td></tr>"
                 );
                 priceIdxArray.push(idx);
                 no++;
@@ -163,7 +163,13 @@
                         menu_cnt_string += "/"+$("#cnt_"+menu_idx_array[i]).val();
                         menu_idx_string += "/"+menu_idx_array[i];
                     }
+                    
+                    if($("#cnt_"+menu_idx_array[i]).val() < 1){
+                        alert('갯수를 입력해주세요');
+                        return;
+                    }
                 }
+                
                 
                 console.log(menu_idx_string);
                 console.log(menu_cnt_string);
