@@ -136,12 +136,14 @@
                 var menu_idx_array = String($("#menu_array").val()).split("/");
                 var menu_idx_string;
                 var menu_cnt_string;
-                var menu_cookie_array = $.cookie('menu_array').split("/");
-                var cnt_cookie_array = $.cookie('cnt_array').split("/");
                                 
+                if(typeof($.cookie('menu_array')) != 'undefined'){
+                    var menu_cookie_array = $.cookie('menu_array').split("/");
+                    var cnt_cookie_array = $.cookie('cnt_array').split("/");
+                }
                                 
                 for(var i=1; i<=no; i++){
-                    if(menu_cookie_array.length > 0){
+                    if(typeof($.cookie('menu_array')) != 'undefined'){
                         var check_cookie = false;
                         for(var j=1;j<=menu_cookie_array.length;j++){   //장바구니에 추가된 상품일경우
                             if(menu_cookie_array[j] == menu_idx_array[i]){
