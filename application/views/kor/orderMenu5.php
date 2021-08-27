@@ -133,7 +133,7 @@
                 return
             }else{
                 
-                var menu_array = $("#menu_array").val();
+                var menu_array = String($("#menu_array").val());
                 
                 
                 $.cookie('menu_array', menu_array ,{path: '/' });
