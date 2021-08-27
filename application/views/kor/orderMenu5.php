@@ -171,13 +171,14 @@
                     }
                 }
                 
-                for(var j=1;j<menu_cookie_array.length;j++){    //장바구니에서 변경될게 없는 상품
-                    if(menu_cookie_array[j] != ""){
-                        menu_cnt_string += "/"+cnt_cookie_array[j];
-                        menu_idx_string += "/"+menu_cookie_array[j];
+                if(typeof($.cookie('menu_array')) != 'undefined'){
+                    for(var j=1;j<menu_cookie_array.length;j++){    //장바구니에서 변경될게 없는 상품
+                        if(menu_cookie_array[j] != ""){
+                            menu_cnt_string += "/"+cnt_cookie_array[j];
+                            menu_idx_string += "/"+menu_cookie_array[j];
+                        }
                     }
                 }
-                
                 console.log(menu_idx_string);
                 console.log(menu_cnt_string);
                 
