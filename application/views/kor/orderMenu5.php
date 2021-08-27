@@ -138,7 +138,6 @@
                 
                 if($.cooke('menu_array') == undefined){
                     menu_idx_array = String($("#menu_array").val());
-                    menu_cnt_array;
                 }else{
                     menu_idx_array = $.cookie('menu_array')+""+String($("#menu_array").val());
                     menu_idx_array = $.cookie('cnt_array');
