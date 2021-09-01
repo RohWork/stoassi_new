@@ -31,14 +31,20 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">장바구니</h4>
       </div>
       <div class="modal-body">
-        ...
+          <table>
+              <tr>
+                  <th>CHECK</th>
+                  <th>주문명</th>
+                  <th>갯수</th>
+              </tr>
+          </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">구입</button>
       </div>
     </div>
   </div>
