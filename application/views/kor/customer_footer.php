@@ -34,7 +34,7 @@
         <h4 class="modal-title" id="myModalLabel">장바구니</h4>
       </div>
       <div class="modal-body">
-          <table>
+          <table id="basket_list">
               <tr>
                   <th>CHECK</th>
                   <th>주문명</th>
