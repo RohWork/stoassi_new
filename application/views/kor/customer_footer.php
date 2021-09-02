@@ -7,7 +7,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="location.href='/customer/orderMenu/1/10'">HOME</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">뒤로가기</div>
-            <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');">장바구니</div>
+            <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');check_basket();">장바구니</div>
             <div class="col-md-2 col-xs-5">
                 <form method="post" id="change_form" action="<?=explode("?",$_SERVER['REQUEST_URI'])[0]?>">
                     <select class="form-control" id="lang_change" name="language" onchange="this.form.submit()">
