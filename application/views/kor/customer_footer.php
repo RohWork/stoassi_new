@@ -91,7 +91,7 @@
                             $("#basket_list").append("<tr>"
                                                     +"<td> <input type='checkbox' name='basket_idx[]' value='"+basket[i].idx+"'/></td>"
                                                     +"<td>"+basket[i].name+"</td>"
-                                                    +"<td> <input type='number' name=basket_cnt[]' value='"+basket_array[basket[i].idx]+"'</td>"+
+                                                    +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'</td>"+
                                                     "</tr>"
                                                     );
                         }
