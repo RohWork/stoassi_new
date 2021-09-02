@@ -73,7 +73,7 @@
                     },
                     success:function(data){
                         if(data.result == true){
-                            console.log(data.result.)
+                            console.log(data.result);
                         }else{
                             alert(data.message);
                         }
