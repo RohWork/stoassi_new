@@ -135,13 +135,15 @@ class Customer extends CI_Controller {
             $params = new stdClass();
             
             $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
+            $menu_return = array();
             
             for($i =0; $i<count($menu_array); $i++){
                 if($menu_array[i] == $menu_info_array->idx){
-                    echo $menu_info_array->idx;
-                    echo $menu_info_array->name."/";
+                    $menu_return[$menu_array[$i]] = $menu_info_array->name;
                 }
             }
+            
+            $result['result'] = $menu_return;
             
             header("Content-Type: application/json;");
             echo json_encode($result);
