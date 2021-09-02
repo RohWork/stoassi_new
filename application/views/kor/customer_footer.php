@@ -65,9 +65,26 @@
             var menu_array = $.cookie('menu_array').split('/');
             var cnt_array = $.cookie('cnt_array').split('/');
             
-            console.log(menu_array);
-            console.log(cnt_array);
-            
+            $.ajax({
+                    url:'/customer/getMenuList',
+                    type:'post',
+                    data: {
+                        menu_array : menu_array,
+                    },
+                    success:function(data){
+                        if(data.result == true){
+                            alert("주문완료");
+                        }else{
+                            alert(data.message);
+                        }
+                    },
+                    error: function(xhr,status,error) {
+                        console.log(xhr,status,error);
+                        alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                        return false;
+                    }	
+            });
+
         }else{
             $("#basket_list").html(
                     "<tr><td>장바구니의 내용이 없습니다.</td></tr>"
