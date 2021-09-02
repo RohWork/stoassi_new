@@ -63,7 +63,7 @@
     function check_basket(){
         if(typeof($.cookie('menu_array')) != "undefined"){
             
-            $("#basket_list").empty();
+            $("#basket_list").remove(".value_tr");
             
             var menu_array = $.cookie('menu_array').split('/');
             var cnt_array = $.cookie('cnt_array').split('/');
@@ -88,7 +88,7 @@
                             
                             console.log(basket[i].name);
                             
-                            $("#basket_list").append("<tr>"
+                            $("#basket_list").append("<tr class='value_tr'>"
                                                     +"<td> <input type='checkbox' name='basket_idx[]' value='"+basket[i].idx+"'/></td>"
                                                     +"<td>"+basket[i].name+"</td>"
                                                     +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'</td>"+
