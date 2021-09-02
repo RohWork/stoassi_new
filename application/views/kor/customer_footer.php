@@ -79,7 +79,12 @@
                             
                             console.log(basket[i].name);
                             
-                            $("#basket_list").append("<tr><td> <input type='checkbox' name='basket_idx[]' /></td><td>"+basket[i].name+"</td></tr>");
+                            $("#basket_list").append("<tr>"
+                                                    +"<td> <input type='checkbox' name='basket_idx[]' value=""/></td>"
+                                                    +"<td>"+basket[i].name+"</td>"
+                                                    +"<td>"+cnt_array[basket[i].idx]+"</td>"+
+                                                    "</tr>"
+                                                    );
                         }
                     },
                     error: function(xhr,status,error) {
