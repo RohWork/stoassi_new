@@ -136,11 +136,8 @@ class Customer extends CI_Controller {
             $params->idx_in = $menu_array;
             
             $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
-            $menu_return = array();
             
-            for($i =0; $i<count($menu_array); $i++){
-                
-            }
+            var_dump($menu_info_array);
             
             $result['return'] = $menu_return;
             
