@@ -65,7 +65,7 @@
             var menu_array = $.cookie('menu_array').split('/');
             var cnt_array = $.cookie('cnt_array').split('/');
             
-            var basket_array = new array();
+            var basket_array = new Array();
             
             for(var i =0; i<menu_array.length; i++){
                 basket_array[menu_array[i]] = cnt_array[i]
