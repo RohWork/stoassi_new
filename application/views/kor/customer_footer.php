@@ -58,7 +58,7 @@
     });
     
     function check_basket(){
-        if($.cookie('menu_array') != "undefined"){
+        if(typeof($.cookie('menu_array')) != "undefined"){
             
         }else{
             $("#basket_list").html(
