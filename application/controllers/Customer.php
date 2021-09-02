@@ -138,7 +138,7 @@ class Customer extends CI_Controller {
             $menu_return = array();
             
             for($i =0; $i<count($menu_array); $i++){
-                if($menu_array[i] == $menu_info_array->idx){
+                if($menu_array[$i] == $menu_info_array->idx){
                     $menu_return[$menu_array[$i]] = $menu_info_array->name;
                 }
             }
