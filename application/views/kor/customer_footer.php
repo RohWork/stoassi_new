@@ -39,7 +39,7 @@
       <div class="modal-body">
           <table id="basket_list">
               <tr>
-                  <th>CHECK</th>
+                  <th></th>
                   <th>주문명</th>
                   <th>갯수</th>
               </tr>
@@ -72,7 +72,13 @@
                         menu_array : $.cookie('menu_array'),
                     },
                     success:function(data){
-                        console.log(data.return);
+                        var basket = data.return;
+                        
+                        for(var i=0; i<basket.length; i++){
+                             $("#basket_list").append(
+                                "<tr><td> <input type='checkbox' name=basket_idx[] ></td>"+basket[i].name+"</tr>";
+                            );
+                        }
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
