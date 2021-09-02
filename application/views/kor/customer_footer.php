@@ -1,4 +1,7 @@
 <footer>
+    <!-- 쿠키 사용 --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>     
+    
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
