@@ -133,14 +133,13 @@ class Customer extends CI_Controller {
             $menu_array = explode("/", $this->input->post("menu_array"));
             
             $params = new stdClass();
+            $params->idx_in = $menu_array;
             
             $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
             $menu_return = array();
             
             for($i =0; $i<count($menu_array); $i++){
-                if($menu_array[$i] == $menu_info_array->idx && $menu_array[$i] != ""){
-                    $menu_return[$menu_array[$i]] = $menu_info_array->name;
-                }
+                
             }
             
             $result['return'] = $menu_return;
