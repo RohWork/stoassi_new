@@ -62,6 +62,11 @@
     
     function check_basket(){
         if(typeof($.cookie('menu_array')) != "undefined"){
+            var menu_array = $.cookie('menu_array').split('/');
+            var cnt_array = $.cookie('cnt_array').split('/');
+            
+            console.log(menu_array);
+            console.log(cnt_array);
             
         }else{
             $("#basket_list").html(
