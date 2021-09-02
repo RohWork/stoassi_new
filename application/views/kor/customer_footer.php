@@ -69,7 +69,7 @@
                     url:'/customer/getMenuList',
                     type:'post',
                     data: {
-                        menu_array : menu_array,
+                        menu_array : $.cookie('menu_array'),
                     },
                     success:function(data){
                         if(data.result == true){
