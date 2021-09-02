@@ -65,6 +65,12 @@
             var menu_array = $.cookie('menu_array').split('/');
             var cnt_array = $.cookie('cnt_array').split('/');
             
+            var basket_array = new array();
+            
+            for(var i =0; i<menu_array.length; i++){
+                basket_array[menu_array[i]] = cnt_array[i]
+            }
+            
             $.ajax({
                     url:'/customer/getMenuList',
                     type:'post',
@@ -80,9 +86,9 @@
                             console.log(basket[i].name);
                             
                             $("#basket_list").append("<tr>"
-                                                    +"<td> <input type='checkbox' name='basket_idx[]' value=""/></td>"
+                                                    +"<td> <input type='checkbox' name='basket_idx[]' value='"+basket[i].idx+"'/></td>"
                                                     +"<td>"+basket[i].name+"</td>"
-                                                    +"<td>"+cnt_array[basket[i].idx]+"</td>"+
+                                                    +"<td> <input type='number' name=basket_cnt[]' value='"+basket_array[basket[i].idx]+"'</td>"+
                                                     "</tr>"
                                                     );
                         }
