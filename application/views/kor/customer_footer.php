@@ -52,5 +52,13 @@
 
 
 <script>
-
+    function check_basket(){
+        if($.cookie('menu_array') != "undefined"){
+            
+        }else{
+            $("#basket_list").html(
+                    "<tr><td>장바구니의 내용이 없습니다.</td></tr>"
+            );
+        }
+    }
 </script>
