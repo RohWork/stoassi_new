@@ -127,6 +127,21 @@ class Customer extends CI_Controller {
             header("Content-Type: application/json;");
             echo json_encode($result);
         }
+        
+        function getMenuList(){
+            
+            $menu_array = explode("/",$this->input->post("menu_array"));
+            
+            $params = new stdClass();
+            
+            $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
+            
+            var_dump($menu_info_array);
+            
+            header("Content-Type: application/json;");
+            echo json_encode($result);
+            
+        }
 }
 
 ?>
