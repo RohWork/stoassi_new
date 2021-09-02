@@ -72,11 +72,7 @@
                         menu_array : $.cookie('menu_array'),
                     },
                     success:function(data){
-                        if(data.result == true){
-                            console.log(data.return);
-                        }else{
-                            alert(data.message);
-                        }
+                        console.log(data.return);
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
