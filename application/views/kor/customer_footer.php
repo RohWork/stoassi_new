@@ -79,9 +79,7 @@
                             
                             console.log(basket[i].name);
                             
-                            /* $("#basket_list").append(
-                                "<tr><td> <input type='checkbox' name=basket_idx[] ></td>"+basket[i].name+"</tr>";
-                            );*/
+                            $("#basket_list").append("<tr><td> <input type='checkbox' name=basket_idx[] ></td>"+basket[i].name+"</tr>");
                         }
                     },
                     error: function(xhr,status,error) {
