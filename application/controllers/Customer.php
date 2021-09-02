@@ -139,7 +139,8 @@ class Customer extends CI_Controller {
             
             var_dump($menu_info_array);
             
-            $result['return'] = $menu_return;
+            
+            $result['return'] = $menu_info_array;
             
             header("Content-Type: application/json;");
             echo json_encode($result);
