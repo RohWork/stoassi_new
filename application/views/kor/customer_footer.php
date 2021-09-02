@@ -53,7 +53,7 @@
 
 <script>
     
-    $(document.ready(function(){
+    $(document).ready(function(){
         check_basket();
     });
     
