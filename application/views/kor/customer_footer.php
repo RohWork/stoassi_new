@@ -52,6 +52,11 @@
 
 
 <script>
+    
+    $(document.ready(function(){
+        check_basket();
+    });
+    
     function check_basket(){
         if($.cookie('menu_array') != "undefined"){
             
