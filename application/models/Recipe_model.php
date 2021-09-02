@@ -101,6 +101,9 @@ class Recipe_model extends CI_Model {
         if(!empty($search_vo->state)){
             $this->db->where('ri.state', $search_vo->state);
         }
+        if(!empty($search_vo->idx_in)){
+            $this->db->where_in("ri.idx",$search_vo->idx_in);
+        }
         
         return $this->db->get()->result();
         
