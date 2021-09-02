@@ -39,9 +39,9 @@
       <div class="modal-body">
           <table id="basket_list">
               <tr>
-                  <th></th>
-                  <th>주문명</th>
-                  <th>갯수</th>
+                  <th width="20%"></th>
+                  <th width="40%">주문명</th>
+                  <th width="40%">갯수</th>
               </tr>
           </table>
       </div>
