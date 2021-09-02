@@ -73,7 +73,7 @@
                     },
                     success:function(data){
                         if(data.result == true){
-                            alert("주문완료");
+                            console.log(data.result.)
                         }else{
                             alert(data.message);
                         }
