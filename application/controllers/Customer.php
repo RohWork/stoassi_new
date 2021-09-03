@@ -168,7 +168,8 @@ class Customer extends CI_Controller {
             }
             
             $total_sum = $total_price + $total_tax;
-
+            
+            var_dump($total_sum);
             
             foreach($menu_info_array as $menu){
                 
