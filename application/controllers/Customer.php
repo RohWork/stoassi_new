@@ -144,7 +144,7 @@ class Customer extends CI_Controller {
             
         }
         
-        function setSubmitBasket2(){
+        function setSubmitBasket(){
             
             $idx_array = $this->input->post("basket_idx");
             $cnt_array = $this->input->post("basket_cnt");
