@@ -189,7 +189,7 @@ class Customer extends CI_Controller {
                     "order_no"      => date('his'),
                 );
 
-                $this->cust_md->insert_order($data);
+                //$this->cust_md->insert_order($data);
                 
             }
             
