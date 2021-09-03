@@ -155,7 +155,7 @@
             }
             
          });
-    
+         console.log(total_sum);
          $("#sum").html(total_sum);
          $("#tax").html(total_tax);
          $("#total").html(total_sum + total_tax);
