@@ -149,7 +149,13 @@ class Customer extends CI_Controller {
             $idx_array = $this->input->post("basket_idx");
             $cnt_array = $this->input->post("basket_cnt");
             $table_no = $this->session->table_no;
+            $shop_idx = $this->input->post("shop_idx");
             
+            $params = new stdClass();
+            $params->idx_in = $idx_array;
+            $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
+            
+            var_dump($menu_info_array);
             
             header("Content-Type: application/json;");
             echo json_encode($result);
