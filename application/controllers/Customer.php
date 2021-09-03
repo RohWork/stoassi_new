@@ -161,7 +161,7 @@ class Customer extends CI_Controller {
             $total_sum = 0;
             
             foreach($menu_info_array as $menu){
-                $idx = array_search($menu_idx, $idx_array);
+                $idx = array_search($menu->idx, $idx_array);
                 
                 $total_price += $menu->price;
                 $total_tax += $menu->price * ($menu->tax / 100);
