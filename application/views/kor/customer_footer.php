@@ -63,7 +63,7 @@
     function check_basket(){
         if(typeof($.cookie('menu_array')) != "undefined"){
             
-            $("#basket_list").remove(".value_tr");
+            $(".value_tr").detach();
             
             var menu_array = $.cookie('menu_array').split('/');
             var cnt_array = $.cookie('cnt_array').split('/');
