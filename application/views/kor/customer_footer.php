@@ -160,7 +160,6 @@
             
          });
          
-         console.log(total_tax);
          $("#basket_sum").html(total_sum);
          $("#basket_tax").html(total_tax);
          $("#basket_total").html(total_sum + total_tax);
