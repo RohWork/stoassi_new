@@ -164,6 +164,7 @@ class Customer extends CI_Controller {
             $cookie_cnt = $_COOKIE['cnt_array'];
             
             echo $cookie_idx;
+            echo $cookie_cnt;
             
             foreach($menu_info_array as $menu){
                 $idx = array_search($menu->idx, $idx_array);
