@@ -149,13 +149,45 @@ class Customer extends CI_Controller {
             $idx_array = $this->input->post("basket_idx");
             $cnt_array = $this->input->post("basket_cnt");
             $table_no = $this->session->table_no;
-            $shop_idx = $this->input->post("shop_idx");
+            $shop_idx = $this->input->post("basket_shop_idx");
+            $place = $this->input->post("basket_place");
             
             $params = new stdClass();
             $params->idx_in = $idx_array;
             $menu_info_array =  $this->recipe_md->get_recipe_list("",$params);
             
-            var_dump($menu_info_array);
+            $total_price = 0;
+            $total_tax = 0;
+            $total_sum = 0;
+            
+            foreach($menu_info_array as $menu){
+                $idx = array_search($menu_idx, $idx_array);
+                
+                $total_price += $menu->price;
+                $total_tax += $menu->price * ($menu->tax / 100);
+            }
+            
+            $total_sum = $total_price + $total_tax;
+
+            
+            foreach($menu_info_array as $menu){
+                
+                $idx = array_search($menu_idx, $idx_array);
+                
+                $data = array(
+                    "table_no"      => $table_no,
+                    "cnt"           => $cnt_array[$idx],
+                    "place"         => $place,
+                    "recipe_idx"    => $menu_idx[$idx],
+                    "shop_idx"      => $shop_idx,
+                    "price"         => $total_sum,
+                    "order_no"      => date('his'),
+                );
+                var_dump($data);
+                //$this->cust_md->insert_order($data);
+                
+            }
+            
             
             header("Content-Type: application/json;");
             echo json_encode($result);
