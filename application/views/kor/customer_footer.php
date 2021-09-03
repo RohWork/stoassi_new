@@ -130,7 +130,7 @@
         var menu_array = $.cookie('menu_array').split('/');
         var cnt_array = $.cookie('cnt_array').split('/');
     
-        var del_idx = menu_array.indexOf(idx);
+        var del_idx = menu_array.indexOf(""+idx);
         
         console.log(idx);
         console.log(menu_array);
