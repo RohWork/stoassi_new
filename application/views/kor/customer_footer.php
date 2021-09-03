@@ -139,7 +139,10 @@
     function calc_basket(){
         
          $("input[name='basket_idx']").each(function() {
-             if()
+             if($(this).is(":checked")){
+                var idx = $(this).val();
+                console.log(idx);
+            }
          });
     
     
