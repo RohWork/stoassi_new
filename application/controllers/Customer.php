@@ -180,6 +180,8 @@ class Customer extends CI_Controller {
                 
             }
             
+            var_dump($cookie_idx_array);
+            var_dump($cookie_cnt_array);
             
             $total_sum = $total_price + $total_tax;
             
@@ -198,7 +200,7 @@ class Customer extends CI_Controller {
                     "order_no"      => date('his'),
                 );
 
-                $this->cust_md->insert_order($data);
+                //$this->cust_md->insert_order($data);
             }
             
             $result = true;
