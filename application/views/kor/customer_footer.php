@@ -152,15 +152,13 @@
                 
                 total_sum += Number(price) * Number(cnt);
                 total_tax += Number(tax) * Number(cnt);
-                
-                console.log(total_sum);
             }
             
          });
     
-         $("#sum").val(total_sum);
-         $("#tax").val(total_tax);
-         $("#total").val(total_sum + total_tax);
+         $("#sum").html(total_sum);
+         $("#tax").html(total_tax);
+         $("#total").html(total_sum + total_tax);
     }
     
     function remove_basket(idx){
