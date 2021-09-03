@@ -134,25 +134,29 @@
         
         console.log(idx);
         
-        var menu_cnt_string = "";
-        var menu_idx_string = "";
-        
-        
-        menu_array.splice(del_idx,1);
-        cnt_array.splice(del_idx,1);
-        
-        for(var j=1;j<menu_array.length;j++){    //장바구니에서 변경될게 없는 상품
-            if(menu_array[j] != ""){
-                menu_cnt_string += "/"+cnt_array[j];
-                menu_idx_string += "/"+menu_array[j];
+        if(del_idx != -1){
+            var menu_cnt_string = "";
+            var menu_idx_string = "";
+
+
+            menu_array.splice(del_idx,1);
+            cnt_array.splice(del_idx,1);
+
+            for(var j=1;j<menu_array.length;j++){    //장바구니에서 변경될게 없는 상품
+                if(menu_array[j] != ""){
+                    menu_cnt_string += "/"+cnt_array[j];
+                    menu_idx_string += "/"+menu_array[j];
+                }
             }
+
+            $.cookie('menu_array', menu_idx_string, {path: '/' });
+            $.cookie('cnt_array', menu_cnt_string, {path: '/' });
+
+            check_basket();
+            count_basket();
+        }else{
+            alert('존재하지 않는 주문명입니다.');
         }
-        
-        $.cookie('menu_array', menu_idx_string, {path: '/' });
-        $.cookie('cnt_array', menu_cnt_string, {path: '/' });
-        
-        check_basket();
-        count_basket();
         
     }
 </script>
