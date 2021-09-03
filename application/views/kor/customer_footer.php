@@ -138,6 +138,9 @@
     }
     
     function calc_basket(){
+        
+        console.log("test");
+    
          $("input:checkbox[name=basket_idx]:checked").each(function() {
              console.log("test");
          });
