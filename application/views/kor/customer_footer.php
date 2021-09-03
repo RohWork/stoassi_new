@@ -117,7 +117,7 @@
                                                                 +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
                                                                 +"<input type='hidden' id='basket_tax_"+basket[i].idx+"' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/>"
                                                         +"</td>"
-                                                        +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'/></td>"
+                                                        +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"' onchange='calc_basket();'/></td>"
                                                         +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-danger'>X</button></td>"+
                                                         "</tr>"
                                                     );
