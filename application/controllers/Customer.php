@@ -143,6 +143,18 @@ class Customer extends CI_Controller {
             echo json_encode($result);
             
         }
+        
+        function setSubmitBasket(){
+            
+            $idx_array = $this->input->post("basket_idx");
+            $cnt_array = $this->input->post("basket_cnt");
+
+            
+            
+            header("Content-Type: application/json;");
+            echo json_encode($result);
+            
+        }
 }
 
 ?>
