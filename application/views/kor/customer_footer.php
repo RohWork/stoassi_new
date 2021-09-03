@@ -133,6 +133,7 @@
         var del_idx = menu_array.indexOf(idx);
         
         console.log(idx);
+        console.log(menu_array);
         
         if(del_idx != -1){
             var menu_cnt_string = "";
