@@ -129,7 +129,9 @@
         var check_val = new Array();
                 
         $("input:checkbox[name='basket_idx']").each(function(i,iVal){
-           check_val.push(iVal);
+            if(i != 0){
+                check_val.push(iVal);
+            }
         });
         
         console.log(check_val);
