@@ -130,7 +130,7 @@
                 
         $("input:checkbox[name='basket_idx']").each(function(i,iVal){
             if(i != 0){
-                check_val.push(iVal);
+                check_val.push(iVal.val());
             }
         });
         
