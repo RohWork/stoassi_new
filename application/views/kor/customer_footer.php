@@ -112,7 +112,10 @@
                             $("#basket_list").append("<tr class='value_tr'>"
                                                         +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked/></td>"
                                                         +"<td>"+basket[i].name+"</td>"
-                                                        +"<td>"+basket[i].price+"<input type='hidden' name='basket_price_"+basket[i].idx+"' value='"+basket[i].price+"'/><input type='hidden' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/></td>"
+                                                        +"<td>"+basket[i].price
+                                                                +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
+                                                                +"<input type='hidden' id='basket_tax_"+basket[i].idx+"' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/>"
+                                                        +"</td>"
                                                         +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'/></td>"
                                                         +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-danger'>X</button></td>"+
                                                         "</tr>"
@@ -133,6 +136,15 @@
         }
     }
     
+    function calc_basket(){
+         $('input[type="checkbox"]:checked').each(function(index){
+               if( index != 0){
+                    console.log($(this).val());
+                }
+         }))
+    
+    
+    }
     
     function remove_basket(idx){
         var menu_array = $.cookie('menu_array').split('/');
