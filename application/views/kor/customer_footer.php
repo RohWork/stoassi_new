@@ -126,7 +126,12 @@
     }
     
     function remove_basket(){
-        var check_val = $("input:checkbox[name='basket_idx']").is("checked").val();
+        var check_val = new Array();
+                
+        $("input:checkbox[name='basket_idx']").each(function(i,iVal){
+           check_val.push(iVal);
+        });
+        
         console.log(check_val);
     
     
