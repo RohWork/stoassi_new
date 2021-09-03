@@ -7,7 +7,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="location.href='/customer/orderMenu/1/10'">HOME</div>
             <div class="col-md-2 col-xs-2" style="text-align: center" onclick="history.back();">뒤로가기</div>
-            <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');check_basket();">장바구니</div>
+            <div class="col-md-2 col-xs-3" style="text-align: center" onclick="$('#myModal').modal('show');check_basket();">장바구니[<span id="view_basket_cnt"></span>]</div>
             <div class="col-md-2 col-xs-5">
                 <form method="post" id="change_form" action="<?=explode("?",$_SERVER['REQUEST_URI'])[0]?>">
                     <select class="form-control" id="lang_change" name="language" onchange="this.form.submit()">
@@ -59,6 +59,20 @@
     $(document).ready(function(){
         check_basket();
     });
+    
+    function count_basket(){
+        if(typeof($.cookie('cnt_array')) != "undefined"){
+            var cnt_array = $.cookie('cnt_array').split('/');
+            var basket_cnt = 0;
+            
+            for( var i =0; i<cnt_array.length; i++){
+                basket_cnt += cnt_array[i];
+            }
+            $("#view_basket_cnt").html(basket_cnt);
+            
+        }
+        
+    }
     
     function check_basket(){
         if(typeof($.cookie('menu_array')) != "undefined"){
