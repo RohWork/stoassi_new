@@ -150,6 +150,7 @@ class Customer extends CI_Controller {
             $cnt_array = $this->input->post("basket_cnt");
 
             var_dump($idx_array);
+            var_dump($cnt_array);
             
             header("Content-Type: application/json;");
             echo json_encode($result);
