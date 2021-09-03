@@ -41,8 +41,8 @@
               <tr>
                   <th width="10%"></th>
                   <th width="50%">메뉴명</th>
-                  <th width="10%">금액</th>
-                  <th width="15%">갯수</th>
+                  <th width="15%">금액</th>
+                  <th width="10%">갯수</th>
                   <th width="10%"></th>
               </tr>
           </table>
