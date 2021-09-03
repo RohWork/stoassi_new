@@ -126,4 +126,11 @@
             );
         }
     }
+    
+    function remove_basket(){
+        var check_val = $("input:checkbox[name='basket_idx[]']").is("checked").val();
+        console.log(check_val);
+    
+    
+    }
 </script>
