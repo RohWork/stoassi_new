@@ -40,8 +40,8 @@
           <table id="basket_list" style="width:100%;" class="table">
               <tr>
                   <th width="10%"></th>
-                  <th width="55%"></th>
-                  <th width="20%"></th>
+                  <th width="55%">주문명</th>
+                  <th width="20%">갯수</th>
                   <th width="10%"></th>
               </tr>
           </table>
