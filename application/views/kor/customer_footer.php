@@ -128,9 +128,9 @@
     function remove_basket(){
         var check_val = new Array();
                 
-        $("input:checkbox[name='basket_idx']").each(function(i,iVal){
-            if(i != 0){
-                check_val.push(iVal.val());
+        $("input:checkbox[name='basket_idx']").each(function(idx){
+            if(idx != 0){
+                check_val.push($(this).val());
             }
         });
         
