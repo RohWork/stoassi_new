@@ -182,7 +182,7 @@
                 
                 $.cookie('menu_array', menu_idx_string, {path: '/' });
                 $.cookie('cnt_array', menu_cnt_string, {path: '/' });
-               
+                count_basket();
             }
         }
         
