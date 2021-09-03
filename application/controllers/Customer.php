@@ -183,12 +183,11 @@ class Customer extends CI_Controller {
                     "price"         => $total_sum,
                     "order_no"      => date('his'),
                 );
-                var_dump($data);
-                //$this->cust_md->insert_order($data);
+
+                $this->cust_md->insert_order($data);
                 
             }
             
-            exit;
             header("Content-Type: application/json;");
             echo json_encode($result);
             
