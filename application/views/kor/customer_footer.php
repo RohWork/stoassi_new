@@ -67,7 +67,7 @@
             var basket_cnt = 0;
             
             for( var i =0; i<cnt_array.length; i++){
-                basket_cnt += cnt_array[i];
+                basket_cnt += Number(cnt_array[i]);
             }
             $("#view_basket_cnt").html(basket_cnt);
             
