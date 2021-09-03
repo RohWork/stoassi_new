@@ -68,7 +68,6 @@
     $(document).ready(function(){
         check_basket();
         count_basket();
-        calc_basket();
     });
     
     function count_basket(){
@@ -140,8 +139,7 @@
     function calc_basket(){
         
          $("input[name='basket_idx']").each(function() {
-             console.log($(this).val());
-             console.log("test");
+             if()
          });
     
     
