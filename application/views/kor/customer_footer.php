@@ -141,7 +141,7 @@
         
 
     
-         $("input:checkbox[name=basket_idx]:checked").each(function() {
+         $("input[name='basket_idx']").each(function() {
              console.log($(this).val());
              console.log("test");
          });
