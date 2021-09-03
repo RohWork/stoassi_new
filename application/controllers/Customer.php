@@ -172,7 +172,7 @@ class Customer extends CI_Controller {
                 $total_price += $menu->price * $cnt_array[$idx];
                 $total_tax += $menu->price * ($menu->tax / 100) * $cnt_array[$idx];
                 $cidx = 0;
-                $cidx = array_search($menu_idx, $cookie_idx_array);
+                $cidx = array_search($menu->idx, $cookie_idx_array);
                 if($cidx > 0){
                     array_splice($cookie_idx_array,$cidx,1);
                     array_splice($cookie_cnt_array,$cidx,1);
