@@ -138,7 +138,7 @@
     }
     
     function calc_basket(){
-         $('input[type="checkbox"]:checked').each(function(index){
+         $('input[name="basket_idx"]:checked').each(function(index){
                if( index != 0){
                     console.log($(this).val());
                 }
