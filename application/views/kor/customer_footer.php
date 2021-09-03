@@ -153,7 +153,7 @@
                 total_sum += Number(price) * Number(cnt);
                 total_tax += Number(tax) * Number(cnt);
                 
-                console.log(idx);
+                console.log(total_sum);
             }
             
          });
