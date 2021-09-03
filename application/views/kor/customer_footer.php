@@ -151,11 +151,10 @@
                 var cnt = $("#basket_cnt_"+idx).val();
                 
                 total_sum += Number(price) * Number(cnt);
-                total_tax += Number(tax) * Number(cnt);
+                total_tax += (Number(price) * (Number(tax) / 100)) * Number(cnt);
             }
             
          });
-         console.log(total_sum);
          $("#sum").html(total_sum);
          $("#tax").html(total_tax);
          $("#total").html(total_sum + total_tax);
