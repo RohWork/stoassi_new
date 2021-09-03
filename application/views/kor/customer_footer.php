@@ -126,17 +126,27 @@
         }
     }
     
-    function remove_basket(){
-        var check_val = new Array();
-                
-        $("input:checkbox[name='basket_idx']").each(function(idx){
-            if(idx != 0){
-                check_val.push($(this).val());
-            }
-        });
+    function remove_basket(idx){
+        var menu_array = $.cookie('menu_array').split('/');
+        var cnt_array = $.cookie('cnt_array').split('/');
+    
+        var del_idx = menu_array.indexOf(idx);
         
-        console.log(check_val);
-    
-    
+        menu_array.splice(del_idx,1);
+        cnt_array.splice(del_idx,1);
+        
+        for(var j=1;j<menu_array.length;j++){    //장바구니에서 변경될게 없는 상품
+            if(menu_array[j] != ""){
+                menu_cnt_string += "/"+cnt_array[j];
+                menu_idx_string += "/"+menu_array[j];
+            }
+        }
+        
+        $.cookie('menu_array', menu_idx_string, {path: '/' });
+        $.cookie('cnt_array', menu_cnt_string, {path: '/' });
+        
+        check_basket();
+        count_basket();
+        
     }
 </script>
