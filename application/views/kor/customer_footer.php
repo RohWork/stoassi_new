@@ -40,8 +40,9 @@
           <table id="basket_list" style="width:100%;" class="table">
               <tr>
                   <th width="10%"></th>
-                  <th width="55%">주문명</th>
-                  <th width="20%">갯수</th>
+                  <th width="50%">메뉴명</th>
+                  <th width="10%">금액</th>
+                  <th width="15%">갯수</th>
                   <th width="10%"></th>
               </tr>
           </table>
@@ -99,7 +100,9 @@
                     },
                     success:function(data){
                         var basket = data.return;
-                        
+                        var total_amt = 0;
+                        var total_tax = 0;
+                        var total_sum = 0;
                         
                         for(var i=0; i<basket.length; i++){
                             
@@ -125,6 +128,7 @@
             );
         }
     }
+    
     
     function remove_basket(idx){
         var menu_array = $.cookie('menu_array').split('/');
