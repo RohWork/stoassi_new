@@ -140,7 +140,7 @@
             },500);
         }else{
             $("#basket_list").html(
-                    "<tr><td>장바구니의 내용이 없습니다.</td></tr>"
+                    "<tr class='value_tr'><td>장바구니의 내용이 없습니다.</td></tr>"
             );
         }
     }
