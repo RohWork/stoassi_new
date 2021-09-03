@@ -48,9 +48,9 @@
                 </tr>
             </table>
             <div style="width: 100%; margin-bottom: 30px">
-                <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
-                <label> 부가세 : </label><span id="tax"></span><br/>
-                <label> 계산된 금액 : </label><span id="total"> </span>
+                <label> 메뉴가격 :  </label><span id="basket_sum"> </span><br/>
+                <label> 부가세 : </label><span id="basket_tax"></span><br/>
+                <label> 계산된 금액 : </label><span id="basket_total"> </span>
             </div>
         </form>
       </div>
@@ -157,9 +157,9 @@
          });
          
          console.log(total_tax);
-         $("#sum").html(total_sum);
-         $("#tax").html(total_tax);
-         $("#total").html(total_sum + total_tax);
+         $("#basket_sum").html(total_sum);
+         $("#basket_tax").html(total_tax);
+         $("#basket_total").html(total_sum + total_tax);
     }
     
     function remove_basket(idx){
