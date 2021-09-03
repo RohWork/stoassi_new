@@ -161,7 +161,8 @@ class Customer extends CI_Controller {
             $total_sum = 0;
             
             var_dump($idx_array);
-            exit
+            exit;
+            
             foreach($menu_info_array as $menu){
                 $idx = array_search($menu_idx, $idx_array);
                 
