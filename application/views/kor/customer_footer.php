@@ -69,7 +69,7 @@
             for( var i =0; i<cnt_array.length; i++){
                 basket_cnt += Number(cnt_array[i]);
             }
-            $("#view_basket_cnt").html(basket_cnt);
+            $("#view_basket_cnt").html("+"+basket_cnt);
             
         }
         
