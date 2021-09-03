@@ -114,7 +114,7 @@
                         for(var i=0; i<basket.length; i++){
                             
                             $("#basket_list").append("<tr class='value_tr'>"
-                                                        +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked='checked'  onchange='calc_basket()'/></td>"
+                                                        +"<td> <input type='checkbox' name='basket_idx[]' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked='checked'  onchange='calc_basket()'/></td>"
                                                         +"<td>"+basket[i].name+"</td>"
                                                         +"<td>"+basket[i].price
                                                                 +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
@@ -147,7 +147,7 @@
           var total_sum = 0;
           var total_tax = 0;
         
-         $("input[name='basket_idx']").each(function() {
+         $("input[name='basket_idx[]']").each(function() {
              if($(this).is(":checked")){
                 var idx = $(this).val();
                 var price = $("#basket_price_"+idx).val();
