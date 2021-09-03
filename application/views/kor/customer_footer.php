@@ -109,7 +109,7 @@
                             $("#basket_list").append("<tr class='value_tr'>"
                                                         +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked/></td>"
                                                         +"<td>"+basket[i].name+"</td>"
-                                                        +"<td>"+basket[i].amt+"</td>"
+                                                        +"<td>"+basket[i].price+"</td>"
                                                         +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'/></td>"
                                                         +"<td> <input type='button' onclick='remove_basket("+basket[i].idx+")' value='삭제' class='form-control btn-danger'/></td>"+
                                                         "</tr>"
