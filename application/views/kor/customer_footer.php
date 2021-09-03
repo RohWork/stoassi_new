@@ -40,8 +40,9 @@
           <table id="basket_list" style="width:100%">
               <tr>
                   <th width="20%"></th>
-                  <th width="40%">주문명</th>
-                  <th width="40%">갯수</th>
+                  <th width="35%"></th>
+                  <th width="35%"></th>
+                  <th width="10%"></th>
               </tr>
           </table>
       </div>
@@ -107,6 +108,7 @@
                                                         +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"'/></td>"
                                                         +"<td>"+basket[i].name+"</td>"
                                                         +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'</td>"+
+                                                        +"<td> <input type='button' onclick=remove_basket('"+basket[i].idx+"') value='삭제'/></td>"+
                                                         "</tr>"
                                                     );
                         }
