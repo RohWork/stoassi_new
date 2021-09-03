@@ -210,9 +210,10 @@ class Customer extends CI_Controller {
                 $new_cookie_cnt .= "/".$cookie_cnt_array[$i];
             }
             
+            $exp = time() + 86400*1;
             
-            setCookie("menu_array", $new_cookie_idx, 1, "/");
-            setCookie("cnt_array", $new_cookie_cnt, 1, "/");
+            setCookie("menu_array", $new_cookie_idx, $exp, "/");
+            setCookie("cnt_array", $new_cookie_cnt, $exp, "/");
             
             header("Content-Type: application/json;");
             echo json_encode($result);
