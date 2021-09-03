@@ -142,7 +142,7 @@
                if( index != 0){
                     console.log($(this).val());
                 }
-         }))
+         });
     
     
     }
