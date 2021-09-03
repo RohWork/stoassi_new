@@ -207,7 +207,7 @@
                     data: $("#basket_form").serialize(),
                     success:function(data){
                         alert('처리완료');
-                        location.reload();
+                        //location.reload();
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
