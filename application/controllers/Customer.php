@@ -160,6 +160,7 @@ class Customer extends CI_Controller {
             $total_tax = 0;
             $total_sum = 0;
             
+            echo "test";
             foreach($menu_info_array as $menu){
                 $idx = array_search($menu_idx, $idx_array);
                 
