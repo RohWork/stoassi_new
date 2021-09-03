@@ -68,6 +68,7 @@
     $(document).ready(function(){
         check_basket();
         count_basket();
+        calc_basket();
     });
     
     function count_basket(){
@@ -128,8 +129,6 @@
                         return false;
                     }	
             });
-            
-            calc_basket();
             
         }else{
             $("#basket_list").html(
