@@ -58,6 +58,7 @@
     
     $(document).ready(function(){
         check_basket();
+        count_basket();
     });
     
     function count_basket(){
