@@ -203,7 +203,7 @@
         $.ajax({
                     url:'/customer/setSubmitBasket',
                     type:'post',
-                    data: $("#basket_form").serialize();
+                    data: $("#basket_form").serialize(),
                     success:function(data){
                         alert('처리완료');
                         location.reload();
