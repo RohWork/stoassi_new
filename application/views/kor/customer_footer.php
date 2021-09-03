@@ -108,7 +108,7 @@
                                                         +"<td>"+basket[i].name+"</td>"
                                                         +"<td>"+basket[i].price+"<input type='hidden' name='basket_price_"+basket[i].idx+"' value='"+basket[i].price+"'/><input type='hidden' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/></td>"
                                                         +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"'/></td>"
-                                                        +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-middle btn-danger'><span class='glyphicon glyphicon-remove'></span></button></td>"+
+                                                        +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-danger'><span class='glyphicon glyphicon-remove'></span></button></td>"+
                                                         "</tr>"
                                                     );
                         }
