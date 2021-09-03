@@ -144,7 +144,7 @@ class Customer extends CI_Controller {
             
         }
         
-        function setSubmitBasket(){
+        function setSubmitBasket2(){
             
             $idx_array = $this->input->post("basket_idx");
             $cnt_array = $this->input->post("basket_cnt");
@@ -161,7 +161,35 @@ class Customer extends CI_Controller {
             $total_sum = 0;
             
             var_dump($idx_array);
-            exit;
+            
+            foreach($menu_info_array as $menu){
+                $idx = array_search($menu_idx, $idx_array);
+                
+                $total_price += $menu->price;
+                $total_tax += $menu->price * ($menu->tax / 100);
+            }
+            
+            $total_sum = $total_price + $total_tax;
+            
+            var_dump($total_sum);
+            echo "test";
+            foreach($menu_info_array as $menu){
+                
+                $idx = array_search($menu_idx, $idx_array);
+                
+                $data = array(
+                    "table_no"      => $table_no,
+                    "cnt"           => $cnt_array[$idx],
+                    "place"         => $place,
+                    "recipe_idx"    => $menu_idx[$idx],
+                    "shop_idx"      => $shop_idx,
+                    "price"         => $total_sum,
+                    "order_no"      => date('his'),
+                );
+                var_dump($data);
+                //$this->cust_md->insert_order($data);
+                
+            }
             
             
             header("Content-Type: application/json;");
