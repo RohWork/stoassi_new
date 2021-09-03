@@ -49,7 +49,6 @@
       <div class="modal-footer">
         
         <button type="button" class="btn btn-primary">구입</button>
-        <button type="button" class="btn btn-danger" onclick="remove_basket()">삭제</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
