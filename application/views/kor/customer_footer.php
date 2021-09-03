@@ -202,18 +202,18 @@
     function submit_basket(){
         
         $.ajax({
-                    url:'/customer/setSubmitBasket',
-                    type:'post',
-                    data: $("#basket_form").serialize(),
-                    success:function(data){
-                        alert('처리완료');
-                        //location.reload();
-                    },
-                    error: function(xhr,status,error) {
-                        console.log(xhr,status,error);
-                        alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                        return false;
-                    }	
+                url:'/customer/setSubmitBasket',
+                type:'post',
+                data: $("#basket_form").serialize(),
+                success:function(data){
+                    alert('처리완료');
+                    //location.reload();
+                },
+                error: function(xhr,status,error) {
+                    console.log(xhr,status,error);
+                    alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                    return false;
+                }	
             });
         
     }
