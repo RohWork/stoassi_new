@@ -201,11 +201,9 @@
     function submit_basket(){
         
         $.ajax({
-                    url:'/customer/getMenuList',
+                    url:'/customer/setSubmitBasket',
                     type:'post',
-                    data: {
-                        menu_array : $.cookie('menu_array'),
-                    },
+                    data: $("#basket_form").serialize();
                     success:function(data){
                         alert('처리완료');
                         location.reload();
