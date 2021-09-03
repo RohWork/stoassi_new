@@ -146,9 +146,9 @@
          $("input[name='basket_idx']").each(function() {
              if($(this).is(":checked")){
                 var idx = $(this).val();
-                var price = $("#basket_price_"idx).val();
-                var tax = $("#basket_tax_"idx).val();
-                var cnt = $("#basket_cnt_"idx).val();
+                var price = $("#basket_price_"+idx).val();
+                var tax = $("#basket_tax_"+idx).val();
+                var cnt = $("#basket_cnt_"+idx).val();
                 
                 total_sum += Number(price) * Number(cnt);
                 total_tax += Number(tax) * Number(cnt);
