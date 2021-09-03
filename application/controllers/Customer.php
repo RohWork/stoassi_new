@@ -210,8 +210,6 @@ class Customer extends CI_Controller {
                 $new_cookie_cnt .= "/".$cookie_cnt_array[$i];
             }
             
-            echo $new_cookie_idx;
-            echo $new_cookie_cnt;
             
             setCookie("menu_array", $new_cookie_idx, 1, "/");
             setCookie("cnt_array", $new_cookie_cnt, 1, "/");
