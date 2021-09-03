@@ -139,6 +139,7 @@
     
     function calc_basket(){
          $('input[name="basket_idx"]:checked').each(function(index){
+             console.log(index);
                if( index != 0){
                     console.log($(this).val());
                 }
