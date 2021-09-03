@@ -68,7 +68,6 @@
     $(document).ready(function(){
         check_basket();
         count_basket();
-        calc_basket();
     });
     
     function count_basket(){
@@ -129,7 +128,9 @@
                         return false;
                     }	
             });
+            
             calc_basket();
+            
         }else{
             $("#basket_list").html(
                     "<tr><td>장바구니의 내용이 없습니다.</td></tr>"
@@ -139,10 +140,10 @@
     
     function calc_basket(){
         
-        console.log("test");
+
     
          $("input:checkbox[name=basket_idx]:checked").each(function() {
-             console.log("test");
+             console.log($(this).val());
          });
     
     
