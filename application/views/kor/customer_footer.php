@@ -37,24 +37,25 @@
         <h4 class="modal-title" id="myModalLabel">장바구니</h4>
       </div>
       <div class="modal-body">
-          <table id="basket_list" style="width:100%;" class="table">
-              <tr>
-                  <th width="10%"></th>
-                  <th width="45%">메뉴명</th>
-                  <th width="20%">금액</th>
-                  <th width="20%">갯수</th>
-                  <th width="5%"></th>
-              </tr>
-          </table>
+        <form id="basket_form">
+            <table id="basket_list" style="width:100%;" class="table">
+                <tr>
+                    <th width="10%"></th>
+                    <th width="45%">메뉴명</th>
+                    <th width="20%">금액</th>
+                    <th width="20%">갯수</th>
+                    <th width="5%"></th>
+                </tr>
+            </table>
             <div style="width: 100%; margin-bottom: 30px">
                 <label> 메뉴가격 :  </label><span id="sum"> </span><br/>
                 <label> 부가세 : </label><span id="tax"></span><br/>
                 <label> 계산된 금액 : </label><span id="total"> </span>
-
             </div>
+        </form>
       </div>
+
       <div class="modal-footer">
-        
         <button type="button" class="btn btn-primary">구입</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -119,7 +120,7 @@
                                                                 +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
                                                                 +"<input type='hidden' id='basket_tax_"+basket[i].idx+"' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/>"
                                                         +"</td>"
-                                                        +"<td> <input type='number' name=basket_cnt[]' class='form-control' value='"+basket_array[basket[i].idx]+"' onkeyup='calc_basket();'/></td>"
+                                                        +"<td> <input type='number' name=basket_cnt[]' id='basket_cnt_"+basket[i].idx+"' class='form-control' value='"+basket_array[basket[i].idx]+"' onkeyup='calc_basket();'/></td>"
                                                         +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-danger'>X</button></td>"+
                                                         "</tr>"
                                                     );
@@ -143,7 +144,8 @@
          $("input[name='basket_idx']").each(function() {
              if($(this).is(":checked")){
                 var idx = $(this).val();
-                console.log(idx);
+                var price = $("#basket_price_"idx).val();
+                var tax = $("")
             }
          });
     
