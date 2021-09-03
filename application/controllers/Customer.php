@@ -172,13 +172,13 @@ class Customer extends CI_Controller {
 
             foreach($menu_info_array as $menu){
                 
-                $idx = array_search($menu_idx, $idx_array);
+                $idx = array_search($menu->idx, $idx_array);
                 
                 $data = array(
                     "table_no"      => $table_no,
                     "cnt"           => $cnt_array[$idx],
                     "place"         => $place,
-                    "recipe_idx"    => $menu_idx[$idx],
+                    "recipe_idx"    => $menu->idx,
                     "shop_idx"      => $shop_idx,
                     "price"         => $total_sum,
                     "order_no"      => date('his'),
