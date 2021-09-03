@@ -111,7 +111,7 @@
                         for(var i=0; i<basket.length; i++){
                             
                             $("#basket_list").append("<tr class='value_tr'>"
-                                                        +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked/></td>"
+                                                        +"<td> <input type='checkbox' name='basket_idx' id='basket_idx_"+basket[i].idx+"' value='"+basket[i].idx+"' checked /></td>"
                                                         +"<td>"+basket[i].name+"</td>"
                                                         +"<td>"+basket[i].price
                                                                 +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
