@@ -188,10 +188,10 @@ class Customer extends CI_Controller {
                 
             }
             
-            /*
+            exit;
             header("Content-Type: application/json;");
             echo json_encode($result);
-            */
+            
         }
 }
 
