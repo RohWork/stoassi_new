@@ -132,6 +132,8 @@
     
         var del_idx = menu_array.indexOf(idx);
         
+        console.log(del_idx);
+        
         var menu_cnt_string = "";
         var menu_idx_string = "";
         
