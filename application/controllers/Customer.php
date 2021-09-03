@@ -199,7 +199,7 @@ class Customer extends CI_Controller {
                 );
 
                 //$this->cust_md->insert_order($data);
-                
+                var_dump($data);
             }
             
             $result = true;
