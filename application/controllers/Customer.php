@@ -180,9 +180,6 @@ class Customer extends CI_Controller {
                 
             }
             
-            var_dump($cookie_idx_array);
-            var_dump($cookie_cnt_array);
-            
             $total_sum = $total_price + $total_tax;
             
 
@@ -212,6 +209,9 @@ class Customer extends CI_Controller {
                 $new_cookie_idx .= "/".$cookie_idx_array[$i];
                 $new_cookie_cnt .= "/".$cookie_cnt_array[$i];
             }
+            
+            echo $new_cookie_idx;
+            echo $new_cookie_cnt;
             
             setCookie("menu_array", $new_cookie_idx, 1, "/");
             setCookie("cnt_array", $new_cookie_cnt, 1, "/");
