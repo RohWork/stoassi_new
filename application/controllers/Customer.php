@@ -198,8 +198,7 @@ class Customer extends CI_Controller {
                     "order_no"      => date('his'),
                 );
 
-                //$this->cust_md->insert_order($data);
-                var_dump($data);
+                $this->cust_md->insert_order($data);
             }
             
             $result = true;
