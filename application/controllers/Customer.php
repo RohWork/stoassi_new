@@ -160,8 +160,8 @@ class Customer extends CI_Controller {
             $total_tax = 0;
             $total_sum = 0;
             
-            $cookie_idx = HTTP_COOKIE_VARS['menu_array'];
-            $cookie_cnt = HTTP_COOKIE_VARS['cnt_array'];
+            $cookie_idx = $_COOKIE['menu_array'];
+            $cookie_cnt = $_COOKIE['cnt_array'];
             
             echo $cookie_idx;
             
