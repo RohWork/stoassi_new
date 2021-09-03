@@ -140,16 +140,24 @@
     }
     
     function calc_basket(){
+          var total_sum = 0;
+          var total_tax = 0;
         
          $("input[name='basket_idx']").each(function() {
              if($(this).is(":checked")){
                 var idx = $(this).val();
                 var price = $("#basket_price_"idx).val();
-                var tax = $("")
+                var tax = $("#basket_tax_"idx).val();
+                var cnt = $("#basket_cnt_"idx).val();
+                
+                total_sum += Number(price) * Number(cnt);
+                total_tax += Number(tax) * Number(cnt);
             }
          });
     
-    
+         $("#sum").val(total_sum);
+         $("#tax").val(total_tax);
+         $("#total").val(total_sum + total_tax);
     }
     
     function remove_basket(idx){
