@@ -205,7 +205,7 @@ class Customer extends CI_Controller {
             $new_cookie_idx  = "";
             $new_cookie_cnt  = "";
             
-            for($i=0;$i<count($cookie_idx_array); $i++){
+            for($i=1;$i<count($cookie_idx_array); $i++){
                 $new_cookie_idx .= "/".$cookie_idx_array[$i];
                 $new_cookie_cnt .= "/".$cookie_cnt_array[$i];
             }
