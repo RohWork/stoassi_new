@@ -132,6 +132,10 @@
     
         var del_idx = menu_array.indexOf(idx);
         
+        var menu_cnt_string = "";
+        var menu_idx_string = "";
+        
+        
         menu_array.splice(del_idx,1);
         cnt_array.splice(del_idx,1);
         
