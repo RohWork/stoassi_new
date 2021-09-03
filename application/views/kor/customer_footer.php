@@ -39,9 +39,9 @@
       <div class="modal-body">
           <table id="basket_list" style="width:100%">
               <tr>
+                  <th width="10%"></th>
+                  <th width="55%"></th>
                   <th width="20%"></th>
-                  <th width="35%"></th>
-                  <th width="35%"></th>
                   <th width="10%"></th>
               </tr>
           </table>
