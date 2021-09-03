@@ -163,15 +163,26 @@ class Customer extends CI_Controller {
             $cookie_idx = $_COOKIE['menu_array'];
             $cookie_cnt = $_COOKIE['cnt_array'];
             
-            echo $cookie_idx;
-            echo $cookie_cnt;
+            $cookie_idx_array = explode("/", $cookie_idx);
+            $cookie_cnt_array = explode("/", $cookie_cnt);
+            
+
+            
             
             foreach($menu_info_array as $menu){
                 $idx = array_search($menu->idx, $idx_array);
                 
-                $total_price += $menu->price;
-                $total_tax += $menu->price * ($menu->tax / 100);
+                $total_price += $menu->price * $cnt_array[$idx];
+                $total_tax += $menu->price * ($menu->tax / 100) * $cnt_array[$idx];
+                $cidx = 0;
+                $cidx = array_search($menu_idx, $cookie_idx_array);
+                if($cidx > 0){
+                    array_splice($cookie_idx_array,$cidx,1);
+                    array_splice($cookie_cnt_array,$cidx,1);
+                }
+                
             }
+            
             
             $total_sum = $total_price + $total_tax;
             
@@ -195,6 +206,17 @@ class Customer extends CI_Controller {
             }
             
             $result = true;
+            
+            $new_cookie_idx  = "";
+            $new_cookie_cnt  = "";
+            
+            for($i=0;$i<count($cookie_idx_array); $i++){
+                $new_cookie_idx .= "/".$cookie_idx_array[$i];
+                $new_cookie_cnt .= "/".$cookie_cnt_array[$i];
+            }
+            
+            setCookie("menu_array", $new_cookie_idx, 1, "/");
+            setCookie("cnt_array", $new_cookie_cnt, 1, "/");
             
             header("Content-Type: application/json;");
             echo json_encode($result);
