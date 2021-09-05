@@ -51,8 +51,8 @@
                 <label> 메뉴가격 :  </label><span id="basket_sum"> </span><br/>
                 <label> 부가세 : </label><span id="basket_tax"></span><br/>
                 <label> 계산된 금액 : </label><span id="basket_total"> </span>
-                <input type="hidden" name="basket_shop_idx" id="basket_shop_idx" value="<?=$shop_idx?>"/>
-                <input type="hidden" name="basket_place" id="basket_place" value="<?=$place?>"/>
+                <input type="hidden" name="basket_shop_idx" id="basket_shop_idx" value="<?=!empty($shop_idx)?$shop_idx:""?>"/>
+                <input type="hidden" name="basket_place" id="basket_place" value="<?=!empty($place)? $place: ""?>"/>
             </div>
         </form>
       </div>
