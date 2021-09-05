@@ -54,7 +54,7 @@ class Customer extends CI_Controller {
                     break;
                 case 4:     //메뉴 선택
                     
-                    $params = new stdClass();
+                    $params = new stdClass(); 
                     $params->shop_idx = $shop_idx;
                     $params->asc = "asc";
                     
