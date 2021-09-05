@@ -35,6 +35,7 @@ class Customer extends CI_Controller {
             }else{
                 $data['shop_info'] = $this->shop_md->get_shop_info($shop_idx);
                 $data['language_list'] = $this->shop_md->get_shop_set($shop_idx);
+                $data['shop_idx'] = $shop_idx;
             }
             
             if(empty($data['shop_info'])){
@@ -68,7 +69,7 @@ class Customer extends CI_Controller {
                     $params->asc = "asc";
                     
                     $data['menu_info'] = $this->recipe_md->get_recipe_list("",$params);
-                    $data['shop_idx'] = $shop_idx;
+                    
                     
                     $this->load->view($language.'/orderMenu5', $data);
                     break;
