@@ -13,6 +13,7 @@
 						<th>주문시각</th>
                                                 <th>메뉴타입</th>
 						<th>주문명</th>
+                                                <th>주문수</th>
 						<th>조리진행</th>
 					</tr>
 				</thead>
@@ -26,6 +27,7 @@
 						<td><?=$row->STATUS?></td>
 						<td><?=$row->regi_date?></td>
 						<td><?=$row->group_name?></td>
+                                                <td><?=$row->cnt?></td>
                                                 <td><?=$row->recipe_name?></td>
 						<td><button type="button" id="modi_button" onclick="set_made_order('<?=$row->idx?>')" class="btn btn-default">조리진행</button></td>
 					</tr>
