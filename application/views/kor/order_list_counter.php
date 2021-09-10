@@ -15,6 +15,7 @@
 						<th>주문상태</th>
 						<th>주문시각</th>
 						<th>주문명</th>
+                                                <th>주문수</th>
 						<th>포장여부</th>
 						<th>결제여부/수정</th>
 					</tr>
@@ -32,6 +33,7 @@
 						<td><?=$row->STATUS?></td>
 						<td><?=$row->regi_date?></td>
 						<td><?=$row->group_name?><?=$row->recipe_name?></td>
+                                                <td><?=$row->cnt?></td>
 						<td><?=$row->place?></td>
 						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
 					</tr>
