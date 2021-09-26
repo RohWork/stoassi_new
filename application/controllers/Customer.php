@@ -67,6 +67,7 @@ class Customer extends CI_Controller {
                     $params = new stdClass();
                     $params->group_idx = $data['menu_idx'] =  $this->input->get_post('menu_idx');
                     $params->asc = "asc";
+                    $params->state = "Y";
                     
                     $data['menu_info'] = $this->recipe_md->get_recipe_list("",$params);
                     
