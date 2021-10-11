@@ -120,7 +120,7 @@
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
-                        "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' readonly value='1' style='text-align:center'/>&nbsp;"+
+                        "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly value='1' style='text-align:center'/>&nbsp;"+
                         "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",1)'> + </button>&nbsp;"+
                         "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",2)'>&nbsp;-&nbsp;</button>"+
                         "</td></tr>"
