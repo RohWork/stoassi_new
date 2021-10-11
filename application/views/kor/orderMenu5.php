@@ -120,9 +120,9 @@
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
-                        "<button type='button' class='btn btn-primary'> + </button>"+
+                        "<button type='button' class='btn btn-primary' cnt_change("+idx+",1)> + </button>"+
                         "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+" readonly onKeyup='calcPrice()' value='1' style='text-align:center'/>"+
-                        "<button type='button' class='btn btn-primary'>&nbsp;-&nbsp;</button>"+
+                        "<button type='button' class='btn btn-primary' cnt_change("+idx+",2)>&nbsp;-&nbsp;</button>"+
                         "</td></tr>"
                 );
                 priceIdxArray.push(idx);
@@ -246,6 +246,25 @@
             $("#total").text(totalPrice);
             $("#total_price").val(totalPrice);
             
+        }
+        
+        function cnt_change(idx,mode){
+            
+            var cnt =  $("#cnt"+idx).val();
+            
+            if(mode == 1 ){
+               cnt ++;
+               $("#cnt_"+idx).val(cnt);
+            }else{
+                cnt --;
+                
+                if(cnt < 0){
+                    alert("0보다 작습니다.");
+                    return false;
+                }else{
+                   $("#cnt_"+idx).val(cnt);
+                }
+            }   
         }
     </script>
 </html>
