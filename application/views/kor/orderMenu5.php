@@ -253,7 +253,7 @@
         function cnt_change(idx,mode){
             
             var cnt =  $("#cnt"+idx).val();
-            
+            console.log(idx);
             if(mode == 1 ){
                cnt ++;
                $("#cnt_"+idx).val(cnt);
