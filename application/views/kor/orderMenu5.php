@@ -261,7 +261,7 @@
                 idx_cnt --;
                 
                 if(idx_cnt < 0){
-                    alert("0보다 작습니다.");
+                    alert("갯수를 체크하세요.");
                     return false;
                 }else{
                    $("#cnt_"+idx).val(idx_cnt);
