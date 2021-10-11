@@ -121,7 +121,7 @@
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
                         "<button type='button' class='btn btn-primary'> + </button>"+
-                        "<input type='text' style='width:80px' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly onKeyup='calcPrice()' value='1' />"+
+                        "<input type='text' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly onKeyup='calcPrice()' value='1' />"+
                         "<button type='button' class='btn btn-primary'> - </button>"+
                         "</td></tr>"
                 );
