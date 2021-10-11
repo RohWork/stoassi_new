@@ -122,7 +122,7 @@
                         "<td>"+
                         "<button type='button' class='btn btn-primary'>+</button>"+
                         "<input type='text' style='width:100px' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly onKeyup='calcPrice()' value='1' />"+
-                        "<button type='button' class='btn btn-secondary'>-</button>"+
+                        "<button type='button' class='btn btn-primary'>-</button>"+
                         "</td></tr>"
                 );
                 priceIdxArray.push(idx);
