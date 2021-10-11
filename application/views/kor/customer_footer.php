@@ -131,6 +131,7 @@
                                                         "</tr>"
                                                     );
                         }
+                        calc_basket();
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
@@ -239,6 +240,6 @@
                $("#basket_cnt_"+idx).val(idx_cnt);
             }
         }
-        calcPrice();
+        calc_basket();
     }
 </script>
