@@ -260,7 +260,7 @@
             }else{
                 idx_cnt --;
                 
-                if(cnt < 0){
+                if(idx_cnt < 0){
                     alert("0보다 작습니다.");
                     return false;
                 }else{
