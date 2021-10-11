@@ -123,7 +123,7 @@
                                                                 +"<input type='hidden' id='basket_tax_"+basket[i].idx+"' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/>"
                                                         +"</td>"
                                                         +"<td class='input-group'>"           
-                                                        +"<input type='text' name=basket_cnt[]' id='basket_cnt_"+basket[i].idx+"' readonly class='form-control' value='"+basket_array[basket[i].idx]+"' style='width:100px' size='3' maxlength='3' />"
+                                                        +"<input type='text' name=basket_cnt[]' id='basket_cnt_"+basket[i].idx+"' readonly class='form-control' value='"+basket_array[basket[i].idx]+"' style='width:50px' size='3' maxlength='3' />"
                                                         +"<button type='button' class='btn btn-primary' onclick='cnt_change("+basket[i].idx+",1)' style='width:40px'> + </button>&nbsp;"
                                                         +"<button type='button' class='btn btn-primary' onclick='cnt_change("+basket[i].idx+",2)' style='width:40px'> - </button>"
                                                         +"</td>"
