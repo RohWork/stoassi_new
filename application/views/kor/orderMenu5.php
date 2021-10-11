@@ -119,7 +119,11 @@
                             "<td>"+no+"</td>"+
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
-                        "<td><input type='number' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' onKeyup='calcPrice()'/></td></tr>"
+                        "<td>"+
+                        "<button type='button' class='btn btn-primary'>+</button>"+
+                        "<input type='text' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly onKeyup='calcPrice()' value=1/>"+
+                        "<button type='button' class='btn btn-secondary'>-</button>"+
+                        "</td></tr>"
                 );
                 priceIdxArray.push(idx);
                 no++;
