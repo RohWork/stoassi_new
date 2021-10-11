@@ -131,7 +131,6 @@
                                                         "</tr>"
                                                     );
                         }
-                        calc_basket();
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
