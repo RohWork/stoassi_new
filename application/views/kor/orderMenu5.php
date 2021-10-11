@@ -120,9 +120,9 @@
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
-                        "<button type='button' > + </button>"+
+                        "<button type='button' class='btn btn-primary'> + </button>"+
                         "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+" readonly onKeyup='calcPrice()' value='1' />"+
-                        "<button type='button' > - </button>"+
+                        "<button type='button' class='btn btn-primary'> - </button>"+
                         "</td></tr>"
                 );
                 priceIdxArray.push(idx);
