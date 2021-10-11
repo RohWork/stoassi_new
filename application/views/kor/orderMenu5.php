@@ -120,11 +120,12 @@
                             "<td>"+menuArray[idx]+"</td>"+
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
-                        "<button type='button' class='btn btn-primary' cnt_change("+idx+",1)> + </button>"+
-                        "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' readonly onKeyup='calcPrice()' value='1' style='text-align:center'/>"+
-                        "<button type='button' class='btn btn-primary' cnt_change("+idx+",2)>&nbsp;-&nbsp;</button>"+
+                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",1)'> + </button>"+
+                        "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' readonly value='1' style='text-align:center'/>"+
+                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",2)'>&nbsp;-&nbsp;</button>"+
                         "</td></tr>"
                 );
+                calcPrice();
                 priceIdxArray.push(idx);
                 no++;
             }
@@ -264,7 +265,8 @@
                 }else{
                    $("#cnt_"+idx).val(cnt);
                 }
-            }   
+            }
+            calcPrice();
         }
     </script>
 </html>
