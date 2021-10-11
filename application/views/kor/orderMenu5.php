@@ -252,19 +252,19 @@
         
         function cnt_change(idx,mode){
             
-            var cnt =  $("#cnt"+idx).val();
+            var idx_cnt =  $("#cnt"+idx).val();
             console.log(idx);
             if(mode == 1 ){
-               cnt ++;
-               $("#cnt_"+idx).val(cnt);
+               idx_cnt ++;
+               $("#cnt_"+idx).val(idx_cnt);
             }else{
-                cnt --;
+                idx_cnt --;
                 
                 if(cnt < 0){
                     alert("0보다 작습니다.");
                     return false;
                 }else{
-                   $("#cnt_"+idx).val(cnt);
+                   $("#cnt_"+idx).val(idx_cnt);
                 }
             }
             calcPrice();
