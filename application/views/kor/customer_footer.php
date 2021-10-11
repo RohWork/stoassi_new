@@ -122,7 +122,11 @@
                                                                 +"<input type='hidden' id='basket_price_"+basket[i].idx+"' name='basket_price_"+basket[i].idx+"'  value='"+basket[i].price+"'/>"
                                                                 +"<input type='hidden' id='basket_tax_"+basket[i].idx+"' name='basket_tax_"+basket[i].idx+"' value='"+basket[i].tax+"'/>"
                                                         +"</td>"
-                                                        +"<td> <input type='number' name=basket_cnt[]' id='basket_cnt_"+basket[i].idx+"' class='form-control' value='"+basket_array[basket[i].idx]+"' onkeyup='calc_basket();'/></td>"
+                                                        +"<td class='input-group'>"           
+                                                        +"<input type='text' name=basket_cnt[]' id='basket_cnt_"+basket[i].idx+"' readonly class='form-control' value='"+basket_array[basket[i].idx]+"' />"
+                                                        +"<button type='button' class='btn btn-primary' onclick='cnt_change("+basket[i].idx+",1)' style='width:40px'> + </button>&nbsp;"
+                                                        +"<button type='button' class='btn btn-primary' onclick='cnt_change("+basket[i].idx+",2)' style='width:40px'> - </button>"
+                                                        +"</td>"
                                                         +"<td> <button type='button' onclick='remove_basket("+basket[i].idx+")' class='btn btn-danger'>X</button></td>"+
                                                         "</tr>"
                                                     );
@@ -216,5 +220,25 @@
                 }	
             });
         
+    }
+    
+    function cnt_change(idx,mode){
+            
+        var idx_cnt =  $("#basket_cnt_"+idx).val();
+        console.log(idx+"/"+idx_cnt);
+        if(mode == 1 ){
+           idx_cnt++;
+           $("#basket_cnt_"+idx).val(idx_cnt);
+        }else{
+            idx_cnt --;
+
+            if(idx_cnt < 0){
+                alert("갯수를 확인하세요.");
+                return false;
+            }else{
+               $("#basket_cnt_"+idx).val(idx_cnt);
+            }
+        }
+        calcPrice();
     }
 </script>
