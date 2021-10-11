@@ -125,9 +125,10 @@
                         "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",2)'>&nbsp;-&nbsp;</button>"+
                         "</td></tr>"
                 );
-                calcPrice();
+                
                 priceIdxArray.push(idx);
                 no++;
+                calcPrice();
             }
             
         }
