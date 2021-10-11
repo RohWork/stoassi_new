@@ -121,7 +121,7 @@
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td>"+
                         "<button type='button' > + </button>"+
-                        "idx"+
+                        "<input type='text' maxlength='3' id='cnt_"+idx+"' name='cnt_"+idx+" readonly onKeyup='calcPrice()' value='1' />"+
                         "<button type='button' > - </button>"+
                         "</td></tr>"
                 );
