@@ -121,8 +121,8 @@
                             "<td>"+priceArray[idx]+"</td>"+
                         "<td class='input-group'>"+                       
                         "<input type='text' maxlength='3' size='3' id='cnt_"+idx+"' name='cnt_"+idx+"' class='form-control' readonly value='1' style='text-align:center;width:50px'/>&nbsp;"+
-                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",1)' style='width:50px'> + </button>&nbsp;"+
-                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",2)' style='width:50px'> - </button>"+
+                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",1)' style='width:40px'> + </button>&nbsp;"+
+                        "<button type='button' class='btn btn-primary' onclick='cnt_change("+idx+",2)' style='width:40px'> - </button>"+
                         "</td></tr>"
                 );
                 
