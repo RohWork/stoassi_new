@@ -215,8 +215,8 @@
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('order_insert_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="order_insert()" class="btn btn-primary">주문하기</button>
+			<button type="button" onclick="modal_close('modal_table_set')" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="table_set()" class="btn btn-primary">테이블셋팅</button>
 		  </div>
 		</div>
 	  </div>
