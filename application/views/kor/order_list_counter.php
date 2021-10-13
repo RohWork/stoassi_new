@@ -264,8 +264,7 @@
                     recipe_info[item.idx]['tax'] = item.tax;
                 });
                 $("#insert_recipe").html(str);
-                
-                console.log($("#insert_recipe option:selected").val());
+
                 recipe_pay($("#insert_recipe option:selected").val());
                 
             },
@@ -283,8 +282,6 @@
 
     function recipe_pay(idx){
         
-        console.log(idx);
-        console.log(recipe_info[idx]);
         $("#insert_recipe_price").val(recipe_info[idx]['price']);
         
     }
