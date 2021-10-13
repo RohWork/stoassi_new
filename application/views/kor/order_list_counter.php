@@ -289,7 +289,7 @@
         var tax = Number(recipe_info[idx]['tax']);
         var cnt = Number($("#insert_recipe_cnt option:selected").val());
         
-        var total_tax = price * (tax / 100) * cnt);
+        var total_tax = price * (tax / 100) * cnt;
         var total_price = (price * cnt)+total_tax;
         
         $("#insert_recipe_price").val(price);
