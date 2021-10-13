@@ -131,13 +131,13 @@
                             <div class="form-group">
                                     <label for="insert_recipe" class="col-sm-3 control-label">메뉴 선택</label>
                                     <div class="col-sm-8">
-                                        <select name="insert_recipe" id="insert_recipe" class="form-control"></select>
+                                        <select name="insert_recipe" id="insert_recipe" class="form-control" onchange="recipe_pay(this.value)"></select>
                                     </div>
                             </div>
                             <div class="form-group">
                                     <label for="결제금액" class="col-sm-3 control-label">상품 금액</label>
                                     <div class="col-sm-3">
-                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
+                                        <input type="text" name="insert_recipe_price" id="insert_recipe_price" class="form-control" readonly/>
                                     </div>
                                     <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
                                     <div class="col-sm-2">
@@ -155,7 +155,7 @@
                             <div class="form-group">
                                     <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
                                     <div class="col-sm-8">
-                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
+                                        <input type="text" name="insert_recipe_total_price" id="insert_recipe_total_price" class="form-control" readonly/>
                                     </div>
                             </div>
                             <div class="form-group">
@@ -189,7 +189,9 @@
 	</div>
 </body>
 <script>
-
+    
+    var recipe_amt = new Array();
+    
     $(document).ready(function(){
             var modfy_idx;
             
@@ -254,6 +256,7 @@
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
+                    recipe_amt[item.idx] = recipe_amt[item.price];
                 });
                 $("#insert_recipe").html(str);
             },
