@@ -211,6 +211,7 @@
                                                 ?>
                                             </select>
                                     </div>
+                                    <input type="hidden" name="table_mode" id="table_mode" value="2"/>
                             </div>
 			</form>
 		  </div>
@@ -373,6 +374,7 @@
     }
     
     
+    
     function order_update(){
         
         var form = $("#order_update_form");
@@ -395,6 +397,30 @@
             }	 
         });
 
+    }
+    
+    function table_set(){
+        
+        var form = $("#table_set_form");
+        var formData = new FormData(form[0]);
+        
+        $.ajax({
+            url:'/order/set_table',
+            type:'post',
+            processData : false,
+            contentType : false,
+            data:formData,
+            success:function(data){
+                alert('수정완료');
+                location.reload();
+            },
+            error: function(xhr,status,error) {
+                console.log(xhr,status,error);
+                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                return false;
+            }	 
+        });
+        
     }
     
 
