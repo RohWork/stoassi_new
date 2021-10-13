@@ -161,6 +161,7 @@
                                     <div class="col-sm-2">
                                         <input type="text" name="insert_recipe_total_tax" id="insert_recipe_total_tax" class="form-control" readonly/>
                                     </div>
+                            </div>
                             <div class="form-group">
                                     <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
                                     <div class="col-sm-4">
