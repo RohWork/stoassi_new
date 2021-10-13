@@ -190,7 +190,8 @@
 </body>
 <script>
     
-    var recipe_amt = new Array();
+    var recipe_info = new Array();
+
     
     $(document).ready(function(){
             var modfy_idx;
@@ -256,7 +257,8 @@
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
-                    recipe_amt[item.idx] = recipe_amt[item.price];
+                    recipe_info[item.idx]['price'] = item.price;
+                    recipe_info[item.idx]['tax'] = item.tax;
                 });
                 $("#insert_recipe").html(str);
             },
@@ -266,7 +268,7 @@
                 return false;
             }	 
         });
-        
+        console.log(recipe_info);
     }
 
 
