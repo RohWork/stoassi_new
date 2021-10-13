@@ -272,7 +272,9 @@
                 return false;
             }	 
         });
-
+        recipe_pay($("#insert_recipe").val());
+        
+        
     }
 
     function recipe_pay(idx){
