@@ -61,6 +61,7 @@ class Customer_model extends CI_Model {
         if(!empty($vo->status)){
             $this->db->where_in('ti.status', $vo->status);
         }
+        $this->db->group_by('ti.`table_no`');
         
         return $this->db->get()->result();
     }
