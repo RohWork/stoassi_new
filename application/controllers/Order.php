@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $offset = $this->input->get('per_page');
             
-            $config['total_rows'] = $this->cust_md->count_order($vo);
+            $config['total_rows'] = $this->cust_md->count_table_order($vo);
             
             $config = setPagination($config);
             $this->pagination->initialize($config);
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             
             $data['offset'] = $offset;
-            $data['order_list'] = $this->cust_md->order_list($vo);
+            $data['order_list'] = $this->cust_md->select_table_order($vo);
             
             $vo->state= 'Y';
             $data['recipe_group_list'] = $this->recipe_md->get_group_list("",$vo);
