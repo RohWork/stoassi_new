@@ -272,7 +272,7 @@
                 return false;
             }	 
         });
-        recipe_pay($("#insert_recipe").val());
+        recipe_pay($("#insert_recipe option:selected").val());
         
         
     }
