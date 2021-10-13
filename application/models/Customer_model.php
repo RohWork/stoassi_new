@@ -42,6 +42,29 @@ class Customer_model extends CI_Model {
         return $this->db->count_all_results();
     }
     
+    function count_table_order($vo){
+        $this->db->select('*');
+        $this->db->from('table_info as ti');
+        
+        if(!empty($vo->status)){
+            $this->db->where('ti.status', $vo->status);
+        }
+        
+        return $this->db->count_all_results();
+    }
+    
+    function select_table_order($vo){
+        
+        $this->db->select("ti.`table_no`, ti.`table_code`, SUM(ol.`price`) as price, MAX(ol.`regi_date`) as regi_date, SUM(ol.`cnt`) AS cnt");
+        $this->db->from("table_info as ti");
+        $this->db->join("order_list as ol", "tl.table_code = ol.table_code and ol.status != 4");
+        if(!empty($vo->status)){
+            $this->db->where('ti.status', $vo->status);
+        }
+        
+        return $this->db->get()->result();
+    }
+    
     function detail_order($vo){
         
         $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_code, ol.cnt");
