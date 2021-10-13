@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="page-header">
 			<h1>주문관리</h1>
-			<p class="lead">주문관리 화면 - 부엌</p>
+			<p class="lead">주문관리 화면 - 주방</p>
 		</div>
 		<div class="table-responsive">
 			<table class="table">
