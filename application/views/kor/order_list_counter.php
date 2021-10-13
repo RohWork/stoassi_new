@@ -10,9 +10,7 @@
 					<tr>
 						<th>NO</th>
 						<th>테이블번호</th>
-                                                <th>주문번호</th>
                                                 <th>주문금액</th>
-						<th>주문상태</th>
 						<th>주문시각</th>
                                                 <th>주문수</th>
 						<th>포장여부</th>
@@ -27,9 +25,7 @@
 					<tr>
 						<td><?=$no?></td>
 						<td><?=$row->table_no?></td>
-                                                <td><?=$row->order_no?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
-						<td><?=$row->STATUS?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
 						<td><?=$row->place?></td>
