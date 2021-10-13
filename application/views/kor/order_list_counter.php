@@ -254,6 +254,8 @@
             type:'post',
             data:params,
             success:function(data){
+                recipe_info = new Array();
+                
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
