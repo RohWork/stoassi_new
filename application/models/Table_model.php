@@ -31,7 +31,7 @@
             $this->db->where('table_no',$vo->table_no);
             $this->db->where('shop_idx',$vo->shop_idx);
             
-            $this->db->update('table_info');
+            $this->db->update('table_info', $data);
             
             
             
