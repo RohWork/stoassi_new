@@ -141,7 +141,7 @@
                                     </div>
                                     <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
                                     <div class="col-sm-3">
-                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt">
+                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control">
                                             <?php
                                                 for($i=1;$i<100;$i++){
                                             ?>
