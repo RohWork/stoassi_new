@@ -257,6 +257,7 @@
                 var str = "";
                 data.result.forEach(function (item){
                     str += "<option value='"+item.idx+"'>"+item.name+"</option>";
+                    recipe_info[item.idx] = new Array();
                     recipe_info[item.idx]['price'] = item.price;
                     recipe_info[item.idx]['tax'] = item.tax;
                 });
