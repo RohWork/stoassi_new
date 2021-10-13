@@ -202,7 +202,9 @@
                             <div class="form-group">
                                     <label for="insert_table_code" class="col-sm-3 control-label">테이블번호</label>
                                     <div class="col-sm-8">
-                                            <input type="text" id="table_no" name="table_no" class="form-control"/>
+                                            <select id="table_no" name="table_no" class="form-control">
+                                                
+                                            </select>
                                     </div>
                             </div>
                             <div class="form-group">
