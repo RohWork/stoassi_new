@@ -153,7 +153,7 @@
                                     </div>
                             </div>
                             <div class="form-group">
-                                    <label for="상품갯수" class="col-sm-3 control-label">총 결제금액</label>
+                                    <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
                                     <div class="col-sm-8">
                                         <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
                                     </div>
