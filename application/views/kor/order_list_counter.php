@@ -282,7 +282,7 @@
 
     function recipe_pay(){
         var idx = $("#insert_recipe option:selected").val();
-        var price = Number(recipe_info[idx]['price');
+        var price = Number(recipe_info[idx]['price']);
         var tax = Number(recipe_info[idx]['tax']);
         var cnt = Number($("#insert_recipe_cnt option:selected").val());
         var total_price = (price * cnt)+(price * (tax / 100));
