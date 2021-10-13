@@ -24,7 +24,7 @@
 				?>
 					<tr>
 						<td><?=$no?></td>
-						<td><?=$row->table_no?></td>
+						<td><?=$row->table_code?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
@@ -58,9 +58,9 @@
 		  <div class="modal-body">
 			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">테이블번호</label>
+					<label for="stock_name" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
-                                            <span id="table_no" name="table_no"></span>
+                                            <span id="table_code" name="table_code"></span>
 					</div>
 				</div>
 				<div class="form-group">
@@ -107,9 +107,102 @@
 		  <div class="modal-body">
 			<form id="order_insert_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
-                                    <label for="insert_table_no" class="col-sm-3 control-label">테이블번호</label>
+                                    <label for="insert_table_code" class="col-sm-3 control-label">테이블코드</label>
                                     <div class="col-sm-8">
-                                            <input type="text" id="insert_table_no" name="insert_table_no" class="form-control"/>
+                                            <input type="text" id="insert_table_code" name="insert_table_code" class="form-control"/>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="insert_recipe_group" class="col-sm-3 control-label">메뉴 그룹</label>
+                                    <div class="col-sm-8">
+                                        <select name="insert_recipe_group" id="insert_recipe_group" onchange="recipe_detail(this.value)" class="form-control">
+                                            <?php
+                                                foreach($recipe_group_list as $row){
+                                                    echo "<option value='".$row->idx."'>".$row->name."</option>";
+                                                }
+                                            ?>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="insert_recipe" class="col-sm-3 control-label">메뉴 선택</label>
+                                    <div class="col-sm-8">
+                                        <select name="insert_recipe" id="insert_recipe" class="form-control" onchange="recipe_pay()"></select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="결제금액" class="col-sm-3 control-label">상품 금액</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="insert_recipe_price" id="insert_recipe_price" class="form-control" readonly/>
+                                    </div>
+                                    <label for="상품갯수" class="col-sm-2 control-label">상품 갯수</label>
+                                    <div class="col-sm-2">
+                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control" onchange="recipe_pay()">
+                                            <?php
+                                                for($i=1;$i<100;$i++){
+                                            ?>
+                                                    <option value="<?=$i?>"><?=$i?></option>
+                                            <?php
+                                                }
+                                            ?>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="insert_recipe_total_price" id="insert_recipe_total_price" class="form-control" readonly/>
+                                    </div>
+                                    <label for="부가세" class="col-sm-2 control-label">부가세</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="insert_recipe_total_tax" id="insert_recipe_total_tax" class="form-control" readonly/>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
+                                    <div class="col-sm-4">
+                                        <input type="radio" name="insert_place" id="insert_place" value="1" checked/>
+                                        <span>취식</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="radio" name="insert_place" id="insert_place" value="2"/>
+                                        <span>포장</span>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="stock_name" class="col-sm-3 control-label">주문상태</label>
+                                    <div class="col-sm-8">
+                                        <select id="insert_status" name="insert_status" class="form-control">
+                                            <option value="1">결제대기</option>
+                                            <option value="2">결제완료</option>
+                                        </select>
+                                    </div>
+                            </div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" onclick="modal_close('order_insert_form')" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="order_insert()" class="btn btn-primary">주문하기</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+        
+        
+        
+        <div id="modal_table_set" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">손님입장(주문시작)</h4>
+		  </div>
+		  <div class="modal-body">
+			<form id="order_insert_form" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="form-group">
+                                    <label for="insert_table_code" class="col-sm-3 control-label">테이블번호</label>
+                                    <div class="col-sm-8">
+                                            <input type="text" id="table_no" name="table_no" class="form-control"/>
                                     </div>
                             </div>
                             <div class="form-group">
@@ -228,7 +321,7 @@
 
             
             $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
-            $("#table_no").html(data.table_no);
+            $("#table_code").html(data.table_code);
             $("#regi_date").html(data.regi_date.substr(10,6));
             //$("#user_msg").val(data.user_msg);
             $("#status").val(data.status);
@@ -299,7 +392,7 @@
 
 
 
-        if($("#insert_table_no").val() == ""){
+        if($("#insert_table_code").val() == ""){
                 alert("테이블번호를 입력하시기 바랍니다.");
                 $("#insert_table_no").focus();
                 return;
