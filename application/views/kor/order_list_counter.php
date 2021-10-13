@@ -265,6 +265,9 @@
                 });
                 $("#insert_recipe").html(str);
                 
+                console.log($("#insert_recipe option:selected").val());
+                recipe_pay($("#insert_recipe option:selected").val());
+                
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
@@ -273,8 +276,7 @@
             }	 
         });
         
-        console.log($("#insert_recipe option:selected").val());
-        recipe_pay();
+
         
         
     }
