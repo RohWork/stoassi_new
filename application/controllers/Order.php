@@ -107,6 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo->table_no = $this->input->post("table_no");
             $vo->status = $this->input->post("table_mode");
             $vo->shop_idx = $this->session->userdata("shop_idx");
+            $vo->table_code = md5(date('his'));
             
             $result = $this->table_md->set_table($vo);
             
