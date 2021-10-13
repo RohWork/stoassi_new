@@ -131,7 +131,7 @@
                             <div class="form-group">
                                     <label for="insert_recipe" class="col-sm-3 control-label">메뉴 선택</label>
                                     <div class="col-sm-8">
-                                        <select name="insert_recipe" id="insert_recipe" class="form-control" onchange="recipe_pay(this.value)"></select>
+                                        <select name="insert_recipe" id="insert_recipe" class="form-control" onchange="recipe_pay()"></select>
                                     </div>
                             </div>
                             <div class="form-group">
@@ -141,7 +141,7 @@
                                     </div>
                                     <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
                                     <div class="col-sm-2">
-                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control">
+                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control" onchange="recipe_pay()">
                                             <?php
                                                 for($i=1;$i<100;$i++){
                                             ?>
@@ -265,7 +265,7 @@
                 });
                 $("#insert_recipe").html(str);
 
-                recipe_pay($("#insert_recipe option:selected").val());
+                recipe_pay();
                 
             },
             error: function(xhr,status,error) {
@@ -280,9 +280,15 @@
         
     }
 
-    function recipe_pay(idx){
+    function recipe_pay(){
+        var idx = $("#insert_recipe option:selected").val();
+        var price = Number(recipe_info[idx]['price');
+        var tax = Number(recipe_info[idx]['tax']);
+        var cnt = Number($("#insert_recipe_cnt option:selected").val());
+        var total_price = (price * cnt)+(price * (tax / 100));
         
-        $("#insert_recipe_price").val(recipe_info[idx]['price']);
+        $("#insert_recipe_price").val(price);
+        $("#insert_recipe_total_price").val(total_price);
         
     }
 
