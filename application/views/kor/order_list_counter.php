@@ -136,10 +136,10 @@
                             </div>
                             <div class="form-group">
                                     <label for="결제금액" class="col-sm-3 control-label">상품 금액</label>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-4">
                                         <input type="text" name="insert_recipe_price" id="insert_recipe_price" class="form-control" readonly/>
                                     </div>
-                                    <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
+                                    <label for="상품갯수" class="col-sm-2 control-label">상품 갯수</label>
                                     <div class="col-sm-2">
                                         <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control" onchange="recipe_pay()">
                                             <?php
@@ -154,10 +154,10 @@
                             </div>
                             <div class="form-group">
                                     <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-4">
                                         <input type="text" name="insert_recipe_total_price" id="insert_recipe_total_price" class="form-control" readonly/>
                                     </div>
-                                    <label for="총결제금액" class="col-sm-3 control-label">부가세</label>
+                                    <label for="총결제금액" class="col-sm-2 control-label">부가세</label>
                                     <div class="col-sm-2">
                                         <input type="text" name="insert_recipe_total_tax" id="insert_recipe_total_tax" class="form-control" readonly/>
                                     </div>
@@ -288,9 +288,12 @@
         var price = Number(recipe_info[idx]['price']);
         var tax = Number(recipe_info[idx]['tax']);
         var cnt = Number($("#insert_recipe_cnt option:selected").val());
-        var total_price = (price * cnt)+(price * (tax / 100) * cnt);
+        
+        var total_tax = price * (tax / 100) * cnt);
+        var total_price = (price * cnt)+total_tax;
         
         $("#insert_recipe_price").val(price);
+        $("#insert_recipe_total_tax").val(total_tax);
         $("#insert_recipe_total_price").val(total_price);
         
     }
