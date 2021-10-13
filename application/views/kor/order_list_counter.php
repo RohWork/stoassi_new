@@ -263,7 +263,7 @@
                 });
                 $("#insert_recipe").html(str);
                 
-                console.log(data.result);
+                console.log(recipe_info);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
