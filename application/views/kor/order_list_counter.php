@@ -146,6 +146,12 @@
                                     </div>
                             </div>
                             <div class="form-group">
+                                    <label for="결제금액" class="col-sm-3 control-label">결제금액</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control"/>
+                                    </div>
+                            </div>
+                            <div class="form-group">
                                     <label for="stock_name" class="col-sm-3 control-label">주문상태</label>
                                     <div class="col-sm-8">
                                         <select id="insert_status" name="insert_status" class="form-control">
