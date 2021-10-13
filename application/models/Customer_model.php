@@ -57,7 +57,7 @@ class Customer_model extends CI_Model {
         
         $this->db->select("ti.`table_no`, ti.`table_code`, SUM(ol.`price`) as price, MAX(ol.`regi_date`) as regi_date, SUM(ol.`cnt`) AS cnt");
         $this->db->from("table_info as ti");
-        $this->db->join("order_list as ol", "ti.table_code = ol.table_code and ol.status != 4");
+        $this->db->join("order_list as ol", "ti.table_code = ol.table_code and ol.status != 4", "left");
         if(!empty($vo->status)){
             $this->db->where('ti.status', $vo->status);
         }
