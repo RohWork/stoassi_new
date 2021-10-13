@@ -13,7 +13,6 @@
                                                 <th>주문금액</th>
 						<th>주문시각</th>
                                                 <th>주문수</th>
-						<th>포장여부</th>
 						<th>결제여부/수정</th>
 					</tr>
 				</thead>
@@ -28,7 +27,7 @@
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
-						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_code?>')" class="btn btn-default">확인/수정</button></td>
+						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_code?>')" class="btn btn-default">상세보기</button></td>
 					</tr>
 				<?php
 				$no ++;
