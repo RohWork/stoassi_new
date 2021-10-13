@@ -97,6 +97,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function set_table(){
+            $code = '';
+            $message = '';
+            
+            $group_idx = $this->input->post("group_idx");
+            
+            $vo = new stdClass();
+            $vo->group_idx = $group_idx;
+            $vo->state = 'Y';
+            
+            $result = $this->recipe_md->get_recipe_list( "", $vo);
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
         public function set_order(){
             
             $code = '200';
