@@ -279,6 +279,7 @@
 
     function recipe_pay(idx){
         
+        console.log(recipe_info[idx]);
         $("#insert_recipe_price").val(recipe_info[idx]['price']);
         
     }
