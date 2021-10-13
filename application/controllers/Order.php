@@ -40,6 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['offset'] = $offset;
             $data['order_list'] = $this->cust_md->select_table_order($vo);
             
+            var_dump($data['order_list']);
+            
             $vo->state= 'Y';
             $data['recipe_group_list'] = $this->recipe_md->get_group_list("",$vo);
             
