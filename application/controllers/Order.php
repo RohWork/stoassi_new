@@ -98,16 +98,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
         
         public function set_table(){
+            
             $code = '';
             $message = '';
             
-            $group_idx = $this->input->post("group_idx");
-            
+
             $vo = new stdClass();
-            $vo->group_idx = $group_idx;
-            $vo->state = 'Y';
+            $vo->table_no = $this->input->post("table_no");
+            $vo->status = $this->input->post("table_mode");
+            $vo->shop_idx = $this->session->userdata("shop_idx");
             
-            $result = $this->recipe_md->get_recipe_list( "", $vo);
+            $result = $this->table_md->set_table($vo);
             
             $data['code'] = $code;
             $data['message'] = $message;
