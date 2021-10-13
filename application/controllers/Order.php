@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->model('Shop_model', 'shop_md', TRUE);
             $this->load->model('Recipe_model', 'recipe_md', TRUE);
             $this->load->model('Customer_model', 'cust_md', TRUE);
-            
+            $this->load->model('Table_model', 'table_md', TRUE);
             
         }
 
@@ -42,6 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo->state= 'Y';
             $data['recipe_group_list'] = $this->recipe_md->get_group_list("",$vo);
             
+            $vo->status='1';
+            $data['table_list'] = $this->table_md->get_table_list($vo);
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
             $this->load->view(LANGUAGE.'/order_list_counter', $data);
