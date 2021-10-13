@@ -136,8 +136,11 @@
                             </div>
                             <div class="form-group">
                                     <label for="결제금액" class="col-sm-3 control-label">결제금액</label>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-2">
                                         <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        x <input type="text" name="insert_recipe_cnt" id="insert_recipe_cnt" class="form-control" readonly/>
                                     </div>
                             </div>
                             <div class="form-group">
