@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $offset = $this->input->get('per_page');
             
-            $vo->status = '2';
+            $vo->status = Array('1','2');
             $config['total_rows'] = $this->cust_md->count_table_order($vo);
             
             $config = setPagination($config);
