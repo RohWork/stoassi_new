@@ -26,6 +26,7 @@
             
 
             $data['status'] = $vo->status;
+            $data['table_code'] = $vo->table_code;
             
             $this->db->where('table_no',$vo->table_no);
             $this->db->where('shop_idx',$vo->shop_idx);
