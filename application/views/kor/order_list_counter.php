@@ -203,7 +203,11 @@
                                     <label for="insert_table_code" class="col-sm-3 control-label">테이블번호</label>
                                     <div class="col-sm-8">
                                             <select id="table_no" name="table_no" class="form-control">
-                                                
+                                                <?php
+                                                foreach($table_list as $row){
+                                                    echo "<option value='".$row->table_no."'>".$row->table_no."</option>";
+                                                }
+                                                ?>
                                             </select>
                                     </div>
                             </div>
