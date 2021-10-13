@@ -135,6 +135,12 @@
                                     </div>
                             </div>
                             <div class="form-group">
+                                    <label for="결제금액" class="col-sm-3 control-label">결제금액</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
+                                    </div>
+                            </div>
+                            <div class="form-group">
                                     <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
                                     <div class="col-sm-4">
                                         <input type="radio" name="insert_place" id="insert_place" value="1" checked/>
@@ -143,12 +149,6 @@
                                     <div class="col-sm-4">
                                         <input type="radio" name="insert_place" id="insert_place" value="2"/>
                                         <span>포장</span>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="결제금액" class="col-sm-3 control-label">결제금액</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
                                     </div>
                             </div>
                             <div class="form-group">
