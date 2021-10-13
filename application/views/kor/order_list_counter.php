@@ -197,6 +197,7 @@
             var modfy_idx;
             
             recipe_detail($("#insert_recipe_group").val());
+            recipe_pay($("#insert_recipe").val());
     });
 
     $("#input_button").click(function(){
@@ -272,7 +273,7 @@
                 return false;
             }	 
         });
-        recipe_pay($("#insert_recipe option:selected").val());
+        
         
         
     }
