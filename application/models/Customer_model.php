@@ -47,7 +47,7 @@ class Customer_model extends CI_Model {
         $this->db->from('table_info as ti');
         
         if(!empty($vo->status)){
-            $this->db->where('ti.status', $vo->status);
+            $this->db->where_in('ti.status', $vo->status);
         }
         
         return $this->db->count_all_results();
@@ -59,7 +59,7 @@ class Customer_model extends CI_Model {
         $this->db->from("table_info as ti");
         $this->db->join("order_list as ol", "ti.table_code = ol.table_code and ol.status != 4", "left");
         if(!empty($vo->status)){
-            $this->db->where('ti.status', $vo->status);
+            $this->db->where_in('ti.status', $vo->status);
         }
         
         return $this->db->get()->result();
