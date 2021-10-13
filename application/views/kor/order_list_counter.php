@@ -40,6 +40,7 @@
 		</div>
 		<div class="col-sm-12">
 			<button type="button" id="input_button" class="btn btn-primary">주문추가</button>
+                        <button type="button" id="table_input" class="btn btn-primary">테이블설정</button>
 		</div>
 		<div class="col-sm-offset-5">
 			<ul class="pagination">
@@ -198,7 +199,7 @@
 			<h4 class="modal-title" id="myModalLabel">손님입장(주문시작)</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="order_insert_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
                                     <label for="insert_table_code" class="col-sm-3 control-label">테이블번호</label>
                                     <div class="col-sm-8">
@@ -209,72 +210,6 @@
                                                 }
                                                 ?>
                                             </select>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="insert_recipe_group" class="col-sm-3 control-label">메뉴 그룹</label>
-                                    <div class="col-sm-8">
-                                        <select name="insert_recipe_group" id="insert_recipe_group" onchange="recipe_detail(this.value)" class="form-control">
-                                            <?php
-                                                foreach($recipe_group_list as $row){
-                                                    echo "<option value='".$row->idx."'>".$row->name."</option>";
-                                                }
-                                            ?>
-                                        </select>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="insert_recipe" class="col-sm-3 control-label">메뉴 선택</label>
-                                    <div class="col-sm-8">
-                                        <select name="insert_recipe" id="insert_recipe" class="form-control" onchange="recipe_pay()"></select>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="결제금액" class="col-sm-3 control-label">상품 금액</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" name="insert_recipe_price" id="insert_recipe_price" class="form-control" readonly/>
-                                    </div>
-                                    <label for="상품갯수" class="col-sm-2 control-label">상품 갯수</label>
-                                    <div class="col-sm-2">
-                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt" class="form-control" onchange="recipe_pay()">
-                                            <?php
-                                                for($i=1;$i<100;$i++){
-                                            ?>
-                                                    <option value="<?=$i?>"><?=$i?></option>
-                                            <?php
-                                                }
-                                            ?>
-                                        </select>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" name="insert_recipe_total_price" id="insert_recipe_total_price" class="form-control" readonly/>
-                                    </div>
-                                    <label for="부가세" class="col-sm-2 control-label">부가세</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" name="insert_recipe_total_tax" id="insert_recipe_total_tax" class="form-control" readonly/>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
-                                    <div class="col-sm-4">
-                                        <input type="radio" name="insert_place" id="insert_place" value="1" checked/>
-                                        <span>취식</span>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="radio" name="insert_place" id="insert_place" value="2"/>
-                                        <span>포장</span>
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                    <label for="stock_name" class="col-sm-3 control-label">주문상태</label>
-                                    <div class="col-sm-8">
-                                        <select id="insert_status" name="insert_status" class="form-control">
-                                            <option value="1">결제대기</option>
-                                            <option value="2">결제완료</option>
-                                        </select>
                                     </div>
                             </div>
 			</form>
@@ -299,9 +234,13 @@
     });
 
     $("#input_button").click(function(){
-            $("#modal_order_insert").modal('show');
+        $("#modal_order_insert").modal('show');
     });
-
+    
+    $("#table_input").click(function(){
+        $("#modal_table_set").modal('show'); 
+    });
+    
     function detail_order_show(idx){
         var params =  {
                 "idx" : idx
