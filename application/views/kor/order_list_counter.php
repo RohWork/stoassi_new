@@ -25,6 +25,7 @@
 					<tr>
 						<td><?=$no?></td>
 						<td><?=$row->table_code?></td>
+                                                <td><?=$row->status == 1 ?  "비어있음" : "사용중" ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
