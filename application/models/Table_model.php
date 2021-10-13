@@ -21,6 +21,19 @@
             return $this->db->get()->result();
 
         }
+        
+        function set_table($vo){
+            
 
+            $data['status'] = $vo->status;
+            
+            $this->db->where('table_no',$vo->table_no);
+            $this->db->where('shop_idx',$vo->shop_idx);
+            
+            $this->db->update('table_info');
+            
+            
+            
+        }
     }
 ?>
