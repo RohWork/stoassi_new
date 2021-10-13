@@ -265,7 +265,6 @@
                 });
                 $("#insert_recipe").html(str);
                 
-                console.log(recipe_info);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
@@ -273,9 +272,14 @@
                 return false;
             }	 
         });
-        console.log(recipe_info);
+
     }
 
+    function recipe_pay(idx){
+        
+        $("#insert_recipe_price").val(recipe_info[idx]['price']);
+        
+    }
 
     function order_insert(){
 
