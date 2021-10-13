@@ -9,7 +9,7 @@
 				<thead>
 					<tr>
 						<th>NO</th>
-						<th>테이블번호</th>
+						<th>테이블코드</th>
                                                 <th>주문금액</th>
 						<th>주문시각</th>
                                                 <th>주문수</th>
@@ -28,8 +28,7 @@
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
-						<td><?=$row->place?></td>
-						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->idx?>')" class="btn btn-default">확인/수정</button></td>
+						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_code?>')" class="btn btn-default">확인/수정</button></td>
 					</tr>
 				<?php
 				$no ++;
