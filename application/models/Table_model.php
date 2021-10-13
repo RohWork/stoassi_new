@@ -11,6 +11,11 @@
             $this->db->select('*');
             $this->db->from('table_info as ti');
             $this->db->where('ti.shop_idx', $search_vo->shop_idx);
+            
+            if(!empty($search_vo->status)){
+                $this->db->where('ti.status', $search_vo->status);
+            }
+            
             $this->db->order_by("ti.idx", "desc");
 
             return $this->db->get()->result();
