@@ -261,6 +261,8 @@
                     recipe_info[item.idx]['tax'] = item.tax;
                 });
                 $("#insert_recipe").html(str);
+                
+                console.log(data.result);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
