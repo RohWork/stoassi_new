@@ -135,7 +135,25 @@
                                     </div>
                             </div>
                             <div class="form-group">
-                                    <label for="결제금액" class="col-sm-3 control-label">결제금액</label>
+                                    <label for="결제금액" class="col-sm-3 control-label">상품 금액</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
+                                    </div>
+                                    <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
+                                    <div class="col-sm-3">
+                                        <select id="insert_recipe_cnt" name="insert_recipe_cnt">
+                                            <?php
+                                                for($i=1;$i<100;$i++){
+                                            ?>
+                                                    <option value="<?=$i?>"><?=$i?></option>
+                                            <?php
+                                                }
+                                            ?>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="상품갯수" class="col-sm-3 control-label">상품 갯수</label>
                                     <div class="col-sm-8">
                                         <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
                                     </div>
