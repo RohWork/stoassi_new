@@ -154,10 +154,13 @@
                             </div>
                             <div class="form-group">
                                     <label for="총결제금액" class="col-sm-3 control-label">총 결제금액</label>
-                                    <div class="col-sm-8">
+                                    <div class="col-sm-3">
                                         <input type="text" name="insert_recipe_total_price" id="insert_recipe_total_price" class="form-control" readonly/>
                                     </div>
-                            </div>
+                                    <label for="총결제금액" class="col-sm-3 control-label">부가세</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" name="insert_recipe_total_tax" id="insert_recipe_total_tax" class="form-control" readonly/>
+                                    </div>
                             <div class="form-group">
                                     <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
                                     <div class="col-sm-4">
