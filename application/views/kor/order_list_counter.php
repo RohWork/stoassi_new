@@ -139,8 +139,10 @@
                                     <div class="col-sm-2">
                                         <input type="text" name="insert_recipe_amt" id="insert_recipe_amt" class="form-control" readonly/>
                                     </div>
-                                    <div class="col-sm-2 input-group">
+                                    <div class="col-sm-2">
+                                        <div class="input-group">
                                         <span>x</span> <input type="text" name="insert_recipe_cnt" id="insert_recipe_cnt" class="form-control"/>
+                                        </div>
                                     </div>
                             </div>
                             <div class="form-group">
