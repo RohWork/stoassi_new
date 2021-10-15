@@ -339,7 +339,7 @@
         
         
         $.ajax({
-            url:'/order/set_table',
+            url:url,
             type:'post',
             processData : false,
             contentType : false,
