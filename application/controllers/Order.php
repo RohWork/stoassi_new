@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $row = $this->table_md->get_table_list($std);
             
-            var_dump($row);
+            var_dump($std);
             
             if(!empty($row)){
                 $vo['table_no'] = $row[0]->table_no;
