@@ -59,7 +59,7 @@
 		  <div class="modal-body">
 			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="stock_name" class="col-sm-3 control-label">테이블코드</label>
+					<label for="table_code" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
                                             <span id="table_code" name="table_code"></span>
 					</div>
