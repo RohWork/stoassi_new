@@ -70,7 +70,7 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="table_set(1)" class="btn btn-primary">테이블정리</button>
+			<button type="button" onclick="table_set(1)" class="btn btn-primary">테이블 정리</button>
 		  </div>
 		</div>
 	  </div>
@@ -200,8 +200,7 @@
 
     
     $(document).ready(function(){
-            var modfy_idx;
-            
+
             recipe_detail($("#insert_recipe_group").val());
     });
 
@@ -321,8 +320,17 @@
     
     function table_set(mode){
         
-        var form = $("#table_set_form");
-        var formData = new FormData(form[0]);
+        var form;
+        var formData;
+        
+        if(mode == 0){
+            form = $("#table_set_form");    //테이블세팅
+            formData = new FormData(form[0]);
+        }else{
+            form = $("#table_update_form"); //테이블정리
+            formData = new FormData(form[0]);
+        }
+        
         
         $.ajax({
             url:'/order/set_table',
