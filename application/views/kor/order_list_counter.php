@@ -211,35 +211,12 @@
         $("#modal_table_set").modal('show'); 
     });
     
-    function detail_order_show(idx){
-        var params =  {
-                "idx" : idx
-        };
-        $.ajax({
-            url:'/order/get_order_info',
-            type:'post',
-            data:params,
-            success:function(data){
-                set_detail_modal(data.result);
-            },
-            error: function(xhr,status,error) {
-                console.log(xhr,status,error);
-                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                return false;
-            }	
-    })
+    function detail_order_show(table_code){
 
+            $("#table_code").html(data.table_code);
             $("#modal_order_detail").modal('show');
     }
 
-    function set_detail_modal(data){
-            console.log(data);
-            
-            $("#myModalOrderLabel").html("["+data.group_name+"]"+data.recipe_name);
-            $("#table_code").html(data.table_code);
-
-     
-    }
 
     function modal_close(id_val){
             $("#"+id_val)[0].reset();
