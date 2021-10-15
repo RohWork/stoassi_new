@@ -213,7 +213,7 @@
     
     function detail_order_show(table_code){
 
-            $("#table_code").html(data.table_code);
+            $("#table_code").html(table_code);
             $("#modal_order_detail").modal('show');
     }
 
