@@ -160,17 +160,6 @@
                                     </div>
                             </div>
                             <div class="form-group">
-                                    <label for="포장여부" class="col-sm-3 control-label">포장 여부</label>
-                                    <div class="col-sm-4">
-                                        <input type="radio" name="insert_place" id="insert_place" value="1" checked/>
-                                        <span>취식</span>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="radio" name="insert_place" id="insert_place" value="2"/>
-                                        <span>포장</span>
-                                    </div>
-                            </div>
-                            <div class="form-group">
                                     <label for="stock_name" class="col-sm-3 control-label">주문상태</label>
                                     <div class="col-sm-8">
                                         <select id="insert_status" name="insert_status" class="form-control">
