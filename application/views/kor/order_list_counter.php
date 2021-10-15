@@ -29,7 +29,7 @@
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
-						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_code?>')" class="btn btn-default">상세보기</button></td>
+						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_no?>','<?=$row->table_code?>')" class="btn btn-default">상세보기</button></td>
 					</tr>
 				<?php
 				$no ++;
@@ -54,15 +54,14 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalOrderLabel">주문상세화면</h4>
+			<h4 class="modal-title" id="myModalOrderLabel">테이블상세화면</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="table_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="table_code" class="col-sm-3 control-label">테이블코드</label>
+					<label for="table_no" class="col-sm-3 control-label">테이블번호</label>
 					<div class="col-sm-8">
-                                            <input type="text" id="table_code" name="table_code" class="form-control"/>
-                                            
+                                            <input type="text" id="table_no" name="table_no" class="form-control"/>
                                             <input type="hidden" name="table_mode" id="table_mode" value="1"/>
 					</div>
 				</div>   
@@ -212,9 +211,9 @@
         $("#modal_table_set").modal('show'); 
     });
     
-    function detail_order_show(table_code){
+    function detail_order_show(table_no,table_code){
 
-            $("#table_code").val(table_code);
+            $("#table_no").val(table_no);
             $("#modal_order_detail").modal('show');
     }
 
