@@ -145,6 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }else{
                 $code = '400';
                 $message = '존재하지않는 테이블 코드입니다';
+                $result = false;
             }
             $data['code'] = $code;
             $data['message'] = $message;
