@@ -134,8 +134,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo['price'] = $this->input->post("insert_recipe_total_price");
             $vo['cnt'] = $this->input->post("insert_recipe_cnt");
             
-            $result = $this->cust_md->insert_order($vo);
+            $vo = new stdClass();
+            $vo->shop_idx = $this->session->userdata("shop_idx");
+            $vo->table_code = $vo['table_code'];
             
+            $row = $this->table_md->get_table_list($vo);
+            if(!empty($row)){
+                $vo['table_no'] = $row->table_no;
+                $result = $this->cust_md->insert_order($vo);
+            }else{
+                $code = '400';
+                $message = '존재하지않는 테이블 코드입니다';
+            }
             $data['code'] = $code;
             $data['message'] = $message;
             $data['result'] = $result;
