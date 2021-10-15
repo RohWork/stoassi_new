@@ -29,8 +29,11 @@
             
 
             $data['status'] = $vo->status;
-            $data['table_code'] = $vo->table_code;
-            
+            if($vo->status == 2){
+                $data['table_code'] = $vo->table_code;
+            }else{
+                $this->db->set('table_code', $vo->table_code, false);
+            }
             $this->db->where('table_no',$vo->table_no);
             $this->db->where('shop_idx',$vo->shop_idx);
             
