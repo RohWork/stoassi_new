@@ -315,32 +315,7 @@
         });
 
     }
-    
-    
-    
-    function order_update(){
-        
-        var form = $("#order_update_form");
-        var formData = new FormData(form[0]);
-        
-        $.ajax({
-            url:'/order/set_update_order',
-            type:'post',
-            processData : false,
-            contentType : false,
-            data:formData,
-            success:function(data){
-                alert('수정완료');
-                location.reload();
-            },
-            error: function(xhr,status,error) {
-                console.log(xhr,status,error);
-                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                return false;
-            }	 
-        });
 
-    }
     
     function table_set(){
         
