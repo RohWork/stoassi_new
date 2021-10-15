@@ -206,7 +206,11 @@
                                             <select id="table_no" name="table_no" class="form-control">
                                                 <?php
                                                 foreach($table_list as $row){
-                                                    echo "<option value='".$row->table_no."'>".$row->table_no."</option>";
+                                                    if($row->table_no == "0"){
+                                                        echo "<option value='".$row->table_no."'>".포장."</option>";
+                                                    }else{
+                                                        echo "<option value='".$row->table_no."'>".$row->table_no."</option>";
+                                                    }
                                                 }
                                                 ?>
                                             </select>
