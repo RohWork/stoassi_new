@@ -57,7 +57,7 @@
 			<h4 class="modal-title" id="myModalOrderLabel">테이블상세화면</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="table_update_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="clear_table_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
 					<label for="table_no" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
@@ -325,13 +325,16 @@
         
         var form;
         var formData;
+        var url;
         
         if(mode == 0){
             form = $("#table_set_form");    //테이블세팅
             formData = new FormData(form[0]);
+            url = '/order/set_table';
         }else{
-            form = $("#table_update_form"); //테이블정리
+            form = $("#clear_table_form"); //테이블정리
             formData = new FormData(form[0]);
+             url = '/order/clear_table';
         }
         
         
