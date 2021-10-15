@@ -128,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo['shop_idx'] = $this->session->userdata("shop_idx");
             $vo['recipe_idx'] = $this->input->post("insert_recipe");
-            $vo['table_code'] = $this->input->post("insert_table_no");
+            $vo['table_code'] = $this->input->post("insert_table_code");
             $vo['place'] = $this->input->post("insert_place");
             $vo['status'] = $this->input->post("insert_status");
             $vo['price'] = $this->input->post("insert_recipe_total_price");
