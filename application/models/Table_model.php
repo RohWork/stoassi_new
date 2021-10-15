@@ -21,8 +21,6 @@
             
             $this->db->order_by("ti.idx", "desc");
 
-            echo  $this->db->last_query();
-            
             return $this->db->get()->result();
 
         }
