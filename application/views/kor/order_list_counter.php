@@ -23,7 +23,7 @@
 				foreach($order_list as $row){		
 				?>
 					<tr>
-						<td><?=$row->table_no > 0 ? $row->table_no : "포장" ?></td>
+                                                <td><span style="margin-left: 10px"><?=$row->table_no > 0 ? $row->table_no : "포장" ?></span></td>
 						<td><?=$row->table_code?></td>
                                                 <td><?=$row->status == 1 ?  "비어있음" : "사용중" ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
