@@ -8,7 +8,7 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>NO</th>
+						<th>테이블번호</th>
 						<th>테이블코드</th>
                                                 <th>테이블상태</th>
                                                 <th>주문금액</th>
@@ -23,7 +23,7 @@
 				foreach($order_list as $row){		
 				?>
 					<tr>
-						<td><?=$no?></td>
+						<td><?=$row->table_no > 0 ? $row->table_no : "포장" ?></td>
 						<td><?=$row->table_code?></td>
                                                 <td><?=$row->status == 1 ?  "비어있음" : "사용중" ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
