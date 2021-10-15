@@ -121,6 +121,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function clear_table(){
+            $code = '';
+            $message = '';
+            
+
+            $vo = new stdClass();
+            
+            $vo->table_no = $this->input->post("table_no");
+            $vo->status = $this->input->post("table_mode");
+            $vo->shop_idx = $this->session->userdata("shop_idx");
+            $vo->table_code = "";
+            
+            $result = $this->table_md->set_table($vo);
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
+        
         public function set_order(){
             
             $code = '200';
