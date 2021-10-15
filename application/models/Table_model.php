@@ -15,6 +15,9 @@
             if(!empty($search_vo->status)){
                 $this->db->where('ti.status', $search_vo->status);
             }
+            if(!empty($seach_vo->table_code)){
+                $this->db->where('ti.table_code', $search_vo->table_code);
+            }
             
             $this->db->order_by("ti.idx", "desc");
 
@@ -36,5 +39,6 @@
             
             
         }
+        
     }
 ?>
