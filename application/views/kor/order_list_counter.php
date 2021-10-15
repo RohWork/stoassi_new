@@ -207,7 +207,7 @@
                                                 <?php
                                                 foreach($table_list as $row){
                                                     if($row->table_no == "0"){
-                                                        echo "<option value='".$row->table_no."'>".포장."</option>";
+                                                        echo "<option value='".$row->table_no."'>포장</option>";
                                                     }else{
                                                         echo "<option value='".$row->table_no."'>".$row->table_no."</option>";
                                                     }
