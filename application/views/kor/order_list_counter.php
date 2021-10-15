@@ -61,8 +61,8 @@
 				<div class="form-group">
 					<label for="table_no" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
-                                            <input type="text" id="detail_table_code" name="detail_table_code" class="form-control" readonly/>
-                                            <input type="hidden" id="detail_table_no" name="detail_table_no" class="form-control"/>
+                                            <input type="text" id="detail_table_code" name="table_code" class="form-control" readonly/>
+                                            <input type="hidden" id="detail_table_no" name="table_no" class="form-control"/>
                                             <input type="hidden" name="table_mode" id="table_mode" value="1"/>
 					</div>
 				</div>
