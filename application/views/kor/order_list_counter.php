@@ -333,7 +333,7 @@
 
         if($("#insert_table_code").val() == ""){
                 alert("테이블번호를 입력하시기 바랍니다.");
-                $("#insert_table_no").focus();
+                $("#insert_table_code").focus();
                 return;
         }
 
