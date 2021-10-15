@@ -57,18 +57,20 @@
 			<h4 class="modal-title" id="myModalOrderLabel">주문상세화면</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="order_update_form" enctype="multipart/form-data" class="form-horizontal">
+			<form id="table_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
 					<label for="table_code" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
-                                            <span id="table_code" name="table_code"></span>
+                                            <input type="text" id="table_code" name="table_code" class="form-control"/>
+                                            
+                                            <input type="hidden" name="table_mode" id="table_mode" value="1"/>
 					</div>
 				</div>   
 			</form>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="order_update()" class="btn btn-primary">저장하기</button>
+			<button type="button" onclick="table_set(1)" class="btn btn-primary">테이블정리</button>
 		  </div>
 		</div>
 	  </div>
@@ -186,7 +188,7 @@
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('modal_table_set')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="table_set()" class="btn btn-primary">테이블셋팅</button>
+			<button type="button" onclick="table_set(0)" class="btn btn-primary">테이블셋팅</button>
 		  </div>
 		</div>
 	  </div>
@@ -213,7 +215,7 @@
     
     function detail_order_show(table_code){
 
-            $("#table_code").html(table_code);
+            $("#table_code").val(table_code);
             $("#modal_order_detail").modal('show');
     }
 
@@ -317,7 +319,7 @@
     }
 
     
-    function table_set(){
+    function table_set(mode){
         
         var form = $("#table_set_form");
         var formData = new FormData(form[0]);
