@@ -269,7 +269,7 @@
     }
 
     function modal_close(id_val){
-     //       $("#"+id_val)[0].reset();
+            $("#"+id_val)[0].reset();
     }
 
     
