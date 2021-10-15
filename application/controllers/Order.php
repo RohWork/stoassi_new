@@ -133,11 +133,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo['price'] = $this->input->post("insert_recipe_total_price");
             $vo['cnt'] = $this->input->post("insert_recipe_cnt");
             
-            $vo = new stdClass();
-            $vo->shop_idx = $this->session->userdata("shop_idx");
-            $vo->table_code = $vo['table_code'];
+            $std = new stdClass();
+            $std->shop_idx = $this->session->userdata("shop_idx");
+            $std->table_code = $vo['table_code'];
             
-            $row = $this->table_md->get_table_list($vo);
+            $row = $this->table_md->get_table_list($std);
             if(!empty($row)){
                 $vo['table_no'] = $row->table_no;
                 $result = $this->cust_md->insert_order($vo);
