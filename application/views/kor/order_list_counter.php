@@ -59,12 +59,14 @@
 		  <div class="modal-body">
 			<form id="table_update_form" enctype="multipart/form-data" class="form-horizontal">
 				<div class="form-group">
-					<label for="table_no" class="col-sm-3 control-label">테이블번호</label>
+					<label for="table_no" class="col-sm-3 control-label">테이블코드</label>
 					<div class="col-sm-8">
-                                            <input type="text" id="table_no" name="table_no" class="form-control"/>
+                                            <input type="text" id="detail_table_code" name="detail_table_code" class="form-control" readonly/>
+                                            <input type="hidden" id="detail_table_no" name="detail_table_no" class="form-control"/>
                                             <input type="hidden" name="table_mode" id="table_mode" value="1"/>
 					</div>
-				</div>   
+				</div>
+                            
 			</form>
 		  </div>
 		  <div class="modal-footer">
@@ -212,7 +214,8 @@
     });
     
     function detail_order_show(table_no,table_code){
-
+            
+            $("#table_code").val(table_code);
             $("#table_no").val(table_no);
             $("#modal_order_detail").modal('show');
     }
