@@ -215,8 +215,9 @@
     
     function detail_order_show(table_no,table_code){
             
-            $("#table_code").val(table_code);
-            $("#table_no").val(table_no);
+            $("#myModalOrderLabel").html(table_no+"번 테이블상세화면");
+            $("#detail_table_code").val(table_code);
+            $("#detail_table_no").val(table_no);
             $("#modal_order_detail").modal('show');
     }
 
