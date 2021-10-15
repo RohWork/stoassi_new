@@ -139,7 +139,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $row = $this->table_md->get_table_list($std);
             if(!empty($row)){
-                $vo['table_no'] = $row->table_no;
+                $vo['table_no'] = $row[0]->table_no;
                 $result = $this->cust_md->insert_order($vo);
             }else{
                 $code = '400';
