@@ -32,7 +32,7 @@
             if($vo->status == 2){
                 $data['table_code'] = $vo->table_code;
             }else{
-                $this->db->set('table_code', $vo->table_code, false);   //null 처리
+                $this->db->set('table_code', $vo->table_code, FALSE);   //null 처리
             }
             $this->db->where('table_no',$vo->table_no);
             $this->db->where('shop_idx',$vo->shop_idx);
