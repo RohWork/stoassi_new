@@ -78,9 +78,9 @@ class Customer extends CI_Controller {
                     break;
                 
             }
-            if($level != 1){
-                $this->load->view($language.'/customer_footer', $data);
-            }
+
+            $this->load->view($language.'/customer_footer', $data);
+            
         }
         
         function orderDetail(){
