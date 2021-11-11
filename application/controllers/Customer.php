@@ -43,16 +43,16 @@ class Customer extends CI_Controller {
             }
             
             switch ($level){
-                case 1:     //언어 선택
+                /*case 1:     //언어 선택
                     $this->load->view('orderMenu1', $data);
-                    break;
-                case 2:     //취식, 포장 여부 선택     
+                    break;*/
+                case 1:     //취식, 포장 여부 선택     
                     $this->load->view($language.'/orderMenu2', $data);
                     break;
-                case 3:     //테이블번호, 혹은 시리얼 번호 입력 (하루 유지)
+                /*case 2:     //테이블번호, 혹은 시리얼 번호 입력 (하루 유지)
                     $this->load->view($language.'/orderMenu3', $data);
-                    break;
-                case 4:     //메뉴 선택
+                    break;*/
+                case 2:     //메뉴 선택
                     
                     $params = new stdClass(); 
                     $params->shop_idx = $shop_idx;
