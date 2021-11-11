@@ -26,7 +26,7 @@
                 <div class="col-md-8 col-xs-8"><center><h3><?=$shop_info['name']?></h3></center></div>
                 <div class="col-md-2 col-xs-2"></div>
             </div>
-            <form id="orderForm" name="orderForm" action="/customer/orderMenu/3/<?=$shop_info['idx']?>/" method="post">
+            <form id="orderForm" name="orderForm" action="/customer/orderMenu/2/<?=$shop_info['idx']?>/" method="post">
                 <div class="row" style="margin-top: 30px">
                     <div class="col-md-2 col-xs-2"></div>
                     <div class="col-md-4 col-xs-4 menu_button" id="button_in" onclick="order_submit(1)">취식</div>
