@@ -22,6 +22,8 @@ class Customer extends CI_Controller {
             $data = array();
             if(!empty($language)){
                 $data['language'] = $language;   
+            }else{
+                $data['language'] = 'kor';   
             }
             if(!empty($place)){
                 $data['place'] = $place;
