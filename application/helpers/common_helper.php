@@ -118,4 +118,12 @@ if ( ! function_exists('header_set')) {
     
     
 }
+
+    function get_qr($url){
+
+        include "/phpqrcode/phpqrcode.php";
+
+        QRcode::png("http://blog.naver.com/pareko",$_SERVER['DOCUMENT_ROOT']."/result/result.png",0,3,2);
+
+    }
 ?>
