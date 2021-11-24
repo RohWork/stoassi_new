@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->model('Customer_model', 'cust_md', TRUE);
             $this->load->model('Table_model', 'table_md', TRUE);
             
+            $this->load->library('common');
         }
 
         public function order_list_counter(){
@@ -22,6 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             
             $this->load->library('pagination');
+            
             $vo = new stdClass();
             $vo->date = date('Y-m-d');
             $vo->shop_idx = $this->session->userdata("shop_idx");
