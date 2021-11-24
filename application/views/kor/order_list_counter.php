@@ -68,7 +68,7 @@
                           <div class="col-sm-5 col-sm-offset-1">
                               결제대기
                           </div>
-                          <div class="col-sm-5 col-sm-offset-1">
+                          <div class="col-sm-5">
                               결제완료
                           </div>
                       </div>
