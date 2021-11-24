@@ -67,13 +67,13 @@
                       <div class="row">
                           <div class="col-sm-5 col-sm-offset-1">
                               <div style="width:100%;height: 80px;text-align: center;background-color: #F2EEC3;border: 1px solid black;">
-                                  <p style="font-size: 16px;padding: 15px;font-weight: bold">결제대기</p>
+                                  <p style="font-size: 16px;padding: 0px 15px 0px 15px;font-weight: bold">결제대기</p>
                                   <p style="font-size: 25px;padding: 0px 15px 0px 15px;font-weight: bold" id="wait_val"></p>
                               </div>
                           </div>
                           <div class="col-sm-5">
                               <div style="width:100%;height: 80px;text-align: center;background-color: #BBC7F3;border: 1px solid black;">
-                                  <p style="font-size: 16px;padding: 15px;font-weight: bold">결제완료</p>
+                                  <p style="font-size: 16px;padding: 0px 15px 0px 15px;font-weight: bold">결제완료</p>
                                   <p style="font-size: 25px;padding: 0px 15px 0px 15px;font-weight: bold" id="compl_val"></p>
                               </div>
                           </div>
