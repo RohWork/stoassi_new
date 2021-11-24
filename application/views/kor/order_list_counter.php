@@ -76,6 +76,13 @@
                               </div>
                           </div>
                       </div>
+                      <div class="row">
+                          <div class="col-sm-10">
+                              <div style="width:100%;height:50px;text-align: center;background-color: #FCE2E2">
+                                  <p style="font-size: 16px;padding: 15px;font-weight: bold">QR코드</p>
+                              </div>
+                          </div>
+                      </div>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
