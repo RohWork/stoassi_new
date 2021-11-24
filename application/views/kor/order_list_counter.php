@@ -1,5 +1,5 @@
 <?php
-$this->get_qr("www.naver.com");
+get_qr("www.naver.com");
 ?>
 	<div class="container">
 		<div class="page-header">
