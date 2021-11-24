@@ -55,17 +55,23 @@
 			<h4 class="modal-title" id="myModalOrderLabel">테이블상세화면</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="clear_table_form" enctype="multipart/form-data" class="form-horizontal">
-				<div class="form-group">
-					<label for="table_no" class="col-sm-3 control-label">테이블코드</label>
-					<div class="col-sm-8">
-                                            <input type="text" id="detail_table_code" name="table_code" class="form-control" readonly/>
+                        <form id="clear_table_form" enctype="multipart/form-data" class="form-horizontal">
+                                <div class="form-group">
+                                        <div class="col-sm-8">
+                                            <input type="hidden" id="detail_table_code" name="table_code" class="form-control" readonly/>
                                             <input type="hidden" id="detail_table_no" name="table_no" class="form-control"/>
                                             <input type="hidden" name="table_mode" id="table_mode" value="1"/>
-					</div>
-				</div>
-                            
-			</form>
+                                        </div>
+                                </div>
+                        </form>
+                      <div class="row">
+                          <div class="col-sm-5 col-sm-offset-1">
+                              결제대기
+                          </div>
+                          <div class="col-sm-5 col-sm-offset-1">
+                              결제완료
+                          </div>
+                      </div>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('stock_update_form')" class="btn btn-default" data-dismiss="modal">취소</button>
