@@ -247,8 +247,8 @@
                 data:params,
                 success:function(data){
                     console.log(data);
-                    $("#compl_val").html(data.complete_cnt);
-                    $("#wait_val").html(data.wait_cnt);
+                    $("#compl_val").html(data.cnt_complete);
+                    $("#wait_val").html(data.cnt_wait);
 
                 },
                 error: function(xhr,status,error) {
