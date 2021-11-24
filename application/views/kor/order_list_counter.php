@@ -1,4 +1,6 @@
-
+<?php
+$this->common->get_qr("www.naver.com");
+?>
 	<div class="container">
 		<div class="page-header">
 			<h1>주문관리</h1>
