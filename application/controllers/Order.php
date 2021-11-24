@@ -79,6 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function get_order_count(){
             $code = '';
             $message = '';
+            $result = '';
             
             $code = $this->input->post('code');
             
