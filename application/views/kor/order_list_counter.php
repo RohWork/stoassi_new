@@ -232,6 +232,8 @@
     
     function detail_order_show(table_no,table_code){
             
+            console.log(table_code);
+            
             var params =  {
                 "table_code" : table_code
             };
