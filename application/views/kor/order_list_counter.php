@@ -232,7 +232,10 @@
     
     function detail_order_show(table_no,table_code){
             
-            console.log(table_code);
+            if(table_code == ''){
+                alert('테이블을 세팅후 확인해주세요.');
+                return;
+            }
             
             var params =  {
                 "table_code" : table_code
