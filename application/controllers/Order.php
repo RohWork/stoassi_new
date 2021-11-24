@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $message = '';
             $result = '';
             
-            $code = $this->input->post('code');
+            $code = $this->input->post('table_code');
             
             if(empty($code)){
                 $message = "code error";
