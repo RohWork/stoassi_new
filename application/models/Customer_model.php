@@ -130,7 +130,7 @@ class Customer_model extends CI_Model {
                                 CASE WHEN STATUS = 1 THEN COUNT(idx) ELSE 0 END AS cnt_wait,
                                 CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete
                         FROM order_list 
-                        WHERE table_code = '9b111e47398ec88ed595ab9b26e410ec'
+                        WHERE table_code = '$code'
                         GROUP BY STATUS
                 ) A";
         $query = $this->db->query($sql); 
