@@ -241,7 +241,7 @@
                 type:'post',
                 data:params,
                 success:function(data){
-
+                    console.log(data);
                     $("#compl_val").html(data.complete_cnt);
                     $("#wait_val").html(data.wait_cnt);
 
