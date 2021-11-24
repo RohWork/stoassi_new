@@ -133,7 +133,7 @@ class Customer_model extends CI_Model {
                         WHERE table_code = '9b111e47398ec88ed595ab9b26e410ec'
                         GROUP BY STATUS
                 ) A";
-        $query = $this->db->query($sSql); 
+        $query = $this->db->query($sql); 
         $result = $query->row(); 
         return $result; 
         
