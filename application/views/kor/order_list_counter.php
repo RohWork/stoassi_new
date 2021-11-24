@@ -85,7 +85,7 @@ echo get_qr("www.naver.com");
                           <div class="col-sm-10 col-sm-offset-1">
                               <div style="width:100%;height:50px;text-align: center;background-color: #FCE2E2;border: 1px solid black;">
                                   <p style="font-size: 16px;padding: 15px;font-weight: bold">QR코드<br/>
-                                      <img src='<?=$_SERVER['DOCUMENT_ROOT']."/result/result.png"?>'/>
+                                      <img src='/result/result.png'/>
                                   </p>
                               </div>
                           </div>
