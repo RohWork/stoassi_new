@@ -119,6 +119,25 @@ class Customer_model extends CI_Model {
         $this->db->update('stock_info');
         
     }
+    
+    function get_order_count($code){
+        
+        $sql = "SELECT
+                        SUM(cnt_wait) AS cnt_wait,
+                        SUM(cnt_complete) AS cnt_complete
+                FROM(
+                        SELECT
+                                CASE WHEN STATUS = 1 THEN COUNT(idx) ELSE 0 END AS cnt_wait,
+                                CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete
+                        FROM order_list 
+                        WHERE table_code = '9b111e47398ec88ed595ab9b26e410ec'
+                        GROUP BY STATUS
+                ) A";
+        $query = $this->db->query($sSql); 
+        $result = $query->row(); 
+        return $result; 
+        
+    }
 }
 ?>
 
