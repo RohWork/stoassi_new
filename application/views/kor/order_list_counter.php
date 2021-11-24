@@ -68,11 +68,13 @@
                           <div class="col-sm-5 col-sm-offset-1">
                               <div style="width:100%;height: 80px;text-align: center;background-color: #F2EEC3;border: 1px solid black;">
                                   <p style="font-size: 16px;padding: 15px;font-weight: bold">결제대기</p>
+                                  <p style="font-size: 25px;padding: 15px;font-weight: bold" id="wait_val"></p>
                               </div>
                           </div>
                           <div class="col-sm-5">
                               <div style="width:100%;height: 80px;text-align: center;background-color: #BBC7F3;border: 1px solid black;">
                                   <p style="font-size: 16px;padding: 15px;font-weight: bold">결제완료</p>
+                                  <p style="font-size: 25px;padding: 15px;font-weight: bold" id="compl_val"></p>
                               </div>
                           </div>
                       </div>
@@ -229,6 +231,28 @@
     });
     
     function detail_order_show(table_no,table_code){
+            
+            var params =  {
+                "table_code" : table_code
+            };
+            
+            $.ajax({
+                url:'/order/get_order_count',
+                type:'post',
+                data:params,
+                success:function(data){
+
+                    $("#compl_val").html(data.complete_cnt);
+                    $("#wait_val").html(data.wait_cnt);
+
+                },
+                error: function(xhr,status,error) {
+                    console.log(xhr,status,error);
+                    alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                    return false;
+                }	 
+            });
+            
             
             $("#myModalOrderLabel").html(table_no+"번 테이블상세화면");
             $("#detail_table_code").val(table_code);
