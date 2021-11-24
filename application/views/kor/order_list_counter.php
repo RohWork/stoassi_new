@@ -246,9 +246,11 @@
                 type:'post',
                 data:params,
                 success:function(data){
-                    console.log(data);
-                    $("#compl_val").html(data.cnt_complete);
-                    $("#wait_val").html(data.cnt_wait);
+                    
+                    var result = data.result;
+                    
+                    $("#compl_val").html(result.cnt_complete);
+                    $("#wait_val").html(result.cnt_wait);
 
                 },
                 error: function(xhr,status,error) {
