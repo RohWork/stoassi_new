@@ -123,7 +123,7 @@ if ( ! function_exists('header_set')) {
 
         include $_SERVER['DOCUMENT_ROOT']."/include/phpqrcode/phpqrcode.php";
 
-        return QRcode::png("http://blog.naver.com/pareko",$_SERVER['DOCUMENT_ROOT']."/result/result.png",0,3,2);
+        return QRcode::png("http://www.naver.com",$_SERVER['DOCUMENT_ROOT']."/result/result.png",0,3,2);
 
     }
 ?>
