@@ -66,12 +66,12 @@
                         </form>
                       <div class="row">
                           <div class="col-sm-5 col-sm-offset-1">
-                              <div style="width:100%;height: 80px;text-align: center">
+                              <div style="width:100%;height: 80px;text-align: center;background-color: #F2EEC3">
                                   결제대기
                               </div>
                           </div>
                           <div class="col-sm-5">
-                              <div style="width:100%;height: 80px;text-align: center">
+                              <div style="width:100%;height: 80px;text-align: center;background-color: #BBC7F3">
                                   결제대기
                               </div>
                           </div>
