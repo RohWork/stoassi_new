@@ -76,6 +76,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             echo json_encode($data);
             
         }
+        public function get_order_count(){
+            $code = '';
+            $message = '';
+            
+            $code = $this->input->post('code');
+            
+            if(empty($code)){
+                $message = "code error";
+                $code = 404;
+            }else{
+                $result = $this->cust_md->get_order_count($code);
+            }
+            
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
+            
+            header("Content-Type: application/json;");
+            echo json_encode($data);
+            
+        }
         
         public function get_recipe_info(){
             $code = '';
