@@ -129,7 +129,7 @@ class Customer_model extends CI_Model {
                 FROM(
                         SELECT
                                 CASE WHEN STATUS = 1 THEN COUNT(idx) ELSE 0 END AS cnt_wait,
-                                CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete,
+                                CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete
                         FROM order_list 
                         WHERE table_code = '$code'
                         GROUP BY STATUS
