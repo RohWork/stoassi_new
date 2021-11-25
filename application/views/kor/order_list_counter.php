@@ -226,9 +226,7 @@ echo get_qr("www.naver.com",'naver');
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
                                 <div class="col-sm-12" style="text-align: center" id='qr_print_area'>
-                                    <div style='border: 1px solid black'>
                                         <img id='qr_code_img' style='width:250px; height:250px;'/>
-                                    </div>
                                 </div>
                             </div>
 			</form>
