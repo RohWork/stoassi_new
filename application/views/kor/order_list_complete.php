@@ -31,7 +31,7 @@
                 height:30px;
                 line-height: 30px;
             }
-            .tr_content td{
+            td{
                 padding-left:10px;
             }
         </style>
