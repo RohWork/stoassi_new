@@ -10,11 +10,11 @@
                 <th>주문일시</th>
             </tr>
             <tr>
-                <td><input type='checkbox'/><td/>
-                <td>1<td/>
-                <td>1<td/>
-                <td>1<td/>
-                <td>1<td/>
+                <td><input type='checkbox'/></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
             </tr>
         </table>
     </body>
