@@ -23,7 +23,9 @@
         <style>
             .tr_head{
                border-bottom: 1px solid black;
-               padding-bottom: 10px;
+               height: 30px;
+               line-break: 3px;
+               font-weight: bold;
             }
             .tr_content{
                 height:30px;
