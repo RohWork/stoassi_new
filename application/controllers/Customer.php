@@ -161,6 +161,7 @@ class Customer extends CI_Controller {
             $idx_array = $this->input->post("basket_idx");
             $cnt_array = $this->input->post("basket_cnt");
             $table_no = $this->session->table_no;
+            $table_code = $this->session->table_code;
             $shop_idx = $this->input->post("basket_shop_idx");
             $place = $this->input->post("basket_place");
             
@@ -201,6 +202,7 @@ class Customer extends CI_Controller {
                 
                 $data = array(
                     "table_no"      => $table_no,
+                    "table_code"      => $table_code,
                     "cnt"           => $cnt_array[$idx],
                     "place"         => $place,
                     "recipe_idx"    => $menu->idx,
