@@ -316,6 +316,14 @@ echo get_qr("www.naver.com",'naver');
         
         $("#modal_table_qr").modal('show');
     });
+    
+    $("#pay_wait").click(function(){
+        $("#modal_order_wait").modal('show');
+    });
+    $("#pay_complete").click(function(){
+        $("#modal_order_complete").modal('show');
+    });
+    
     function detail_order_show(table_no,table_code){
             
             if(table_code == ''){
