@@ -1,5 +1,5 @@
 <?php
-echo get_qr("www.naver.com");
+echo get_qr("www.naver.com",'naver');
 ?>
 
 	<div class="container">
@@ -84,9 +84,7 @@ echo get_qr("www.naver.com");
                       <div class="row" style="margin-top: 20px">
                           <div class="col-sm-10 col-sm-offset-1">
                               <div style="width:100%;height:50px;text-align: center;background-color: #FCE2E2;border: 1px solid black;cursor: pointer">
-                                  <p style="font-size: 16px;padding: 15px;font-weight: bold">QR코드<br/>
-                                      <img src='/result/result.png'/>
-                                  </p>
+                                  <p style="font-size: 16px;padding: 15px;font-weight: bold">QR코드<br/></p>
                               </div>
                           </div>
                       </div>
