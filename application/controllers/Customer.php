@@ -28,7 +28,7 @@ class Customer extends CI_Controller {
             if(!empty($place)){
                 $data['place'] = $place;
             }
-            if(!empty($table_code) || !empty($this->session->table_code)){
+            if(!empty($table_code)){
                 
                 
                 $table_info = $this->cust_md->get_table_info($table_code);
@@ -39,6 +39,11 @@ class Customer extends CI_Controller {
                 $this->session->set_userdata($sess_data);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
  
             }
+            
+            if(empty($this->session->table_code)){
+                show_error("Check to Your URL."); 
+            }
+            
             if(empty($shop_idx) || $shop_idx == 0){
                 show_error("Check to Your URL."); 
             }else{
