@@ -259,6 +259,9 @@ echo get_qr("www.naver.com",'naver');
         $("#modal_table_set").modal('show'); 
     });
     
+    $("#pay_qr").click(function(){
+        $("#modal_table_qr").modal('show');
+    });
     function detail_order_show(table_no,table_code){
             
             if(table_code == ''){
