@@ -111,14 +111,11 @@ echo get_qr("www.naver.com",'naver');
                                     <div class="col-sm-8">                                 
                                             <select id="insert_table_code" name="insert_table_code" class="form-control">
                                                 <?php
-                                                foreach($table_list as $row){
-                                                    echo "<option value='".$row->table_code."'>포장</option>";
-                                                    if($row->status == "2"){    //사용중인 테이블만 출력
-                                                        if($row->table_no == "0"){
-                                                            echo "<option value='".$row->table_code."'>포장</option>";
-                                                        }else{
-                                                            echo "<option value='".$row->table_code."'>".$row->table_no."</option>";
-                                                        }
+                                                foreach($use_table_list as $row){
+                                                    if($row->table_no == "0"){
+                                                        echo "<option value='".$row->table_code."'>포장</option>";
+                                                    }else{
+                                                        echo "<option value='".$row->table_code."'>".$row->table_no."</option>";
                                                     }
                                                 }
                                                 ?>
