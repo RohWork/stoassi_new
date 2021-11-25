@@ -49,7 +49,7 @@
                 foreach($list_complete as $list){
             ?>
             <tr class='tr_content'>
-                <td><?=$list->status?></td>
+                <td><?=$list->STATUS?></td>
                 <td><?=$list->recipe_name?></td>
                 <td><?=$list->price?></td>
                 <td><?=$list->cnt?></td>
