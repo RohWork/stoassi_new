@@ -48,9 +48,8 @@ class Customer extends CI_Controller {
                 /*case 1:     //언어 선택
                     $this->load->view('orderMenu1', $data);
                     break;*/
-                case 1:     //취식, 포장 여부 선택     
-                    $this->load->view($language.'/orderMenu2', $data);
-                    break;
+  
+                    
                 /*case 2:     //테이블번호, 혹은 시리얼 번호 입력 (하루 유지)
                     $this->load->view($language.'/orderMenu3', $data);
                     break;*/
@@ -76,7 +75,9 @@ class Customer extends CI_Controller {
                     
                     $this->load->view($language.'/orderMenu5', $data);
                     break;
-                
+                default:
+                    $this->load->view($language.'/orderMenu2', $data);
+                    break;
             }
 
             $this->load->view($language.'/customer_footer', $data);
