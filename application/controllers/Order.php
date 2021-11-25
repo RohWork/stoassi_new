@@ -246,7 +246,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo->status = 1;
 
-            $result['list_wait'] = $this->cust_md->order_list($vo);
+            $data['list_wait'] = $this->cust_md->order_list($vo);
             
             $this->load->view(LANGUAGE.'/order_list_wait', $data);
             
@@ -259,7 +259,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo->status = array(2,3);
 
-            $result['list_wait'] = $this->cust_md->order_list($vo);
+            $data['list_wait'] = $this->cust_md->order_list($vo);
             
             $this->load->view(LANGUAGE.'/order_list_complete', $data);
             
