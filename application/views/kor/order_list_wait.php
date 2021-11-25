@@ -23,7 +23,7 @@
         <style>
             .tr_head{
                border-bottom: 1px solid black;
-               margin-bottom: 10px;
+               padding-bottom: 10px;
             }
             .tr_content{
                 height:30px;
