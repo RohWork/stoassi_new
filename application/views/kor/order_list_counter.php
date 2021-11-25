@@ -214,6 +214,32 @@ echo get_qr("www.naver.com",'naver');
 		</div>
 	  </div>
 	</div>
+        
+        <div id="modal_table_qr" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">QR코드 확인</h4>
+		  </div>
+		  <div class="modal-body">
+			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <img id='qr_code_img' style='width:150px; height:150px'/>
+                                    </div>
+
+                            </div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" onclick="modal_close('modal_table_set')" class="btn btn-default" data-dismiss="modal">취소</button>
+			<button type="button" onclick="table_set(0)" class="btn btn-primary">테이블셋팅</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+        
 </body>
 <script>
     
