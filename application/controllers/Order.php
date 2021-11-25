@@ -47,6 +47,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo->status='1';
             $data['table_list'] = $this->table_md->get_table_list($vo);
             
+            $vo->status = '2';
+            $data['use_table_list'] = $this->table_md->get_table_list($vo);
+            
             $this->load->view(LANGUAGE.'/header', $this->head_data);
             $this->load->view(LANGUAGE.'/order_list_counter', $data);
             
