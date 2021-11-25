@@ -503,14 +503,11 @@ echo get_qr("www.naver.com",'naver');
         
     }
     function qr_print(){
-        var initBody = document.body.innerHTML;
-        window.onbeforeprint = function(){
-            document.body.innerHTML = document.getElementById('qr_print_area').innerHTML
-        }
-        window.onafterprint = function(){
-            document.body.innerHTML = initBody;
-        }
-        window.print();
+        
+        var popupWindow = window.open("", "_blank" );
+        popupWindow.document.write( $("#qr_print_area").html() );
+        popupWindow.print();
+        popupWindow.close();
     }
 
         
