@@ -257,11 +257,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo = new stdClass();
             $vo->table_code = $this->input->get('code');
             
-            $vo->status = 2;
+            $vo->status = array(2,3);
 
             $result['list_wait'] = $this->cust_md->order_list($vo);
             
-            $this->load->view(LANGUAGE.'/order_list_wait', $data);
+            $this->load->view(LANGUAGE.'/order_list_complete', $data);
             
         }
         
