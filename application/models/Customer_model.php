@@ -13,7 +13,7 @@ class Customer_model extends CI_Model {
     }
     
     function order_list($vo){
-        $this->db->select("if(ti.table_no > 0 , '취식' , '포장') AS place, ol.table_code, ol.cnt, ol.order_no, ol.price");
+        $this->db->select("if(ti.place == 1 , '취식' , '포장') AS place, ol.table_code, ol.cnt, ol.order_no, ol.price");
         $this->db->select("ol.regi_date, CASE WHEN ol.status = 1 then '결제대기' when ol.status = 2 then '결제완료' when ol.status = 3 then '조리완료' else '결제취소' END  AS STATUS");
         $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ol.idx");
         $this->db->from('order_list AS ol');
@@ -124,13 +124,11 @@ class Customer_model extends CI_Model {
         
         $sql = "SELECT
                         SUM(cnt_wait) AS cnt_wait,
-                        SUM(cnt_complete) AS cnt_complete,
-                        shop_idx
+                        SUM(cnt_complete) AS cnt_complete
                 FROM(
                         SELECT
                                 CASE WHEN STATUS = 1 THEN COUNT(idx) ELSE 0 END AS cnt_wait,
                                 CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete,
-                                shop_idx
                         FROM order_list 
                         WHERE table_code = '$code'
                         GROUP BY STATUS
@@ -139,15 +137,6 @@ class Customer_model extends CI_Model {
         $result = $query->row(); 
         return $result; 
         
-    }
-    
-    function get_table_info($code){
-        
-        $this->db->select("*");
-        $this->db->from('table_info AS ti');
-        $this->db->where('ti.table_code', $code);
-        
-        return $this->db->get()->row();
     }
     
 }
