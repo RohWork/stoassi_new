@@ -141,6 +141,15 @@ class Customer_model extends CI_Model {
         
     }
     
+    function get_table_info($code){
+        
+        $this->db->select("*");
+        $this->db->from('table_info AS ti');
+        $this->db->where('ti.table_code', $code);
+        
+        return $this->db->get()->row();
+    }
+    
 }
 ?>
 
