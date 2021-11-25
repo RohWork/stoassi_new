@@ -259,6 +259,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function pop_table_qr($code){
+            
+            $result = $this->cust_md->get_order_count($code);
+            
+            
+            if(is_https_request()){
+                $host = "http://";
+            }else{
+                $host = "https://";
+            }
+            $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result->shop_idx;
+            echo $url;
+        }
+        
         public function get_order_recipe_info(){
             
             $code = '';
