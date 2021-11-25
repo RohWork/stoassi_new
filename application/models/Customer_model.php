@@ -24,10 +24,10 @@ class Customer_model extends CI_Model {
         $this->db->like('ol.regi_date', $vo->date);
         }
         if(!empty($vo->status)){
-            $this->db->like('ol.status', $vo->status, 'after');
+            $this->db->where_in('ol.status', $vo->status);
         }
         if(!empty($vo->code)){
-            $this->db->like('ol.table_code', $vo->code, 'after');
+            $this->db->where('ol.table_code', $vo->code);
         }
         
         return $this->db->get()->result();
