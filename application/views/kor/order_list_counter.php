@@ -220,7 +220,7 @@ echo get_qr("www.naver.com",'naver');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">QR코드 확인</h4>
+			<h4 class="modal-title" id="myModalQrLabel">QR코드 확인</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
@@ -243,7 +243,7 @@ echo get_qr("www.naver.com",'naver');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">결제대기</h4>
+			<h4 class="modal-title" id="myModalWaitLabel">결제대기</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
@@ -265,7 +265,7 @@ echo get_qr("www.naver.com",'naver');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">결제완료</h4>
+			<h4 class="modal-title" id="myModalCompleteLabel">결제완료</h4>
 		  </div>
 		  <div class="modal-body">
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
@@ -349,7 +349,19 @@ echo get_qr("www.naver.com",'naver');
                     
                     $("#compl_val").html(count.cnt_complete);
                     $("#wait_val").html(count.cnt_wait);
-
+                    
+                    var wait_data = data.result.list_wait;
+                    var wait_str = "";
+                    wait_data.forEach(function (item){
+                        wait_str += "<tr>"
+                        wait_str += "<td>"+item.recipe_name+"</td>";
+                        wait_str += "<td>"+item.price+"</td>";
+                        wait_str += "<td>"+item.cnt+"</td>";
+                        wait_str += "<td>"+item.regi_date+"</td>";
+                        wait_str += "</tr>";
+                    });
+                    
+                    
                 },
                 error: function(xhr,status,error) {
                     console.log(xhr,status,error);
@@ -359,7 +371,11 @@ echo get_qr("www.naver.com",'naver');
             });
             
             
-            $("#myModalOrderLabel").html(table_no+"번 테이블상세화면");
+            $("#myModalOrderLabel").html(table_no+"번 테이블 상세화면");
+            $("#myModalQrLabel").html(table_no+"번 테이블 QR코드");
+            $("#myModalWaitLabel").html(table_no+"번 테이블 결제대기");
+            $("#myModalCompleteLabel").html(table_no+"번 테이블 결제완료");
+            
             $("#detail_table_code").val(table_code);
             $("#detail_table_no").val(table_no);
             $("#modal_order_detail").modal('show');
