@@ -505,7 +505,9 @@ echo get_qr("www.naver.com",'naver');
     function qr_print(){
         
         var popupWindow = window.open("", "_blank" );
+        popupWindow.document.write( "<center>" );
         popupWindow.document.write( $("#qr_print_area").html() );
+        popupWindow.document.write( "</center>" );
         popupWindow.print();
         popupWindow.close();
     }
