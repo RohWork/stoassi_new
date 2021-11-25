@@ -246,7 +246,7 @@ echo get_qr("www.naver.com",'naver');
 			<h4 class="modal-title" id="myModalWaitLabel">결제대기</h4>
 		  </div>
 		  <div class="modal-body">
-			<iframe id="order_wait_frame" style='border:0px solid black;width:100%;'></iframe>
+			<iframe id="order_wait_frame" style='border:0px solid black;width:100%;height:400px'></iframe>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('modal_order_wait')" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -262,7 +262,7 @@ echo get_qr("www.naver.com",'naver');
 			<h4 class="modal-title" id="myModalCompleteLabel">결제완료</h4>
 		  </div>
 		  <div class="modal-body">
-			<iframe id="order_complete_frame"  style='border:0px solid black; width:100%;'></iframe>
+			<iframe id="order_complete_frame"  style='border:0px solid black; width:100%;;height:400px'></iframe>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('modal_order_complete')" class="btn btn-default" data-dismiss="modal">닫기</button>
