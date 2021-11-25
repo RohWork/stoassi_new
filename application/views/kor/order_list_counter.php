@@ -318,9 +318,15 @@ echo get_qr("www.naver.com",'naver');
     });
     
     $("#pay_wait").click(function(){
+        
+        $("#order_wait_frame").attr('src','/order/pop_wait_order?code='+$("#detail_table_code").val());
+        
         $("#modal_order_wait").modal('show');
     });
     $("#pay_complete").click(function(){
+        
+        $("#order_complete_frame").attr('src','/order/pop_complete_order?code='+$("#detail_table_code").val());
+        
         $("#modal_order_complete").modal('show');
     });
     
