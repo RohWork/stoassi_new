@@ -302,10 +302,10 @@ echo get_qr("www.naver.com",'naver');
                 data:params,
                 success:function(data){
                     
-                    var result = data.result;
+                    var count = data.result.count;
                     
-                    $("#compl_val").html(result.cnt_complete);
-                    $("#wait_val").html(result.cnt_wait);
+                    $("#compl_val").html(count.cnt_complete);
+                    $("#wait_val").html(count.cnt_wait);
 
                 },
                 error: function(xhr,status,error) {
