@@ -232,7 +232,7 @@ echo get_qr("www.naver.com",'naver');
 			</form>
 		  </div>
 		  <div class="modal-footer">
-                        <button type="button" onclick="qr_print();" class="btn btn-default" data-dismiss="modal">출력</button>
+                        <button type="button" onclick="qr_print();" class="btn btn-primary" data-dismiss="modal">출력</button>
 			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
