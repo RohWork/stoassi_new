@@ -39,7 +39,7 @@ class Customer extends CI_Controller {
                 $this->session->set_userdata($sess_data);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
  
             }else{
-                show_error("Check to Your URL."); 
+                show_error("Check to Your CODE."); 
             }
             if(empty($shop_idx) || $shop_idx == 0){
                 show_error("Check to Your URL."); 
