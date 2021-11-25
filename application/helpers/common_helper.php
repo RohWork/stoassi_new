@@ -119,11 +119,16 @@ if ( ! function_exists('header_set')) {
     
 }
 
-    function get_qr($url){
+    function get_qr($url,$file_name){
 
         include $_SERVER['DOCUMENT_ROOT']."/include/phpqrcode/phpqrcode.php";
-
-        return QRcode::png("http://www.naver.com",$_SERVER['DOCUMENT_ROOT']."/result/result.png",0,3,2);
+        
+        $dir = "/result/";
+        $file_name = $file_name.".png";
+        
+        QRcode::png($url,$_SERVER['DOCUMENT_ROOT'].$dir.$file_name,0,3,2);
+        
+        return $file_name;
 
     }
 ?>
