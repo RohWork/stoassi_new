@@ -112,7 +112,7 @@ echo get_qr("www.naver.com",'naver');
                                             <select id="insert_table_code" name="insert_table_code" class="form-control">
                                                 <?php
                                                 foreach($table_list as $row){
-                                                    if($row->table_status == "2"){
+                                                    if($row->status == "2"){    //사용중인 테이블만 출력
                                                         if($row->table_no == "0"){
                                                             echo "<option value='".$row->table_code."'>포장</option>";
                                                         }else{
