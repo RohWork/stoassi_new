@@ -297,7 +297,7 @@ echo get_qr("www.naver.com",'naver');
             };
         
             $.ajax({
-                url:'/order/pop_table_qr',
+                url:'/order/get_table_qr',
                 type:'post',
                 data:params,
                 success:function(data){
