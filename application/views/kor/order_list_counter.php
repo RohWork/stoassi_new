@@ -225,14 +225,14 @@ echo get_qr("www.naver.com",'naver');
 		  <div class="modal-body">
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
-                                <div class="col-sm-12" style="text-align: center">
+                                <div class="col-sm-12" style="text-align: center" id='qr_print_area'>
                                         <img id='qr_code_img' style='width:250px; height:250px'/>
-                                    </div>
-
+                                </div>
                             </div>
 			</form>
 		  </div>
 		  <div class="modal-footer">
+                        <button type="button" onclick="qr_print();" class="btn btn-default" data-dismiss="modal">출력</button>
 			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
@@ -500,7 +500,16 @@ echo get_qr("www.naver.com",'naver');
         });
         
     }
-    
+    function qr_print(){
+        var initBody = document.body.innerHTML;
+        window.onbeforeprint = function(){
+            document.body.innerHTML = $("#qr_print_area").html();
+        }
+        window.onafterprint = function(){
+            document.body.innerHTML = initBody;
+        }
+        window.print();
+    }
 
         
 </script>
