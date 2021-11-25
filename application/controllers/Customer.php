@@ -101,6 +101,7 @@ class Customer extends CI_Controller {
         function setMenu(){
             
             $table_code =  $this->session->table_code;
+            $table_code =  $this->session->table_no;
             $recipe_idx = $this->input->post("menu_array");
             $recipe_array = explode("/", $recipe_idx);
             $cnt = 1; //cnt 값은 나중에 입력 받을 예정
@@ -120,6 +121,7 @@ class Customer extends CI_Controller {
                     if($recipe_array[$i] != ""){
                         $data = array(
                             "table_code"      => $table_code,
+                            "table_no"      => $table_no,
                             "cnt"           => $cnt,
                             "place"         => $place,
                             "recipe_idx"    => $recipe_array[$i],
