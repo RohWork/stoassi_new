@@ -246,13 +246,7 @@ echo get_qr("www.naver.com",'naver');
 			<h4 class="modal-title" id="myModalWaitLabel">결제대기</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
-                            <div class="form-group">
-                                <div class="col-sm-12" id='content_order_wait'>
-                                        
-                                </div>
-                            </div>
-			</form>
+			<iframe id="order_wait_frame" ></iframe>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('modal_order_wait')" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -268,13 +262,7 @@ echo get_qr("www.naver.com",'naver');
 			<h4 class="modal-title" id="myModalCompleteLabel">결제완료</h4>
 		  </div>
 		  <div class="modal-body">
-			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
-                            <div class="form-group">
-                                <div class="col-sm-12" id='content_order_complete'>
-                                       
-                                </div>
-                            </div>
-			</form>
+			<iframe id="order_complete_frame" ></iframe>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" onclick="modal_close('modal_order_complete')" class="btn btn-default" data-dismiss="modal">닫기</button>
@@ -349,18 +337,6 @@ echo get_qr("www.naver.com",'naver');
                     
                     $("#compl_val").html(count.cnt_complete);
                     $("#wait_val").html(count.cnt_wait);
-                    
-                    var wait_data = data.result.list_wait;
-                    var wait_str = "";
-                    wait_data.forEach(function (item){
-                        wait_str += "<tr>"
-                        wait_str += "<td>"+item.recipe_name+"</td>";
-                        wait_str += "<td>"+item.price+"</td>";
-                        wait_str += "<td>"+item.cnt+"</td>";
-                        wait_str += "<td>"+item.regi_date+"</td>";
-                        wait_str += "</tr>";
-                    });
-                    
                     
                 },
                 error: function(xhr,status,error) {
