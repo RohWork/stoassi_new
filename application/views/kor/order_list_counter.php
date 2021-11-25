@@ -69,13 +69,13 @@ echo get_qr("www.naver.com",'naver');
                         </form>
                       <div class="row">
                           <div class="col-sm-5 col-sm-offset-1">
-                              <div style="width:100%;height: 80px;text-align: center;background-color: #F2EEC3;border: 1px solid black;;cursor: pointer">
+                              <div style="width:100%;height: 80px;text-align: center;background-color: #F2EEC3;border: 1px solid black;;cursor: pointer" id='pay_wait'>
                                   <p style="font-size: 16px;padding: 5px 15px 0px 15px;font-weight: bold">결제대기</p>
                                   <p style="font-size: 25px;padding: 0px 15px 0px 15px;font-weight: bold" id="wait_val"></p>
                               </div>
                           </div>
                           <div class="col-sm-5">
-                              <div style="width:100%;height: 80px;text-align: center;background-color: #BBC7F3;border: 1px solid black;cursor: pointer">
+                              <div style="width:100%;height: 80px;text-align: center;background-color: #BBC7F3;border: 1px solid black;cursor: pointer" id='pay_complete'>
                                   <p style="font-size: 16px;padding: 5px 15px 0px 15px;font-weight: bold">결제완료</p>
                                   <p style="font-size: 25px;padding: 0px 15px 0px 15px;font-weight: bold" id="compl_val"></p>
                               </div>
@@ -83,7 +83,7 @@ echo get_qr("www.naver.com",'naver');
                       </div>
                       <div class="row" style="margin-top: 20px">
                           <div class="col-sm-10 col-sm-offset-1">
-                              <div style="width:100%;height:50px;text-align: center;background-color: #FCE2E2;border: 1px solid black;cursor: pointer">
+                              <div style="width:100%;height:50px;text-align: center;background-color: #FCE2E2;border: 1px solid black;cursor: pointer" id='pay_qr'>
                                   <p style="font-size: 16px;padding: 15px;font-weight: bold">QR코드<br/></p>
                               </div>
                           </div>
