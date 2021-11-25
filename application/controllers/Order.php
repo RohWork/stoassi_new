@@ -265,9 +265,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             
             if(is_https_request()){
-                $host = "http://";
-            }else{
                 $host = "https://";
+            }else{
+                $host = "http://";
             }
             $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result->shop_idx;
             
