@@ -19,6 +19,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <!-- Custom styles for this template --> 
         <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
+        
+        <style>
+            .tr_content{
+                height:30px;
+                line-height: 30px;
+            }
+            .tr_content td{
+                padding-left:10px;
+            }
+        </style>
     </head>
     <body>
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
@@ -29,7 +39,7 @@
                 <th>갯수</th>
                 <th>주문일시</th>
             </tr>
-            <tr style='height:30px;line-height: 30px;'>
+            <tr class='tr_content'>
                 <td><input type='checkbox'/></td>
                 <td>1</td>
                 <td>1</td>
