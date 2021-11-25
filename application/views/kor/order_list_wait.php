@@ -1,8 +1,8 @@
 <html>
     <head></head>
     <body>
-        <table style="width:100%;" border='1' cellpadding='0' cellspacing='0'>
-            <tr>
+        <table style="width:100%;" cellpadding='0' cellspacing='0'>
+            <tr style='border-bottom: 1px solid black'>
                 <th><input type='checkbox'/></th>
                 <th>상품명</th>
                 <th>상품가격</th>
