@@ -259,6 +259,30 @@ echo get_qr("www.naver.com",'naver');
     });
     
     $("#pay_qr").click(function(){
+            var table_code = $("#detail_table_code").val();
+        
+            var params =  {
+                "code" : table_code
+            };
+        
+            $.ajax({
+                url:'/order/pop_table_qr',
+                type:'post',
+                data:params,
+                success:function(data){
+                    
+                    var result = data.result;
+                    
+                    $("#qr_code_img").attr("src",result->file);
+                },
+                error: function(xhr,status,error) {
+                    console.log(xhr,status,error);
+                    alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                    return false;
+                }	 
+            });
+        
+        
         $("#modal_table_qr").modal('show');
     });
     function detail_order_show(table_no,table_code){
