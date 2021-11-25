@@ -225,7 +225,7 @@ echo get_qr("www.naver.com",'naver');
 		  <div class="modal-body">
 			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
-                                    <div class="col-sm-12">
+                                <div class="col-sm-12" style="text-align: center">
                                         <img id='qr_code_img' style='width:150px; height:150px'/>
                                     </div>
 
