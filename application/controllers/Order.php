@@ -277,7 +277,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 }else{
                     $host = "http://";
                 }
-                $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result_qr->shop_idx;
+                $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result_qr->shop_idx.'code='.$code;
 
                 $result['file'] = get_qr($url,$code);
             }
