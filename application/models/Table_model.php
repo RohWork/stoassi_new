@@ -19,7 +19,7 @@
                 $this->db->where('ti.table_code', $search_vo->table_code);
             }
             
-            $this->db->order_by("ti.idx", "desc");
+            $this->db->order_by("ti.idx", "asc");
 
             return $this->db->get()->result();
 
