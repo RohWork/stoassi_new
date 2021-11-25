@@ -130,7 +130,7 @@ if ( ! function_exists('header_set')) {
             QRcode::png($url,$_SERVER['DOCUMENT_ROOT'].$dir.$file_name,0,3,2);
         }
         echo $file_name;
-        return $file_name;
+        return $dir.$file_name;
         
     }
 ?>
