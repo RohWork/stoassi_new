@@ -69,10 +69,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $result['count'] = $this->cust_md->get_order_count($vo->code);
                 
                 $vo->status = 1;
-                $result['list_wait'] = $this->cust_md->get_order_list($vo);
+                $result['list_wait'] = $this->cust_md->order_list($vo);
                 
                 $vo->status = 2;
-                $result['list_complete'] = $this->cust_md->get_order_list($vo);
+                $result['list_complete'] = $this->cust_md->order_list($vo);
             }
             
             $data['code'] = $code;
