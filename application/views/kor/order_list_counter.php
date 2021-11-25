@@ -108,8 +108,21 @@ echo get_qr("www.naver.com",'naver');
 			<form id="order_insert_form" enctype="multipart/form-data" class="form-horizontal">
                             <div class="form-group">
                                     <label for="insert_table_code" class="col-sm-3 control-label">테이블코드</label>
-                                    <div class="col-sm-8">
-                                            <input type="text" id="insert_table_code" name="insert_table_code" class="form-control"/>
+                                    <div class="col-sm-8">                                 
+                                            <select id="insert_table_code" name="insert_table_code" class="form-control">
+                                                <?php
+                                                foreach($table_list as $row){
+                                                    if($row->table_status == "2"){
+                                                        if($row->table_no == "0"){
+                                                            echo "<option value='".$row->table_code."'>포장</option>";
+                                                        }else{
+                                                            echo "<option value='".$row->table_code."'>".$row->table_no."</option>";
+                                                        }
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                            
                                     </div>
                             </div>
                             <div class="form-group">
