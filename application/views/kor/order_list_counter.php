@@ -273,7 +273,7 @@ echo get_qr("www.naver.com",'naver');
                     
                     var result = data.result;
                     
-                    $("#qr_code_img").attr("src",result->file);
+                    $("#qr_code_img").attr("src",result.file);
                 },
                 error: function(xhr,status,error) {
                     console.log(xhr,status,error);
