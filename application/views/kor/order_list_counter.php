@@ -227,7 +227,7 @@ echo get_qr("www.naver.com",'naver');
                             <div class="form-group">
                                 <div class="col-sm-12" style="text-align: center" id='qr_print_area'>
                                     <div style='border: 1px solid black'>
-                                        <img id='qr_code_img' style='width:250px; height:250px;webkit-print-color-adjust:exact;'/>
+                                        <img id='qr_code_img'/>
                                     </div>
                                 </div>
                             </div>
