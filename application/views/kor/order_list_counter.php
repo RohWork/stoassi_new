@@ -255,7 +255,7 @@ echo get_qr("www.naver.com",'naver');
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
+			<button type="button" onclick="modal_close('modal_order_wait')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
 	  </div>
@@ -277,7 +277,7 @@ echo get_qr("www.naver.com",'naver');
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
+			<button type="button" onclick="modal_close('modal_order_complete')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
 	  </div>
