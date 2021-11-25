@@ -1,7 +1,7 @@
 <html>
     <head></head>
     <body>
-        <table style="width:100%;" cellpadding='0' cellspacing='0'>
+        <table style="width:100%;" cellpadding='0' border='1' cellspacing='0'>
             <tr style='border-bottom: 1px solid black'>
                 <th><input type='checkbox'/></th>
                 <th>상품명</th>
