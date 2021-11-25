@@ -20,8 +20,9 @@ class Customer_model extends CI_Model {
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
         $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
         $this->db->join('table_info as ti', 'ti.table_code = ol.table_code', 'left');
+        if(!empty($vo->date)){
         $this->db->like('ol.regi_date', $vo->date);
-        
+        }
         if(!empty($vo->status)){
             $this->db->like('ol.status', $vo->status, 'after');
         }
