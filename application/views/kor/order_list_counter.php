@@ -233,8 +233,7 @@ echo get_qr("www.naver.com",'naver');
 			</form>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" onclick="modal_close('modal_table_set')" class="btn btn-default" data-dismiss="modal">취소</button>
-			<button type="button" onclick="table_set(0)" class="btn btn-primary">테이블셋팅</button>
+			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
 	  </div>
