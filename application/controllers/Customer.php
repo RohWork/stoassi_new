@@ -28,7 +28,7 @@ class Customer extends CI_Controller {
             if(!empty($place)){
                 $data['place'] = $place;
             }
-            if(!empty($table_code) && !empty($this->session->table_code)){
+            if(!empty($table_code) || !empty($this->session->table_code)){
                 
                 
                 $table_info = $this->cust_md->get_table_info($table_code);
