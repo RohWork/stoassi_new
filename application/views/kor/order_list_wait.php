@@ -21,6 +21,10 @@
         <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
         
         <style>
+            .tr_head{
+               border-bottom: 1px solid black;
+               margin-bottom: 10px;
+            }
             .tr_content{
                 height:30px;
                 line-height: 30px;
@@ -32,7 +36,7 @@
     </head>
     <body>
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
-            <tr style='border-bottom: 1px solid black'>
+            <tr class='tr_head'>
                 <th style='padding-left:10px;'><input type='checkbox'/></th>
                 <th>상품명</th>
                 <th>상품가격</th>
