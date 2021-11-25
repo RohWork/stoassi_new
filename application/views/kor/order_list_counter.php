@@ -238,7 +238,50 @@ echo get_qr("www.naver.com",'naver');
 		</div>
 	  </div>
 	</div>
-        
+        <div id="modal_order_wait" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">결제대기</h4>
+		  </div>
+		  <div class="modal-body">
+			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-12" id='content_order_wait'>
+                                        
+                                </div>
+                            </div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+        <div id="modal_order_complete" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">결제완료</h4>
+		  </div>
+		  <div class="modal-body">
+			<form id="table_set_form" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-12" id='content_order_complete'>
+                                       
+                                </div>
+                            </div>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" onclick="modal_close('modal_table_qr')" class="btn btn-default" data-dismiss="modal">닫기</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
 </body>
 <script>
     
