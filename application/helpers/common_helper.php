@@ -126,8 +126,9 @@ if ( ! function_exists('header_set')) {
         $dir = "/result/";
         $file_name = $file_name.".png";
         
-        QRcode::png($url,$_SERVER['DOCUMENT_ROOT'].$dir.$file_name,0,3,2);
-        
+        if(!is_file($_SERVER['DOCUMENT_ROOT'].$dir.$file_name)){
+            QRcode::png($url,$_SERVER['DOCUMENT_ROOT'].$dir.$file_name,0,3,2);
+        }
         return $file_name;
 
     }
