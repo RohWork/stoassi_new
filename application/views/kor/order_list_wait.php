@@ -9,7 +9,13 @@
                 <th>갯수</th>
                 <th>주문일시</th>
             </tr>
-            <tr></tr>
+            <tr>
+                <td><input type='checkbox'/><td/>
+                <td>1<td/>
+                <td>1<td/>
+                <td>1<td/>
+                <td>1<td/>
+            </tr>
         </table>
     </body>
     
