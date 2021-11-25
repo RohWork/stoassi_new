@@ -31,9 +31,10 @@
                 height:30px;
                 line-height: 30px;
             }
-            td{
+            td, th{
                 padding-left:10px;
             }
+            
         </style>
     </head>
     <body>
