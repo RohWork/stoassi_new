@@ -29,7 +29,7 @@
                 <th>갯수</th>
                 <th>주문일시</th>
             </tr>
-            <tr style='height:30px;line-height: 30px;padding-left: 5px'>
+            <tr style='height:30px;line-height: 30px;padding-left: 15px'>
                 <td><input type='checkbox'/></td>
                 <td>1</td>
                 <td>1</td>
