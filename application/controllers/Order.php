@@ -261,19 +261,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         public function pop_table_qr($code){
             
-            $result = $this->cust_md->get_order_count($code);
+            $code = '';
+            $message = '';
             
+            $code = $this->input->post('code');
             
-            if(is_https_request()){
-                $host = "https://";
+            if(empty($code)){
+                $message = "code error";
+                $code = 404;
             }else{
-                $host = "http://";
+                $result = $this->cust_md->get_order_count($code);
+
+                if(is_https_request()){
+                    $host = "https://";
+                }else{
+                    $host = "http://";
+                }
+                $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result->shop_idx;
+
+                $data['file'] = get_qr($url,$code);
             }
-            $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result->shop_idx;
             
-            $data['file'] = get_qr($url,$code);
+            $data['code'] = $code;
+            $data['message'] = $message;
+            $data['result'] = $result;
             
-            $this->load->view(LANGUAGE.'/popup_table_qr', $data);
+            header("Content-Type: application/json;");
+            echo json_encode($data);
         }
         
         public function get_order_recipe_info(){
