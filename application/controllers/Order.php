@@ -68,11 +68,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo->code = $code;
                 $result['count'] = $this->cust_md->get_order_count($vo->code);
                 
-                $vo->status = 1;
-                $result['list_wait'] = $this->cust_md->order_list($vo);
-                
-                $vo->status = 2;
-                $result['list_complete'] = $this->cust_md->order_list($vo);
             }
             
             $data['code'] = $code;
@@ -243,7 +238,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
-        public function pop_table_qr(){
+        public function get_table_qr(){
             
             $code = '';
             $message = '';
