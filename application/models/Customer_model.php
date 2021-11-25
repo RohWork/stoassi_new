@@ -124,11 +124,13 @@ class Customer_model extends CI_Model {
         
         $sql = "SELECT
                         SUM(cnt_wait) AS cnt_wait,
-                        SUM(cnt_complete) AS cnt_complete
+                        SUM(cnt_complete) AS cnt_complete,
+                        shop_idx
                 FROM(
                         SELECT
                                 CASE WHEN STATUS = 1 THEN COUNT(idx) ELSE 0 END AS cnt_wait,
-                                CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete
+                                CASE WHEN STATUS = 2 THEN COUNT(idx) ELSE 0 END AS cnt_complete,
+                                shop_idx
                         FROM order_list 
                         WHERE table_code = '$code'
                         GROUP BY STATUS
@@ -138,6 +140,7 @@ class Customer_model extends CI_Model {
         return $result; 
         
     }
+    
 }
 ?>
 
