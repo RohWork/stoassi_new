@@ -27,7 +27,7 @@ class Customer_model extends CI_Model {
             $this->db->like('ol.status', $vo->status, 'after');
         }
         if(!empty($vo->code)){
-            $this->db->like('ti.code', $vo->code, 'after');
+            $this->db->like('ol.table_code', $vo->code, 'after');
         }
         
         return $this->db->get()->result();
