@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $vo = new stdClass();
                 
                 $vo->code = $code;
-                $result['count'] = $this->cust_md->get_order_count($code);
+                $result['count'] = $this->cust_md->get_order_count($vo->code);
                 
                 $vo->status = 1;
                 $result['list_wait'] = $this->cust_md->get_order_list($vo);
