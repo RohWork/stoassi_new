@@ -503,7 +503,7 @@ echo get_qr("www.naver.com",'naver');
     function qr_print(){
         var initBody = document.body.innerHTML;
         window.onbeforeprint = function(){
-            document.body.innerHTML = $("#qr_print_area").html();
+            document.body.innerHTML = document.getElementById('qr_print_area').innerHTML
         }
         window.onafterprint = function(){
             document.body.innerHTML = initBody;
