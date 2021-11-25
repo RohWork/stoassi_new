@@ -53,31 +53,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
         
         public function get_order_info(){
-            
-            $code = '';
-            $message = '';
-            
-            $order_idx = $this->input->post("idx");
-            
-            if(empty($order_idx)){
-                $message = "idx error";
-                $code = 404;
-            }else{
-                $vo = new stdClass();
-                $vo->idx = $order_idx;
-                
-                $result = $this->cust_md->detail_order($vo);
-            }
-            
-            $data['code'] = $code;
-            $data['message'] = $message;
-            $data['result'] = $result;
-            
-            header("Content-Type: application/json;");
-            echo json_encode($data);
-            
-        }
-        public function get_order_count(){
             $code = '';
             $message = '';
             $result = '';
@@ -88,7 +63,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $message = "code error";
                 $code = 404;
             }else{
-                $result = $this->cust_md->get_order_count($code);
+                $vo = new stdClass();
+                
+                $vo->code = $code;
+                $result['count'] = $this->cust_md->get_order_count($vo->code);
+                
+                $vo->status = 1;
+                $result['list_wait'] = $this->cust_md->get_order_list($vo);
+                
+                $vo->status = 2;
+                $result['list_complete'] = $this->cust_md->get_order_list($vo);
             }
             
             $data['code'] = $code;
