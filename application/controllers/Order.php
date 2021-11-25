@@ -242,6 +242,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
             $vo = new stdClass();
+            echo $code;
             $vo->table_code = $this->input->get('code');
             
             $vo->status = 1;
