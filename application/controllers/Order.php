@@ -259,7 +259,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
-        public function pop_table_qr($code){
+        public function pop_table_qr(){
             
             $code = '';
             $message = '';
