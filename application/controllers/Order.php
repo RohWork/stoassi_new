@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function get_order_info(){
             $code = '';
             $message = '';
-            $result = '';
+            $result = array();
             
             $code = $this->input->post('table_code');
             
