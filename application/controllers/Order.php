@@ -260,7 +260,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo->status = array(2,3);
 
-            $data['list_wait'] = $this->cust_md->order_list($vo);
+            $data['list_complete'] = $this->cust_md->order_list($vo);
             
             $this->load->view(LANGUAGE.'/order_list_complete', $data);
             
