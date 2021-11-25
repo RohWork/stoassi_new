@@ -45,13 +45,19 @@
                 <th>갯수</th>
                 <th>주문일시</th>
             </tr>
+            <?php
+                foreach($list_wait as $list){
+            ?>
             <tr class='tr_content'>
                 <td><input type='checkbox'/></td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td><?=$list->recipe_name?></td>
+                <td><?=$list->price?></td>
+                <td><?=$list->cnt?></td>
+                <td><?=$list->regi_date?></td>
             </tr>
+            <?php
+                }
+            ?>
         </table>
     </body>
     
