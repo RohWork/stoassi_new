@@ -270,16 +270,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $message = "code error";
                 $code = 404;
             }else{
-                $result = $this->cust_md->get_order_count($code);
+                $result_qr = $this->cust_md->get_order_count($code);
 
                 if(is_https_request()){
                     $host = "https://";
                 }else{
                     $host = "http://";
                 }
-                $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result->shop_idx;
+                $url = $host.$_SERVER["HTTP_HOST"].'/customer/orderMenu/1/'.$result_qr->shop_idx;
 
-                $data['file'] = get_qr($url,$code);
+                $result['file'] = get_qr($url,$code);
             }
             
             $data['code'] = $code;
