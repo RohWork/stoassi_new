@@ -238,6 +238,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function pop_wait_order(){
+
+
+            $vo = new stdClass();
+            $vo->table_code = $this->input->get('code');
+            
+            $vo->status = 1;
+
+            $result['list_wait'] = $this->cust_md->order_list($vo);
+            
+            $this->load->view(LANGUAGE.'/order_list_wait', $data);
+            
+        }
+        public function pop_complete_order(){
+
+
+            $vo = new stdClass();
+            $vo->table_code = $this->input->get('code');
+            
+            $vo->status = 2;
+
+            $result['list_wait'] = $this->cust_md->order_list($vo);
+            
+            $this->load->view(LANGUAGE.'/order_list_wait', $data);
+            
+        }
+        
         public function get_table_qr(){
             
             $code = '';
