@@ -27,7 +27,7 @@ class Customer_model extends CI_Model {
             $this->db->where_in('ol.status', $vo->status);
         }
         if(!empty($vo->table_code)){
-            $this->db->where('ol.table_code', $vo->code);
+            $this->db->where('ol.table_code', $vo->table_code);
         }
         
         return $this->db->get()->result();
