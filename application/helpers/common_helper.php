@@ -132,4 +132,15 @@ if ( ! function_exists('header_set')) {
         return $dir.$file_name;
         
     }
+    
+    function is_https_request(){
+        if ( (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') 
+
+             || $_SERVER['SERVER_PORT'] == 443) {		
+
+		return true; 
+	}
+	return false;
+        
+    }
 ?>
