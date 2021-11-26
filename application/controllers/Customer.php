@@ -43,7 +43,7 @@ class Customer extends CI_Controller {
  
             }
             
-            if(empty($this->session->table_code)){
+            if(empty($this->session->table_code) && empty($table_code)){
                 show_error("Check to Your URL."); 
             }
             
