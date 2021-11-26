@@ -25,7 +25,22 @@
             return $this->db->get()->result();
 
         }
-        
+        function get_table_info($search_vo){
+
+            $this->db->select('*');
+            $this->db->from('table_info as ti');
+            
+            if(!empty($search_vo->shop_idx)){
+                $this->db->where('ti.shop_idx', $search_vo->shop_idx);
+            }
+            if(!empty($search_vo->table_code)){
+                $this->db->where('ti.table_code', $search_vo->table_code);
+            }
+            
+
+            return $this->db->get()->row();
+
+        }
         function set_table($vo){
             
 
