@@ -50,6 +50,7 @@ class Customer extends CI_Controller {
             }
             
             if(empty($this->session->userdata('table_code')) && empty($table_code)){
+                var_dump($this->session);
                 echo $this->session->userdata('table_code');
                 show_error("Check to Your Code."); 
             }
