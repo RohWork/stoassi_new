@@ -11,6 +11,7 @@ class Customer extends CI_Controller {
                 $this->load->model('Shop_model', 'shop_md', TRUE);
                 $this->load->model('Recipe_model', 'recipe_md', TRUE);
                 $this->load->model('Customer_model', 'cust_md', TRUE);
+                $this->load->model('Table_model', 'table_md', TRUE);
 	}
         
        public function orderMenu($level,$shop_idx=0){
@@ -30,8 +31,10 @@ class Customer extends CI_Controller {
             }
             if(!empty($table_code)){
                 
+                $vo = new stdClass();
+                $vo->table_code = $table_code;
                 
-                $table_info = $this->cust_md->get_table_info($table_code);
+                $table_info = $this->table_md->get_table_list($vo);
                 
                 $sess_data['table_code'] = $table_info->table_code;
                 $sess_data['table_no'] = $table_info->table_no;
