@@ -36,7 +36,7 @@ class Customer extends CI_Controller {
                 
                 $table_info = $this->table_md->get_table_info($vo);
                 
-                $sess_data['table_code'] = $table_info->table_code;
+                $sess_data['table_code'] = $table_code;
                 $sess_data['table_no'] = $table_info->table_no;
                 
                 $this->session->set_userdata($sess_data);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
@@ -44,7 +44,7 @@ class Customer extends CI_Controller {
             }
             
             if(empty($this->session->table_code)){
-                show_error("Check to Your Code."); 
+                show_error("Check to Your URL."); 
             }
             
             if(empty($shop_idx) || $shop_idx == 0){
