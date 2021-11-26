@@ -43,10 +43,13 @@ class Customer extends CI_Controller {
                 
                 $sess_data['table_code'] = $table_code;
                 $sess_data['table_no'] = $table_info->table_no;
+                $sess_data['shop_idx'] = $table_info->shop_idx;
                 $shop_idx = $table_info->shop_idx;
                 
                 $this->session->set_userdata($sess_data);    //테이블번호, 혹은 시리얼넘버는 변조가 안되도록 세션으로 처리
  
+            }else{
+                $shop_idx = $this->session->userdata('shop_idx');
             }
             
             if(empty($this->session->userdata('table_code')) && empty($table_code)){
