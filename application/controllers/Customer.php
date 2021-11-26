@@ -19,6 +19,7 @@ class Customer extends CI_Controller {
             $language = $this->input->get_post("language");
             $place = $this->input->get_post("place");
             $table_code = $this->input->get_post("code");
+            $shop_idx = '';
             
             $data = array();
             if(!empty($language)){
@@ -29,10 +30,14 @@ class Customer extends CI_Controller {
             if(!empty($place)){
                 $data['place'] = $place;
             }
-            if(!empty($table_code)){
+            if(!empty($table_code) || !empty($this->session->table_code)){
                 
                 $vo = new stdClass();
-                $vo->table_code = $table_code;
+                if(!empty($table_code)){
+                    $vo->table_code = $table_code;
+                }else{
+                    $vo->table_code = $this->session->table_code;
+                }
                 
                 $table_info = $this->table_md->get_table_info($vo);
                 
