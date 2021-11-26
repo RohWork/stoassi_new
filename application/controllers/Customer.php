@@ -34,7 +34,7 @@ class Customer extends CI_Controller {
                 $vo = new stdClass();
                 $vo->table_code = $table_code;
                 
-                $table_info = $this->table_md->get_table_list($vo);
+                $table_info = $this->table_md->get_table_info($vo);
                 
                 $sess_data['table_code'] = $table_info->table_code;
                 $sess_data['table_no'] = $table_info->table_no;
