@@ -10,8 +10,9 @@
 
             $this->db->select('*');
             $this->db->from('table_info as ti');
-            $this->db->where('ti.shop_idx', $search_vo->shop_idx);
-            
+            if(!empty($search_vo->shop_idx)){
+                $this->db->where('ti.shop_idx', $search_vo->shop_idx);
+            }
             if(!empty($search_vo->status)){
                 $this->db->where('ti.status', $search_vo->status);
             }
