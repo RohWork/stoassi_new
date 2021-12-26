@@ -192,6 +192,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $order_idx = $this->input->post("idx");
             $status = $this->input->post("status");
             
+            var_dump($order_idx);
+            
             if(empty($order_idx)){
                 $message = "idx error";
                 $code = 404;
