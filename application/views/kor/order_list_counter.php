@@ -294,7 +294,7 @@ echo get_qr("www.naver.com",'naver');
     });
     
     $("#set_pay").click(function(){
-       $("#order_wait_frame").contentWindow.order_update();  
+       $("#order_wait_frame").contentWindow.get(0).order_update();  
     });
     
     $("#input_button").click(function(){
