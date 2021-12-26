@@ -260,6 +260,7 @@ echo get_qr("www.naver.com",'naver');
 			<iframe id="order_wait_frame" style='border:0px solid black;width:100%;height:400px'></iframe>
 		  </div>
 		  <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="set_pay">결제처리</button>
 			<button type="button" onclick="modal_close('modal_order_wait')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
@@ -291,7 +292,11 @@ echo get_qr("www.naver.com",'naver');
 
             recipe_detail($("#insert_recipe_group").val());
     });
-
+    
+    $("#set_pay").click(function(){
+       $("#order_wait_frame").contentWindow.order_update(); 
+    });
+    
     $("#input_button").click(function(){
         $("#modal_order_insert").modal('show');
     });
