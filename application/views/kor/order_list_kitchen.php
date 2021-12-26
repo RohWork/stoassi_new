@@ -235,7 +235,7 @@
     function order_update_recipe(){
         
         var form = $("#order_update_form");
-        var formData = new FormData(form[0]);
+        var formData = new FormData(form[0]); 
         
         $.ajax({
             url:'/order/set_update_order_recipe',
