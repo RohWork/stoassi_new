@@ -205,7 +205,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $data['code'] = $code;
             $data['message'] = $message;
-            $data['result'] = $result;
             
             header("Content-Type: application/json;");
             echo json_encode($data);
