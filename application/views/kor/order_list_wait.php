@@ -58,11 +58,6 @@
             <?php
                 }
             ?>
-            <tr>
-                <td colspan="5">
-                    <button onclick="order_update();">결제처리</butt>
-                </td>
-            </tr>
         </table>
     </body>
     
