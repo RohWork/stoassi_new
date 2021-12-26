@@ -203,7 +203,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if (is_array($order_idx))
 
                 $cnt = count($order_idx);
-                
+                echo $cnt;
                 for($i=0;$i<$cnt;$i++){
                     $vo = new stdClass();
                     $vo->idx = $order_idx[$i];
