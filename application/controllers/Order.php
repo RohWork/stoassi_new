@@ -197,7 +197,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $message = "idx error";
                 $code = 404;
             }else{
-                for($i=0;$i<count($order_idx);$i++){
+                
+                $cnt = 0;
+
+                if (is_array($order_idx))
+
+                $cnt = count($list);
+                
+                for($i=0;$i<$cnt;$i++){
                     $vo = new stdClass();
                     $vo->idx = $order_idx[$i];
                     $vo->status = $status;
