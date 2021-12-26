@@ -80,7 +80,7 @@
             }
             
             formData.append('status', status);
-            formData.append('chkArray', chkArray);
+            formData.append('idx', chkArray);
             
             $.ajax({
                 url:'/order/set_update_order',
