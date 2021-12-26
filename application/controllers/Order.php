@@ -192,17 +192,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $order_idx = $this->input->post("idx");
             $status = $this->input->post("status");
             
-            var_dump($order_idx);
             
             if(empty($order_idx)){
                 $message = "idx error";
                 $code = 404;
             }else{
-                $vo = new stdClass();
-                $vo->idx = $order_idx;
-                $vo->status = $status;
-                
-                $result = $this->cust_md->set_order($vo);
+                for($i=0;$i<count($order_idx);$i++){
+                    $vo = new stdClass();
+                    $vo->idx = $order_idx[$i];
+                    $vo->status = $status;
+
+                    $result = $this->cust_md->set_order($vo);
+                }
             }
             
             $data['code'] = $code;
