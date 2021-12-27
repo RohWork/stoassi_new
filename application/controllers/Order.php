@@ -189,7 +189,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $code = '';
             $message = '';
             
-            $order_idx = $this->input->post("idx");
+            $order_idx = explode(",",$this->input->post("idx"));
             $status = $this->input->post("status");
             
             
