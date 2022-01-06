@@ -51,7 +51,7 @@
                 foreach($list_complete as $list){
             ?>
             <tr class='tr_content'>
-                <td><input type='checkbox' id="list_idx" name="list_idx[]" value="<?=$list->idx?>" /></td>
+                <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
                 <td><?=$list->STATUS?></td>
                 <td><?=$list->recipe_name?></td>
                 <td><?=$list->price?></td>
@@ -103,9 +103,9 @@
         }
         function all_check(){
             if($("#all_check").is(':checked')){
-                $("input[name=list_idx]").prop("checked",true);
+                $(".chk").prop("checked",true);
             }else{
-                $("input[name=list_idx]").prop("checked",false);
+                $(".chk").prop("checked",false);
             }
             
         }
