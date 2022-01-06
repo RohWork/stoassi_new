@@ -40,7 +40,7 @@
     <body>
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
             <tr class='tr_head'>
-                <th style='padding-left:10px;'><input type='checkbox'/></th>
+                <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
                 <th>주문상태</th>
                 <th>상품명</th>
                 <th>상품가격</th>
@@ -100,6 +100,14 @@
                 }	 
             });
 
+        }
+        function all_check(){
+            if($("#all_check").is(':checked')){
+                $("#list_idx").prop("checked",true);
+            }else{
+                $("#list_idx").prop("checked",false);
+            }
+            
         }
     </script>
 </html>
