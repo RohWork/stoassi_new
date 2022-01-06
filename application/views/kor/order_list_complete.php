@@ -40,6 +40,7 @@
     <body>
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
             <tr class='tr_head'>
+                <th style='padding-left:10px;'><input type='checkbox'/></th>
                 <th>주문상태</th>
                 <th>상품명</th>
                 <th>상품가격</th>
@@ -50,6 +51,7 @@
                 foreach($list_complete as $list){
             ?>
             <tr class='tr_content'>
+                <td><input type='checkbox' id="list_idx" name="list_idx[]" value="<?=$list->idx?>" /></td>
                 <td><?=$list->STATUS?></td>
                 <td><?=$list->recipe_name?></td>
                 <td><?=$list->price?></td>
