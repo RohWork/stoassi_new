@@ -277,6 +277,7 @@ echo get_qr("www.naver.com",'naver');
 			<iframe id="order_complete_frame"  style='border:0px solid black; width:100%;;height:400px'></iframe>
 		  </div>
 		  <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="set_cancel">결제취소</button>
 			<button type="button" onclick="modal_close('modal_order_complete')" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  </div>
 		</div>
@@ -296,6 +297,10 @@ echo get_qr("www.naver.com",'naver');
     $("#set_pay").click(function(){
        $("#order_wait_frame").get(0).contentWindow.order_update();  
     });
+    $("#set_cancel").click(function(){
+       $("#order_complete_frame").get(0).contentWindow.order_update();  
+    });
+    
     
     $("#input_button").click(function(){
         $("#modal_order_insert").modal('show');
