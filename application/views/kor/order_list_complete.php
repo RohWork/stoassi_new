@@ -63,5 +63,43 @@
             ?>
         </table>
     </body>
-    
+    <script>
+        function order_update(){
+            
+            var chkArray = new Array();
+            var status = '4';
+            var formData = new FormData();
+            
+            $("input[name='list_idx[]']:checked").each(function() { 
+                var tmpVal = $(this).val(); 
+                chkArray.push(tmpVal);
+            });
+            
+            if( chkArray.length < 1 ){
+                alert("값을 선택해주시기 바랍니다.");
+                return;
+            }
+            
+            formData.append('status', status);
+            formData.append('idx', chkArray);
+            
+            $.ajax({
+                url:'/order/set_update_order',
+                type:'post',
+                processData : false,
+                contentType : false,
+                data:formData,
+                success:function(data){
+                    alert('수정완료');
+                    location.reload();
+                },
+                error: function(xhr,status,error) {
+                    console.log(xhr,status,error);
+                    alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                    return false;
+                }	 
+            });
+
+        }
+    </script>
 </html>
