@@ -39,7 +39,7 @@
     <body>
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
             <tr class='tr_head'>
-                <th style='padding-left:10px;'><input type='checkbox'/></th>
+                <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
                 <th>상품명</th>
                 <th>상품가격</th>
                 <th>갯수</th>
@@ -49,7 +49,7 @@
                 foreach($list_wait as $list){
             ?>
             <tr class='tr_content'>
-                <td><input type='checkbox' id="list_idx" name="list_idx[]" value="<?=$list->idx?>" /></td>
+                <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
                 <td><?=$list->recipe_name?></td>
                 <td><?=$list->price?></td>
                 <td><?=$list->cnt?></td>
@@ -99,6 +99,15 @@
                 }	 
             });
 
+        }
+        
+        function all_check(){
+            if($("#all_check").is(':checked')){
+                $(".chk").prop("checked",true);
+            }else{
+                $(".chk").prop("checked",false);
+            }
+            
         }
         </script>
 </html>
