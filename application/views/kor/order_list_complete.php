@@ -103,9 +103,9 @@
         }
         function all_check(){
             if($("#all_check").is(':checked')){
-                $("input[name=list_idx[]]").prop("checked",true);
+                $("input[name=list_idx]").prop("checked",true);
             }else{
-                $("input[name=list_idx[]]").prop("checked",false);
+                $("input[name=list_idx]").prop("checked",false);
             }
             
         }
