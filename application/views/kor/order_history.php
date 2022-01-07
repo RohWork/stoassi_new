@@ -31,7 +31,7 @@ echo get_qr("www.naver.com",'naver');
                                                 <td><?=$row->recipe_name ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
                                                 <td><?=$row->cnt ?></td>
-                                                <td><?=$row->status ?></td>
+                                                <td><?=$row->STATUS ?></td>
 						<td><?=$row->regi_date?></td>
 					</tr>
 				<?php
