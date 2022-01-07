@@ -80,6 +80,12 @@ class Customer_model extends CI_Model {
         if(!empty($vo->status)){
             $this->db->where_in('ti.status', $vo->status);
         }
+        if(!empty($vo->sdate)){
+            $this->db->where('ol.regi_date >=', $vo->sdate);
+        }
+        if(!empty($vo->edate)){
+            $this->db->where('ol.regi_date <=', $vo->edate);
+        }
         
         return $this->db->count_all_results();
     }
