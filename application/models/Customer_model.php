@@ -54,7 +54,7 @@ class Customer_model extends CI_Model {
          $this->db->limit($vo->config_per_page, $offset);
         
         $this->db->order_by("ol.regi_date","DESC");
-        echo $this->db->last_query();
+        
         return $this->db->get()->result();
     }
     
