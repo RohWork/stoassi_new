@@ -46,10 +46,10 @@ class Customer_model extends CI_Model {
 
 
         if(!empty($vo->sdate)){
-            $this->db->where('ol.reg_date >=', $vo->sdate);
+            $this->db->where('ol.regi_date >=', $vo->sdate);
         }
         if(!empty($vo->edate)){
-            $this->db->where('ol.reg_date <=', $vo->edate);
+            $this->db->where('ol.regi_date <=', $vo->edate);
         }
          $this->db->limit($vo->config_per_page, $offset);
         
