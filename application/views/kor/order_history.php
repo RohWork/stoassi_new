@@ -64,7 +64,17 @@ echo get_qr("www.naver.com",'naver');
 <script>
   
     $(document).ready(function(){
-         $("#sdate").val(new Date().toISOString().substring(0, 10));
+         
+        var sdate = '<?=$sdate?>';
+        var edate = '<?=$edate?>';
+        if(sdate == ""){
+            sdate = new Date().toISOString().substring(0, 10);
+        }
+        if(edate == ""){
+            edate = new Date().toISOString().substring(0, 10);
+        }
+        
+         $("#sdate").val();
          $("#edate").val(new Date().toISOString().substring(0, 10));
     
         $("#search").click(function(){
