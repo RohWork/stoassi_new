@@ -29,6 +29,7 @@ class Customer_model extends CI_Model {
         if(!empty($vo->table_code)){
             $this->db->where('ol.table_code', $vo->table_code);
         }
+        $this->db->order_by("rp.reg_date","DESC");
         
         return $this->db->get()->result();
     }
