@@ -303,8 +303,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $vo->config_per_page = $config['per_page'];
             
-            $data['offset'] = $vo->offset = $offset;
-            $data['order_list'] = $this->cust_md->order_list($vo);
+            $data['offset'] =  $offset;
+            $data['order_list'] = $this->cust_md->order_limit_list($vo,$offset);
             
 
             
