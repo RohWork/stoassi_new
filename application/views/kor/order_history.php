@@ -8,7 +8,7 @@ echo get_qr("www.naver.com",'naver');
 			<p class="lead">주문내역</p>
                         <div>
                             <button id="excel_print" class="btn btn-primary">excel</button>
-                            <input type="date" id="sdate" name="sdate" style="margin-left:30px"/>~
+                            <input type="date" id="sdate" name="sdate" style="margin-left:100px"/>~
                             <input type="date" id="edate" name="edate"/>
                         </div>
 		</div>
