@@ -298,8 +298,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->pagination->initialize($config);
             $data['pagination'] = $this->pagination->create_links();
             
+            $vo->config_per_page = $config['per_page'];
             
-            $data['offset'] = $offset;
+            $data['offset'] = $vo->offset = $offset;
             $data['order_list'] = $this->cust_md->order_list($vo);
             
 
