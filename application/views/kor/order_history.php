@@ -28,10 +28,11 @@ echo get_qr("www.naver.com",'naver');
 					<tr>
                                                 <td><?=$no?></td>
                                                 <td><span style="margin-left: 10px"><?=$row->table_no > 0 ? $row->table_no : "포장" ?></span></td>
-                                                <td><?=$row->status == 1 ?  "비어있음" : "사용중" ?></td>
+                                                <td><?=$row->recipe_name ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
+                                                <td><?=$row->cnt ?></td>
+                                                <td><?=$row->status ?></td>
 						<td><?=$row->regi_date?></td>
-                                                <td><?=$row->cnt?></td>
 					</tr>
 				<?php
 				$no ++;
