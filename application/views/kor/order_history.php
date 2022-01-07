@@ -5,7 +5,7 @@ echo get_qr("www.naver.com",'naver');
 	<div class="container">
 		<div class="page-header">
 			<h1>주문관리</h1>
-			<p class="lead">주문관리 화면 - 카운터</p>
+			<p class="lead">주문내역</p>
 		</div>
 		<div class="table-responsive">
 			<table class="table">
