@@ -289,7 +289,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             //$vo->date = date('Y-m-d');
             $vo->shop_idx = $this->session->userdata("shop_idx");
             $data['sdate'] = $vo->sdate = $this->input->get("sdate");
-            $data['edate'] = $vo->sdate = $this->input->get("edate");
+            $data['edate'] = $vo->edate = $this->input->get("edate");
             
             
             $config['base_url'] = current_url() . '?' . reset_GET('per_page');
