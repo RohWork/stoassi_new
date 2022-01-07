@@ -43,16 +43,14 @@ class Customer_model extends CI_Model {
         $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
         $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
         $this->db->join('table_info as ti', 'ti.table_code = ol.table_code', 'left');
-        if(!empty($vo->date)){
-        $this->db->like('ol.regi_date', $vo->date);
+
+
+        if(!empty($vo->sdate)){
+            $this->db->where('ol.reg_date >=', $vo->sdate);
         }
-        if(!empty($vo->status)){
-            $this->db->where_in('ol.status', $vo->status);
+        if(!empty($vo->edate)){
+            $this->db->where('ol.reg_date <=', $vo->edate);
         }
-        if(!empty($vo->table_code)){
-            $this->db->where('ol.table_code', $vo->table_code);
-        }
-       
          $this->db->limit($vo->config_per_page, $offset);
         
         $this->db->order_by("ol.regi_date","DESC");
