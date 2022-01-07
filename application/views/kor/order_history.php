@@ -6,10 +6,12 @@ echo get_qr("www.naver.com",'naver');
 		<div class="page-header">
 			<h1>주문관리</h1>
 			<p class="lead">주문내역</p>
-                        <button id="excel_print" class="btn btn-primary">excel</button>
-                        <input type="date" id="sdate" name="sdate" style="margin-left:30px"/>~
-                        <input type="date" id="edate" name="edate"/>
 		</div>
+            <div class="col-sm5">
+                    <button id="excel_print" class="btn btn-primary">excel</button>
+                    <input type="date" id="sdate" name="sdate" style="margin-left:30px"/>~
+                    <input type="date" id="edate" name="edate"/>
+                </div>
 		<div class="table-responsive">
 			<table class="table">
 				<thead>
