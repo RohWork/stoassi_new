@@ -286,7 +286,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->library('pagination');
             
             $vo = new stdClass();
-            
+            //$vo->date = date('Y-m-d');
             $vo->shop_idx = $this->session->userdata("shop_idx");
             
             
