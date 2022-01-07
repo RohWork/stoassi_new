@@ -74,8 +74,8 @@ echo get_qr("www.naver.com",'naver');
             edate = new Date().toISOString().substring(0, 10);
         }
         
-         $("#sdate").val();
-         $("#edate").val(new Date().toISOString().substring(0, 10));
+         $("#sdate").val(sdate);
+         $("#edate").val(edate);
     
         $("#search").click(function(){
            $("#frm").submit();
