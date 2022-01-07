@@ -42,8 +42,8 @@ echo get_qr("www.naver.com",'naver');
 			</table>
 		</div>
 		<div class="col-sm-12">
-			<button type="button" id="input_button" class="btn btn-primary">주문추가</button>
-                        <button type="button" id="table_input" class="btn btn-primary">테이블셋팅</button>
+			<!--<button type="button" id="input_button" class="btn btn-primary">주문추가</button>-->
+                        
 		</div>
 		<div class="col-sm-offset-5">
 			<ul class="pagination">
