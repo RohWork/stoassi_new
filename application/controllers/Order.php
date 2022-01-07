@@ -290,6 +290,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $vo->shop_idx = $this->session->userdata("shop_idx");
             
             
+            $config['base_url'] = current_url() . '?' . reset_GET('per_page');
+            $config['per_page'] = 10;
+
             $offset = $this->input->get('per_page');
             
             $config['total_rows'] = $this->cust_md->count_order($vo);
