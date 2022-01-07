@@ -65,6 +65,7 @@
               <ul class="dropdown-menu" role="menu">
                 <li <?=$order_list_kitchen?>><a href="/Order/order_list_kitchen">주방주문관리</a></li>
                 <li <?=$order_list_counter?>><a href="/Order/order_list_counter">카운터주문관리</a></li>
+                <li <?=$order_history?>><a href="/Order/order_history">주문내역</a></li>
               </ul>
             </li>
           </ul>
