@@ -30,9 +30,6 @@ class Customer_model extends CI_Model {
             $this->db->where('ol.table_code', $vo->table_code);
         }
         
-        if(!empty($vo->offset)){
-            $this->db->limit($vo->config_per_page, $vo->offset);
-        }
         $this->db->order_by("ol.regi_date","DESC");
         
         return $this->db->get()->result();
@@ -55,10 +52,9 @@ class Customer_model extends CI_Model {
         if(!empty($vo->table_code)){
             $this->db->where('ol.table_code', $vo->table_code);
         }
+       
+         $this->db->limit($vo->config_per_page, $offset);
         
-        if(!empty($vo->offset)){
-            $this->db->limit($vo->config_per_page, $offset);
-        }
         $this->db->order_by("ol.regi_date","DESC");
         
         return $this->db->get()->result();
