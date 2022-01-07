@@ -63,7 +63,7 @@ echo get_qr("www.naver.com",'naver');
 </body>
 <script>
   
-    document.ready(function(){
+    $(document).ready(function(){
          $("#sdate").val(new Date().toISOString().substring(0, 10));
          $("#edate").val(new Date().toISOString().substring(0, 10));
     
