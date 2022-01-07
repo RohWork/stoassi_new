@@ -33,7 +33,7 @@ class Customer_model extends CI_Model {
         if(!empty($vo->offset)){
             $this->db->limit($vo->config_per_page, $vo->offset);
         }
-        $this->db->order_by("ol.reg_date","DESC");
+        $this->db->order_by("ol.regi_date","DESC");
         
         return $this->db->get()->result();
     }
