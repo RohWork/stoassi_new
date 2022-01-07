@@ -38,6 +38,32 @@ class Customer_model extends CI_Model {
         return $this->db->get()->result();
     }
     
+     function order_limit_list($offset,$vo){
+        $this->db->select("if(ol.place = 1 , '취식' , '포장') AS place, ol.table_code, ol.cnt, ol.order_no, ol.price");
+        $this->db->select("ol.regi_date, CASE WHEN ol.status = 1 then '결제대기' when ol.status = 2 then '결제완료' when ol.status = 3 then '조리완료' else '결제취소' END  AS STATUS");
+        $this->db->select("ri.name AS recipe_name , rg.name AS group_name, ol.idx, ol.table_no");
+        $this->db->from('order_list AS ol');
+        $this->db->join('recipe_info AS ri ', 'ol.recipe_idx = ri.idx', 'left');
+        $this->db->join('recipe_group AS rg', 'ri.group_idx = rg.idx', 'left');
+        $this->db->join('table_info as ti', 'ti.table_code = ol.table_code', 'left');
+        if(!empty($vo->date)){
+        $this->db->like('ol.regi_date', $vo->date);
+        }
+        if(!empty($vo->status)){
+            $this->db->where_in('ol.status', $vo->status);
+        }
+        if(!empty($vo->table_code)){
+            $this->db->where('ol.table_code', $vo->table_code);
+        }
+        
+        if(!empty($vo->offset)){
+            $this->db->limit($vo->config_per_page, $offset);
+        }
+        $this->db->order_by("ol.regi_date","DESC");
+        
+        return $this->db->get()->result();
+    }
+    
     function count_order($vo){
         
         $this->db->select('*');
