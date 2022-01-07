@@ -7,7 +7,8 @@ echo get_qr("www.naver.com",'naver');
 			<h1>주문관리</h1>
 			<p class="lead">주문내역</p>
                         <button id="excel_print">excel</button>
-                        <input type="date" id="history_date"/>
+                        <input type="date" id="sdate" name="sdate"/>~
+                        <input type="date" id="edate" name="edate"/>
 		</div>
 		<div class="table-responsive">
 			<table class="table">
