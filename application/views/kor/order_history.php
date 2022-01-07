@@ -14,6 +14,7 @@ echo get_qr("www.naver.com",'naver');
                     <div class="col-sm-3">
                         <input type="date" id="history_date"/>
                     </div>
+                    <div class="col-sm-6"></div>
                 </div>
 		<div class="table-responsive">
 			<table class="table">
