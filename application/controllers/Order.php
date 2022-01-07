@@ -278,6 +278,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function order_history(){
+
+
+            $this->head_data = header_set("order_history");
+            
+            $this->load->library('pagination');
+            
+            $vo = new stdClass();
+            $vo->date = date('Y-m-d');
+            $vo->shop_idx = $this->session->userdata("shop_idx");
+            
+            
+            $offset = $this->input->get('per_page');
+            
+            $vo->status = Array('1','2');
+            $config['total_rows'] = $this->cust_md->count_order($vo);
+            
+            $config = setPagination($config);
+            $this->pagination->initialize($config);
+            $data['pagination'] = $this->pagination->create_links();
+            
+            
+            $data['offset'] = $offset;
+            $data['order_list'] = $this->cust_md->order_list($vo);
+            
+
+            
+            $this->load->view(LANGUAGE.'/header', $this->head_data);
+            $this->load->view(LANGUAGE.'/order_history', $data);
+            
+        }
+        
         public function get_table_qr(){
             
             $code = '';
