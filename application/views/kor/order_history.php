@@ -11,12 +11,13 @@ echo get_qr("www.naver.com",'naver');
 			<table class="table">
 				<thead>
 					<tr>
+                                                <th>no</th>
 						<th>테이블번호</th>
-                                                <th>테이블상태</th>
+                                                <th>주문명</th>
                                                 <th>주문금액</th>
-						<th>주문시각</th>
-                                                <th>주문수</th>
-						<th>결제여부/수정</th>
+						<th>주문수</th>
+                                                <th>주문결과</th>
+                                                <th>주문일시</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,12 +26,12 @@ echo get_qr("www.naver.com",'naver');
 				foreach($order_list as $row){		
 				?>
 					<tr>
+                                                <td><?=$no?></td>
                                                 <td><span style="margin-left: 10px"><?=$row->table_no > 0 ? $row->table_no : "포장" ?></span></td>
                                                 <td><?=$row->status == 1 ?  "비어있음" : "사용중" ?></td>
                                                 <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
 						<td><?=$row->regi_date?></td>
                                                 <td><?=$row->cnt?></td>
-						<td><button type="button" id="modi_button" onclick="detail_order_show('<?=$row->table_no?>','<?=$row->table_code?>')" class="btn btn-default">상세보기</button></td>
 					</tr>
 				<?php
 				$no ++;
