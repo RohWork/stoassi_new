@@ -7,6 +7,14 @@ echo get_qr("www.naver.com",'naver');
 			<h1>주문관리</h1>
 			<p class="lead">주문내역</p>
 		</div>
+                <div class="rows">
+                    <div class="col-sm-3">
+                        <button id="excel_print">excel</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="date" id="history_date"/>
+                    </div>
+                </div>
 		<div class="table-responsive">
 			<table class="table">
 				<thead>
