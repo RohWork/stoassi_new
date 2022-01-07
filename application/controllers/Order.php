@@ -292,7 +292,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             $offset = $this->input->get('per_page');
             
-            $vo->status = Array('1','2');
             $config['total_rows'] = $this->cust_md->count_order($vo);
             
             $config = setPagination($config);
