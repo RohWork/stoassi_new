@@ -82,7 +82,7 @@ echo get_qr("www.naver.com",'naver');
         });
         
         $("#excel_print").click(function(){
-            location.href = "/Order/order_history_ex?sdate=<?=$sdate?>&edate=<?=$edate?>";
+            window.open("/Order/order_history_excel?sdate=<?=$sdate?>&edate=<?=$edate?>");
         });
     });
 </script>
