@@ -315,6 +315,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
         }
         
+        public function order_history_excel(){
+
+
+            $this->head_data = header_set("order_history");
+            
+            $this->load->library('pagination');
+            
+            $vo = new stdClass();
+            //$vo->date = date('Y-m-d');
+            $vo->shop_idx = $this->session->userdata("shop_idx");
+            $data['sdate'] = $vo->sdate = $this->input->get("sdate");
+            $data['edate'] = $vo->edate = $this->input->get("edate");
+            
+            
+
+            $offset = $this->input->get('per_page');
+            
+            $vo->config_per_page = $config['per_page'];
+            
+            $data['offset'] =  $offset;
+            $data['order_list'] = $this->cust_md->order_limit_list($vo,$offset);
+            
+            $this->load->view(LANGUAGE.'/order_history_excel', $data);
+            
+        }
+        
         public function get_table_qr(){
             
             $code = '';
