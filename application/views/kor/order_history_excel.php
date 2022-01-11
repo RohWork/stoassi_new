@@ -1,0 +1,59 @@
+<?php 
+    $file_name = 'history_ex_'.date('Y-m-d');
+    header("Content-Disposition: attachment; filename=$file_name.xls");
+?>
+
+<html>
+    <head></head>
+    <body
+    <div class="container">
+		<div class="page-header">
+			<h1>주문관리</h1>
+			<p class="lead">주문내역</p>
+                        <div>
+                            <form action="" method="get" id="frm" name="frm">
+                                <button type="button" id="excel_print" class="btn btn-primary">excel</button>
+                                <input type="date" id="sdate" name="sdate" style="margin-left:100px"/>~
+                                <input type="date" id="edate" name="edate"/>
+                                <button type="button" id="search" name="search" class="btn btn-primary">검색</button>
+                            </form>
+                        </div>
+		</div>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+                                            <th>no</th>
+                                            <th>테이블번호</th>
+                                            <th>주문명</th>
+                                            <th>주문금액</th>
+                                            <th>주문수</th>
+                                            <th>주문결과</th>
+                                            <th>주문일시</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php
+				$no = 1+$offset;
+				foreach($order_list as $row){		
+				?>
+					<tr>
+                                                <td><?=$no?></td>
+                                                <td><span style="margin-left: 10px"><?=$row->table_no > 0 ? $row->table_no : "포장" ?></span></td>
+                                                <td><?=$row->recipe_name ?></td>
+                                                <td><?=$row->price?> <?= !empty($row->price) ?  "zł" : "" ?></td>
+                                                <td><?=$row->cnt ?></td>
+                                                <td><?=$row->STATUS ?></td>
+						<td><?=$row->regi_date?></td>
+					</tr>
+				<?php
+				$no ++;
+				}
+				?>				
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
