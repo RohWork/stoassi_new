@@ -51,8 +51,9 @@ class Customer_model extends CI_Model {
         if(!empty($vo->edate)){
             $this->db->where('ol.regi_date <=', $vo->edate);
         }
-        $this->db->limit($vo->config_per_page, $offset);
-        
+        if(!empty($vo->config_per_page)){
+            $this->db->limit($vo->config_per_page, $offset);
+        }
         $this->db->order_by("ol.regi_date","DESC");
         
         return $this->db->get()->result();
