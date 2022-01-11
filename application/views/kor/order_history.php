@@ -80,6 +80,10 @@ echo get_qr("www.naver.com",'naver');
         $("#search").click(function(){
            $("#frm").submit();
         });
+        
+        $("#excel_print").click(function(){
+            location.href("/Order/order_history_ex");
+        });
     });
 </script>
 </html>
