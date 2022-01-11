@@ -13,7 +13,7 @@
 		<div class="table-responsive">
 			<table class="table" border="1">
 				<thead>
-					<tr>
+					<tr bgcolor="gray">
                                             <th>no</th>
                                             <th>테이블번호</th>
                                             <th>주문명</th>
