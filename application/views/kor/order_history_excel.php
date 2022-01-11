@@ -8,19 +8,10 @@
     <body
     <div class="container">
 		<div class="page-header">
-			<h1>주문관리</h1>
-			<p class="lead">주문내역</p>
-                        <div>
-                            <form action="" method="get" id="frm" name="frm">
-                                <button type="button" id="excel_print" class="btn btn-primary">excel</button>
-                                <input type="date" id="sdate" name="sdate" style="margin-left:100px"/>~
-                                <input type="date" id="edate" name="edate"/>
-                                <button type="button" id="search" name="search" class="btn btn-primary">검색</button>
-                            </form>
-                        </div>
+			<h1>주문내역</h1>
 		</div>
 		<div class="table-responsive">
-			<table class="table">
+			<table class="table" border="1">
 				<thead>
 					<tr>
                                             <th>no</th>
