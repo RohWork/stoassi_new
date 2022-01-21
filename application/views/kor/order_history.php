@@ -95,7 +95,7 @@
 
 </body>
 <script>
-  
+    
     $(document).ready(function(){
          
         var sdate = '<?=$sdate?>';
@@ -121,10 +121,10 @@
     
     function order_set(orderparam){
     
-        if(orderparam == '<?=$orderparam?>'){
-            $("#orderdesc").val("asc");
-        }else{
+        if(orderparam == '<?=$orderparam?>' && <?=$order_desc?> == 'asc'){
             $("#orderdesc").val("desc");
+        }else{
+            $("#orderdesc").val("asc");
         }
         
         $("#orderparam").val(orderparam);
