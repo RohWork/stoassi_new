@@ -3,6 +3,27 @@
         cursor: pointer;
     }
 </style>
+<?php
+    if(empty($orderdesc)){
+        $orderdesc = "desc";
+    }
+    if(empty($orderparam)){
+        $orderparam = "order_date";
+    }
+
+    $class_type = array();
+    
+    if($orderdesc = "asc"){
+        $class_order = "top";
+    }else{
+        $class_order = "bottom";
+    }
+    
+    $class_type[$orderparam] = "glyphicon glyphicon-triangle-".$class_order;
+    
+    
+    
+?>
 
 	<div class="container">
 		<div class="page-header">
@@ -22,12 +43,12 @@
 				<thead>
 					<tr>
                                             <th>no</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>테이블번호</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문명</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문금액</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문수</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문결과</th>
-                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문일시</th>
+                                            <th class="header_button"><span class="<?=$class_type['table_no']?>"></span>테이블번호</th>
+                                            <th class="header_button"><span class="<?=$class_type['order_name']?>"></span>주문명</th>
+                                            <th class="header_button"><span class="<?=$class_type['order_price']?>"></span>주문금액</th>
+                                            <th class="header_button"><span class="<?=$class_type['order_cnt']?>"></span>주문수</th>
+                                            <th class="header_button"><span class="<?=$class_type['order_result']?>"></span>주문결과</th>
+                                            <th class="header_button"><span class="<?=$class_type['order_date']?>"></span>주문일시</th>
 					</tr>
 				</thead>
 				<tbody>
