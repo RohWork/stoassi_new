@@ -20,7 +20,7 @@
         'order_date' => '',
     );
     
-    if($orderdesc = "asc"){
+    if($orderdesc == "asc"){
         $class_order = "top";
     }else{
         $class_order = "bottom";
