@@ -34,8 +34,8 @@
                                 <button type="button" id="excel_print" class="btn btn-primary">excel</button>
                                 <input type="date" id="sdate" name="sdate" style="margin-left:100px"/>~
                                 <input type="date" id="edate" name="edate"/>
-                                <input type="hidden" id="orderdesc" name="orderdesc"/>
-                                <input type="hidden" id="orderparam" name="orderparam"/>
+                                <input type="hidden" id="orderdesc" name="orderdesc" value="<?=$orderdesc?>"/>
+                                <input type="hidden" id="orderparam" name="orderparam" value="<?=$orderparam?>"/>
                                 
                                 <button type="button" id="search" name="search" class="btn btn-primary">검색</button>
                             </form>
