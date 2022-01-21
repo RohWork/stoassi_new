@@ -4,13 +4,6 @@
     }
 </style>
 <?php
-    if(empty($orderdesc)){
-        $orderdesc = "desc";
-    }
-    if(empty($orderparam)){
-        $orderparam = "order_date";
-    }
-
     $class_type = array(
         'table_no' => '',
         'order_name' => '',
