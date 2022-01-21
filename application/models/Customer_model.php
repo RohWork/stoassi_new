@@ -54,8 +54,29 @@ class Customer_model extends CI_Model {
         if(!empty($vo->config_per_page)){
             $this->db->limit($vo->config_per_page, $offset);
         }
-        $this->db->order_by("ol.regi_date","DESC");
-        
+        if(!empty($vo->orderparam)){
+            switch($vo->orderparam){
+                case 'table_no':  
+                    $this->db->order_by("ol.table_no",$vo->orderdesc);
+                    break;
+                case 'order_name':  
+                    $this->db->order_by("ri.name",$vo->orderdesc);
+                    break;
+                case 'order_price':  
+                    $this->db->order_by("ol.price",$vo->orderdesc);
+                    break;
+                case 'order_cnt':  
+                    $this->db->order_by("ol.cnt",$vo->orderdesc);
+                    break;
+                case 'order_result':  
+                    $this->db->order_by("ol.status",$vo->orderdesc);
+                    break;
+                default:  
+                    $this->db->order_by("ol.regi_date","desc");
+                    break;
+            }
+            
+        }
         return $this->db->get()->result();
     }
     
