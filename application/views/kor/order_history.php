@@ -121,7 +121,7 @@
     
     function order_set(orderparam){
     
-        if(orderparam == '<?=$orderparam?>' && <?=$order_desc?> == 'desc'){
+        if(orderparam == '<?=$orderparam?>' && '<?=$order_desc?>' == 'desc'){
             $("#orderdesc").val("asc");
         }else{
             $("#orderdesc").val("desc");
