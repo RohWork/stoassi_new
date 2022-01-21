@@ -20,12 +20,12 @@ echo get_qr("www.naver.com",'naver');
 				<thead>
 					<tr>
                                             <th>no</th>
-                                            <th>테이블번호</th>
-                                            <th>주문명</th>
-                                            <th>주문금액</th>
-                                            <th>주문수</th>
-                                            <th>주문결과</th>
-                                            <th>주문일시</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>테이블번호</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>주문명</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>주문금액</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>주문수</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>주문결과</th>
+                                            <th><span class="glyphicon glyphicon-triangle-bottom"></span>주문일시</th>
 					</tr>
 				</thead>
 				<tbody>
