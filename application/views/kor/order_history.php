@@ -41,6 +41,9 @@
                                 <button type="button" id="excel_print" class="btn btn-primary">excel</button>
                                 <input type="date" id="sdate" name="sdate" style="margin-left:100px"/>~
                                 <input type="date" id="edate" name="edate"/>
+                                <input type="hidden" id="orderdesc" name="orderdesc"/>
+                                <input type="hidden" id="orderparam" name="orderparam"/>
+                                
                                 <button type="button" id="search" name="search" class="btn btn-primary">검색</button>
                             </form>
                         </div>
@@ -50,12 +53,12 @@
 				<thead>
 					<tr>
                                             <th>no</th>
-                                            <th class="header_button"><span class="<?=$class_type['table_no']?>"></span>테이블번호</th>
-                                            <th class="header_button"><span class="<?=$class_type['order_name']?>"></span>주문명</th>
-                                            <th class="header_button"><span class="<?=$class_type['order_price']?>"></span>주문금액</th>
-                                            <th class="header_button"><span class="<?=$class_type['order_cnt']?>"></span>주문수</th>
-                                            <th class="header_button"><span class="<?=$class_type['order_result']?>"></span>주문결과</th>
-                                            <th class="header_button"><span class="<?=$class_type['order_date']?>"></span>주문일시</th>
+                                            <th class="header_button" onclick="order_set('table_no');"><span class="<?=$class_type['table_no']?>"></span>테이블번호</th>
+                                            <th class="header_button" onclick="order_set('order_name');"><span class="<?=$class_type['order_name']?>"></span>주문명</th>
+                                            <th class="header_button" onclick="order_set('order_price');"><span class="<?=$class_type['order_price']?>"></span>주문금액</th>
+                                            <th class="header_button" onclick="order_set('order_cnt');"><span class="<?=$class_type['order_cnt']?>"></span>주문수</th>
+                                            <th class="header_button" onclick="order_set('order_result');"><span class="<?=$class_type['order_result']?>"></span>주문결과</th>
+                                            <th class="header_button" onclick="order_set('order_date');"><span class="<?=$class_type['order_date']?>"></span>주문일시</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -115,5 +118,18 @@
             window.open("/Order/order_history_excel?sdate=<?=$sdate?>&edate=<?=$edate?>");
         });
     });
+    
+    function order_set(orderparam){
+    
+        if(orderparam == '<?=$orderparam?>'){
+            $("#order").val("asc");
+        }else{
+            $("#order").val("desc");
+        }
+        
+        $("#orderparam").val(orderparam);
+        
+        $("#frm").submit();
+    }
 </script>
 </html>
