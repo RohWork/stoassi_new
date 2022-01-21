@@ -108,7 +108,7 @@
         });
         
         $("#excel_print").click(function(){
-            window.open("/Order/order_history_excel?sdate=<?=$sdate?>&edate=<?=$edate?>");
+            window.open("/Order/order_history_excel?sdate=<?=$sdate?>&edate=<?=$edate?>&orderdesc=<?=$orderdesc?>&orderparam=<?=$orderparam?>");
         });
     });
     
