@@ -122,9 +122,9 @@
     function order_set(orderparam){
     
         if(orderparam == '<?=$orderparam?>'){
-            $("#order").val("asc");
+            $("#orderdesc").val("asc");
         }else{
-            $("#order").val("desc");
+            $("#orderdesc").val("desc");
         }
         
         $("#orderparam").val(orderparam);
