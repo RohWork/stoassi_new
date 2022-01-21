@@ -72,7 +72,7 @@ class Customer_model extends CI_Model {
                     $this->db->order_by("ol.status",$vo->orderdesc);
                     break;
                 default:  
-                    $this->db->order_by("ol.regi_date","desc");
+                    $this->db->order_by("ol.regi_date",$vo->orderdesc);
                     break;
             }
             
