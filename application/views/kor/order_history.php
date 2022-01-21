@@ -1,8 +1,6 @@
 <style>
     .header_button{
         cursor: pointer;
-        width:5px;
-        height:5px;
     }
 </style>
 
