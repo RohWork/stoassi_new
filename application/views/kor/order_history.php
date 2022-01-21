@@ -11,7 +11,14 @@
         $orderparam = "order_date";
     }
 
-    $class_type = array();
+    $class_type = array(
+        'table_no' => '',
+        'order_name' => '',
+        'order_price' => '',
+        'order_cnt' => '',
+        'order_result' => '',
+        'order_date' => '',
+    );
     
     if($orderdesc = "asc"){
         $class_order = "top";
