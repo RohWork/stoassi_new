@@ -22,12 +22,12 @@
 				<thead>
 					<tr>
                                             <th>no</th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button">테이블번호</span></th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button"></span>주문명</th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button"></span>주문금액</th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button"></span>주문수</th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button"></span>주문결과</th>
-                                            <th><span class="glyphicon glyphicon-triangle-bottom header_button"></span>주문일시</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>테이블번호</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문명</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문금액</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문수</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문결과</th>
+                                            <th class="header_button"><span class="glyphicon glyphicon-triangle-bottom"></span>주문일시</th>
 					</tr>
 				</thead>
 				<tbody>
