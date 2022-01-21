@@ -339,7 +339,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['sdate'] = $vo->sdate = $this->input->get("sdate");
             $data['edate'] = $vo->edate = $this->input->get("edate");
             
-            
+            if(empty($this->input->get('orderdesc'))){
+                $data['orderdesc'] = $vo->orderdesc = "desc";
+                $data['orderparam'] = $vo->orderparam = "order_date";
+            }else{
+                $data['orderdesc'] = $vo->orderdesc = $this->input->get('orderdesc');
+                $data['orderparam'] = $vo->orderparam = $this->input->get('orderparam');
+            }
 
             $offset = $this->input->get('per_page');
             
