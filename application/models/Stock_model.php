@@ -251,6 +251,9 @@ class Stock_model extends CI_Model {
             $this->db->where($search_vo);
         }*/
         $this->db->limit($search_vo->config_per_page, $offset);
+        $this->db->order_by("sh.idx", "desc");
+        
+        
         return $this->db->get()->result();
     }
 }
