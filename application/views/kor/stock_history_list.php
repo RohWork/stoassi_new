@@ -40,19 +40,20 @@
         <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
             <tr class='tr_head'>
                 <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
-                <th>상품명</th>
-                <th>상품가격</th>
-                <th>갯수</th>
-                <th>주문일시</th>
+                <th>재고명</th>
+                <th>재고개수</th>
+                <th>입출고여부</th>
+                <th>메모</th>
+                <th>등록일</th>
             </tr>
             <?php
-                foreach($list_wait as $list){
+                foreach($stock_history as $list){
             ?>
             <tr class='tr_content'>
                 <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
-                <td><?=$list->recipe_name?></td>
-                <td><?=$list->price?></td>
-                <td><?=$list->cnt?></td>
+                <td><?=$list->stock_name?></td>
+                <td><?=$list->count?></td>
+                <td><?=$list->inout == 1 ? "입고" : "출고" ?></td>
                 <td><?=$list->regi_date?></td>
             </tr>
             <?php
