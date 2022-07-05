@@ -230,6 +230,14 @@ class Stock_model extends CI_Model {
         
         return $this->db->get()->result();
     }
+    
+    function get_stock_history_array($where){
+        $this->db->select("*");
+        $this->db->from("stock_history");
+        $this->db->where($where);
+        
+        return $this->db->get()->result();
+    }
 }
 
 ?>
