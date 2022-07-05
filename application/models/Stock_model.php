@@ -250,6 +250,7 @@ class Stock_model extends CI_Model {
         /*if(!empty($search_vo)){
             $this->db->where($search_vo);
         }*/
+        $this->db->limit($search_vo->config_per_page, $offset);
         return $this->db->get()->result();
     }
 }
