@@ -231,14 +231,24 @@ class Stock_model extends CI_Model {
         return $this->db->get()->result();
     }
     
-    function get_stock_history_array($where){
+    function count_stock_history($search_vo){
+        
+        $this->db->select('si.*');
+        $this->db->from('stock_info as si');
+        $this->db->join("stock_category as sc", 'si.stock_category_idx = sc.idx', 'left');
+        $this->db->join("stock_seller_info as ssi", 'si.stock_seller_idx = ssi.idx', 'left');
+
+        return $this->db->count_all_results();
+    }
+    
+    function get_stock_history_array($search_vo){
         
         
         $this->db->select('si.name as stock_name, sh.count, sh.inout, sh.memo, sh.regi_date');
         $this->db->from('stock_history as sh');
         $this->db->join("stock_info as si", 'sh.stock_idx = si.idx', 'left');
         
-        $this->db->where($where);
+        $this->db->where($search_vo);
         
         return $this->db->get()->result();
     }
