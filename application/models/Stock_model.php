@@ -241,7 +241,7 @@ class Stock_model extends CI_Model {
         return $this->db->count_all_results();
     }
     
-    function get_stock_history_array($search_vo){
+    function get_stock_history_array($search_vo, $offset){
         
         
         $this->db->select('si.name as stock_name, sh.count, sh.inout, sh.memo, sh.regi_date');
