@@ -247,9 +247,9 @@ class Stock_model extends CI_Model {
         $this->db->select('si.name as stock_name, sh.count, sh.inout, sh.memo, sh.regi_date');
         $this->db->from('stock_history as sh');
         $this->db->join("stock_info as si", 'sh.stock_idx = si.idx', 'left');
-        
-        $this->db->where($search_vo);
-        
+        if(!empty($search_vo)){
+            $this->db->where($search_vo);
+        }
         return $this->db->get()->result();
     }
 }
