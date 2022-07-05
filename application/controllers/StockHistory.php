@@ -34,7 +34,7 @@ class StockHistory extends CI_Controller {
             $data['pagination'] = $this->pagination->create_links();
             
             
-            $data['stock_history'] = $this->stock_md->get_stock_history_array($search_vo);
+            $data['stock_history'] = $this->stock_md->get_stock_history_array($search_vo, $offset);
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
             $this->load->view(LANGUAGE.'/stock_history_list', $data);
