@@ -19,6 +19,7 @@
                     <td><?=$list->stock_name?></td>
                     <td><?=$list->count?></td>
                     <td><?=$list->inout == 1 ? "입고" : "출고" ?></td>
+                    <td><?=$list->memo?></td>
                     <td><?=$list->regi_date?></td>
                 </tr>
                 <?php
