@@ -6,7 +6,6 @@
         <div class="table-responsive">
             <table class="table">
                 <tr class='tr_head'>
-                    <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
                     <th>재고명</th>
                     <th>재고개수</th>
                     <th>입출고여부</th>
@@ -17,7 +16,6 @@
                     foreach($stock_history as $list){
                 ?>
                 <tr class='tr_content'>
-                    <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
                     <td><?=$list->stock_name?></td>
                     <td><?=$list->count?></td>
                     <td><?=$list->inout == 1 ? "입고" : "출고" ?></td>
