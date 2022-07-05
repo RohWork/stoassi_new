@@ -1,65 +1,38 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Refobi</title>
-        <!-- 합쳐지고 최소화된 최신 CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-        <!-- 부가적인 테마 -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- 쿠키 사용 --> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> 
-
-        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <!-- Custom styles for this template --> 
-        <link href="../../assets/css/sticky-footer-navbar.css" rel="stylesheet">
-        
-        <style>
-            .tr_head{
-               border-bottom: 1px solid black;
-               height: 30px;
-               line-break: 3px;
-               font-weight: bold;
-            }
-            .tr_content{
-                height:30px;
-                line-height: 30px;
-            }
-            .tr_content td{
-                padding-left:10px;
-            }
-        </style>
-    </head>
-    <body>
-        <table style="width:100%;" cellpadding='0' border='0' cellspacing='0'>
-            <tr class='tr_head'>
-                <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
-                <th>재고명</th>
-                <th>재고개수</th>
-                <th>입출고여부</th>
-                <th>메모</th>
-                <th>등록일</th>
-            </tr>
-            <?php
-                foreach($stock_history as $list){
-            ?>
-            <tr class='tr_content'>
-                <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
-                <td><?=$list->stock_name?></td>
-                <td><?=$list->count?></td>
-                <td><?=$list->inout == 1 ? "입고" : "출고" ?></td>
-                <td><?=$list->regi_date?></td>
-            </tr>
-            <?php
-                }
-            ?>
-        </table>
+<div class="container">
+        <div class="page-header">
+                <h1>재고관리</h1>
+                <p class="lead">재고관리 화면</p>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr class='tr_head'>
+                    <th style='padding-left:10px;'><input type='checkbox' id="all_check" onclick="all_check()"/></th>
+                    <th>재고명</th>
+                    <th>재고개수</th>
+                    <th>입출고여부</th>
+                    <th>메모</th>
+                    <th>등록일</th>
+                </tr>
+                <?php
+                    foreach($stock_history as $list){
+                ?>
+                <tr class='tr_content'>
+                    <td><input type='checkbox' id="list_idx" class="chk" name="list_idx[]" value="<?=$list->idx?>" /></td>
+                    <td><?=$list->stock_name?></td>
+                    <td><?=$list->count?></td>
+                    <td><?=$list->inout == 1 ? "입고" : "출고" ?></td>
+                    <td><?=$list->regi_date?></td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </table>
+            <div class="col-sm-offset-5">
+                <ul class="pagination">
+                        <?= $pagination ?>
+                </ul>
+            </div>
+        </div>
     </body>
     
     
