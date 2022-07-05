@@ -13,12 +13,14 @@ class StockHistory extends CI_Controller {
 
         function history_list(){
             
+            $this->load->library('pagination');
+            
             $data = array();
             
             $where = "";
             
             $search_vo  = new stdClass();
-
+            
             $config['per_page'] = 10;
             $offset = $this->input->get('per_page');
             $config['base_url'] = current_url() . '?' . reset_GET('per_page');
