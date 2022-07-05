@@ -7,15 +7,17 @@ class StockHistory extends CI_Controller {
             
             $this->head_data = header_set("stock_history");
 
-            $this->load->model('Recipe_model', 'recipe_md', TRUE);
+            $this->load->model('Stock_model', 'stock_md', TRUE);
             
         }
 
         function history_list(){
             
+            $data = array();
             
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
+            $this->load->view(LANGUAGE.'/history_list', $data);
         }
         
 }
