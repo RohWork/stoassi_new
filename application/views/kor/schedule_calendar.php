@@ -1,0 +1,17 @@
+<style>
+    .select_font{
+        font-size: 10px;
+    }
+    
+</style>
+
+	<div class="container">
+            <div class="page-header">
+                    <h1>레시피 관리</h1>
+                    <p class="lead">레시피 관리 화면</p>
+            </div>
+                
+            
+            
+    </body>
+<script>
