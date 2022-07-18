@@ -7,7 +7,7 @@
         clear: both;
     }
     td {
-        text-align: center;
+        text-align: left;
         height: 50px;
         width: 70px;
     }
