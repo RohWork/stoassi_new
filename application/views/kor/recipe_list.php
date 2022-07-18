@@ -2,25 +2,7 @@
     .select_font{
         font-size: 10px;
     }
-
-    table {
-        clear: both;
-    }
-    input {
-        height: 50px;
-        width: 70px;
-        border: none;
-        background-color:  orange;
-        font-size: 30px;
-    }
-    .year_mon{
-        font-size: 25px;
-    }
-    .colToday{
-        background-color: #FFA07A;
-    }
-
-
+    
 </style>
 
 	<div class="container">
