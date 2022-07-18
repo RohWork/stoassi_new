@@ -8,8 +8,8 @@
     }
     td {
         text-align: left;
-        height: 50px;
-        width: 70px;
+        height: 80px;
+        width: 100px;
         padding:5px;
         vertical-align: top;
     }
