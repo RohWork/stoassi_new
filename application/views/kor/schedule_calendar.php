@@ -25,7 +25,9 @@
     .colToday{
         background-color: #FFA07A;
     }
-
+    th{
+        text-align: center
+    }
 
 </style>
 
@@ -37,12 +39,12 @@
             <div class="table-responsive">
                 <table class="table" id="calendar" >
                     <thead>
-                        <tr style="text-align:center"> 
+                        <tr> 
                             <th><input name="preMon" type="button" value="<"></th>
                             <th colspan="5" class="year_mon"></th>
                             <th><input name="nextMon" type="button" value=">"></th>
                         </tr>
-                        <tr style="text-align:center">
+                        <tr>
                             <th>MON</th>
                             <th>TUE</th>
                             <th>WED</th>
