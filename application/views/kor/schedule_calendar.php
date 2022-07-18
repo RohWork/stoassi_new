@@ -35,14 +35,14 @@
                     <p class="lead">일정 관리 화면</p>
             </div>
             <div class="table-responsive">
-                <table class="table" id="calendar" style="text-align:center">
+                <table class="table" id="calendar" >
                     <thead>
-                        <tr> 
+                        <tr style="text-align:center"> 
                             <th><input name="preMon" type="button" value="<"></th>
                             <th colspan="5" class="year_mon"></th>
                             <th><input name="nextMon" type="button" value=">"></th>
                         </tr>
-                        <tr>
+                        <tr style="text-align:center">
                             <th>MON</th>
                             <th>TUE</th>
                             <th>WED</th>
