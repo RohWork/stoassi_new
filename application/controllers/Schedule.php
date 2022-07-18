@@ -9,15 +9,17 @@ class Schedule extends CI_Controller {
             $this->load->model('Shop_model', 'shop_md', TRUE);
             $this->load->model('Schedule_model', 'schedule_md', TRUE);
             
-            $this->head_data = header_set("schedule");
+            
 	}
         
         public function index(){
             
+            $this->head_data = header_set("schedule_calendar");
+            
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
 
-            
+            $data = array();
             
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
