@@ -8,7 +8,7 @@
 	<div class="container">
             <div class="page-header">
                     <h1>일정 관리</h1>
-                    <p class="lead">레시피 관리 화면</p>
+                    <p class="lead">일정 관리 화면</p>
             </div>
                 
             
