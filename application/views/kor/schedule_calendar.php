@@ -10,13 +10,11 @@
         text-align: center;
         height: 50px;
         width: 70px;
-        background-color: #FFFDC5;  
     }
     input {
         height: 50px;
         width: 70px;
         border: none;
-        background-color:  orange;
         font-size: 30px;
     }
     .year_mon{
