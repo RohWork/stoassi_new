@@ -10,16 +10,6 @@
                     <h1>일정 관리</h1>
                     <p class="lead">일정 관리 화면</p>
             </div>
-            <div class="row" style="margin-bottom: 3rem">
-                <div class="col-sm-2" >
-                    <select id="group_select" name="group_select" class="form-control">
-                        <option value="0">선택없음</option>
-                        <?php                            
-                            echo $group_select;
-                        ?>
-                    </select>
-                </div>
-            </div>
             <div class="table-responsive">
                 <table class="table" id="calendar">
                     <thead>
