@@ -70,10 +70,10 @@
             </li>
             <li class="dropdown <?=$schedule?>">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                  주문관리 <span class="caret"></span>
+                  근무관리 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li <?=$schedule_calendar?>><a href="/Order/order_list_kitchen">주방주문관리</a></li>
+                <li <?=$schedule_calendar?>><a href="/Schedule/index">근무확인</a></li>
               </ul>
             </li>
           </ul>
