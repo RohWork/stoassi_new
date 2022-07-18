@@ -68,6 +68,14 @@
                 <li <?=$order_history?>><a href="/Order/order_history">주문내역</a></li>
               </ul>
             </li>
+            <li class="dropdown <?=$schedule?>">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  주문관리 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li <?=$schedule_calendar?>><a href="/Order/order_list_kitchen">주방주문관리</a></li>
+              </ul>
+            </li>
           </ul>
             <!--
             <li><a href="#contact">Contact</a></li>
