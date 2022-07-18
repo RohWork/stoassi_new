@@ -116,4 +116,5 @@
                 }) 
             }
             buildCalendar();
+            });
 </script>
