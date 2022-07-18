@@ -10,6 +10,7 @@
         text-align: left;
         height: 50px;
         width: 70px;
+        padding:5px;
     }
     input {
         height: 50px;
