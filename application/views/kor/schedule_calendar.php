@@ -6,11 +6,6 @@
     table {
         clear: both;
     }
-    th {
-        height: 50px;
-        width: 70px;
-        background-color:  orange;
-    }
     td {
         text-align: center;
         height: 50px;
