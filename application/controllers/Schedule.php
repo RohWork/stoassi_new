@@ -8,6 +8,8 @@ class Schedule extends CI_Controller {
             $this->load->model('Member_model', 'member_md', TRUE);
             $this->load->model('Shop_model', 'shop_md', TRUE);
             $this->load->model('Schedule_model', 'schedule_md', TRUE);
+            
+            $this->head_data = header_set("schedule");
 	}
         
         public function index(){
