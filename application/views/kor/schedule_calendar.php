@@ -11,6 +11,7 @@
         height: 50px;
         width: 70px;
         padding:5px;
+        vertical-align: top;
     }
     input {
         height: 50px;
