@@ -116,5 +116,5 @@
                 }) 
             }
             buildCalendar();
-            });
+            })
 </script>
