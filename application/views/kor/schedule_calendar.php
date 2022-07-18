@@ -35,7 +35,7 @@
                     <p class="lead">일정 관리 화면</p>
             </div>
             <div class="table-responsive">
-                <table class="table" id="calendar" >
+                <table class="table" id="calendar" border="1">
                     <thead>
                         <tr> 
                             <th><input name="preMon" type="button" value="<"></th>
