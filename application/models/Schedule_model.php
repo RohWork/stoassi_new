@@ -16,7 +16,7 @@ class Schedule_model extends CI_Model {
         $this->db->like('cd.date', $date, 'after');
         $this->db->like('cd.shop_idx', $shop_idx);
         
-        return $this->db->get()->result();
+        return $this->db->get()->row();
         
     }
     
