@@ -133,7 +133,7 @@
                 //schedule = "";
                 
                 var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
-                date = today.getFullYear()+'-'+month_data;
+                var post_date = today.getFullYear()+'-'+month_data;
                 
                 
                 $.ajax({
@@ -141,7 +141,7 @@
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{"date": date},
+                    data:{"date": post_date},
                     
                     success:function(data){
                         schedule = data.schedule;
