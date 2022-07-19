@@ -29,16 +29,16 @@ class Schedule extends CI_Controller {
             
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
-            $date = $this->input->post('post_date');
+            $post_date = $this->input->post('post_date');
             
-            if(empty($date)){
-                $date = date('Y-m');
+            if(empty($post_date)){
+                $post_date = date('Y-m');
                 echo "데이터가없음";
             }
             
             echo $date;
 
-            $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$date);
+            $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$post_date);
             
             
             header("Content-Type: application/json;");
