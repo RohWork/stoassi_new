@@ -76,7 +76,7 @@
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
                 get_schedule_data();
-                console.log(schedule);
+                console.log(sche);
                 buildCalendar();
             })
             
@@ -85,7 +85,7 @@
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
                 get_schedule_data();
-                console.log(schedule);
+                console.log(sche);
                 buildCalendar();
                     
             })
