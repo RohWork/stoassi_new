@@ -27,6 +27,8 @@ class Schedule extends CI_Controller {
         
         public function get_month_schedule(){
             
+            $shop_idx = $this->session->userdata('shop_idx');
+            $user_idx = $this->session->userdata('user_idx');
             $date = $this->input->post('date');
             
             if(empty($date)){
