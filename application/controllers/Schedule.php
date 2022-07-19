@@ -21,7 +21,7 @@ class Schedule extends CI_Controller {
 
                         
             $this->load->view(LANGUAGE.'/header', $this->head_data);
-            $this->load->view(LANGUAGE.'/schedule_calendar', $data);
+            $this->load->view(LANGUAGE.'/schedule_calendar');
             
         }
         
