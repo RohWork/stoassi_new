@@ -140,6 +140,7 @@
                     
                     success:function(data){
                         sche = data.schedule;
+                        console.log(data);
                         
                     },
                     error: function(xhr,status,error) {
@@ -148,8 +149,6 @@
                         return false;
                     }	 
                 });
-                
-                console.log(data);
             }
             
             get_schedule_data();
