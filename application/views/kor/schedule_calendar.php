@@ -149,7 +149,8 @@
                         return false;
                     }	 
                 });
-            
+                
+                console.log(schedule);
             }
             
             buildCalendar();
