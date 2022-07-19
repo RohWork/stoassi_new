@@ -18,8 +18,9 @@ class Schedule extends CI_Controller {
             
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
+            $date = date('Y-m');
 
-            $data = array();
+            $data['schedule'] = $this->schedule_md->get_schedule($shop_idx,$user_idx,$date);
             
             
             $this->load->view(LANGUAGE.'/header', $this->head_data);
