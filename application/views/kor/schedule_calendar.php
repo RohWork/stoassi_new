@@ -149,5 +149,7 @@
             }
             
             buildCalendar();
+            get_schedule_data();
+            
             })
 </script>
