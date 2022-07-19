@@ -98,7 +98,9 @@
                 firstDate = new Date(nowYear,nowMonth,1).getDate();
                 firstDay = new Date(nowYear,nowMonth,1).getDay(); //1st의 요일
                 lastDate = new Date(nowYear,nowMonth+1,0).getDate();
-
+                
+                get_schedule_data(nowYear, nowMonth);
+                
                 if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
                     lastDate[1]=29;
                 }
@@ -128,10 +130,10 @@
             }
             
             
-            function get_schedule_data(){
+            function get_schedule_data(year,month){
                 
-                var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
-                var post_date = { post_date : today.getFullYear()+'-'+month_data };
+                var month_data = ("0" + (month + 1)).slice(-2);
+                var post_date = { post_date : year+'-'+month_data };
                 
                 
                 console.log(post_date);
