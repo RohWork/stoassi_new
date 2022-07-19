@@ -134,7 +134,6 @@
                 
                 var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
                 
-                console.log(today.getFullYear()+'-'+month_data);
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
                     type:'post',
