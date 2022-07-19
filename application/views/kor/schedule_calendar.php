@@ -139,7 +139,7 @@
                     data : post_date,
                     
                     success:function(data){
-                        sche = data.schedule;
+                        data.schedule;
                         
                     },
                     error: function(xhr,status,error) {
@@ -152,8 +152,9 @@
                 console.log(sche);
             }
             
-            buildCalendar();
             get_schedule_data();
+            buildCalendar();
+            
             
             })
 </script>
