@@ -29,7 +29,7 @@ class Schedule extends CI_Controller {
             
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
-            $date = $this->input->post('date');
+            $date = $this->input->post('post_date');
             
             if(empty($date)){
                 $date = date('Y-m');
