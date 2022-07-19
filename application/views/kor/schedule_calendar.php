@@ -138,7 +138,7 @@
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{"date":today.getFullYear()+'-'+today.getMonth()},
+                    data:{"date":today.getFullYear()+'-'+today.getMonth().padStart(2, '0') },
                     success:function(data){
                         schedule = data.schedule;
                     },
