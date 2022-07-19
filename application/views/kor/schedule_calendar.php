@@ -137,7 +137,7 @@
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{"date":today.getFullYear()+'-'+today.getMonth().padStart(2, '0') },
+                    data:{"date":today.getFullYear()+'-'+"0"+today.getMonth().slice(-2) },
                     success:function(data){
                         schedule = data.schedule;
                     },
