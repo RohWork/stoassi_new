@@ -68,12 +68,15 @@
 <script>
     $(function(){
             var today = new Date();
-            var date = new Date();           
+            var date = new Date();
+            var schedule;
 
             $("input[name=preMon]").click(function() { // 이전달
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
+                get_schedule_data();
+                console.log(schedule);
                 buildCalendar();
             })
             
@@ -81,7 +84,10 @@
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
+                get_schedule_data();
+                console.log(schedule);
                 buildCalendar();
+                    
             })
 
 
@@ -120,6 +126,28 @@
                     }
                 }) 
             }
+            
+            
+            function get_schedule_data(){
+                
+                $.ajax({
+                    url:'/stockCategory/set_update_category',
+                    type:'post',
+                    processData : false,
+                    contentType : false,
+                    data:{"date":today.getFullYear()+'-'+today.getMonth()},
+                    success:function(data){
+                        schedule = data.schedule;
+                    },
+                    error: function(xhr,status,error) {
+                        console.log(xhr,status,error);
+                        alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                        return false;
+                    }	 
+                });
+            
+            }
+            
             buildCalendar();
             })
 </script>
