@@ -25,7 +25,7 @@ class Schedule extends CI_Controller {
             
         }
         
-        public function get_month_schedule(){
+        function get_month_schedule(){
             
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
@@ -33,11 +33,8 @@ class Schedule extends CI_Controller {
             
             if(empty($post_date)){
                 $post_date = date('Y-m');
-                echo "데이터가없음";
             }
             
-            echo $post_date;
-
             $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$post_date);
             
             
