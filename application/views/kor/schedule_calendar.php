@@ -138,8 +138,6 @@
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
                     type:'post',
-                    processData : false,
-                    contentType : false,
                     data : post_date,
                     
                     success:function(data){
