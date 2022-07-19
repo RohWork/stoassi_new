@@ -150,7 +150,7 @@
                     }	 
                 });
                 
-                console.log(schedule);
+                console.log(data);
             }
             
             buildCalendar();
