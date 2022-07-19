@@ -140,7 +140,7 @@
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{post_date: post_date},
+                    data:{ post_date : post_date },
                     
                     success:function(data){
                         schedule = data.schedule;
