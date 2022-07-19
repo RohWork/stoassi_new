@@ -149,7 +149,7 @@
                     }	 
                 });
                 
-                console.log(sche);
+                console.log(data);
             }
             
             get_schedule_data();
