@@ -132,12 +132,14 @@
                 
                 schedule = "";
                 
+                var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
+                
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{"date":today.getFullYear()+'-'+"0"+today.getMonth().slice(-2) },
+                    data:{"date":today.getFullYear()+'-'+.slice(-2) },
                     success:function(data){
                         schedule = data.schedule;
                     },
