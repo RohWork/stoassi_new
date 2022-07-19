@@ -32,8 +32,10 @@ class Schedule extends CI_Controller {
             if(empty($date)){
                 $date = date('Y-m');
             }
-
+            
             $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$date);
+            
+            var_dump($result);
             
             header("Content-Type: application/json;");
             echo json_encode($result);
