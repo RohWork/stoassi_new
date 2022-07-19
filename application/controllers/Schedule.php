@@ -34,6 +34,8 @@ class Schedule extends CI_Controller {
             if(empty($date)){
                 $date = date('Y-m');
             }
+            
+            echo $date;
 
             $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$date);
             
