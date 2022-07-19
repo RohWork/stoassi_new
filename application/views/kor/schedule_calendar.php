@@ -130,6 +130,8 @@
             
             function get_schedule_data(){
                 
+                schedule = "";
+                
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
                     type:'post',
