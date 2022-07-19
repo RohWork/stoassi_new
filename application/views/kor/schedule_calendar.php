@@ -131,7 +131,6 @@
             function get_schedule_data(){
                 
                 schedule = "";
-                console.log(today.getFullYear()+'-'+today.getMonth());
                 
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
