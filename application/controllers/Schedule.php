@@ -33,6 +33,7 @@ class Schedule extends CI_Controller {
             
             if(empty($date)){
                 $date = date('Y-m');
+                echo "데이터가없음";
             }
             
             echo $date;
