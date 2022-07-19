@@ -131,7 +131,7 @@
             function get_schedule_data(){
                 
                 $.ajax({
-                    url:'/stockCategory/set_update_category',
+                    url:'/Schedule/get_month_schedule',
                     type:'post',
                     processData : false,
                     contentType : false,
