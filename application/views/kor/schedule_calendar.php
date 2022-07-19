@@ -139,7 +139,7 @@
                     data : post_date,
                     
                     success:function(data){
-                        data.schedule;
+                        sche = data.schedule;
                         
                     },
                     error: function(xhr,status,error) {
