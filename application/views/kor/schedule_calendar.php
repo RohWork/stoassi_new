@@ -130,7 +130,7 @@
             
             function get_schedule_data(){
                 
-                //schedule = "";
+                schedule = "";
                 
                 var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
                 var post_date = today.getFullYear()+'-'+month_data;
