@@ -75,8 +75,7 @@
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
-                get_schedule_data();
-                console.log(sche);
+
                 buildCalendar();
             })
             
@@ -84,8 +83,7 @@
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
-                get_schedule_data();
-                console.log(sche);
+
                 buildCalendar();
                     
             })
@@ -100,6 +98,7 @@
                 lastDate = new Date(nowYear,nowMonth+1,0).getDate();
                 
                 get_schedule_data(nowYear, nowMonth);
+                console.log(sche);
                 
                 if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
                     lastDate[1]=29;
@@ -156,7 +155,6 @@
                 
             }
             
-            get_schedule_data();
             buildCalendar();
             
             
