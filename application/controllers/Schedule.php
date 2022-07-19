@@ -25,7 +25,9 @@ class Schedule extends CI_Controller {
             
         }
         
-        public function get_month_schedule($date){
+        public function get_month_schedule(){
+            
+            $date = $this->input->post('date');
             
             if(empty($date)){
                 $date = date('Y-m');
