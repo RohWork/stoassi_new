@@ -69,7 +69,7 @@
     $(function(){
             var today = new Date();
             var date = new Date();
-            var schedule;
+            var sche;
 
             $("input[name=preMon]").click(function() { // 이전달
                 $("#calendar > tbody > td").remove();
@@ -141,7 +141,8 @@
                     data : post_date,
                     
                     success:function(data){
-                        schedule = data.schedule;
+                        sche = data.schedule;
+                        
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
@@ -150,7 +151,7 @@
                     }	 
                 });
                 
-                console.log(data);
+                console.log(sche);
             }
             
             buildCalendar();
