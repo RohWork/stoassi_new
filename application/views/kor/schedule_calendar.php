@@ -139,7 +139,7 @@
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{"date":today.getFullYear()+'-'+.slice(-2) },
+                    data:{"date":today.getFullYear()+'-'+month_data },
                     success:function(data){
                         schedule = data.schedule;
                     },
