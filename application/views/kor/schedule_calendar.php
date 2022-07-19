@@ -133,14 +133,14 @@
                 schedule = "";
                 
                 var month_data = ("0" + (today.getMonth() + 1)).slice(-2);
-                var post_date = today.getFullYear()+'-'+month_data;
+                var post_date = { post_date : today.getFullYear()+'-'+month_data };
                 
                 $.ajax({
                     url:'/Schedule/get_month_schedule',
                     type:'post',
                     processData : false,
                     contentType : false,
-                    data:{ post_date : post_date },
+                    data : post_date,
                     
                     success:function(data){
                         schedule = data.schedule;
