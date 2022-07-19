@@ -18,13 +18,23 @@ class Schedule extends CI_Controller {
             
             $shop_idx = $this->session->userdata('shop_idx');
             $user_idx = $this->session->userdata('user_idx');
-            $date = date('Y-m');
 
-            $data['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$date);
-            
-            
+                        
             $this->load->view(LANGUAGE.'/header', $this->head_data);
             $this->load->view(LANGUAGE.'/schedule_calendar', $data);
+            
+        }
+        
+        public function get_month_schedule($date){
+            
+            if(empty($date)){
+                $date = date('Y-m');
+            }
+
+            $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$date);
+            
+            header("Content-Type: application/json;");
+            echo json_encode($result);
             
         }
 }
