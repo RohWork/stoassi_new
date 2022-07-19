@@ -36,7 +36,7 @@ class Schedule extends CI_Controller {
                 echo "데이터가없음";
             }
             
-            echo $date;
+            echo $post_date;
 
             $result['schedule'] = $this->schedule_md->get_schedule($user_idx,$shop_idx,$post_date);
             
