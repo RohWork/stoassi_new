@@ -77,7 +77,7 @@
                 today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
 
                 buildCalendar();
-            })
+            });
             
             $("input[name=nextMon]").click(function(){ //다음달
                 $("#calendar > tbody > td").remove();
@@ -86,80 +86,86 @@
 
                 buildCalendar();
                     
-            })
+            });
 
-
-            function buildCalendar() {
-                
-                nowYear = today.getFullYear();
-                nowMonth = today.getMonth();
-                firstDate = new Date(nowYear,nowMonth,1).getDate();
-                firstDay = new Date(nowYear,nowMonth,1).getDay(); //1st의 요일
-                lastDate = new Date(nowYear,nowMonth+1,0).getDate();
-                
-                var sch_data = get_schedule_data(nowYear, nowMonth);
-                console.log(sch_data);
-
-                if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
-                    lastDate[1]=29;
-                }
-
-                $(".year_mon").text(nowYear+"년 "+(nowMonth+1)+"월");
-
-                for (i=0; i<firstDay; i++) { //첫번째 줄 빈칸
-                    $("#calendar tbody:last").append("<td></td>");
-                }
-                for (i=1; i <=lastDate; i++){ // 날짜 채우기
-                    plusDate = new Date(nowYear,nowMonth,i).getDay();
-                    if (plusDate==0) {
-                        $("#calendar tbody:last").append("<tr></tr>");
-                    }
-                    $("#calendar tbody:last").append("<td class='date'>"+ i +"</td>");
-                }
-                if($("#calendar > tbody > td").length%7!=0) { //마지막 줄 빈칸
-                    for(i=1; i<= $("#calendar > tbody > td").length%7; i++) {
-                        $("#calendar tbody:last").append("<td></td>");
-                    }
-                }
-                $(".date").each(function(index){ // 오늘 날짜 표시
-                    if(nowYear==date.getFullYear() && nowMonth==date.getMonth() && $(".date").eq(index).text()==date.getDate()) {
-                        $(".date").eq(index).addClass('colToday');
-                    }
-                }) 
-                
-
-            }
-            
-            
-            function get_schedule_data(year,month){
-                
-                var sche;
-                var month_data = ("0" + (month + 1)).slice(-2);
-                var post_date = { post_date : year+'-'+month_data };
-                
-                
-                console.log(post_date);
-                $.ajax({
-                    url:'/Schedule/get_month_schedule',
-                    type:'post',
-                    data : post_date,
-                    async: false,
-                    success:function(data){
-                        sche = data.schedule;
-                    },
-                    error: function(xhr,status,error) {
-                        console.log(xhr,status,error);
-                        alert("네트워크 오류!! 관리자에게 문의 주세요!!");
-                        return false;
-                    }	 
-                });
-                
-                 return sche;
-                
-            }
             
             buildCalendar();
             
             
-            })
+    });
+    
+    function buildCalendar() {
+
+        nowYear = today.getFullYear();
+        nowMonth = today.getMonth();
+        firstDate = new Date(nowYear,nowMonth,1).getDate();
+        firstDay = new Date(nowYear,nowMonth,1).getDay(); //1st의 요일
+        lastDate = new Date(nowYear,nowMonth+1,0).getDate();
+
+        var sch_data = get_schedule_data(nowYear, nowMonth);
+
+
+        if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
+            lastDate[1]=29;
+        }
+
+        $(".year_mon").text(nowYear+"년 "+(nowMonth+1)+"월");
+
+        for (i=0; i<firstDay; i++) { //첫번째 줄 빈칸
+            $("#calendar tbody:last").append("<td></td>");
+        }
+        for (i=1; i <=lastDate; i++){ // 날짜 채우기
+            plusDate = new Date(nowYear,nowMonth,i).getDay();
+            if (plusDate==0) {
+                $("#calendar tbody:last").append("<tr></tr>");
+            }
+            $("#calendar tbody:last").append("<td class='date'>"+ i +"</td>");
+        }
+        if($("#calendar > tbody > td").length%7!=0) { //마지막 줄 빈칸
+            for(i=1; i<= $("#calendar > tbody > td").length%7; i++) {
+                $("#calendar tbody:last").append("<td></td>");
+            }
+        }
+        $(".date").each(function(index){ // 오늘 날짜 표시
+            if(nowYear==date.getFullYear() && nowMonth==date.getMonth() && $(".date").eq(index).text()==date.getDate()) {
+                $(".date").eq(index).addClass('colToday');
+            }
+        }) 
+
+
+    }
+
+
+    function get_schedule_data(year,month){
+
+        var sche;
+        var month_data = ("0" + (month + 1)).slice(-2);
+        var post_date = { post_date : year+'-'+month_data };
+
+
+        console.log(post_date);
+        $.ajax({
+            url:'/Schedule/get_month_schedule',
+            type:'post',
+            data : post_date,
+            async: false,
+            success:function(data){
+                sche = data.schedule;
+            },
+            error: function(xhr,status,error) {
+                console.log(xhr,status,error);
+                alert("네트워크 오류!! 관리자에게 문의 주세요!!");
+                return false;
+            }	 
+        });
+
+         return sche;
+
+    }
+
+    function set_schedule_array(sch_data){
+
+
+
+    }
 </script>
