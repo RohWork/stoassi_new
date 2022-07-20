@@ -166,8 +166,11 @@
 
     }
 
-    function set_schedule_array(sch_data){
+    function set_schedule_array(sche){
 
+        for(var i=0; i<sche.length; i++){
+            console.log(sche);
+        }
 
 
     }
