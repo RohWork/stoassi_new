@@ -33,18 +33,15 @@
     }
     .sch_wait{
         height:30px;
-        width:80px;
-        text-align: center;
+        text-align: right;
     }
     .sch_complete{
         height:30px;
-        width:80px;
-        text-align: center;
+        text-align: right;
     }
     .sch_end{
         height:30px;
-        width:80px;
-        text-align: center;
+        text-align: right;
     }
 </style>
 
