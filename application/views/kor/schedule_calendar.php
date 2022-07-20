@@ -33,17 +33,17 @@
     }
     .sch_wait{
         height:30px;
-        width:150px;
+        width:80px;
         text-align: center;
     }
     .sch_complete{
         height:30px;
-        width:150px;
+        width:80px;
         text-align: center;
     }
     .sch_end{
         height:30px;
-        width:150px;
+        width:80px;
         text-align: center;
     }
 </style>
