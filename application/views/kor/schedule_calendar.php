@@ -124,8 +124,12 @@
             }
             
             var day_cnt = ("0" + (i + 1)).slice(-2);
+            var span_data = "";
+            if(sch_data[day_cnt] != "undefined"){
+                span_data = sch_data[day_cnt];
+            }
             
-            $("#calendar tbody:last").append("<td class='date'>"+ i + sch_data[day_cnt]+"</td>");
+            $("#calendar tbody:last").append("<td class='date'>"+ i + span_data+"</td>");
         }
         if($("#calendar > tbody > td").length%7!=0) { //마지막 줄 빈칸
             for(i=1; i<= $("#calendar > tbody > td").length%7; i++) {
