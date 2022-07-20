@@ -38,6 +38,7 @@
         text-align: center;
         border : 1px solid black;
         background-color: #C8E6C9;
+        vertical-align: middle;
     }
     .sch_complete{
         height:50px;
@@ -46,6 +47,7 @@
         text-align: center;
         border : 1px solid black;
         background-color: #FFFFFF;
+        vertical-align: middle;
     }
     .sch_end{
         height:50px;
@@ -54,6 +56,7 @@
         text-align: center;
         border : 1px solid black;
         background-color: #CCCCCC;
+        vertical-align: middle;
     }
 </style>
 
