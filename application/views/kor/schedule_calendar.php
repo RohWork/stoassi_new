@@ -97,7 +97,8 @@
                 firstDay = new Date(nowYear,nowMonth,1).getDay(); //1st의 요일
                 lastDate = new Date(nowYear,nowMonth+1,0).getDate();
                 
-                
+                var sch_data = get_schedule_data(nowYear, nowMonth);
+                console.log(sch_data+"2");
 
                 if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
                     lastDate[1]=29;
@@ -126,8 +127,7 @@
                     }
                 }) 
                 
-                var sch_data = get_schedule_data(nowYear, nowMonth);
-                console.log(sch_data+"2");
+
             }
             
             
