@@ -200,7 +200,7 @@
         for(var i=0; i<sche.length; i++){
             
             var day = sche[i].date.split('-')[2];
-            console.log(sche[i].use_cnt);
+            console.log(sche[i].use_cnt+day);
             if(sche[i].state == "1"){
                 if(Number(sche[i].time_cnt) > 0){   //신청대기중인 일정이 1개이상인경우
                     if( Number(sche[i].use_cnt) == 0){   //해당날짜에 본인이 신청한 일정이 없는경우
