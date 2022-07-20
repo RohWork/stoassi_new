@@ -14,8 +14,8 @@ class Schedule_model extends CI_Model {
         
         $this->db->from('commute_date as cd');
         $this->db->like('cd.date', $date, 'after');
-        $this->db->where('cd.date >= now()');
         $this->db->like('cd.shop_idx', $shop_idx);
+        $this->db->where('cd.date >= now()');
         
         return $this->db->get()->result();
         
