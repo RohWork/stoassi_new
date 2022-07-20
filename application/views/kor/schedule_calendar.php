@@ -125,7 +125,7 @@
             
             var day_cnt = ("0" + (i + 1)).slice(-2);
             var span_data = "";
-            if(sch_data[day_cnt] != "undefined"){
+            if(sch_data[day_cnt] != ""){
                 span_data = sch_data[day_cnt];
             }
             
@@ -153,7 +153,6 @@
         var post_date = { post_date : year+'-'+month_data };
 
 
-        console.log(post_date);
         $.ajax({
             url:'/Schedule/get_month_schedule',
             type:'post',
