@@ -69,29 +69,30 @@
     var today, date;
     
     $(function(){
-            today = new Date();
-            date = new Date();
-            
+        
+        today = new Date();
+        date = new Date();
 
-            $("input[name=preMon]").click(function() { // 이전달
-                $("#calendar > tbody > td").remove();
-                $("#calendar > tbody > tr").remove();
-                today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
 
-                buildCalendar();
-            });
-            
-            $("input[name=nextMon]").click(function(){ //다음달
-                $("#calendar > tbody > td").remove();
-                $("#calendar > tbody > tr").remove();
-                today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
+        $("input[name=preMon]").click(function() { // 이전달
+            $("#calendar > tbody > td").remove();
+            $("#calendar > tbody > tr").remove();
+            today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
 
-                buildCalendar();
-                    
-            });
-
-            
             buildCalendar();
+        });
+
+        $("input[name=nextMon]").click(function(){ //다음달
+            $("#calendar > tbody > td").remove();
+            $("#calendar > tbody > tr").remove();
+            today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
+
+            buildCalendar();
+
+        });
+
+
+        buildCalendar();
             
             
     });
