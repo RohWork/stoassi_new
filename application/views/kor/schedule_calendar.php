@@ -173,7 +173,7 @@
         for(var i=0; i<sche.length; i++){
             
             var day = String(sche.date).split('-')[2];
-            
+            console.log(day);
             if(sche.state = 1){
                 if(sche.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
                     if( sche.use_cnt = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
