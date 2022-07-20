@@ -126,7 +126,7 @@
             var day_cnt = ("0" + (i + 1)).slice(-2);
             var span_data = "";
             console.log(sch_data[day_cnt]);
-            if(sch_data[day_cnt] != ""){
+            if(typeof sch_data[day_cnt] != undefined){
                 span_data = sch_data[day_cnt];
             }
             
