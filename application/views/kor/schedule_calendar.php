@@ -69,8 +69,8 @@
     var today, date;
     
     $(function(){
-            var today = new Date();
-            var date = new Date();
+            today = new Date();
+            date = new Date();
             
 
             $("input[name=preMon]").click(function() { // 이전달
