@@ -143,7 +143,7 @@
                     url:'/Schedule/get_month_schedule',
                     type:'post',
                     data : post_date,
-                    
+                    async: false,
                     success:function(data){
                         sche = data.schedule;
                         console.log(sche+"1");
