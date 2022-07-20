@@ -122,7 +122,10 @@
             if (plusDate==0) {
                 $("#calendar tbody:last").append("<tr></tr>");
             }
-            $("#calendar tbody:last").append("<td class='date'>"+ i +"</td>");
+            
+            var day_cnt = ("0" + (i + 1)).slice(-2);
+            
+            $("#calendar tbody:last").append("<td class='date'>"+ i + sch_data[day_cnt]+"</td>");
         }
         if($("#calendar > tbody > td").length%7!=0) { //마지막 줄 빈칸
             for(i=1; i<= $("#calendar > tbody > td").length%7; i++) {
@@ -177,17 +180,17 @@
             if(sche.state = 1){
                 if(sche.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
                     if( sche.use_cnt = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
-                        sch_array[day] =   "신청가능";
+                        sch_array[day] =   "<span class='sch_wait'>신청가능</span>";
                     }else{  //해당날짜에 본인이 신청한 일정이 하나 이상인 경우
-                        sch_array[day] = "신청완료";
+                        sch_array[day] = "<span class='sch_complete'>신청완료</span>";
                     }
                 }else{  //신청대기중인 일정이 0개인경우
-                    sch_array[day] = "신청마감";
+                    sch_array[day] = "<span class='sch_end'>신청마감</span>";
                 }
             }
         }
         
-        console.log(sch_array);
+        return sch_array;
 
 
     }
