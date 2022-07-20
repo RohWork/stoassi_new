@@ -69,7 +69,7 @@
     $(function(){
             var today = new Date();
             var date = new Date();
-            var sche;
+            
 
             $("input[name=preMon]").click(function() { // 이전달
                 $("#calendar > tbody > td").remove();
@@ -131,6 +131,7 @@
             
             function get_schedule_data(year,month){
                 
+                var sche;
                 var month_data = ("0" + (month + 1)).slice(-2);
                 var post_date = { post_date : year+'-'+month_data };
                 
