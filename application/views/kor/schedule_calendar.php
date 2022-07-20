@@ -143,7 +143,7 @@
                     
                     success:function(data){
                         sche = data.schedule;
-                        
+                        console.log(sche);
                         
                     },
                     error: function(xhr,status,error) {
