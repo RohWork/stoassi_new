@@ -153,7 +153,7 @@
             data : post_date,
             async: false,
             success:function(data){
-                sche = data.schedule;
+                sche = set_schedule_array(data.schedule);
             },
             error: function(xhr,status,error) {
                 console.log(xhr,status,error);
