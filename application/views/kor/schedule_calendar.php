@@ -147,7 +147,7 @@
                     success:function(data){
                         sche = data.schedule;
                         console.log(sche+"1");
-                        
+                        return sche;
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
@@ -156,7 +156,7 @@
                     }	 
                 });
                 
-                return sche;
+                
                 
             }
             
