@@ -205,9 +205,11 @@
                 if(Number(sche[i].time_cnt) > 0){   //신청대기중인 일정이 1개이상인경우
                     if( Number(sche[i].use_cnt) == 0){   //해당날짜에 본인이 신청한 일정이 없는경우
                         sch_array[day] =   "<div class='sch_wait'>신청가능</div>";
-                    }else{  //해당날짜에 본인이 신청한 일정이 하나 이상인 경우
+                    }else{
                         sch_array[day] = "<div class='sch_complete'>신청완료</div>";
                     }
+                }else if( Number(sche[i].use_cnt) > 0){
+                    sch_array[day] = "<div class='sch_complete'>신청완료</div>";
                 }else{  //신청대기중인 일정이 0개인경우
                     sch_array[day] = "<div class='sch_end'>신청마감</div>";
                 }
