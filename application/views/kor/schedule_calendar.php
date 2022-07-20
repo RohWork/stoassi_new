@@ -197,7 +197,7 @@
         
         var sch_array = new Array;
     
-        for(var i=0; i<sche.length; i++){
+        for(var i=1; i<sche.length; i++){
             
             var day = sche[i].date.split('-')[2];
             console.log(sche[i].use_cnt+day);
