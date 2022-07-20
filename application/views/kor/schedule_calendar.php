@@ -75,7 +75,8 @@
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()-1, today.getDate());
-
+                var sch_data = get_schedule_data(nowYear, nowMonth);
+                console.log(sch_data+"2");
                 buildCalendar();
             })
             
@@ -83,7 +84,8 @@
                 $("#calendar > tbody > td").remove();
                 $("#calendar > tbody > tr").remove();
                 today = new Date ( today.getFullYear(), today.getMonth()+1, today.getDate());
-
+                var sch_data = get_schedule_data(nowYear, nowMonth);
+                console.log(sch_data+"2");
                 buildCalendar();
                     
             })
@@ -126,8 +128,7 @@
                     }
                 }) 
                 
-                var sch_data = get_schedule_data(nowYear, nowMonth);
-                console.log(sch_data+"2");
+
             }
             
             
