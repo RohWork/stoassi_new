@@ -184,12 +184,12 @@
             if(sche[i].state == "1"){
                 if(Number(sche[i].time_cnt) > 0){   //신청대기중인 일정이 1개이상인경우
                     if( Number(sche[i].use_cnt) == 0){   //해당날짜에 본인이 신청한 일정이 없는경우
-                        sch_array[day] =   "<span class='sch_wait'>신청가능</span>";
+                        sch_array[day] =   "<br/><span class='sch_wait'>신청가능</span>";
                     }else{  //해당날짜에 본인이 신청한 일정이 하나 이상인 경우
-                        sch_array[day] = "<span class='sch_complete'>신청완료</span>";
+                        sch_array[day] = "<br/><span class='sch_complete'>신청완료</span>";
                     }
                 }else{  //신청대기중인 일정이 0개인경우
-                    sch_array[day] = "<span class='sch_end'>신청마감</span>";
+                    sch_array[day] = "<br/><span class='sch_end'>신청마감</span>";
                 }
             }
         }
