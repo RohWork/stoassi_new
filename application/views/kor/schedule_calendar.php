@@ -175,8 +175,8 @@
             var day = String(sche.date).split('-')[2];
             
             if(sche.state = 1){
-                if(sch.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
-                    if( sch.use_cnt = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
+                if(sche.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
+                    if( sche.use_cnt = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
                         sch_array[day] =   "신청가능";
                     }else{  //해당날짜에 본인이 신청한 일정이 하나 이상인 경우
                         sch_array[day] = "신청완료";
