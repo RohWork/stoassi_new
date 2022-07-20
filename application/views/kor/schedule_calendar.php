@@ -98,7 +98,7 @@
                 lastDate = new Date(nowYear,nowMonth+1,0).getDate();
                 
                 var sch_data = get_schedule_data(nowYear, nowMonth);
-                console.log(sch_data+"2");
+                console.log(sch_data);
 
                 if((nowYear%4===0 && nowYear % 100 !==0) || nowYear%400===0) { //윤년 적용
                     lastDate[1]=29;
@@ -146,8 +146,6 @@
                     async: false,
                     success:function(data){
                         sche = data.schedule;
-                        console.log(sche+"1");
-                       
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
