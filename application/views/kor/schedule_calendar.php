@@ -33,18 +33,24 @@
     }
     .sch_wait{
         height:30px;
+        width:100px;
+        margin-left:20px;
         text-align: center;
         border : 1px solid black;
         background-color: #C8E6C9;
     }
     .sch_complete{
         height:30px;
+        width:100px;
+        margin-left:20px;
         text-align: center;
         border : 1px solid black;
         background-color: #FFFFFF;
     }
     .sch_end{
         height:30px;
+        width:100px;
+        margin-left:20px;
         text-align: center;
         border : 1px solid black;
         background-color: #CCCCCC;
