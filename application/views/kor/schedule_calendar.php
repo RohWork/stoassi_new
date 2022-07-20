@@ -143,7 +143,7 @@
                 $("#calendar tbody:last").append("<tr></tr>");
             }
             
-            var day_cnt = ("0" + (i + 1)).slice(-2);
+            var day_cnt = ("0" + (i)).slice(-2);
             var span_data = "";
 
             if(typeof sch_data[day_cnt] != "undefined"){
@@ -197,7 +197,7 @@
         
         var sch_array = new Array;
     
-        for(var i=1; i<sche.length; i++){
+        for(var i=0; i<sche.length; i++){
             
             var day = sche[i].date.split('-')[2];
             console.log(sche[i].use_cnt+day);
