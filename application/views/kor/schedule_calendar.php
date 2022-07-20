@@ -41,7 +41,7 @@
         height:30px;
         text-align: right;
         border : 1px solid black;
-        background-color: #CCCCCC;
+        background-color: #FFFFFF;
     }
     .sch_end{
         height:30px;
