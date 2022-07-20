@@ -66,6 +66,8 @@
             
     </body>
 <script>
+    var today, date;
+    
     $(function(){
             var today = new Date();
             var date = new Date();
