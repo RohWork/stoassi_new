@@ -161,6 +161,8 @@
                 
             }
             
+            var sch_data = get_schedule_data(nowYear, nowMonth);
+            console.log(sch_data+"2");
             buildCalendar();
             
             
