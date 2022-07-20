@@ -172,7 +172,7 @@
     
         for(var i=0; i<sche.length; i++){
             
-            var day = String(sche.date).split('-');
+            var day = String(sche.date);
             console.log(day);
             if(sche.state = 1){
                 if(sche.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
