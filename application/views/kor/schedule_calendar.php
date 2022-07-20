@@ -169,7 +169,7 @@
     function set_schedule_array(sche){
 
         for(var i=0; i<sche.length; i++){
-            console.log(sche);
+            console.log(sche[i]);
         }
 
 
