@@ -181,7 +181,7 @@
             
             var day = sche[i].date.split('-')[2];
 
-            if(sche.state == 1){
+            if(sche.state == "1"){
                 if(Number(sche.time_cnt) > 0){   //신청대기중인 일정이 1개이상인경우
                     if( Number(sche.use_cnt) = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
                         sch_array[day] =   "<span class='sch_wait'>신청가능</span>";
