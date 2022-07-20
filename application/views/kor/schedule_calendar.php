@@ -144,10 +144,10 @@
                     type:'post',
                     data : post_date,
                     
-                    success:function(obj){
-                        sche = obj.schedule;
+                    success:function(data){
+                        sche = data.schedule;
                         console.log(sche+"1");
-                        return obj;
+                       
                     },
                     error: function(xhr,status,error) {
                         console.log(xhr,status,error);
@@ -156,7 +156,7 @@
                     }	 
                 });
                 
-                
+                 return sche;
                 
             }
             
