@@ -167,10 +167,27 @@
     }
 
     function set_schedule_array(sche){
-
+        
+        var sch_array = new Array;
+    
         for(var i=0; i<sche.length; i++){
-            console.log(sche[i]);
+            
+            var day = sche.date.split('-')[2];
+            
+            if(sche.state = 1){
+                if(sch.time_cnt > 0){   //신청대기중인 일정이 1개이상인경우
+                    if( sch.use_cnt = 0){   //해당날짜에 본인이 신청한 일정이 없는경우
+                        sch_array[day] =   "신청가능";
+                    }else{  //해당날짜에 본인이 신청한 일정이 하나 이상인 경우
+                        sch_array[day] = "신청완료";
+                    }
+                }else{  //신청대기중인 일정이 0개인경우
+                    sch_array[day] = "신청마감";
+                }
+            }
         }
+        
+        console.log(sch_array);
 
 
     }
